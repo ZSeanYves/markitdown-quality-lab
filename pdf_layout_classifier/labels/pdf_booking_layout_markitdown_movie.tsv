@@ -1,0 +1,122 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	0	0				heading	document title
+block	1	8	8				form_row	order code value should stay form-like
+block	1	9	9				form_row	form key
+block	1	10	10				form_row	product description value should stay form-like, not heading
+block	1	13	13				form_row	form key
+block	1	14	14				form_row	booking dates value should stay form-like
+block	1	25	25				form_row	form key
+block	1	26	26				form_row	region value should stay form-like, not heading
+block	1	27	27				paragraph	form section label should stay paragraph-like text
+block	1	28	28				form_row	form key
+block	1	29	29				form_row	form value
+block	1	30	30				form_row	form key
+block	1	31	31				form_row	form value
+block	1	32	32				form_row	form key
+block	1	33	33				form_row	form value
+block	1	34	34				form_row	form value continuation
+block	1	35	35				form_row	form value continuation
+block	1	36	36				form_row	form key
+block	1	37	37				form_row	form value
+block	1	38	38				form_row	form key
+block	1	39	39				form_row	form value
+block	1	40	40				form_row	form key
+block	1	41	41				form_row	form value
+block	1	42	42				heading	customer section heading
+block	1	43	43				form_row	form key
+block	1	44	44				form_row	form value
+block	1	45	45				form_row	form key
+block	1	46	46				form_row	form value
+block	1	47	47				form_row	form key
+block	1	48	48				form_row	form value
+block	1	49	49				form_row	form key
+block	1	50	50				form_row	form value
+block	1	51	51				form_row	form key
+block	1	52	52				form_row	form value
+block	1	53	53				heading	summary table heading
+block	1	54	54				table_like	table header
+block	1	55	55				table_like	table header
+block	1	56	56				table_like	table header
+block	1	57	57				table_like	table header
+block	1	58	58				table_like	table header
+block	1	59	59				table_like	table cell
+block	1	60	60				table_like	table cell
+block	1	61	61				table_like	table cell
+block	1	62	62				table_like	table cell
+block	1	63	63				table_like	table cell
+block	1	64	64				paragraph	totals section label should stay paragraph-like text
+block	1	65	65				table_like	table header
+block	1	66	66				table_like	table header
+block	1	67	67				table_like	table header
+block	1	68	68				table_like	table header
+block	1	69	69				table_like	table header
+block	1	70	70				table_like	table cell
+block	1	71	71				table_like	table cell
+block	1	72	72				table_like	table cell
+block	1	73	73				table_like	table cell
+block	1	74	74				table_like	table cell
+block	1	75	75				table_like	table summary row
+block	1	76	76				table_like	table summary row
+block	1	77	77				table_like	table summary row
+block	1	78	78				table_like	table summary row
+block	1	79	79				table_like	table summary row
+block	1	80	80				paragraph	table section label should stay paragraph-like text
+block	1	81	81				table_like	table header
+block	1	82	82				table_like	table header
+block	1	83	83				table_like	table header
+block	1	84	84				table_like	table header
+block	1	85	85				table_like	table header
+block	1	86	86				table_like	table cell
+block	1	87	87				table_like	table cell
+block	1	88	88				table_like	table cell
+block	1	89	89				table_like	table cell
+block	1	90	90				table_like	table cell
+block	1	91	91				heading	show schedule heading
+block	1	92	92				table_like	schedule header
+block	1	93	93				table_like	schedule header
+block	1	94	94				table_like	schedule header
+block	1	95	95				table_like	schedule header
+block	1	96	96				table_like	schedule header
+block	1	97	97				table_like	schedule header
+block	1	98	98				table_like	schedule header
+block	1	99	99				table_like	schedule header
+block	1	100	100				table_like	schedule header
+block	1	101	101				table_like	schedule header
+block	1	102	102				table_like	schedule header
+block	1	103	103				table_like	schedule header
+block	1	104	104				table_like	schedule row
+block	1	105	105				table_like	schedule row
+block	1	106	106				table_like	schedule row
+block	1	107	107				table_like	schedule row
+block	1	108	108				table_like	schedule row
+block	1	109	109				table_like	schedule row
+block	1	110	110				table_like	schedule row
+block	1	111	111				table_like	schedule row
+block	1	112	112				table_like	schedule row
+block	1	113	113				table_like	schedule row
+block	1	114	114				table_like	schedule row
+block	1	115	115				table_like	schedule row
+block	1	116	116				table_like	schedule row continuation
+block	1	143	143				heading	show details heading
+block	1	144	144				table_like	table header
+block	1	145	145				table_like	table header
+block	1	146	146				table_like	table header
+block	1	147	147				table_like	table header
+block	1	148	148				table_like	table header
+block	1	149	149				table_like	table header
+block	1	150	150				table_like	table header
+block	1	151	151				table_like	table header
+block	1	152	152				table_like	table header
+block	1	153	153				table_like	table row
+block	1	154	154				table_like	table row
+block	1	155	155				table_like	table row
+block	1	156	156				table_like	table row
+block	1	157	157				table_like	table row
+block	1	158	158				table_like	table row
+block	1	159	159				table_like	table row
+block	1	160	160				table_like	table row
+block	1	161	161				table_like	table row
+block	1	180	180				form_row	total revenue key
+block	1	181	181				form_row	total revenue value
+block	1	182	182				paragraph	trailing note
+block	1	183	183				paragraph	trailing note

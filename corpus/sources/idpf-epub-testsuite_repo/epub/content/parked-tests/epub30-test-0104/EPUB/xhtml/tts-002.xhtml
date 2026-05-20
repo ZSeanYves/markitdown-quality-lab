@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ssml="http://www.w3.org/2001/10/synthesis" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="pronunciation" type="application/pls+xml" href="../pls/en-ipa.xml" hreflang="en"/>
+		<link rel="pronunciation" type="application/pls+xml" href="../pls/en-x-sampa.xml" hreflang="en"/>
+		<link rel="pronunciation" type="application/pls+xml" href="../pls/en-mixed.xml" hreflang="en"/>
+		<link rel="pronunciation" type="application/pls+xml" href="../pls/fr-ipa.xml" hreflang="fr"/>
+		<link rel="pronunciation" type="application/pls+xml" href="../pls/fr-x-sampa.xml" hreflang="fr"/>
+	</head>
+	<body>
+		<section id="tts-pls">
+			<h2>PLS Lexicons</h2>
+			<section id="pls-010" class="otest">
+				<h3><span class="nature">[OPTIONAL]</span>
+					<span class="test-id">pls-010</span> PLS: IPA Support</h3>
+				
+				<p class="desc">Tests whether PLS lexicons with IPA pronunciations are supported.</p>
+				
+				<p>Today</p>
+				
+				<p class="eval">If the preceding word is pronounced "tomorrow", IPA lexicons are supported.</p>
+			</section>
+			
+			<section id="pls-020" class="otest">
+				<h3><span class="nature">[OPTIONAL]</span>
+					<span class="test-id">pls-020</span> PLS: X-SAMPA Support</h3>
+				
+				<p class="desc">Tests whether PLS lexicons with X-SAMPA pronunciations are supported.</p>
+				
+				<p>Daily</p>
+				
+				<p class="eval">If the preceding word is pronounced "weekly", X-SAMPA lexicons are supported.</p>
+			</section>
+			
+			<section id="pls-030" class="otest">
+				<h3><span class="nature">[OPTIONAL]</span>
+					<span class="test-id">pls-030</span> PLS: Mixed Lexicon Support</h3>
+				
+				<p class="desc">Tests whether X-SAMPA and IPA pronunciations can be mixed in a
+					single lexicon file.</p>
+				
+				<p>Despair</p>
+				
+				<p class="eval">If the preceding word is pronounced "joy", mixed lexicons are supported.</p>
+			</section>
+			
+			<section id="pls-040" class="otest">
+				<h3><span class="nature">[OPTIONAL]</span>
+					<span class="test-id">pls-040</span> PLS: Multilingual Support</h3>
+				
+				<p class="desc">Tests whether PLS lexicons are supported for embedded languages.</p>
+				
+				<p>Comparing apples to <span xml:lang="fr" lang="fr">oranges</span>.</p>
+				
+				<p class="eval">If the preceding sentence is pronounced "comparing apples to apples" the test
+					passes, otherwise it fails.</p>
+			</section>
+			
+			<section id="pls-050" class="otest">
+				<h3><span class="nature">[OPTIONAL]</span>
+					<span class="test-id">pls-050</span> PLS: Case Sensitivity</h3>
+				
+				<p class="desc">Tests whether PLS lexicons entries are case sensitive.</p>
+				
+				<p>Bass not bass.</p>
+				
+				<p class="eval">If the preceding sentence is pronounced "comparing apples to apples" the test
+					passes, otherwise it fails.</p>
+			</section>
+		</section>
+	</body>
+</html>

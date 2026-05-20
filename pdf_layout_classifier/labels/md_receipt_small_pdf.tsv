@@ -1,0 +1,40 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	0	0				heading	store title
+block	1	1	1				paragraph	street address should not become heading
+block	1	2	2				paragraph	city/state line should not become heading
+block	1	3	3				paragraph	phone line
+block	1	4	4				separator	visual separator
+block	1	5	5				paragraph	store id line
+block	1	6	6				form_row	timestamp row
+block	1	7	7				form_row	transaction id row
+block	1	8	8				form_row	cashier row
+block	1	9	9				form_row	register row
+block	1	10	10				separator	visual separator
+block	1	13	13				form_row	sku qty price row
+block	1	15	15				form_row	line total row
+block	1	37	38				separator	visual separator before totals
+block	1	38	39				form_row	subtotal row should not be heading
+block	1	39	40				form_row	discount row should not be heading
+block	1	40	41				form_row	sales tax row should not be heading
+block	1	41	42				form_row	rewards row should not be heading
+block	1	42	43				separator	visual separator around total
+block	1	43	44				form_row	total row should not be heading
+block	1	45	46				paragraph	payment section label should stay paragraph-like
+block	1	46	47				form_row	payment value row
+block	1	47	48				form_row	auth row
+block	1	48	49				form_row	ref row
+block	1	49	50				separator	visual separator
+block	1	50	51				paragraph	rewards member label should stay paragraph-like
+block	1	52	53				form_row	member id row
+block	1	53	54				form_row	points earned row
+block	1	54	55				form_row	total points row
+block	1	55	56				form_row	next reward row
+block	1	56	58				separator	visual separator
+block	1	57	59				paragraph	return policy label should stay paragraph-like
+block	1	58	60				paragraph	return policy body
+block	1	59	61				paragraph	return policy body
+block	1	60	62				paragraph	return policy body should not be heading
+block	1	61	63				footer_header_noise	barcode-ish footer token
+block	1	62	64				paragraph	closing text
+block	1	63	65				paragraph	visible url text
+block	1	64	66				separator	visual separator footer

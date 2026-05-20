@@ -1,0 +1,3 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	11	1	1				paragraph	figure lead-in sentence should stay paragraph, not caption
+block	18	10	28				caption	real figure caption in RFC layout

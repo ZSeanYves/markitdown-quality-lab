@@ -1,0 +1,3 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	0	0				footer_header_noise	top page shell near link grid should stay header/footer noise, not link_text
+block	1	1	1				link_text	page-number-like internal destination anchor from qpdf fixture

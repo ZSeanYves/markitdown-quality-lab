@@ -1,0 +1,5 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	13	13				form_row	plain phone value inside repair form should stay form-like text
+block	1	17	17				form_row	plain email value inside repair form should stay form-like text
+block	2	13	13				form_row	annotated phone value inside repair form should not be promoted to link_text
+block	2	17	17				form_row	annotated email value inside repair form should not be promoted to link_text

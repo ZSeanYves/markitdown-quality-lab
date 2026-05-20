@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta charset="utf-8" />
+		<title>epub test suite</title>
+        <link rel="stylesheet" type="text/css" href="../css/base.css" />
+        <script type="text/javascript">  
+            <![CDATA[
+            // test entry point
+            results = function () {
+                var xhr = window.XMLHttpRequest;
+                if (!xhr) {
+                    //bail out, all tests default to fail in the html
+                    return;
+                }
+                
+                document.getElementById('xhr-010-result').innerHTML = 'PASS';
+                
+                // try to get a remote file
+                testRequest("http://epubtest.org/media/remote/xhr-test.xhtml", "xhr-030-result", true);
+                
+                // try to get a local file
+                testRequest("xhr-test.xhtml", "xhr-020-result", false);
+                
+            };
+            
+            // helper function
+            // make a request and set the test result to "PASS" if it worked
+            testRequest = function(filename, testResultId, asynch) {
+                xhr = createXHR(filename, asynch);
+                
+                if (xhr) {
+                    xhr.onreadystatechange = function(e) {
+                        if (this.readyState == 4 && this.status == 200) {
+                            elm = xhr.responseXML.getElementById("epub-xhr-test");
+                            var str = elm.textContent || elm.innerText;
+                            if (str == "This file is used by the XMLHttpRequest tests.") {
+                                document.getElementById(testResultId).innerHTML = 'PASS';
+                            }
+                        }
+                    }
+                    xhr.send();
+                }
+            };
+            
+            function createXHR(url, asynch) {
+                xhr = new XMLHttpRequest();
+                
+                if ("withCredentials" in xhr) {
+                    xhr.open('GET', url, asynch);
+                }
+                else if (typeof XDomainRequest != "undefined") {
+                    xhr = new XDomainRequest();
+                    xhr.open('GET', url);
+                }
+                else {
+                    xhr = null;
+                }
+                return xhr;
+            }
+            //]]>
+        </script>
+    </head>
+    <body onload="results()">
+    	<section id="script-xhr">
+    		<h2>XMLHttpRequest</h2>
+    		<p>This section contains tests for the <a
+    			href="http://www.w3.org/TR/XMLHttpRequest/">XMLHttpRequest</a> API.</p>
+    		
+    		<section id="xhr-010" class="otest">
+    			<h3><span class="nature">[OPTIONAL]</span> <span class="test-id">xhr-010</span> The <code>XMLHttpRequest</code> object</h3>
+    			<p class="desc">Tests whether the <code>window.XMLHttpRequest</code> field is
+    				defined.</p>
+    			<p id="xhr-010-result">FAIL</p>
+    			<p class="eval">If the preceding paragraph reads "PASS", the test passes.</p>
+    			<p class="conditional">If the preceding paragraph reads "FAIL", then none of the remaining tests in this section
+    				(<code>xhr-*</code>) apply, and should be given the result <code>Not Supported</code>.</p>
+    		</section>
+    		
+    		<section id="xhr-020" class="otest">
+    			<h3><span class="nature">[OPTIONAL]</span> <span class="test-id">xhr-020</span> Reading local files</h3>
+    			<p class="desc">Tests whether it is possible to open local files using XHR. </p>
+    			<p id="xhr-020-result">FAIL</p> 
+    			<p class="eval">If the preceding paragraph reads "PASS", the test passes.</p>
+    		</section>
+    		
+    		<section id="xhr-030" class="otest">
+    			<h3><span class="nature">[OPTIONAL]</span> <span class="test-id">xhr-030</span> Reading remote files</h3>
+    			<p class="desc">Tests whether it is possible to open remote files using XHR. </p>
+    			<p id="xhr-030-result">FAIL</p> 
+    			<p class="eval">If the preceding paragraph reads "PASS", the test passes.</p>
+    		</section>
+    	</section>
+    </body>
+</html>

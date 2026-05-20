@@ -1,0 +1,31 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	0	0				footer_header_noise	repeated header shell
+block	1	1	1				footer_header_noise	repeated timestamp shell
+block	1	14	14				list_item	toc list marker
+block	1	15	15				heading	toc heading text
+block	1	19	19				list_item	bullet item
+block	1	20	20				list_item	bullet item with JSON mention should stay list
+block	1	21	21				list_item	bullet item
+block	1	23	23				list_item	bullet item with CLI option mention
+block	1	25	25				list_item	bullet item
+block	2	2	2				heading	command-help heading
+block	2	5	5				keep_as_text	command-line options block should stay literal
+block	2	6	7				separator	dash separator/control token
+block	2	10	11				separator	bare double-dash token should stay separator
+block	2	16	17				keep_as_text	command-line help option block should stay literal
+block	3	10	10				keep_as_text	command switch example should stay literal
+block	3	14	14				keep_as_text	json command-line switch should stay literal
+block	4	15	15				keep_as_text	customMessages option description should stay literal
+block	4	16	16				keep_as_text	listChecks option description should stay literal
+block	5	12	12				keep_as_text	listChecks usage paragraph should stay literal
+block	5	13	13				keep_as_text	customMessages environment-variable paragraph should stay literal
+block	6	5	5				paragraph	standalone bullet marker should not become its own list item
+block	6	9	9				paragraph	standalone bullet marker should not become its own list item
+block	6	12	12				paragraph	standalone bullet marker should not become its own list item
+block	6	16	16				paragraph	standalone bullet marker should not become its own list item
+block	6	21	23				paragraph	standalone bullet marker should not become its own list item
+block	6	23	25				paragraph	body text mentioning JSON is still paragraph
+block	6	25	28				paragraph	body continuation with JSON mention stays paragraph
+block	7	0	0				footer_header_noise	repeated header shell
+block	7	1	1				footer_header_noise	repeated timestamp shell
+block	7	3	3				paragraph	path-like token inside body should not force keep_as_text

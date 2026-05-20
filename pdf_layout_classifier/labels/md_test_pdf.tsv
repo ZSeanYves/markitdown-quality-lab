@@ -1,0 +1,18 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	0	0				heading	document section title
+block	1	1	1				paragraph	body paragraph with broken text recovery
+block	1	2	4				paragraph	body paragraph with broken text recovery
+block	1	3	8				paragraph	body paragraph with broken text recovery
+block	1	4	10				paragraph	body paragraph continuation
+block	1	5	11				footer_header_noise	page number
+block	1	6	12				paragraph	body continuation
+block	1	7	13				paragraph	paragraph mentioning Figure 1 should stay paragraph, not caption
+block	1	8	14				paragraph	body paragraph
+block	1	9	15				paragraph	body paragraph
+block	1	10	17				paragraph	body paragraph
+block	1	11	18				paragraph	body paragraph
+block	1	12	19				paragraph	body paragraph
+block	1	13	21				paragraph	body paragraph
+block	1	14	22				footer_header_noise	page number
+block	1	15	23				paragraph	appendix reference sentence should stay paragraph, not link_text
+block	1	16	24				footer_header_noise	page number

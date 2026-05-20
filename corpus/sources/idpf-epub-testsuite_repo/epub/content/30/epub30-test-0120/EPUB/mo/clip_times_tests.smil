@@ -1,0 +1,78 @@
+<smil xmlns:epub="http://www.idpf.org/2007/ops" xmlns="http://www.w3.org/ns/SMIL" version="3.0">
+  <body epub:textref="../xhtml/clip_times_tests.xhtml">
+    <par>
+      <text src="../xhtml/clip_times_tests.xhtml#mo-1"/>
+      <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:00.000" clipEnd="00:00:00.946"/>
+    </par>
+    <par>
+      <text src="../xhtml/clip_times_tests.xhtml#mo-2"/>
+      <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:00.946" clipEnd="00:00:03.098"/>
+    </par>
+    <seq epub:textref="../xhtml/clip_times_tests.xhtml#mo-audio-010">
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-1-75"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:03.098" clipEnd="00:00:03.927"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-2-61"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:03.927" clipEnd="00:00:05.134"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-2-7"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:05.134" clipEnd="00:00:11.390"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-3"/>
+        <audio src="../audio/clip_times_tests1A.mp3" clipEnd="00:00:04.650"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-3-23"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:11.390" clipEnd="00:00:15.365"/>
+      </par>
+    </seq>
+    <seq epub:textref="../xhtml/clip_times_tests.xhtml#mo-audio-020">
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-1-a"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:15.365" clipEnd="00:00:16.050"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-2-a"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:16.050" clipEnd="00:00:17.256"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-5-39"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:17.256" clipEnd="00:00:23.160"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-4-a"/>
+        <audio src="../audio/clip_times_tests2A.mp3" clipBegin="00:00:00.000"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-6-a"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:23.160" clipEnd="00:00:27.136"/>
+      </par>
+    </seq>
+    <seq epub:textref="../xhtml/clip_times_tests.xhtml#mo-audio-030">
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-1-b"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:27.136" clipEnd="00:00:27.820"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-2-b"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:27.820" clipEnd="00:00:28.885"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-8-b"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:28.885" clipEnd="00:00:36.031"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-5-b"/>
+        <audio src="../audio/clip_times_tests3A.mp3" clipBegin="00:00:00.000" clipEnd="00:00:20.000"/>
+      </par>
+      <par>
+        <text src="../xhtml/clip_times_tests.xhtml#mo-9-b"/>
+        <audio src="../audio/clip_times_tests.mp3" clipBegin="00:00:36.031" clipEnd="00:00:43.037"/>
+      </par>
+    </seq>
+  </body>
+</smil>

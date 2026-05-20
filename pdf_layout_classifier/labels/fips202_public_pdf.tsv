@@ -1,0 +1,7 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	19	19				paragraph	URI lead-in sentence should stay paragraph, not link_text
+block	1	20	20				link_text	visible DOI URI anchor line
+block	6	11	16				paragraph	link-bearing paragraph should stay paragraph, not link_text
+block	16	7	7				caption	figure caption below diagram
+block	21	10	10				paragraph	figure reference sentence should stay paragraph, not caption
+block	30	18	21				caption	table caption above the HMAC size table

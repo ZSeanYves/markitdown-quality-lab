@@ -1,0 +1,5 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	4	6	14				paragraph	front-matter publisher line with Internet token should stay paragraph, not link_text or footer noise
+block	6	1	1				link_text	internal TOC row with destination annotations should stay link_text
+block	7	15	15				link_text	table-of-figures internal link row; support-only same-source subtype expansion
+block	29	0	0				paragraph	table reference sentence should stay paragraph, not caption

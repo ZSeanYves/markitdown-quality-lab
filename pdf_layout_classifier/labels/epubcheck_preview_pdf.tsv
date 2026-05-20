@@ -1,0 +1,34 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	0	0				footer_header_noise	repeated header shell
+block	1	1	1				footer_header_noise	repeated timestamp shell
+block	1	14	14				list_item	toc list marker
+block	1	15	15				heading	toc heading text
+block	1	19	19				list_item	bullet item
+block	1	20	20				list_item	bullet item with JSON mention should stay list
+block	1	21	21				list_item	bullet item
+block	1	23	23				list_item	bullet item with CLI option mention
+block	1	25	25				list_item	bullet item
+block	1	31	31				link_text	long TOC row with destination annotations should count as link_text
+block	1	32	32				link_text	second TOC destination row from the same train doc; support-only same-source duplicate
+block	1	33	33				keep_as_text	toc line with command-line syntax should stay literal
+block	1	34	34				keep_as_text	command option reference line should stay literal
+block	1	35	35				keep_as_text	toc line with JSON file structure reference stays literal
+block	1	36	36				keep_as_text	toc line with file-like reference stays literal
+block	2	2	2				heading	command-help heading
+block	2	4	4				list_item	command-line bullet row
+block	2	5	5				keep_as_text	command-line options block should stay literal
+block	2	6	7				separator	dash separator/control token
+block	2	7	8				keep_as_text	command token continuation should stay literal
+block	2	8	9				separator	single dash separator/control token
+block	2	18	20				paragraph	link-bearing paragraph should stay paragraph, not link_text
+block	6	5	5				paragraph	standalone bullet marker should not become its own list item
+block	6	9	9				paragraph	standalone bullet marker should not become its own list item
+block	6	12	12				paragraph	standalone bullet marker should not become its own list item
+block	6	16	16				paragraph	standalone bullet marker should not become its own list item
+block	6	21	23				paragraph	standalone bullet marker should not become its own list item
+block	6	23	25				paragraph	body text mentioning JSON is still paragraph
+block	6	25	28				paragraph	body continuation with JSON mention stays paragraph
+block	6	26	29				keep_as_text	technical field list should stay literal
+block	7	0	0				footer_header_noise	repeated header shell
+block	7	1	1				footer_header_noise	repeated timestamp shell
+block	7	3	3				paragraph	path-like token inside body should not force keep_as_text

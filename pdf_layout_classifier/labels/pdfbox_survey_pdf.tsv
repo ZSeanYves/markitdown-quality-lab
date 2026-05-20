@@ -1,0 +1,9 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	21	21				footer_header_noise	repeated survey page footer shell
+block	1	22	22				footer_header_noise	repeated footer URL should stay footer noise, not link_text
+block	2	6	6				footer_header_noise	repeated survey page footer shell
+block	2	7	7				footer_header_noise	repeated footer URL should stay footer noise, not link_text
+block	8	3	3				footer_header_noise	repeated survey page footer shell
+block	8	4	4				footer_header_noise	repeated footer URL should stay footer noise, not link_text
+block	9	3	3				footer_header_noise	repeated survey page footer shell
+block	9	4	4				footer_header_noise	repeated footer URL should stay footer noise, not link_text

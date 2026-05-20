@@ -1,0 +1,10 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	3	3				heading	section code heading
+block	1	4	4				heading	section heading
+block	1	5	5				footer_header_noise	page counter shell
+block	1	6	6				list_item	top-level list marker
+block	1	7	7				heading	list heading
+block	1	8	8				list_item	sub-list marker
+block	1	9	9				paragraph	list body paragraph
+block	1	12	12				list_item	sub-list marker
+block	1	13	13				paragraph	list continuation paragraph

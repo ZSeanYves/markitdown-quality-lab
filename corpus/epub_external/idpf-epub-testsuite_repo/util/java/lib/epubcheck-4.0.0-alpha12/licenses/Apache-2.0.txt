@@ -1,0 +1,1 @@
+../../../../../../../sources/idpf-epub-testsuite_repo/epub/util/java/lib/epubcheck-4.0.0-alpha12/licenses/Apache-2.0.txt

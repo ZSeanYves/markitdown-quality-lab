@@ -1,0 +1,17 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	0	0				paragraph	toc line should stay text
+block	1	2	2				separator	dot leader separator
+block	1	3	3				paragraph	parenthetical CJK date line should stay text
+block	1	4	4				paragraph	cjk text row
+block	1	6	6				separator	dot leader separator
+block	1	7	7				paragraph	parenthetical CJK date line should stay text
+block	1	8	8				paragraph	cjk text row
+block	1	10	10				separator	dot leader separator
+block	1	11	11				paragraph	parenthetical CJK date line should stay text
+block	1	12	12				paragraph	cjk text row
+block	1	15	15				paragraph	parenthetical CJK date line should stay text
+block	1	16	16				paragraph	short CJK toc/content line should stay text
+block	1	20	20				paragraph	parenthetical CJK date line should stay text
+block	1	21	21				paragraph	short CJK toc/content line should stay text
+block	1	25	25				paragraph	parenthetical CJK date line should stay text
+block	1	26	26				paragraph	short CJK toc/content line should stay text

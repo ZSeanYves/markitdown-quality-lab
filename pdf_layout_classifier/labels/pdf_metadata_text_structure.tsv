@@ -1,0 +1,9 @@
+record_kind	page_index	block_index	line_index	next_page_index	next_block_index	next_line_index	label	notes
+block	1	0	0				heading	CJK chapter heading
+block	1	1	1				paragraph	CJK body paragraph
+block	1	2	2				heading	numbered section heading
+block	1	5	5				paragraph	technical-token paragraph should remain body
+block	1	6	6				footer_header_noise	page number shell
+block	2	2	2				heading	CJK chapter heading
+block	2	3	3				paragraph	CJK body paragraph
+block	2	4	4				footer_header_noise	CJK page number shell

@@ -1,0 +1,1 @@
+../../sources/xlsxwriter/xlsx/src/hide_row_col.py
