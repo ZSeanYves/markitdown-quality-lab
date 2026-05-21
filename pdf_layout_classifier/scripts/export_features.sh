@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+LAB_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+MAIN_ROOT="$(cd "$LAB_ROOT/.." && pwd)"
 MANIFEST_OVERRIDE=""
 LAB_ROOT_OVERRIDE=""
 CORPUS_ROOT_OVERRIDE=""
 OUT_DIR_OVERRIDE=""
 SPLIT_FILTER=""
 
-run_layout_tool() {
-  moon run "$ROOT/tools/pdf_layout_classifier" -- "$@"
-}
-
 usage() {
   cat <<'EOF'
-usage: ./samples/pdf_layout_classifier/export_features.sh [--split train|heldout] [--manifest <path>] [--lab-root <path>] [--corpus-root <path>] [--out-dir <path>]
+usage: ./markitdown-quality-lab/pdf_layout_classifier/scripts/export_features.sh [--split train|heldout] [--manifest <path>] [--lab-root <path>] [--corpus-root <path>] [--out-dir <path>]
 EOF
 }
 
@@ -72,7 +69,7 @@ while [[ $# -gt 0 ]]; do
   shift
 done
 
-CMD=(python3 "$ROOT/tools/pdf_layout_classifier/export_manifest_features.py")
+CMD=(python3 "$LAB_ROOT/scripts/export_manifest_features.py")
 if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
   CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
 fi
@@ -82,7 +79,7 @@ fi
 if [[ -n "$MANIFEST_OVERRIDE" ]]; then
   CMD+=(--manifest "$MANIFEST_OVERRIDE")
 else
-  CMD+=(--manifest "samples/pdf_layout_classifier/manifest.tsv")
+  CMD+=(--manifest "$LAB_ROOT/manifest.tsv")
 fi
 if [[ -n "$OUT_DIR_OVERRIDE" ]]; then
   CMD+=(--output-dir "$OUT_DIR_OVERRIDE")

@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-TMP_ROOT="${MARKITDOWN_TMP_DIR:-$ROOT/.tmp}"
+LAB_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+MAIN_ROOT="$(cd "$LAB_ROOT/.." && pwd)"
+TMP_ROOT="${MARKITDOWN_TMP_DIR:-$MAIN_ROOT/.tmp}"
 OUT_ROOT="$TMP_ROOT/pdf_layout_classifier"
 FEATURE_DIR="$OUT_ROOT/features"
 PRED_DIR="$OUT_ROOT/predictions"
@@ -16,7 +17,7 @@ CORPUS_ROOT_OVERRIDE=""
 
 usage() {
   cat <<'EOF'
-usage: ./samples/pdf_layout_classifier/evaluate.sh [--smoke] [--heldout] [--manifest <path>] [--lab-root <path>] [--model-root <path>] [--corpus-root <path>]
+usage: ./markitdown-quality-lab/pdf_layout_classifier/scripts/evaluate.sh [--smoke] [--heldout] [--manifest <path>] [--lab-root <path>] [--model-root <path>] [--corpus-root <path>]
 EOF
 }
 
@@ -78,11 +79,11 @@ fi
 
 mkdir -p "$FEATURE_DIR" "$PRED_DIR" "$EVAL_DIR"
 
-MANIFEST_PATH="${MANIFEST_OVERRIDE:-$ROOT/samples/pdf_layout_classifier/manifest.tsv}"
+MANIFEST_PATH="${MANIFEST_OVERRIDE:-$LAB_ROOT/manifest.tsv}"
 MODEL_PATH="$OUT_ROOT/models/pdf_layout_linear.json"
 mkdir -p "$(dirname "$MODEL_PATH")"
 
-EXPORT_CMD=("$ROOT/samples/pdf_layout_classifier/export_features.sh")
+EXPORT_CMD=("$LAB_ROOT/scripts/export_features.sh")
 if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
   EXPORT_CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
 fi
@@ -104,7 +105,7 @@ if [[ "$RUN_HELDOUT" -eq 1 ]]; then
   "${EXPORT_HELDOUT_CMD[@]}"
 fi
 
-TRAIN_CMD=(python3 "$ROOT/tools/pdf_layout_classifier/train.py")
+TRAIN_CMD=(python3 "$LAB_ROOT/scripts/train.py")
 if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
   TRAIN_CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
 fi
@@ -125,13 +126,13 @@ if [[ "$RUN_HELDOUT" -eq 1 ]]; then
     if [[ "$split" != "heldout" ]]; then
       continue
     fi
-    moon run "$ROOT/tools/pdf_layout_classifier" -- infer \
+    moon run "$MAIN_ROOT/tools/pdf_layout_classifier" -- infer \
       --model "$MODEL_PATH" \
       --features "$FEATURE_DIR/$sample_id.features.tsv" \
       --output "$PRED_DIR/$sample_id.predictions.tsv"
   done
 
-  EVAL_CMD=(python3 "$ROOT/tools/pdf_layout_classifier/train.py")
+  EVAL_CMD=(python3 "$LAB_ROOT/scripts/train.py")
   if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
     EVAL_CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
   fi
