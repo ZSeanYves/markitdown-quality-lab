@@ -15,7 +15,7 @@ from path_roots import (
 )
 
 
-DEFAULT_TOOL = "_build/native/debug/build/tools/pdf_layout_classifier/pdf_layout_classifier.exe"
+DEFAULT_TOOL = "_build/native/debug/build/doc_parse/pdf/layout_model_tool/layout_model_tool.exe"
 DEFAULT_OUTPUT_DIR = None
 
 
@@ -50,7 +50,7 @@ def run_export(tool_path, sample_id, pdf_path, record_kind, output_path, root):
 
 def default_tool_path(repo_root):
     candidates = [
-        repo_root / "_build/native/debug/build/tools/pdf_layout_classifier/pdf_layout_classifier.exe",
+        repo_root / "_build/native/debug/build/doc_parse/pdf/layout_model_tool/layout_model_tool.exe",
         repo_root / DEFAULT_TOOL,
     ]
     for candidate in candidates:
@@ -127,7 +127,7 @@ def main():
     if not os.path.exists(tool_path):
         raise SystemExit(
             "native pdf_layout_classifier tool not found: "
-            f"{tool_path}\nrun: moon build tools/pdf_layout_classifier --target native"
+            f"{tool_path}\nrun: moon build doc_parse/pdf/layout_model_tool --target native"
         )
 
     os.makedirs(output_dir, exist_ok=True)

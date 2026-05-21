@@ -126,7 +126,7 @@ if [[ "$RUN_HELDOUT" -eq 1 ]]; then
     if [[ "$split" != "heldout" ]]; then
       continue
     fi
-    moon run "$MAIN_ROOT/tools/pdf_layout_classifier" -- infer \
+    moon run "$MAIN_ROOT/doc_parse/pdf/layout_model_tool" -- infer \
       --model "$MODEL_PATH" \
       --features "$FEATURE_DIR/$sample_id.features.tsv" \
       --output "$PRED_DIR/$sample_id.predictions.tsv"

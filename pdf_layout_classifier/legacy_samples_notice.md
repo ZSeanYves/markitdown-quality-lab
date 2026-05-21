@@ -89,7 +89,7 @@ Feature export:
 Local-only manifest export without `moon run`:
 
 ```bash
-python3 tools/pdf_layout_classifier/export_manifest_features.py \
+python3 doc_parse/pdf/layout_model_tool/export_manifest_features.py \
   --lab-root ../markitdown-quality-lab/pdf_layout_classifier \
   --corpus-root ../markitdown-quality-lab/corpus \
   --manifest samples/pdf_layout_classifier/manifest.tsv \
@@ -100,13 +100,13 @@ python3 tools/pdf_layout_classifier/export_manifest_features.py \
 Local-only tiny public-dataset subset intake:
 
 ```bash
-python3 tools/pdf_layout_classifier/fetch_tiny_subsets.py
+python3 doc_parse/pdf/layout_model_tool/fetch_tiny_subsets.py
 ```
 
 Train:
 
 ```bash
-python3 tools/pdf_layout_classifier/train.py \
+python3 doc_parse/pdf/layout_model_tool/train.py \
   --lab-root ../markitdown-quality-lab/pdf_layout_classifier \
   --manifest samples/pdf_layout_classifier/manifest.tsv
 ```
@@ -120,7 +120,7 @@ Evaluate:
 Run the first local-only external-corpus ablation:
 
 ```bash
-python3 tools/pdf_layout_classifier/local_eval.py \
+python3 doc_parse/pdf/layout_model_tool/local_eval.py \
   --lab-root ../markitdown-quality-lab/pdf_layout_classifier \
   --manifest samples/pdf_layout_classifier/manifest.tsv \
   --manifest .external/layout_model/pdf_eval_manifest.local.tsv \
