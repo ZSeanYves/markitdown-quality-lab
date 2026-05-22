@@ -1,6 +1,6 @@
-# Left A1
+Left A1
 
-# Right B1
+Right B1
 
 Left A2
 
