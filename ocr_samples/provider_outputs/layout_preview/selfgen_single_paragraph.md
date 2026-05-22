@@ -1,0 +1,1 @@
+MoonBit converts documents into Markdown. This fixture checks plain OCR text flow.
