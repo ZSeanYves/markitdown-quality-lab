@@ -1,5 +1,1 @@
-# Item Qty
-
-Apple 2
-
-Banana 5
+Item Qty Apple 2 Banana 5
