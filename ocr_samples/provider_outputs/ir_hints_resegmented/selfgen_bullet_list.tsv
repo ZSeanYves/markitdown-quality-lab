@@ -1,0 +1,4 @@
+page_index	ir_block_index	kind	confidence	line_start	line_end	text	reasons
+0	0	ListItem	90.149731	0	0	- OCRPageModel	single-line paragraph;list marker prefix
+0	1	ListItem	95.32072966666668	1	1	- Layout recovery	single-line paragraph;list marker prefix
+0	2	ListItem	95.11344433333333	2	2	- Markdown preview	single-line paragraph;list marker prefix

@@ -1,0 +1,3 @@
+page_index	ir_block_index	kind	confidence	line_start	line_end	text	reasons
+0	0	Heading	86.298763	0	0	Left A1 Right B1	single-line paragraph;single-line heading candidate
+0	1	Paragraph	92.66847250000001	1	1	Left A2 Right B2	single-line paragraph

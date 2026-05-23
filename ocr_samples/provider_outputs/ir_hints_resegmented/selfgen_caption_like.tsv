@@ -1,0 +1,3 @@
+page_index	ir_block_index	kind	confidence	line_start	line_end	text	reasons
+0	0	Paragraph	96.1487635	0	0	Figure 1: System overview	single-line paragraph
+0	1	Paragraph	96.58988683333335	1	1	The pipeline keeps provider signals separate.	single-line paragraph
