@@ -1,0 +1,3 @@
+page_index	ir_block_index	kind	confidence	line_start	line_end	text	reasons
+0	0	CaptionLike	94.45840425	0	0	Fig. 3: Resegmentation path	single-line paragraph
+0	1	Paragraph	96.4567795	1	1	Word geometry can split merged lines.	single-line paragraph

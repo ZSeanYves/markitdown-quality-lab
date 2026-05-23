@@ -1,0 +1,4 @@
+page_index	ir_block_index	kind	confidence	line_start	line_end	text	reasons
+0	0	KeyValueLike	92.3497085	0	0	Invoice: INV-001	single-line paragraph
+0	1	KeyValueLike	95.861687	1	1	Due: 2026-05-22	single-line paragraph
+0	2	KeyValueLike	96.236	2	2	Amount: 42.00	single-line paragraph

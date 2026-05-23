@@ -1,0 +1,3 @@
+Fig. 3: Resegmentation path
+
+Word geometry can split merged lines.

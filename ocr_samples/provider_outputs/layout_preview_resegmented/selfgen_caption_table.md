@@ -1,0 +1,3 @@
+Table 2: OCR quality summary
+
+Rows are checked without running OCR.
