@@ -320,6 +320,9 @@ For tracked `ocr_corpus/samples/` files:
 
 * use local `tesseract` smoke runs only as qualitative preview, not as product
   assertions
+* local helper: `bash markitdown-quality-lab/ocr_corpus/tools/preview_smoke.sh`
+* prerequisites: `tesseract` executable plus any needed language data such as
+  `eng`, `ara`, or `chi_sim`
 * keep preview text or provider outputs under `.tmp/ocr_corpus_preview/` or
   `local_only/`, never in tracked git paths
 * if a row is `pdf_page_image` and current image-only smoke does not support the
@@ -327,6 +330,8 @@ For tracked `ocr_corpus/samples/` files:
   OCR
 * if language data is missing locally, record `not_run` or `weak` and describe
   the limitation in `audit_report.md`
+* helper output is audit-only status text and local OCR text files, not a
+  public gate and not a golden baseline
 
 ## Local-Only Policy
 
