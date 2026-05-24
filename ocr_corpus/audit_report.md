@@ -75,11 +75,32 @@
 | `cand_nod_oldbook_degradation` | `ocr_src_0017` | `degradation;historical` | `blur;low_resolution;historical_scan` | `unknown` | Attractive degradation benchmark if license clears. |
 | `cand_xfund_multilingual_form` | `ocr_src_0007` | `language;structured` | `cjk;latin;multilingual;key_value_like` | `forbidden` | Strong multilingual benchmark reference, but not commit-safe. |
 | `cand_chronicling_america_dense_page` | `ocr_src_0018` | `historical;plain_print;pdf_page_image` | `dense_text;small_font;multi_column;historical_scan` | `metadata_only` | High-value historical OCR stress from LOC. |
-| `cand_commons_pd_sign_negative` | `ocr_src_0022` | `scene_text;negative` | `signage_like;no_text;text_too_sparse` | `ok` | Negative control for incidental text. |
-| `cand_commons_ledger_historical` | `ocr_src_0023` | `historical;plain_print` | `historical_scan;typewriter;dense_text;small_font` | `ok` | Public-domain historical ledger candidate. |
-| `cand_commons_menu_scene_text` | `ocr_src_0025` | `scene_text;structured;degradation` | `menu_like;perspective;shadow;digits_amounts_units` | `ok` | Phone-photo menu candidate for structured scene text. |
+| `ocr_negative_commons_sign_0001` | `ocr_src_0022` | `scene_text;negative` | `signage_like;no_text;text_too_sparse` | `ok` | Real public-domain sign negative-control sample now checked in. |
+| `ocr_historical_commons_ledger_0001` | `ocr_src_0023` | `historical;plain_print` | `historical_scan;typewriter;dense_text;small_font` | `ok` | Real public-domain historical ledger sample now checked in. |
+| `ocr_scene_text_commons_menu_0001` | `ocr_src_0025` | `scene_text;structured;degradation` | `menu_like;perspective;shadow;digits_amounts_units` | `ok` | Real CC-BY scene-text menu sample now checked in. |
 | `cand_irs_pdf_render_small_font` | `ocr_src_0020` | `pdf_page_image;plain_print` | `small_font;dense_text;form_like` | `ok` | Good rendered-page candidate while keeping PDF OCR out of scope. |
 | `cand_commons_permission_scan` | `ocr_src_0024` | `plain_print;structured;pdf_page_image` | `clean_print;form_like;metadata_only_candidate` | `metadata_only` | Small freedom-cleared scanned-page fallback if we need one. |
+
+## Checked-In Seed Samples
+
+| Row id | Source | Scenario | Notes |
+| --- | --- | --- | --- |
+| `ocr_pdf_page_image_irs_fw4_0001` | `ocr_src_0020` | `plain_print;structured;pdf_page_image` | Blank official IRS W-4 form. |
+| `ocr_language_irs_fw4zht_0001` | `ocr_src_0020` | `language;structured;pdf_page_image` | Chinese IRS W-4 variant for CJK coverage. |
+| `ocr_structured_irs_fw9_0001` | `ocr_src_0020` | `plain_print;structured;pdf_page_image` | Denser blank official IRS W-9 form. |
+| `ocr_language_irs_fw9sp_0001` | `ocr_src_0020` | `language;structured;pdf_page_image` | Spanish IRS W-9 variant. |
+| `ocr_negative_commons_sign_0001` | `ocr_src_0022` | `scene_text;negative` | Public-domain signage sample with sparse incidental text. |
+| `ocr_historical_commons_ledger_0001` | `ocr_src_0023` | `historical;plain_print` | Public-domain historical ledger image. |
+| `ocr_scene_text_commons_menu_0001` | `ocr_src_0025` | `scene_text;structured;degradation` | CC-BY menu photo with perspective and structured text. |
+
+## Item-Level Metadata-Only Audit
+
+| Source | Candidate item direction | Status |
+| --- | --- | --- |
+| `ocr_src_0011` | choose one multi-column page and one heading-plus-paragraph page from a provenance-reviewed public subset | not downloaded this round |
+| `ocr_src_0018` | choose one dense historical newspaper page with clean rights notes | not downloaded this round |
+| `ocr_src_0004` | choose one handwritten or mixed field sample from SD19 | not downloaded this round |
+| `ocr_src_0003` | choose one Arabic non-PII document page after manual screening | not downloaded this round |
 
 ## Rejected Or Pending Sources
 
@@ -116,3 +137,5 @@
 * review one `historical`, one `language`, and one `scene_text` source at
   item-level granularity
 * keep semantic hint wording observational only and avoid over-claim language
+* add one smaller negative/signage sample from a stable public-domain file page
+* add one denser small-font metadata-only candidate after item-level rights review
