@@ -18,3 +18,5 @@ Rules:
 * record `sha256`, `scenario`, and `risk_tags` even for local-only rows
 * use local-only for any row carrying `pii_risk`, unresolved `license_risk`, or
   real receipt/invoice/address/signature content
+* keep OCR preview text or provider outputs here, or under `.tmp/`, whenever the
+  source payload itself is not commit-safe

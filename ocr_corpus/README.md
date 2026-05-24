@@ -33,6 +33,8 @@ Safe-to-commit files in this directory:
 * `audit_report.md`
 * `local_only/README.md`
 * `local_only/manifest.local.example.tsv`
+* compact tracked sample files under `samples/` whose source row is reviewed as
+  `redistribution=ok` and whose `sha256` is recorded in `manifest.tsv`
 * compact metadata-only notes that do not include payload bytes, provider
   outputs, or copied unclear-license text
 
@@ -167,6 +169,9 @@ Rules:
   Candidate-row planning surface. It may contain metadata-only rows with blank
   `relative_path` and blank `sha256` when the source has been audited but no
   local file has been staged yet.
+* `samples/`
+  Checked-in seed sample tree for small `redistribution=ok` OCR payloads grouped
+  by scenario.
 * `manifest.example.tsv`
   Example row template showing recommended field usage.
 * `audit_report.md`
@@ -262,7 +267,8 @@ Recommended workflow:
 2. Decide whether the source is `ok`, `metadata_only`, `local_only`,
    `forbidden`, or `unknown`.
 3. If a concrete row is worth tracking, add a planning row to `manifest.tsv`.
-4. If the payload cannot be committed, store it only under `local_only/`.
+4. Put commit-safe payload files under `samples/<scenario>/` and keep
+   non-committable payloads only under `local_only/`.
 5. Record scenario tags, risk tags, expected preview notes, expected hint notes,
    and `sha256` once a file exists.
 6. Keep provider-generated artifacts local unless the payload itself is clearly
@@ -279,7 +285,7 @@ Suggested row id style:
 From the main repo root, for a local payload file:
 
 ```bash
-shasum -a 256 markitdown-quality-lab/ocr_corpus/local_only/path/to/sample.png
+shasum -a 256 markitdown-quality-lab/ocr_corpus/samples/layout/sample.png
 ```
 
 Copy the hex digest into the `sha256` field only after the file exists.
@@ -307,6 +313,20 @@ Interpretation:
 * they are optional audit helpers, not a public-only gate
 * `ocr_corpus` is a planning/audit surface and does not replace current helper
   inputs today
+
+## Seed Preview Smoke
+
+For tracked `ocr_corpus/samples/` files:
+
+* use local `tesseract` smoke runs only as qualitative preview, not as product
+  assertions
+* keep preview text or provider outputs under `.tmp/ocr_corpus_preview/` or
+  `local_only/`, never in tracked git paths
+* if a row is `pdf_page_image` and current image-only smoke does not support the
+  source format, record `skipped` in `audit_report.md` instead of forcing PDF
+  OCR
+* if language data is missing locally, record `not_run` or `weak` and describe
+  the limitation in `audit_report.md`
 
 ## Local-Only Policy
 
