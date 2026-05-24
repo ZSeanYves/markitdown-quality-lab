@@ -5,19 +5,21 @@ This directory exists only for OCR real-world quality audit work in
 
 Scope:
 
-* this directory is for curating and auditing real-world OCR sample candidates
-* the goal is quality audit coverage for the shipped main-CLI image OCR path
-* PDF OCR is out of scope for this round
-* this directory does not define a product gate or public-only gate
-* this directory does not change converter/runtime behavior and does not change
-  OCR assertions
+* this directory is for curating, auditing, and planning real-world OCR sample
+  candidates
+* the goal is coverage work for the shipped main-CLI image OCR path
+* PDF OCR is out of scope for this round, but rendered page-image candidates may
+  still be cataloged for future manual review
+* this directory does not define a product gate or a public-only gate
+* this directory does not change runtime, converter behavior, OCR assertions, or
+  current fail-closed PDF OCR boundaries
 
 Current OCR boundary:
 
 * shipped OCR currently means image OCR on the main CLI
 * image OCR depends on local `tesseract` plus matching language data
-* current OCR audit work helps us inspect provider signal, layout recovery,
-  preview output, and future IR hints for image inputs
+* this audit directory is for source/license/risk review plus future sample
+  planning
 * PDF OCR remains fail-closed and is not part of this corpus round
 
 ## What May Be Committed
@@ -31,36 +33,109 @@ Safe-to-commit files in this directory:
 * `audit_report.md`
 * `local_only/README.md`
 * `local_only/manifest.local.example.tsv`
-* tiny license-clean metadata-only notes that do not include payload bytes or
-  unclear-license text
+* compact metadata-only notes that do not include payload bytes, provider
+  outputs, or copied unclear-license text
 
 Do not commit:
 
-* real sample files whose redistribution is not explicitly `ok`
-* any local-only payload under `local_only/`
-* provider outputs generated from local-only or unclear-license inputs
-* copied license texts that have not been intentionally reviewed
-* large downloads or bulk dataset mirrors
+* real sample files whose `redistribution` is not explicitly `ok`
+* any local payload under `local_only/`
+* provider outputs generated from local-only or non-committable inputs
+* copied third-party license files that have not been intentionally reviewed
+* PII-heavy files, raw receipts, addresses, phone numbers, signatures, IDs, or
+  large dataset mirrors
 
 ## Taxonomy
 
-The current OCR audit taxonomy uses the following top-level scenario buckets:
+Level-1 `scenario` values:
 
-* `plain_print`: clean printed text with straightforward reading order
-* `layout`: multi-column, mixed alignment, headers/footers, captions, or
-  reading-order stress
-* `structured`: receipts, forms, tables, menus, labels, and other structured
-  image documents
-* `degradation`: blur, skew, low contrast, compression noise, glare, crop loss,
-  or handwriting-over-print interference
-* `language`: multilingual, mixed-script, non-Latin, vertical text, or language
-  pack sensitivity checks
-* `negative`: non-document images, decorative text, extremely low-signal inputs,
-  or inputs where OCR should remain weak/ambiguous
+* `plain_print`
+* `layout`
+* `structured`
+* `degradation`
+* `language`
+* `negative`
+* `scene_text`
+* `handwriting`
+* `historical`
+* `synthetic`
+* `pdf_page_image`
 
-These scenario labels are audit tags only. They do not guarantee Markdown
-reconstruction quality, and they do not imply that `TableLike`, `KeyValueLike`,
-or `CaptionLike` hints are product guarantees.
+Level-2 `risk_tags` currently expected in audit planning:
+
+* `clean_print`
+* `small_font`
+* `dense_text`
+* `multi_column`
+* `mixed_reading_order`
+* `heading_paragraph`
+* `caption_like`
+* `table_like`
+* `key_value_like`
+* `form_like`
+* `receipt_like`
+* `invoice_like`
+* `ticket_like`
+* `menu_like`
+* `label_like`
+* `signage_like`
+* `chart_with_text`
+* `code_like`
+* `math_like`
+* `footnote_like`
+* `header_footer`
+* `page_number`
+* `watermark`
+* `stamp`
+* `signature`
+* `logo_noise`
+* `low_resolution`
+* `blur`
+* `skew`
+* `perspective`
+* `shadow`
+* `compression_artifact`
+* `background_texture`
+* `low_contrast`
+* `cjk`
+* `latin`
+* `arabic`
+* `devanagari`
+* `multilingual`
+* `digits_amounts_units`
+* `vertical_text`
+* `handwritten`
+* `historical_scan`
+* `typewriter`
+* `no_text`
+* `text_too_sparse`
+* `pii_risk`
+* `license_risk`
+* `large_dataset`
+* `download_required`
+* `metadata_only_candidate`
+
+These labels are audit tags only. Semantic labels such as `TableLike`,
+`KeyValueLike`, and `CaptionLike` remain observational hints and must not be
+read as a Markdown reconstruction promise.
+
+## Source Kinds
+
+Preferred `source_kind` values:
+
+* `self_synthetic`
+* `public_domain_dataset`
+* `permissive_dataset`
+* `restricted_dataset`
+* `government_public`
+* `wikimedia_commons`
+* `kaggle_dataset`
+* `huggingface_dataset`
+* `github_dataset`
+* `paper_dataset`
+* `commercial_dataset`
+* `web_page`
+* `unknown`
 
 ## Redistribution Policy
 
@@ -69,36 +144,38 @@ Allowed `redistribution` values:
 * `ok`: payload may be checked in after review
 * `metadata_only`: keep only manifest/catalog metadata in git
 * `local_only`: payload may be stored locally for audit but must stay out of git
-* `forbidden`: do not store payload in git or local shared corpus; keep at most
-  a note explaining why it was rejected
-* `unknown`: not reviewed yet; treat like non-committable until clarified
+* `forbidden`: do not store payload in git or a shared local corpus; keep only
+  audit notes
+* `unknown`: terms are not clear enough yet
 
 Rules:
 
-* default to `unknown` when terms are unclear
+* default to `unknown` when license or terms are unclear
 * only `ok` is eligible for tracked payload bytes
-* `metadata_only` rows may appear in tracked manifests, but payload paths should
-  stay empty or point to future reviewed assets
+* `metadata_only` is the default outcome for large or mixed-provenance public
+  sources until we intentionally review a small subset
 * `local_only` rows belong under `local_only/` and that subtree is git-ignored
-* `forbidden` rows belong only in audit notes, not in the active payload pool
+* `forbidden` means the source may still be cataloged, but not downloaded into a
+  shared tracked corpus
 
 ## Files
 
 * `source_catalog.tsv`
-  Source-level audit catalog for candidate corpora, websites, datasets, and
-  manually curated local collections.
+  Source-level audit catalog for public datasets, official pages, repositories,
+  government archives, and synthetic generation strategies.
 * `manifest.tsv`
-  Canonical tracked manifest for reviewed OCR corpus rows that are safe to
-  describe in git.
+  Candidate-row planning surface. It may contain metadata-only rows with blank
+  `relative_path` and blank `sha256` when the source has been audited but no
+  local file has been staged yet.
 * `manifest.example.tsv`
   Example row template showing recommended field usage.
 * `audit_report.md`
-  Working audit summary: scope, accepted/rejected source classes, sample
-  targets, and next actions.
+  Working audit summary: source triage, scenario coverage, candidate row plans,
+  and open questions.
 * `local_only/`
   Git-ignored area for local manifests and payloads that cannot be committed.
 
-## Manifest Fields
+## Field Definitions
 
 `source_catalog.tsv` fields:
 
@@ -130,20 +207,52 @@ Rules:
 
 Field guidance:
 
-* `relative_path` should be repo-relative under `ocr_corpus/` and must never be
-  absolute or contain `..`
-* `relative_path` may be blank for tracked metadata-only placeholder rows that
-  intentionally do not carry payload bytes yet
-* `local_only` must be `true` only for local manifests or payload references
-* `scenario` should use one or more taxonomy tags such as
-  `layout;structured`
-* `risk_tags` can record privacy, license, or content concerns such as
-  `pii_possible`, `license_review`, `screenshot`, or `non_doc_negative`
-* `expected_preview` is a compact expectation for layout-preview review, not a
-  formal assertion
-* `expected_hints` is a compact expectation for semantic/layout hint review, not
-  a product guarantee
-* `sha256` should be recorded for any real payload file once staged locally
+* `relative_path` must be repo-relative under `ocr_corpus/` when present
+* `relative_path` may be blank only for tracked metadata-only planning rows
+* `local_only` is `true` only for local manifests or local payload references
+* `scenario` uses level-1 tags such as `layout;structured`
+* `risk_tags` uses level-2 tags such as
+  `multi_column;dense_text;metadata_only_candidate`
+* `expected_preview` is a compact review expectation, not a golden assertion
+* `expected_hints` is a compact review expectation for future hint inspection,
+  not a product contract
+* `sha256` should remain blank until a real local payload file exists
+
+## Online Source Audit Workflow
+
+For each online source:
+
+1. Verify the source is still reachable.
+2. Find the clearest available license or terms page.
+3. Record whether commercial use appears allowed.
+4. Record whether derivative use appears allowed.
+5. Record whether attribution or license-preservation duties exist.
+6. Record whether the source is safe for `ok`, or should stay
+   `metadata_only`, `local_only`, `forbidden`, or `unknown`.
+7. Record OCR usefulness and sensitivity risks in `notes`.
+
+Recommended `notes` structure in `source_catalog.tsv`:
+
+* `access=...`
+* `license_basis=...`
+* `commercial=...`
+* `derivative=...`
+* `attribution=...`
+* `recommend=...`
+* `useful=...`
+* `review=...`
+* `sample_download=...`
+
+## Source Catalog vs Manifest
+
+Default path:
+
+* new web sources go to `source_catalog.tsv` first
+* `manifest.tsv` is only for concrete candidate rows that we may later download,
+  render, or stage locally
+* if a source is too unclear, too large, or too sensitive, keep it in
+  `source_catalog.tsv` and list row ideas in `audit_report.md` instead of
+  forcing manifest rows
 
 ## Adding A Sample
 
@@ -152,21 +261,18 @@ Recommended workflow:
 1. Add or update a source row in `source_catalog.tsv`.
 2. Decide whether the source is `ok`, `metadata_only`, `local_only`,
    `forbidden`, or `unknown`.
-3. If the payload cannot be redistributed, keep the bytes under `local_only/`
-   only and use a local manifest row there instead of adding tracked payload
-   files.
-4. Add a row to `manifest.tsv` only when it is safe to describe in git.
+3. If a concrete row is worth tracking, add a planning row to `manifest.tsv`.
+4. If the payload cannot be committed, store it only under `local_only/`.
 5. Record scenario tags, risk tags, expected preview notes, expected hint notes,
-   and `sha256`.
+   and `sha256` once a file exists.
 6. Keep provider-generated artifacts local unless the payload itself is clearly
    review-safe.
 
-Suggested sample id style:
+Suggested row id style:
 
 * lowercase
 * words separated by `_`
-* include a short source or scenario cue such as
-  `receipt_cn_blur_local_001`
+* short scenario cues such as `cand_irs_w4_blank_page`
 
 ## Recording SHA256
 
@@ -176,14 +282,14 @@ From the main repo root, for a local payload file:
 shasum -a 256 markitdown-quality-lab/ocr_corpus/local_only/path/to/sample.png
 ```
 
-Copy the hex digest into the `sha256` field. If the payload is not present in
-git, keep only the digest plus metadata in the appropriate manifest.
+Copy the hex digest into the `sha256` field only after the file exists.
 
 ## Running Existing OCR Quality Helpers
 
-Current helpers target `markitdown-quality-lab/ocr_samples/`, which remains the
-checked-in synthetic/reference OCR surface. This audit directory is upstream of
-that step and helps us decide which real-world rows are worth curating next.
+Current helpers still target `markitdown-quality-lab/ocr_samples/`, which
+remains the checked-in synthetic/reference OCR surface. This audit directory is
+upstream of that step and helps us decide which real-world rows are worth
+curating next.
 
 Useful existing commands from the main repo root:
 
@@ -199,16 +305,16 @@ Interpretation:
 
 * these helpers validate and compare the existing `ocr_samples` scaffold
 * they are optional audit helpers, not a public-only gate
-* this `ocr_corpus` directory should feed future curated additions, but does not
-  replace current helper inputs today
+* `ocr_corpus` is a planning/audit surface and does not replace current helper
+  inputs today
 
 ## Local-Only Policy
 
 Use `local_only/` for:
 
-* private screenshots
+* private screenshots or phone captures
+* real receipts, invoices, labels, addresses, signatures, or IDs
 * samples with uncertain redistribution terms
-* samples containing potential personal data
 * temporary provider outputs produced from non-committable inputs
 
 Keep out of `local_only/`:
