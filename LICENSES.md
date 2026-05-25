@@ -2,8 +2,10 @@
 
 This workspace does not relicense third-party fixtures or model/eval artifacts.
 
-Each source keeps its original license and usage terms. Use `corpus/MANIFEST.tsv`
-and per-source notes as the source-of-truth for:
+Each source keeps its original license and usage terms. Use
+`external_quality/_quality_rows_staging/manifest.tsv`, per-format/source notes,
+and training-dataset metadata under `pdf_model_training/` as the current
+source-of-truth for:
 
 * origin
 * approval / review status

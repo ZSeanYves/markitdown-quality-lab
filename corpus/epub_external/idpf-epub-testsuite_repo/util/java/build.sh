@@ -1,1 +1,0 @@
-../../../../sources/idpf-epub-testsuite_repo/epub/util/java/build.sh
