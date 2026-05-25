@@ -320,11 +320,14 @@ For tracked `ocr_corpus/samples/` files:
 
 * use local `tesseract` smoke runs only as qualitative preview, not as product
   assertions
-* local helper: `bash markitdown-quality-lab/ocr_corpus/tools/preview_smoke.sh`
+* local helper:
+  `bash markitdown-quality-lab/ocr_corpus/tools/preview_smoke.sh`
 * prerequisites: `tesseract` executable plus any needed language data such as
   `eng`, `ara`, or `chi_sim`
-* keep preview text or provider outputs under `.tmp/ocr_corpus_preview/` or
-  `local_only/`, never in tracked git paths
+* default output dir is `.tmp/ocr_corpus_preview/`
+* helper also writes `.tmp/ocr_corpus_preview/preview_summary.tsv`
+* keep preview text, `preview_summary.tsv`, or provider outputs under `.tmp/`
+  or `local_only/`, never in tracked git paths
 * if a row is `pdf_page_image` and current image-only smoke does not support the
   source format, record `skipped` in `audit_report.md` instead of forcing PDF
   OCR
@@ -332,6 +335,14 @@ For tracked `ocr_corpus/samples/` files:
   the limitation in `audit_report.md`
 * helper output is audit-only status text and local OCR text files, not a
   public gate and not a golden baseline
+* helper status vocabulary is limited to `pass`, `weak`, `failed`, `skipped`,
+  and `not_run`
+
+Supported helper options:
+
+* `--out-dir <DIR>` to redirect local artifacts
+* `--sample-id <ID>` to run one tracked sample
+* `--summary-only` to rebuild the summary from existing local OCR text files
 
 ## Local-Only Policy
 

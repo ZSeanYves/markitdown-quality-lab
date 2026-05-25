@@ -31,11 +31,11 @@
 
 | Scenario | Current audited source coverage |
 | --- | --- |
-| `plain_print` | `ocr_src_0001`, `ocr_src_0011`, `ocr_src_0018`, `ocr_src_0020`, `ocr_src_0023`, `ocr_src_0028`, `ocr_src_0029`, `ocr_src_0030`, `ocr_src_0031` |
+| `plain_print` | `ocr_src_0001`, `ocr_src_0011`, `ocr_src_0018`, `ocr_src_0020`, `ocr_src_0023`, `ocr_src_0028`, `ocr_src_0029`, `ocr_src_0030`, `ocr_src_0031`, `ocr_src_0032` |
 | `layout` | `ocr_src_0010`, `ocr_src_0011`, `ocr_src_0012`, `ocr_src_0013`, `ocr_src_0014`, `ocr_src_0027`, `ocr_src_0028`, `ocr_src_0029` |
 | `structured` | `ocr_src_0003`, `ocr_src_0006`, `ocr_src_0007`, `ocr_src_0008`, `ocr_src_0020`, `ocr_src_0027` |
 | `degradation` | `ocr_src_0003`, `ocr_src_0005`, `ocr_src_0017`, `ocr_src_0025`, `ocr_src_0027`, `ocr_src_0031` |
-| `language` | `ocr_src_0003`, `ocr_src_0007`, `ocr_src_0016`, `ocr_src_0027`, `ocr_src_0030` |
+| `language` | `ocr_src_0003`, `ocr_src_0007`, `ocr_src_0016`, `ocr_src_0027`, `ocr_src_0030`, `ocr_src_0032` |
 | `negative` | `ocr_src_0021`, `ocr_src_0022` |
 | `scene_text` | `ocr_src_0001`, `ocr_src_0021`, `ocr_src_0022`, `ocr_src_0025` |
 | `handwriting` | `ocr_src_0004`, `ocr_src_0005`, `ocr_src_0016` |
@@ -100,6 +100,7 @@
 | `ocr_historical_commons_scc1_0001` | `ocr_src_0029` | `historical;layout;plain_print` | Real public-domain Chronicling America newspaper page. |
 | `ocr_language_commons_uar_0001` | `ocr_src_0030` | `language;historical;plain_print` | Real public-domain Arabic newspaper front page. |
 | `ocr_degradation_commons_typewriter_photo_0001` | `ocr_src_0031` | `degradation;plain_print;scene_text` | Real CC0 document-like typewriter photo with blur and perspective. |
+| `ocr_language_commons_lat_pau_0001` | `ocr_src_0032` | `language;historical;plain_print` | Real public-domain Chinese newspaper front page. |
 
 ## Coverage Status
 
@@ -123,8 +124,7 @@ Covered now with checked-in samples:
 Still missing or still metadata-only:
 
 * real receipt or invoice bytes that are safe to commit
-* real CJK public item beyond the existing IRS PDF row
-* stronger real camera-photo skew sample that is more page-like than sign/menu
+* stronger real camera-photo skew sample that is more page-like than the current menu or typewriter-photo rows
 * handwriting tracked bytes with commit-safe licensing
 
 ## OCR Preview Smoke
@@ -134,6 +134,7 @@ Preview policy used this round:
 * local `tesseract` smoke only
 * reusable local helper: `ocr_corpus/tools/preview_smoke.sh`
 * outputs stored under `.tmp/ocr_corpus_preview/` and not committed
+* helper emits `preview_summary.tsv` as a local audit artifact only
 * PDF rows recorded as `skipped` because this round remains image-OCR only
 * non-Latin rows without matching local language packs are recorded conservatively
 
