@@ -1,0 +1,2 @@
+id	relative_path	source_id	source_kind	license	redistribution	local_only	document_kind	pdf_signal	scenario	risk_tags	model_targets	sha256	notes
+pdf_local_only_example_0001	local_only/private_form_packet.pdf	pdf_src_private_example_0001	unknown	unknown	local_only	true	form	scanned_image_only	scanned_pdf;forms_key_value	image_only;pii_risk;license_risk	low_signal_detection		Local-only example only; keep notes about source, privacy review, and why this file cannot be tracked.

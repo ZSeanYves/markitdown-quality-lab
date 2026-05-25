@@ -2,6 +2,9 @@
 .tmp/
 local_eval/
 reports/
+pdf_corpus/local_only/*
+!pdf_corpus/local_only/README.md
+!pdf_corpus/local_only/manifest.local.example.tsv
 
 # Python
 __pycache__/
