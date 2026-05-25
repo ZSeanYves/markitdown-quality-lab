@@ -43,6 +43,8 @@ Redistribution snapshot:
 * `forbidden`: 0
 * `unknown`: 1
 
+Tracked seed samples now in `manifest.tsv`: 5
+
 ## P0 Source Targets
 
 * born-digital multi-column articles with stable reading order
@@ -177,15 +179,39 @@ Covered by at least one audited source:
 * `key_value_region`
 * `low_signal_detection`
 
+Covered by tracked seed samples:
+
+* `heading_vs_paragraph`
+* `noise_header_footer`
+* `caption_association`
+* `table_region_detection`
+* `list_continuation`
+* `key_value_region`
+
+Still missing from tracked seed samples:
+
+* `reading_order_columns`
+* `cross_page_merge`
+* `low_signal_detection`
+
+## Checked-In Seed Samples
+
+| Row id | Source | Document kind | Main targets | Notes |
+| --- | --- | --- | --- | --- |
+| `pdf_form_irs_fw4_0001` | `pdf_src_0001` | `form` | `key_value_region`, `heading_vs_paragraph`, `noise_header_footer` | Blank W-4 form with repeated labels, headers, and page noise. |
+| `pdf_form_irs_fw9_0001` | `pdf_src_0001` | `form` | `key_value_region`, `heading_vs_paragraph`, `noise_header_footer` | Blank W-9 form with denser field structure than W-4. |
+| `pdf_manual_irs_iw9_0001` | `pdf_src_0001` | `manual` | `heading_vs_paragraph`, `list_continuation`, `noise_header_footer` | Instruction PDF adds numbered headings and list-heavy prose. |
+| `pdf_manual_niosh_2023_113_0001` | `pdf_src_0008` | `manual` | `heading_vs_paragraph`, `caption_association`, `list_continuation`, `noise_header_footer` | Official public-domain NIOSH manual with figures and list structure. |
+| `pdf_report_nist_tn2194_0001` | `pdf_src_0004` | `report` | `heading_vs_paragraph`, `table_region_detection`, `caption_association` | NIST technical note adds table-heavy and technical-layout pressure. |
+
 ## Next-Round Item-Level Candidates
 
 | Candidate direction | Source | Why it matters | Current policy |
 | --- | --- | --- | --- |
-| blank IRS form or multilingual instruction PDF | `pdf_src_0001` | safest early tracked payload for `forms_key_value` and `cjk_pdf` | `ok` |
-| compact GAO report with repeated headers and appendix tables | `pdf_src_0003` | strong `noise_header_footer` plus `table_region_detection` stress | `ok` |
-| NIST technical note with numbered headings, figures, and tables | `pdf_src_0004` | covers `heading_vs_paragraph` and `caption_association` together | `ok` |
-| BLS handbook or report chapter with lists and tables | `pdf_src_0006` | useful `list_continuation` and `table_region_detection` baseline | `ok` |
-| NIOSH safety guide or manual chapter | `pdf_src_0008` | compact public-domain manual candidate with headings and figure noise | `ok` |
+| compact GAO report with repeated headers and appendix tables | `pdf_src_0003` | strong `noise_header_footer` plus `table_region_detection` stress | `ok`, but official site returned 403 to current automation so bytes were not checked in this round |
+| additional NIST technical note with stronger column or figure density | `pdf_src_0004` | broadens report-side coverage beyond one tracked note | `ok` |
+| BLS handbook or report chapter with lists and tables | `pdf_src_0006` | useful `list_continuation` and `table_region_detection` baseline | `ok`, but official site returned 403 to current automation so bytes were not checked in this round |
+| another NIOSH manual chapter or report | `pdf_src_0008` | extends public-domain manual coverage with a second layout style | `ok` |
 | one CC BY or public-domain arXiv paper | `pdf_src_0010` | best real `multi_column` and `reading_order_columns` pressure | `metadata_only` until paper-level license check |
 | one CC BY or public-domain PMC OA article | `pdf_src_0011` | good `figure_caption` and `table_heavy` candidate | `metadata_only` until article-level license check |
 | one historical Chronicling America PDF page | `pdf_src_0013` | real `historical_scan` and `negative_low_signal` pressure | `metadata_only` |
@@ -209,10 +235,10 @@ Covered by at least one audited source:
 
 ## Manifest Discipline
 
-* `manifest.tsv` remains header-only in this round
-* no fake `relative_path`
-* no fake `sha256`
-* no payload bytes were downloaded for source-catalog expansion
+* every tracked row now has a real `relative_path`
+* every tracked row now has a real `sha256`
+* no metadata-only fake rows were added to `manifest.tsv`
+* no source-catalog-only rows were copied into `manifest.tsv` without payload bytes
 
 ## Open Questions
 
