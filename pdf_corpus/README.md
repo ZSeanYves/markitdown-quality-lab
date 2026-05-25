@@ -168,8 +168,8 @@ Allowed `model_targets` values:
 * `low_signal_detection`
 * `none`
 
-These tags are audit and labeling hints only. They do not guarantee final
-Markdown reconstruction quality.
+These tags are audit and labeling hints only. They do not imply final Markdown
+reconstruction quality.
 
 ## Redistribution Policy
 

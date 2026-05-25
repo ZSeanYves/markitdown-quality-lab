@@ -83,7 +83,7 @@ Structural disambiguation labels:
 * `figure_like`
 
 These are label categories for review and model research only. They are not a
-guarantee of final Markdown reconstruction behavior.
+promise of final Markdown reconstruction behavior.
 
 ## Model-Target Mapping
 
