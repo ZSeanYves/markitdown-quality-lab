@@ -127,6 +127,15 @@ Still missing or still metadata-only:
 * stronger real camera-photo skew sample that is more page-like than the current menu or typewriter-photo rows
 * handwriting tracked bytes with commit-safe licensing
 
+## Current Snapshot
+
+* tracked seed samples: 18
+* real CJK gap: covered via `ocr_language_commons_lat_pau_0001`
+* phone-photo-like skew or perspective document page: still open
+* handwriting: still open
+* real receipt or invoice bytes: keep local-only or metadata-only unless rights
+  and privacy review become exceptionally clear
+
 ## OCR Preview Smoke
 
 Preview policy used this round:
@@ -137,6 +146,10 @@ Preview policy used this round:
 * helper emits `preview_summary.tsv` as a local audit artifact only
 * PDF rows recorded as `skipped` because this round remains image-OCR only
 * non-Latin rows without matching local language packs are recorded conservatively
+* `preview_summary.tsv` columns are `sample_id`, `status`, `reason`,
+  `language_hint`, `scenario`, and `output_path`
+* `not_run` due to missing tessdata is an environment limitation, not a sample
+  failure
 
 | Sample id | Preview status | Reason | Observed summary | Next action |
 | --- | --- | --- | --- | --- |
@@ -192,11 +205,10 @@ Preview policy used this round:
 
 ## Next Action Checklist
 
-* pick 2 to 4 `ok` or `metadata_only` sources and extract only tiny candidate
-  page images
-* stage any sensitive receipt/invoice/menu examples under `local_only/` only
-* review one `historical`, one `language`, and one `scene_text` source at
-  item-level granularity
+* optionally install `chi_sim` and `ara` tessdata, then re-run
+  `tools/preview_smoke.sh`
+* continue looking for one rights-clean phone-photo-like document sample only if
+  it clearly improves the current perspective gap
+* consider handwriting only when item-level license and PII risk are both
+  exceptionally clear
 * keep semantic hint wording observational only and avoid over-claim language
-* add one smaller negative/signage sample from a stable public-domain file page
-* add one denser small-font metadata-only candidate after item-level rights review

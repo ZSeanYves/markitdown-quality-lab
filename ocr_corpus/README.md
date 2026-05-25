@@ -162,6 +162,8 @@ Rules:
 
 ## Files
 
+Current workflow surface:
+
 * `source_catalog.tsv`
   Source-level audit catalog for public datasets, official pages, repositories,
   government archives, and synthetic generation strategies.
@@ -177,8 +179,14 @@ Rules:
 * `audit_report.md`
   Working audit summary: source triage, scenario coverage, candidate row plans,
   and open questions.
+* `tools/preview_smoke.sh`
+  Local preview helper that reads tracked rows from `manifest.tsv`, skips PDF
+  rows, and writes local-only smoke artifacts under `.tmp/`.
 * `local_only/`
   Git-ignored area for local manifests and payloads that cannot be committed.
+* `.tmp/ocr_corpus_preview/`
+  Default local preview output directory for OCR smoke text files and summary
+  artifacts. This stays outside tracked corpus bytes.
 
 ## Field Definitions
 
@@ -343,6 +351,34 @@ Supported helper options:
 * `--out-dir <DIR>` to redirect local artifacts
 * `--sample-id <ID>` to run one tracked sample
 * `--summary-only` to rebuild the summary from existing local OCR text files
+
+`preview_summary.tsv` columns:
+
+* `sample_id`
+* `status`
+* `reason`
+* `language_hint`
+* `scenario`
+* `output_path`
+
+Status meaning:
+
+* `pass`: local smoke returned enough text, or a negative-control sample
+  correctly stayed near-empty
+* `weak`: local smoke ran but produced sparse, partial, or clearly degraded text
+* `failed`: local helper or OCR execution errored in a way that prevented a
+  usable output file
+* `skipped`: row is intentionally out of image-only smoke scope, such as a PDF
+  sample
+* `not_run`: current machine is missing a required executable or language pack
+
+Interpretation rules:
+
+* preview is a local audit artifact only and must not be treated as a golden
+  assertion
+* `skipped` on `pdf_page_image` rows does not imply any PDF OCR support
+* `not_run` because `chi_sim` or `ara` is missing does not imply that the sample
+  itself failed
 
 ## Local-Only Policy
 
