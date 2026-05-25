@@ -43,7 +43,7 @@ Redistribution snapshot:
 * `forbidden`: 0
 * `unknown`: 1
 
-Tracked seed samples now in `manifest.tsv`: 5
+Tracked seed samples now in `manifest.tsv`: 7
 
 ## P0 Source Targets
 
@@ -185,13 +185,10 @@ Covered by tracked seed samples:
 * `noise_header_footer`
 * `caption_association`
 * `table_region_detection`
-* `list_continuation`
-* `key_value_region`
-
-Still missing from tracked seed samples:
-
 * `reading_order_columns`
 * `cross_page_merge`
+* `list_continuation`
+* `key_value_region`
 * `low_signal_detection`
 
 ## Checked-In Seed Samples
@@ -203,6 +200,8 @@ Still missing from tracked seed samples:
 | `pdf_manual_irs_iw9_0001` | `pdf_src_0001` | `manual` | `heading_vs_paragraph`, `list_continuation`, `noise_header_footer` | Instruction PDF adds numbered headings and list-heavy prose. |
 | `pdf_manual_niosh_2023_113_0001` | `pdf_src_0008` | `manual` | `heading_vs_paragraph`, `caption_association`, `list_continuation`, `noise_header_footer` | Official public-domain NIOSH manual with figures and list structure. |
 | `pdf_report_nist_tn2194_0001` | `pdf_src_0004` | `report` | `heading_vs_paragraph`, `table_region_detection`, `caption_association` | NIST technical note adds table-heavy and technical-layout pressure. |
+| `pdf_paper_nist_jres_120_011_0001` | `pdf_src_0004` | `paper` | `reading_order_columns`, `cross_page_merge`, `caption_association` | NIST Journal of Research article adds real two-column born-digital paper structure. |
+| `pdf_manual_niosh_2015_100_0001` | `pdf_src_0008` | `manual` | `low_signal_detection`, `caption_association`, `noise_header_footer` | Public-domain image-heavy booklet adds sparse and brochure-like pages. |
 
 ## Next-Round Item-Level Candidates
 
