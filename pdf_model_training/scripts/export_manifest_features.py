@@ -24,6 +24,22 @@ def read_tsv(path):
         return list(csv.DictReader(f, delimiter="\t"))
 
 
+def resolve_output_dir(raw_path, repo_root, layout_lab_root):
+    resolved = resolve_existing_path(
+        raw_path,
+        repo_root=repo_root,
+        extra_roots=[layout_lab_root],
+    )
+    if resolved is not None:
+        return resolved
+    if raw_path is None:
+        return None
+    candidate = os.path.expanduser(raw_path)
+    if os.path.isabs(candidate):
+        return candidate
+    return os.path.join(str(repo_root), candidate)
+
+
 def ensure_columns(rows, path):
     required = {"sample_id", "pdf_path", "record_kind", "split"}
     keys = set(rows[0].keys()) if rows else set()
@@ -114,11 +130,7 @@ def main():
             tool_path = default_tool_path(repo_root)
         else:
             tool_path = repo_root / args.tool
-    output_dir = resolve_existing_path(
-        args.output_dir,
-        repo_root=repo_root,
-        extra_roots=[layout_lab_root],
-    ) if args.output_dir else None
+    output_dir = resolve_output_dir(args.output_dir, repo_root, layout_lab_root) if args.output_dir else None
     if output_dir is None:
         output_dir = default_feature_dir(layout_lab_root, repo_root)
     split_filter = set(args.split or [])

@@ -16,6 +16,7 @@ LEGACY_LAYOUT_LAB_PREFIX = "samples/pdf_layout_classifier/"
 LEGACY_LAYOUT_MODEL_PREFIX = ".external/layout_model/"
 EXTERNAL_QUALITY_REL = "external_quality"
 PDF_MODEL_TRAINING_REL = "pdf_model_training"
+PDF_MODEL_TRAINING_PREFIX = f"{PDF_MODEL_TRAINING_REL}/"
 
 
 def _env_path(name: str) -> Path | None:
@@ -56,6 +57,21 @@ def legacy_layout_model_candidates(raw: str, layout_lab_root: Path | None) -> li
     if suffix.startswith("eval_"):
         return [layout_lab_root / "reports" / suffix]
     return [layout_lab_root / "reports" / suffix]
+
+
+def current_layout_lab_candidates(raw: str, layout_lab_root: Path | None) -> list[Path]:
+    if layout_lab_root is None:
+        return []
+    if not raw.startswith(PDF_MODEL_TRAINING_PREFIX):
+        return []
+    suffix = raw[len(PDF_MODEL_TRAINING_PREFIX) :]
+    if not suffix:
+        return []
+    quality_lab_root = layout_lab_root.parent
+    return [
+        quality_lab_root / raw,
+        layout_lab_root / suffix,
+    ]
 
 
 def first_existing_dir(candidates: Iterable[Path | None]) -> Path | None:
@@ -238,6 +254,7 @@ def resolve_pdf_source_path(
             candidates.append(corpus_root / raw[len(LEGACY_CORPUS_PREFIX) :])
         else:
             candidates.append(corpus_root / raw)
+    candidates.extend(current_layout_lab_candidates(raw, layout_lab_root))
     candidates.extend(legacy_layout_model_candidates(raw, layout_lab_root))
     for candidate in _dedupe_paths(candidates):
         if candidate.exists():
@@ -260,6 +277,7 @@ def resolve_layout_lab_path(
         return direct
 
     candidates: list[Path] = []
+    candidates.extend(current_layout_lab_candidates(raw, layout_lab_root))
     candidates.extend(legacy_layout_model_candidates(raw, layout_lab_root))
     if layout_lab_root is not None:
         if raw.startswith(LEGACY_LAYOUT_LAB_PREFIX):
