@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-LAB_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+MODEL_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+LAB_ROOT="$(cd "$MODEL_ROOT/.." && pwd)"
 MAIN_ROOT="$(cd "$LAB_ROOT/.." && pwd)"
 TMP_ROOT="${MARKITDOWN_TMP_DIR:-$MAIN_ROOT/.tmp}"
 OUT_ROOT="$TMP_ROOT/pdf_model_training"
@@ -79,11 +80,11 @@ fi
 
 mkdir -p "$FEATURE_DIR" "$PRED_DIR" "$EVAL_DIR"
 
-MANIFEST_PATH="${MANIFEST_OVERRIDE:-$LAB_ROOT/manifest.tsv}"
-MODEL_PATH="$OUT_ROOT/models/pdf_layout_linear.json"
+MANIFEST_PATH="${MANIFEST_OVERRIDE:-$MODEL_ROOT/manifest.example.tsv}"
+MODEL_PATH="$OUT_ROOT/models/text_block_classifier_linear.json"
 mkdir -p "$(dirname "$MODEL_PATH")"
 
-EXPORT_CMD=("$LAB_ROOT/scripts/export_features.sh")
+EXPORT_CMD=("$MODEL_ROOT/scripts/export_features.sh")
 if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
   EXPORT_CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
 fi
@@ -94,7 +95,7 @@ EXPORT_CMD+=(--manifest "$MANIFEST_PATH" --out-dir "$FEATURE_DIR" --split train)
 "${EXPORT_CMD[@]}"
 
 if [[ "$RUN_HELDOUT" -eq 1 ]]; then
-  EXPORT_HELDOUT_CMD=("$LAB_ROOT/scripts/export_features.sh")
+  EXPORT_HELDOUT_CMD=("$MODEL_ROOT/scripts/export_features.sh")
   if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
     EXPORT_HELDOUT_CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
   fi
@@ -105,7 +106,7 @@ if [[ "$RUN_HELDOUT" -eq 1 ]]; then
   "${EXPORT_HELDOUT_CMD[@]}"
 fi
 
-TRAIN_CMD=(python3 "$LAB_ROOT/scripts/train.py")
+TRAIN_CMD=(python3 "$MODEL_ROOT/scripts/train.py")
 if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
   TRAIN_CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
 fi
@@ -132,7 +133,7 @@ if [[ "$RUN_HELDOUT" -eq 1 ]]; then
       --output "$PRED_DIR/$sample_id.predictions.tsv"
   done
 
-  EVAL_CMD=(python3 "$LAB_ROOT/scripts/train.py")
+  EVAL_CMD=(python3 "$MODEL_ROOT/scripts/train.py")
   if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
     EVAL_CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
   fi

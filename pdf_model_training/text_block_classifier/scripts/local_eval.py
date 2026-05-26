@@ -6,6 +6,15 @@ import json
 import math
 import os
 import re
+import sys
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+SHARED_SCRIPTS_DIR = SCRIPT_DIR.parents[1] / "scripts"
+if str(SHARED_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SHARED_SCRIPTS_DIR))
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
 
 from path_roots import (
     REPO_ROOT,
@@ -1430,7 +1439,7 @@ def write_strategy_outputs(output_dir, split_name, strategy_name, metrics):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Run local-only report/eval ablations for the PDF layout-assist spike.",
+        description="Run local-only report/eval ablations for the text block classifier spike.",
     )
     parser.add_argument(
         "--lab-root",

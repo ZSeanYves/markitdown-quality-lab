@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-LAB_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+MODEL_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+LAB_ROOT="$(cd "$MODEL_ROOT/.." && pwd)"
 MAIN_ROOT="$(cd "$LAB_ROOT/.." && pwd)"
 MANIFEST_OVERRIDE=""
 LAB_ROOT_OVERRIDE=""
@@ -69,7 +70,7 @@ while [[ $# -gt 0 ]]; do
   shift
 done
 
-CMD=(python3 "$LAB_ROOT/scripts/export_manifest_features.py")
+CMD=(python3 "$MODEL_ROOT/scripts/export_manifest_features.py")
 if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then
   CMD+=(--lab-root "$LAB_ROOT_OVERRIDE")
 fi
@@ -79,7 +80,7 @@ fi
 if [[ -n "$MANIFEST_OVERRIDE" ]]; then
   CMD+=(--manifest "$MANIFEST_OVERRIDE")
 else
-  CMD+=(--manifest "$LAB_ROOT/manifest.tsv")
+  CMD+=(--manifest "$MODEL_ROOT/manifest.example.tsv")
 fi
 if [[ -n "$OUT_DIR_OVERRIDE" ]]; then
   CMD+=(--output-dir "$OUT_DIR_OVERRIDE")

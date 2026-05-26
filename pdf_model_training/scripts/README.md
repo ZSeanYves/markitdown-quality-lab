@@ -1,31 +1,26 @@
-# Script Boundary Notes
+# Shared Script Notes
 
-## Current Tiny Fetch Script
+This directory should only contain scripts that are still genuinely shared
+across PDF model-training targets.
 
-`fetch_tiny_subsets.py` is a metadata-oriented helper only.
+Current shared scripts:
 
-It is suitable for:
+* `path_roots.py`
+* `fetch_tiny_subsets.py`
 
-- tiny tracked metadata refresh;
-- adapter sanity inputs;
-- first-row or example-schema inspection.
+## Boundary
 
-It is not suitable for:
+`fetch_tiny_subsets.py` is still only a tiny-metadata helper. It is not:
 
-- full dataset acquisition;
-- larger local-only teacher-training downloads;
-- declaring a dataset ready for Task A teacher training.
+* a full dataset downloader
+* a larger local-only acquisition tool
+* a teacher-training downloader
+* a license validator
 
-## Future Local Acquisition Direction
+Block-only train/eval/export scripts now live under:
 
-If a future downloader is added for larger dataset pulls, it should:
+* `text_block_classifier/scripts/`
 
-- write only under `pdf_model_training/local_only/...`;
-- avoid modifying tracked manifests automatically;
-- record source, license, subset selection, and local hashes;
-- remain separate from tiny tracked subset refresh logic.
+If a future layout-recovery-specific script appears, it should live under:
 
-## Training Boundary
-
-Tracked scripts in this directory may help plan or document local-only flows,
-but actual larger dataset payloads and teacher artifacts must remain outside git.
+* `layout_recovery_model/scripts/`

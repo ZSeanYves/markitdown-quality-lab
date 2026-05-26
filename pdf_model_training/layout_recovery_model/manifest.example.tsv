@@ -1,0 +1,4 @@
+sample_id	pdf_path	task	layer	model_target	record_kind	split	label_source	label_path	status	notes
+pdf_cross_page_should_merge_phase15	samples/main_process/pdf/pdf_cross_page_should_merge_phase15.pdf	parser_boundary_assist	doc_parse/pdf/text	parser_boundary_assist	boundary	train	manual	pdf_model_training/labels/pdf_cross_page_should_merge_phase15.tsv	active	cross-page merge boundary train seed
+pdf_cross_page_should_not_merge_phase15	samples/main_process/pdf/pdf_cross_page_should_not_merge_phase15.pdf	parser_boundary_assist	doc_parse/pdf/text	parser_boundary_assist	boundary	train	manual	pdf_model_training/labels/pdf_cross_page_should_not_merge_phase15.tsv	active	cross-page no-merge boundary train seed
+pdf_cross_page_paragraph	samples/main_process/pdf/pdf_cross_page_paragraph.pdf	parser_boundary_assist	doc_parse/pdf/text	parser_boundary_assist	boundary	heldout	manual	pdf_model_training/labels/pdf_cross_page_paragraph.tsv	active	cross-page merge held-out sample

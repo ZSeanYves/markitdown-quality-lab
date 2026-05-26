@@ -1,123 +1,93 @@
-# PDF Text-Flow Assist Model
+# PDF Model Training
 
-This directory contains offline-only assets for the PDF text-flow assist model
-research track.
+This directory contains offline-only research assets for two PDF assist-model
+targets:
 
-The goal is not to replace the checked rule system. The goal is to support it
-with local-only training and evaluation assets that can later be connected, if
-ever, behind explicit rule gates and fail-closed runtime behavior.
+1. `layout_recovery_model`
+2. `text_block_classifier`
 
-Tracked assets here include:
+The training track exists to support rule-based PDF parsing and conversion, not
+to replace them. Training may be heavy and local-only. Any future runtime
+candidate must stay lightweight, rule-gated, and fail closed.
 
-* `manifest.tsv` and draft task-aware manifest files
-* `labels/` with manual local label TSVs
-* `scripts/` for feature export and local-only train/eval helpers
-* `datasets/` for tracked metadata or tiny subsets
-* `models/` for historical model JSON snapshots
-* `reports/` and `evaluation/` for local-only notes and outputs
-* `archive/` for migration notes and legacy references
+## Directory Layout
 
-Normal PDF conversion in the main repository does not depend on these assets.
-Current checked behavior remains rule-first MoonBit logic in `convert/pdf`.
+* `shared/`
+  Shared schema, dataset registry, source catalog, and policy documents.
+* `layout_recovery_model/`
+  Parser/layout-facing planning, manifests, adapters, scripts, and future
+  evaluation/model slots for reading order, column risk, and layout-region
+  recovery.
+* `text_block_classifier/`
+  Convert-layer planning, manifests, adapters, scripts, and historical model
+  assets for block labels such as paragraph, heading, footer/header noise,
+  caption, table-like, form-row, list-item, separator, link-text, and
+  keep-as-text.
+* `datasets/`
+  Tracked tiny metadata, public sample references, and existing small fixture
+  assets. Full public datasets do not belong here.
+* `labels/`
+  Existing local label TSVs. This round does not rewrite label contents.
+* `local_only/`
+  Git-ignored home for larger local datasets, teacher artifacts, feature dumps,
+  and local manifests.
+* `archive/`
+  Legacy manifests, superseded planning material, and migration notes.
+* `scripts/`
+  Shared helper scripts that are still genuinely cross-target.
 
-## Model Scope
+## Model Boundaries
 
-This lab is for a PDF text-flow assist model family, not a single flat layout
-classifier.
+### `layout_recovery_model`
 
-The intended task split is:
+Layer:
 
-* `Task A: convert_block_classification`
-  * layer: `convert/pdf`
-  * purpose: assist convert-layer mapping from PDF line/block text flow to
-    Markdown / IR semantics such as paragraph, heading, caption, table-like,
-    form-row, list-item, separator, link-text, keep-as-text, and
-    footer/header noise
-* `Task B: parser_boundary_assist`
-  * layer: `doc_parse/pdf/text` or parser/layout bridge
-  * purpose: assist parser-layer decisions around cross-page boundaries,
-    low-signal transitions, and reading-order risk
-* `Task C: parser_layout_signal_assist`
-  * future target only
-  * purpose: low-signal or scanned-ish parser/layout signals; not part of the
-    current training path
+* `doc_parse/pdf/text`
+* parser/layout bridge
 
-Boundary labels do not belong in the same flat label space as convert-layer
-block labels. Task B should remain separate from Task A training/eval.
+Focus:
 
-## Current Focus
+* reading order recovery
+* multi-column risk
+* layout regions
+* table / figure / caption region assistance
+* parser-side boundary and recovery signals
 
-Near-term work in this directory is intentionally narrow:
+### `text_block_classifier`
 
-* keep feature export healthy for current tracked samples
-* keep schema and manifest drafts aligned with the intended task split
-* focus first on `Task A: convert_block_classification`
-* keep `Task B` tracked separately and do not mix boundary labels into block
-  label training
-* leave `Task C` as future-only design scope
+Layer:
 
-Current non-goals:
+* `convert/pdf`
 
-* no runtime model integration
-* no PDF OCR integration
-* no automatic rule replacement
-* no production claim based on local-only held-out checks
+Focus:
 
-Historical `models/*.json` files remain useful as migration artifacts and
-historical metadata only. They should not be treated as proof of the current
-best model target, schema, or eval policy.
+* paragraph vs heading
+* footer/header noise
+* caption
+* table-like
+* form-row
+* list-item
+* separator
+* link-text
+* keep-as-text
 
-## Script Entrypoints
+Do not flatten these two targets into one classifier or one mixed manifest.
 
-Preferred local-only entrypoints currently live here:
+## Dataset Direction
 
-* `scripts/export_manifest_features.py`
-* `scripts/local_eval.py`
-* `scripts/train.py`
-* `scripts/fetch_tiny_subsets.py`
-* `scripts/export_features.sh`
-* `scripts/evaluate.sh`
+The preferred training sources are mature public annotated datasets:
 
-These scripts assume:
+* `DocLayNet` as the primary gold source
+* `PubLayNet` as a weak-layout supplement
+* `PubTables-1M` as a table specialist
 
-* the main repository lives one directory above this lab
-* the external quality corpus payloads live in `../external_quality`
-* the main repository still provides the native MoonBit export/infer tool
+Small tracked subsets are only for adapter and schema sanity. Meaningful
+teacher training belongs in `local_only/` and must not be committed.
 
-Typical feature-export smoke:
+## Historical Notes
 
-```bash
-python3 markitdown-quality-lab/pdf_model_training/scripts/export_manifest_features.py \
-  --manifest markitdown-quality-lab/pdf_model_training/manifest.tsv \
-  --corpus-root markitdown-quality-lab/external_quality \
-  --sample-id heading_basic \
-  --output-dir .tmp/pdf_model_training/post_migration_smoke
-```
-
-This directory is for local research and schema work only. Any future runtime
-connection must remain gated by deterministic rules and fail closed when model
-support is absent, weak, or intentionally disabled.
-
-## Data Scale And Training Route
-
-The current intended route is no longer "tiny subset as the main training
-strategy".
-
-The updated route is:
-
-1. keep tracked metadata, mapping files, and tiny sanity fixtures in git;
-2. keep larger public dataset payloads local-only;
-3. use larger local-only Task A corpora for offline teacher training and
-   evaluation;
-4. distill the teacher results into rule suggestions, lightweight classifier
-   candidates, confidence thresholds, and feature-level explanations;
-5. evaluate any future runtime candidate separately under fail-closed rule
-   gates.
-
-This means:
-
-* training-time assets may be large and slow, but stay local-only;
-* runtime-time assets, if ever adopted, must stay lightweight;
-* teacher models are not runtime artifacts;
-* tiny tracked subsets are for adapter/schema sanity only, not for claiming
-  enough coverage for production-grade Task A training.
+Older root-level manifests, planning TSVs, and one-off policy documents were
+migrated into `shared/`, `text_block_classifier/`, or `archive/` during this
+cleanup. Historical model JSON files remain as legacy artifacts under
+`text_block_classifier/models/`; they do not imply a current recommended
+runtime model.

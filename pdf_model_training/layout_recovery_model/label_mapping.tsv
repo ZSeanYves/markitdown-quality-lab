@@ -1,0 +1,8 @@
+dataset_id	source_label	target_model	target_label	mapping_confidence	mapping_notes
+doclaynet	Title	layout_recovery_model	text_region	medium	Text-bearing region; useful context but not a direct block-semantic label.
+doclaynet	Section-header	layout_recovery_model	heading_region	medium	May help region and reading-order recovery.
+doclaynet	Table	layout_recovery_model	table_region	high	Direct layout region signal.
+doclaynet	Caption	layout_recovery_model	caption_region	high	Direct caption-region signal.
+doclaynet	Picture	layout_recovery_model	figure_region	high	Direct figure-region signal.
+doclaynet	Page-header	layout_recovery_model	header_region	medium	Useful for repeated edge region suppression.
+doclaynet	Page-footer	layout_recovery_model	footer_region	medium	Useful for repeated edge region suppression.

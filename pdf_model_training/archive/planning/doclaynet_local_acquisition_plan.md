@@ -145,10 +145,10 @@ Text-cell absence should not cause silent row loss during the raw adapter stage.
 Recommended local-only adapter path:
 
 ```bash
-python3 markitdown-quality-lab/pdf_model_training/adapters/doclaynet_adapter.py \
+python3 markitdown-quality-lab/pdf_model_training/text_block_classifier/adapters/doclaynet_adapter.py \
   --annotations pdf_model_training/local_only/datasets/doclaynet/core/COCO/train.json \
   --text-cells-root pdf_model_training/local_only/datasets/doclaynet/extra/JSON \
-  --mapping markitdown-quality-lab/pdf_model_training/adapters/doclaynet_mapping.tsv \
+  --mapping markitdown-quality-lab/pdf_model_training/text_block_classifier/adapters/doclaynet_mapping.tsv \
   --output .tmp/doclaynet_task_a_train.tsv \
   --split train
 ```

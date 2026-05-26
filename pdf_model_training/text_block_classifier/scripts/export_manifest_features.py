@@ -4,6 +4,12 @@ import csv
 import os
 import subprocess
 import sys
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+SHARED_SCRIPTS_DIR = SCRIPT_DIR.parents[1] / "scripts"
+if str(SHARED_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SHARED_SCRIPTS_DIR))
 
 from path_roots import (
     REPO_ROOT,

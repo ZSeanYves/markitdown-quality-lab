@@ -11,12 +11,20 @@ LAYOUT_LAB_ROOT = SCRIPT_DIR.parent
 QUALITY_LAB_ROOT = LAYOUT_LAB_ROOT.parent
 MAIN_REPO_ROOT = QUALITY_LAB_ROOT.parent
 REPO_ROOT = MAIN_REPO_ROOT
+TEXT_BLOCK_CLASSIFIER_REL = "text_block_classifier"
+LAYOUT_RECOVERY_MODEL_REL = "layout_recovery_model"
 LEGACY_CORPUS_PREFIX = ".external/quality_corpus/"
 LEGACY_LAYOUT_LAB_PREFIX = "samples/pdf_layout_classifier/"
 LEGACY_LAYOUT_MODEL_PREFIX = ".external/layout_model/"
 EXTERNAL_QUALITY_REL = "external_quality"
 PDF_MODEL_TRAINING_REL = "pdf_model_training"
 PDF_MODEL_TRAINING_PREFIX = f"{PDF_MODEL_TRAINING_REL}/"
+
+
+def text_block_classifier_root(layout_lab_root: Path | None) -> Path | None:
+    if layout_lab_root is None:
+        return None
+    return layout_lab_root / TEXT_BLOCK_CLASSIFIER_REL
 
 
 def _env_path(name: str) -> Path | None:
@@ -141,12 +149,15 @@ def discover_model_root(
     layout_lab_root: Path | None = None,
 ) -> Path | None:
     quality_lab_root = discover_quality_lab_root(repo_root)
+    block_root = text_block_classifier_root(layout_lab_root or discover_layout_lab_root(repo_root))
     return first_existing_dir(
         [
             Path(override).expanduser() if override else None,
             _env_path("MARKITDOWN_LAYOUT_MODEL"),
             (_env_path("MARKITDOWN_LAYOUT_LAB") / "models") if _env_path("MARKITDOWN_LAYOUT_LAB") else None,
+            LAYOUT_LAB_ROOT / TEXT_BLOCK_CLASSIFIER_REL / "models",
             LAYOUT_LAB_ROOT / "models",
+            (block_root / "models") if block_root else None,
             (quality_lab_root / PDF_MODEL_TRAINING_REL / "models") if quality_lab_root else None,
             (layout_lab_root / "models") if layout_lab_root else None,
             repo_root / "markitdown-quality-lab" / PDF_MODEL_TRAINING_REL / "models",
@@ -157,18 +168,26 @@ def discover_model_root(
 
 
 def default_manifest_path(repo_root: Path = REPO_ROOT, layout_lab_root: Path | None = None) -> Path:
+    block_root = text_block_classifier_root(layout_lab_root or LAYOUT_LAB_ROOT)
+    if block_root is not None:
+        candidate = block_root / "manifest.example.tsv"
+        if candidate.exists():
+            return candidate
     if LAYOUT_LAB_ROOT.is_dir():
-        candidate = LAYOUT_LAB_ROOT / "manifest.tsv"
+        candidate = LAYOUT_LAB_ROOT / "archive" / "old_manifests" / "manifest.legacy.tsv"
         if candidate.exists():
             return candidate
     if layout_lab_root:
-        candidate = layout_lab_root / "manifest.tsv"
+        candidate = layout_lab_root / "archive" / "old_manifests" / "manifest.legacy.tsv"
         if candidate.exists():
             return candidate
     return repo_root / "samples" / "pdf_layout_classifier" / "manifest.tsv"
 
 
 def default_feature_dir(layout_lab_root: Path | None, repo_root: Path = REPO_ROOT) -> Path:
+    block_root = text_block_classifier_root(layout_lab_root or LAYOUT_LAB_ROOT)
+    if block_root is not None:
+        return block_root / "evaluation" / "local_eval" / "features" / "raw"
     if LAYOUT_LAB_ROOT.is_dir():
         return LAYOUT_LAB_ROOT / "evaluation" / "local_eval" / "features" / "raw"
     if layout_lab_root:
@@ -177,6 +196,9 @@ def default_feature_dir(layout_lab_root: Path | None, repo_root: Path = REPO_ROO
 
 
 def default_eval_output_dir(layout_lab_root: Path | None, repo_root: Path = REPO_ROOT) -> Path:
+    block_root = text_block_classifier_root(layout_lab_root or LAYOUT_LAB_ROOT)
+    if block_root is not None:
+        return block_root / "evaluation" / "local_eval" / "eval"
     if LAYOUT_LAB_ROOT.is_dir():
         return LAYOUT_LAB_ROOT / "evaluation" / "local_eval" / "eval"
     if layout_lab_root:
@@ -188,8 +210,11 @@ def default_model_output_path(
     layout_lab_root: Path | None,
     model_root: Path | None,
     repo_root: Path = REPO_ROOT,
-    name: str = "pdf_layout_linear.json",
+    name: str = "text_block_classifier_linear.json",
 ) -> Path:
+    block_root = text_block_classifier_root(layout_lab_root or LAYOUT_LAB_ROOT)
+    if block_root is not None:
+        return block_root / "models" / name
     if LAYOUT_LAB_ROOT.is_dir():
         return (LAYOUT_LAB_ROOT / "models" / name)
     if model_root:
@@ -204,13 +229,16 @@ def default_local_eval_model_path(
     model_root: Path | None,
     repo_root: Path = REPO_ROOT,
 ) -> Path:
+    block_root = text_block_classifier_root(layout_lab_root or LAYOUT_LAB_ROOT)
+    if block_root is not None:
+        return block_root / "models" / "text_block_classifier_local_eval.json"
     if LAYOUT_LAB_ROOT.is_dir():
-        return LAYOUT_LAB_ROOT / "models" / "pdf_layout_linear_local_eval.json"
+        return LAYOUT_LAB_ROOT / "models" / "text_block_classifier_local_eval.json"
     if model_root:
-        return model_root / "pdf_layout_linear_local_eval.json"
+        return model_root / "text_block_classifier_local_eval.json"
     if layout_lab_root:
-        return layout_lab_root / "models" / "pdf_layout_linear_local_eval.json"
-    return repo_root / ".external" / "layout_model" / "models" / "pdf_layout_linear_local_eval.json"
+        return layout_lab_root / "models" / "text_block_classifier_local_eval.json"
+    return repo_root / ".external" / "layout_model" / "models" / "text_block_classifier_local_eval.json"
 
 
 def resolve_existing_path(raw_path: str | Path, repo_root: Path = REPO_ROOT, extra_roots: Iterable[Path | None] = ()) -> Path | None:

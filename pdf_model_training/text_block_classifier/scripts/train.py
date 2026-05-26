@@ -4,7 +4,14 @@ import csv
 import json
 import math
 import os
+import sys
 from collections import Counter, defaultdict
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+SHARED_SCRIPTS_DIR = SCRIPT_DIR.parents[1] / "scripts"
+if str(SHARED_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SHARED_SCRIPTS_DIR))
 
 from path_roots import (
     REPO_ROOT,
@@ -190,7 +197,7 @@ def build_model(rows, manifest_path):
     label_counts = Counter(ys)
     return {
         "version": 1,
-        "task": "pdf_layout_classifier",
+        "task": "text_block_classifier",
         "model_type": "linear_v1",
         "labels": labels,
         "features": names,
@@ -388,7 +395,7 @@ def write_json(path, payload):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Train or evaluate the PDF layout classifier spike.")
+    parser = argparse.ArgumentParser(description="Train or evaluate the local text block classifier spike.")
     parser.add_argument("--lab-root", help="PDF model-training root. Defaults to MARKITDOWN_LAYOUT_LAB or sibling markitdown-quality-lab/pdf_model_training when available.")
     parser.add_argument("--model-root", help="Model artifact root. Defaults to MARKITDOWN_LAYOUT_MODEL, lab-root/models, or legacy fallbacks.")
     parser.add_argument("--manifest", default=None)

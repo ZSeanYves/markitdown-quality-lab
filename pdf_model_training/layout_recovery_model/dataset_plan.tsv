@@ -1,0 +1,4 @@
+dataset_id	recommended_use	required_adapter	required_mapping	status	notes
+doclaynet	layout_region_gold_baseline	page_region_adapter	doclaynet_to_layout_recovery_labels	planned	Human-annotated region source; likely best first parser/layout recovery baseline once label space is defined.
+publaynet	weak_layout_booster	coco_region_adapter	publaynet_to_layout_recovery_labels	planned	Weak layout source; keep separate from gold eval.
+pubtables_1m	table_region_specialist	table_region_adapter	pubtables_to_table_region	review	Table-region specialist only; not a full layout recovery corpus.
