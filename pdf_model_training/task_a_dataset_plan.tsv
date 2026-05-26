@@ -1,0 +1,13 @@
+dataset_id	recommended_use	required_adapter	required_mapping	tiny_subset_status	next_action	notes
+doclaynet	primary_gold_task_a	coco_or_pdf_cell_to_block_adapter	doclaynet_to_task_a_labels	metadata_present	write_doclaynet_adapter_spec	Start from human labels; use extra PDF/text JSON locally if needed, but keep tracked bytes tiny.
+publaynet	secondary_weak_layout_booster	coco_to_block_adapter	publaynet_to_task_a_labels	sample_json_present	write_publaynet_adapter_spec	Useful for paragraph/heading/list/table coverage, but keep separate from gold-metric claims.
+pubtables_1m	table_like_specialist	table_region_adapter	pubtables_table_to_table_like	first_rows_metadata_present	locate_official_license_then_add_table_only_adapter	Keep isolated as a table_like supplement instead of a full Task A source.
+docbank	local_only_research_probe	token_to_block_aggregator	docbank_token_to_task_a	local_metadata_only	license_review_before_any_download	Useful for adapter ideas, not tracked bytes under current repo policy.
+tablebank	local_only_table_probe	table_box_adapter	tablebank_table_to_table_like	no_local_subset	keep_out_of_tracked_plan	Table-only and research-only.
+funsd	form_row_sanity_only	entity_to_block_aggregator	funsd_entity_to_form_row_and_heading	no_local_subset	keep_local_only	If used at all, use only for adapter sanity and never as the main corpus.
+layoutparser_zoo	discovery_index	none	upstream_only	not_applicable	use_for_source_discovery_only	Not a dataset; only a discovery helper.
+deepfigures	caption_research_candidate	figure_caption_adapter	deepfigures_caption_to_caption	no_local_subset	review_license_and_source_packaging	Only useful if redistribution path becomes clear.
+rvl_cdip	negative_source_mining_only	document_class_filter	no_direct_block_mapping	labels_only_available	do_not_use_for_task_a_training	May inform future source mining, but has no direct Task A block labels.
+iit_cdip	provenance_reference	none	no_direct_block_mapping	not_applicable	no_action_this_round	Track provenance only.
+cord	form_domain_holdout	entity_to_block_aggregator	cord_receipt_entities_to_form_row	no_local_subset	do_not_track_bytes_due_pii	Receipt domain and PII risk make it unsuitable as tracked mainline data.
+sroie	excluded	none	no_direct_block_mapping	registration_gated	no_action_this_round	Keep out due to license, registration, and PII risk.
