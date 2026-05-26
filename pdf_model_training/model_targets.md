@@ -83,17 +83,25 @@ Status:
 
 ## Near-Term Route
 
-1. Start with `Task A` smoke only.
-2. Use `manifest.v2.tsv` style drafts to bring more block labels under a
-   task-aware schema.
-3. Extend local-only eval later with an explicit
+1. Build `Task A` around local-only larger datasets rather than tiny tracked
+   subsets.
+2. Start with `DocLayNet` as the primary gold teacher-training source.
+3. Keep `PubLayNet` as a weak-layout supplement and `PubTables-1M` as a
+   `table_like` specialist input.
+4. Use task-aware draft manifests and adapter outputs to define teacher
+   training/eval inputs.
+5. Extend local-only eval later with an explicit
    `--task convert_block_classification` path.
 
 ## Mid-Term Route
 
-1. Add separate `Task B` local-only eval.
-2. Keep Task B out of Task A label space.
-3. Plan for a single provider surface that can later dispatch multiple small
+1. Train stronger offline teacher models for `Task A` on larger local-only
+   corpora.
+2. Distill the teacher into rule suggestions, feature importance, confidence
+   thresholds, and lightweight classifier candidates.
+3. Add separate `Task B` local-only eval.
+4. Keep Task B out of Task A label space.
+5. Plan for a single provider surface that can later dispatch multiple small
    models or heads without flattening parser and convert tasks together.
 
 ## Hard Boundaries
@@ -101,10 +109,21 @@ Status:
 Do not do the following:
 
 * do not train or ship a runtime model by default
+* do not make the CLI depend on a heavy teacher model
 * do not use this track as a PDF OCR path
 * do not treat model output as a replacement for deterministic rules
 * do not mix parser boundary labels and convert block labels into one flat
   classifier
+
+## Teacher / Distillation Boundary
+
+The intended split is:
+
+* teacher training may be heavy, local-only, and dataset-rich;
+* runtime candidates, if any, must be small and optional;
+* teacher outputs are for offline analysis and distillation, not direct CLI
+  dependency;
+* weak-label sources must never be treated as gold evaluation for Task A.
 
 ## Fail-Closed Rule
 

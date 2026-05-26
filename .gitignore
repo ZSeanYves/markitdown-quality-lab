@@ -2,6 +2,8 @@
 .tmp/
 local_eval/
 reports/
+pdf_model_training/local_only/*
+!pdf_model_training/local_only/README.md
 external_quality/ocr/_audit/local_only/*
 !external_quality/ocr/_audit/local_only/README.md
 !external_quality/ocr/_audit/local_only/manifest.local.example.tsv

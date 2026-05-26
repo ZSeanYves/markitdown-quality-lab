@@ -97,3 +97,27 @@ python3 markitdown-quality-lab/pdf_model_training/scripts/export_manifest_featur
 This directory is for local research and schema work only. Any future runtime
 connection must remain gated by deterministic rules and fail closed when model
 support is absent, weak, or intentionally disabled.
+
+## Data Scale And Training Route
+
+The current intended route is no longer "tiny subset as the main training
+strategy".
+
+The updated route is:
+
+1. keep tracked metadata, mapping files, and tiny sanity fixtures in git;
+2. keep larger public dataset payloads local-only;
+3. use larger local-only Task A corpora for offline teacher training and
+   evaluation;
+4. distill the teacher results into rule suggestions, lightweight classifier
+   candidates, confidence thresholds, and feature-level explanations;
+5. evaluate any future runtime candidate separately under fail-closed rule
+   gates.
+
+This means:
+
+* training-time assets may be large and slow, but stay local-only;
+* runtime-time assets, if ever adopted, must stay lightweight;
+* teacher models are not runtime artifacts;
+* tiny tracked subsets are for adapter/schema sanity only, not for claiming
+  enough coverage for production-grade Task A training.
