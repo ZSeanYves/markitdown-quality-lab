@@ -1,20 +1,75 @@
-# PDF Model Training
+# PDF Text-Flow Assist Model
 
-This directory contains training/eval-only assets for the PDF layout classifier:
+This directory contains offline-only assets for the PDF text-flow assist model
+research track.
 
-* `manifest.tsv` plus manual labels
-* `scripts/` for export/train/eval helpers
+The goal is not to replace the checked rule system. The goal is to support it
+with local-only training and evaluation assets that can later be connected, if
+ever, behind explicit rule gates and fail-closed runtime behavior.
+
+Tracked assets here include:
+
+* `manifest.tsv` and draft task-aware manifest files
+* `labels/` with manual local label TSVs
+* `scripts/` for feature export and local-only train/eval helpers
 * `datasets/` for tracked metadata or tiny subsets
-* `models/` for tracked model JSON snapshots
-* `reports/` and `evaluation/` for training/eval outputs and notes
+* `models/` for historical model JSON snapshots
+* `reports/` and `evaluation/` for local-only notes and outputs
 * `archive/` for migration notes and legacy references
 
 Normal PDF conversion in the main repository does not depend on these assets.
-The runtime gate remains distilled MoonBit logic in `convert/pdf`.
+Current checked behavior remains rule-first MoonBit logic in `convert/pdf`.
 
-## Script entrypoints
+## Model Scope
 
-Preferred training/eval entrypoints now live here:
+This lab is for a PDF text-flow assist model family, not a single flat layout
+classifier.
+
+The intended task split is:
+
+* `Task A: convert_block_classification`
+  * layer: `convert/pdf`
+  * purpose: assist convert-layer mapping from PDF line/block text flow to
+    Markdown / IR semantics such as paragraph, heading, caption, table-like,
+    form-row, list-item, separator, link-text, keep-as-text, and
+    footer/header noise
+* `Task B: parser_boundary_assist`
+  * layer: `doc_parse/pdf/text` or parser/layout bridge
+  * purpose: assist parser-layer decisions around cross-page boundaries,
+    low-signal transitions, and reading-order risk
+* `Task C: parser_layout_signal_assist`
+  * future target only
+  * purpose: low-signal or scanned-ish parser/layout signals; not part of the
+    current training path
+
+Boundary labels do not belong in the same flat label space as convert-layer
+block labels. Task B should remain separate from Task A training/eval.
+
+## Current Focus
+
+Near-term work in this directory is intentionally narrow:
+
+* keep feature export healthy for current tracked samples
+* keep schema and manifest drafts aligned with the intended task split
+* focus first on `Task A: convert_block_classification`
+* keep `Task B` tracked separately and do not mix boundary labels into block
+  label training
+* leave `Task C` as future-only design scope
+
+Current non-goals:
+
+* no runtime model integration
+* no PDF OCR integration
+* no automatic rule replacement
+* no production claim based on local-only held-out checks
+
+Historical `models/*.json` files remain useful as migration artifacts and
+historical metadata only. They should not be treated as proof of the current
+best model target, schema, or eval policy.
+
+## Script Entrypoints
+
+Preferred local-only entrypoints currently live here:
 
 * `scripts/export_manifest_features.py`
 * `scripts/local_eval.py`
@@ -29,7 +84,7 @@ These scripts assume:
 * the external quality corpus payloads live in `../external_quality`
 * the main repository still provides the native MoonBit export/infer tool
 
-Typical smoke:
+Typical feature-export smoke:
 
 ```bash
 python3 markitdown-quality-lab/pdf_model_training/scripts/export_manifest_features.py \
@@ -39,6 +94,6 @@ python3 markitdown-quality-lab/pdf_model_training/scripts/export_manifest_featur
   --output-dir .tmp/pdf_model_training/post_migration_smoke
 ```
 
-This directory is for model-training research only. It is not a runtime
-dependency of the main repository, and this migration does not imply active
-runtime integration.
+This directory is for local research and schema work only. Any future runtime
+connection must remain gated by deterministic rules and fail closed when model
+support is absent, weak, or intentionally disabled.

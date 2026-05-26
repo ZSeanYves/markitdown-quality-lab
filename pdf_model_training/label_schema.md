@@ -1,79 +1,117 @@
-# PDF Layout Classifier Label Schema
+# PDF Text-Flow Assist Label Schema
 
-This directory contains the local-only training spike assets for the
-text-layer PDF layout classifier experiment.
+This directory contains local-only schema and label assets for the PDF
+text-flow assist model track.
 
-Current labels:
+The schema is task-aware and layer-aware. Boundary labels do not belong in the
+same flat classifier as convert-layer block labels.
 
-* `BodyText`
-* `Heading`
-* `Noise`
-* `PageNumber`
-* `HeaderFooter`
-* `Caption`
-* `TableLike`
-* `CrossPageMerge`
-* `CrossPageNoMerge`
-* `ColumnBoundary`
-* `Unknown`
+## Task A: convert_block_classification
 
-Recommended next-step labels for new manual rows:
+Layer: `convert/pdf`
 
-Block labels:
+Purpose:
+
+* assist convert-layer mapping from PDF line/block text flow to Markdown / IR
+  semantics
+
+Primary labels:
 
 * `paragraph`
 * `heading`
+* `footer_header_noise`
+* `caption`
 * `table_like`
 * `form_row`
 * `list_item`
-* `caption`
-* `footer_header_noise`
 * `separator`
 * `link_text`
 * `keep_as_text`
-
-Boundary labels:
-
-* `cross_page_merge`
-* `cross_page_keep_split`
-* `column_boundary`
-* `paragraph_continuation`
-
-Legacy mapping guide:
-
-* `BodyText` -> `paragraph` or `keep_as_text`
-* `Heading` -> `heading`
-* `Noise` / `HeaderFooter` / `PageNumber` -> `footer_header_noise` or `separator`
-* `Caption` -> `caption`
-* `TableLike` -> `table_like`
-* `CrossPageMerge` -> `cross_page_merge`
-* `CrossPageNoMerge` -> `cross_page_keep_split`
+* `unknown`
+* `uncertain`
 
 Notes:
 
-* This is a training spike, not a production output policy.
-* Not every label currently has enough samples for real training.
-* The current held-out pass mainly exercises `Heading`, `BodyText`, `Caption`,
-  `TableLike`, `CrossPageMerge`, `CrossPageNoMerge`, and `Unknown`.
-* `Noise`, `PageNumber`, `HeaderFooter`, and `ColumnBoundary` remain
-  export-ready labels, but the current local corpus does not yet provide
-  enough reliable labeled rows to treat them as evaluated.
-* Held-out results from this directory are small-sample checks only and should
-  not be written up as generalized model quality claims.
-* The first local-only external-corpus ablation currently learns only
-  `caption`, `footer_header_noise`, `form_row`, `heading`, `keep_as_text`,
-  `paragraph`, `separator`, and `table_like`.
-* The current best report-only expanded held-out run now uses the round-15
-  paragraph-boundary feature pass on the harder `223 / 195` split, keeps
-  `link_text` and `caption` stable, improves receipt/form-row and
-  figure-reference paragraph boundaries, and still keeps
-  normal-path activation off.
-* A later real-support expansion pushed held-out support to `link_text = 9`
-  and `caption = 8` on a harder `195`-row held-out slice while keeping
-  regressions at `0`.
-* A later residual feature pass then improved the same harder split again
-  without adding labels first, but `Summary`, a visible-URL boundary row, and
-  a receipt/body boundary row still remain.
-* Before any future gated-normal trial, add more unique-source real labels for
-  `link_text`, `caption`, short-title `heading` boundaries, and
-  receipt/footer-style literal-text negatives.
+* these labels are for convert-layer semantic assistance only
+* boundary labels do not belong in this task
+* `unknown` or `uncertain` should stay explicit when the intent is not stable
+  enough for a stronger semantic class
+
+## Task B: parser_boundary_assist
+
+Layer: `doc_parse/pdf/text` or parser/layout bridge
+
+Purpose:
+
+* assist parser-layer decisions around cross-page boundaries, low-signal
+  transitions, and reading-order risk
+
+Primary labels:
+
+* `cross_page_merge`
+* `cross_page_no_merge`
+* `low_signal`
+* `usable_text`
+* `multi_column_risk`
+* `uncertain`
+
+Notes:
+
+* these labels are not part of Task A convert-layer block classification
+* they should be trained and evaluated separately from block labels
+
+## Task C: parser_layout_signal_assist
+
+Layer: parser/layout feature
+
+Purpose:
+
+* future-only parser/layout signal assistance for cases such as `low_signal`,
+  `image_only`, `scanned_ish`, `reading_order_risk`, or stronger
+  multi-column-risk detection
+
+Notes:
+
+* Task C is a future target only
+* it is not part of the current training mainline
+
+## Legacy Compatibility Mapping
+
+Legacy local labels can still be interpreted with the following mapping guide:
+
+* `BodyText` -> `paragraph`
+* `Heading` -> `heading`
+* `Noise` -> `footer_header_noise`
+* `HeaderFooter` -> `footer_header_noise`
+* `PageNumber` -> `footer_header_noise`
+* `Caption` -> `caption`
+* `TableLike` -> `table_like`
+* `CrossPageMerge` -> `cross_page_merge`
+* `CrossPageNoMerge` -> `cross_page_no_merge`
+* `Unknown` -> `unknown`
+
+Important note:
+
+* older local eval code may still collapse `Unknown` into a more specific
+  fallback such as `keep_as_text`; that is legacy local-eval behavior, not the
+  preferred schema meaning going forward
+
+## Record-Kind Guidance
+
+* `record_kind=block` should normally map to `Task A`
+* `record_kind=boundary` should normally map to `Task B`
+* `record_kind=all` should not remain ambiguous
+
+If a row or file mixes convert-task and parser-task semantics under
+`record_kind=all`, the preferred action is:
+
+* split it into task-specific rows or files, or
+* mark it `schema_review` until the target is unambiguous
+
+## Current Scope Notes
+
+* this lab remains local-only and research-only
+* current held-out checks are small-sample sanity checks, not generalized
+  quality claims
+* Task A currently has materially more labeled coverage than Task B
+* Task B currently has only a tiny local seed set and should stay separate
