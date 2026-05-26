@@ -1,0 +1,37 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "file_name": "synthetic_page1.png",
+      "width": 1025,
+      "height": 1025,
+      "page_no": 1,
+      "doc_category": "manuals",
+      "doc_name": "synthetic_manual.pdf"
+    }
+  ],
+  "categories": [
+    {
+      "id": 10,
+      "name": "Title"
+    },
+    {
+      "id": 20,
+      "name": "Picture"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 100,
+      "image_id": 1,
+      "category_id": 10,
+      "bbox": [10, 10, 220, 40]
+    },
+    {
+      "id": 101,
+      "image_id": 1,
+      "category_id": 20,
+      "bbox": [100, 120, 300, 220]
+    }
+  ]
+}

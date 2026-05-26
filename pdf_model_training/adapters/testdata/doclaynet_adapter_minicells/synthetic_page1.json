@@ -1,0 +1,12 @@
+{
+  "cells": [
+    {
+      "text": "Synthetic heading",
+      "bbox": [20, 15, 180, 24]
+    },
+    {
+      "text": "Synthetic body text outside title",
+      "bbox": [30, 80, 260, 28]
+    }
+  ]
+}
