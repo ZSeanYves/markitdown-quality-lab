@@ -1,0 +1,12 @@
+source_label	source_label_description	target_task	target_label	mapping_confidence	use_for_training	notes
+Title	document-level or page-level title block	convert_block_classification	heading	high	yes	Strong positive heading source for Task A.
+Section-header	section or subsection heading block	convert_block_classification	heading	high	yes	Keep separate from body text; reliable heading signal.
+Text	primary running text region	convert_block_classification	paragraph	high	yes	Main positive source for paragraph.
+List-item	bulleted or numbered list block	convert_block_classification	list_item	high	yes	Reliable positive source for list_item.
+Caption	caption attached to figure or table	convert_block_classification	caption	high	yes	Best current public caption source in DocLayNet.
+Page-header	repeated page-top header region	convert_block_classification	footer_header_noise	high	yes	Use as positive noise/header signal.
+Page-footer	repeated page-bottom footer region	convert_block_classification	footer_header_noise	high	yes	Use as positive noise/footer signal.
+Table	table region	convert_block_classification	table_like	high	yes	Use as primary table_like source.
+Footnote	footnote or marginal low-priority text	convert_block_classification	keep_as_text	medium	review	Often still textual, but not a primary semantic Markdown target.
+Formula	displayed equation or formula block	convert_block_classification	uncertain	medium	no	Do not force-map to paragraph; reserve for future schema expansion or ignore path.
+Picture	non-text picture or figure region	convert_block_classification	uncertain	low	no	Picture is contextual but not a direct Task A text-flow label.
