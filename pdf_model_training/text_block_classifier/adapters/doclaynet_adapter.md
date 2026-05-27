@@ -46,8 +46,8 @@ Recommended TSV fields:
 * `split`
 * `notes`
 
-`target_task` remains `convert_block_classification` for compatibility with the
-existing Task A naming, but the owning directory is now `text_block_classifier`.
+`target_task` remains `convert_block_classification` for compatibility with
+legacy naming, but the owning directory is now `text_block_classifier`.
 
 ## Mapping Rules
 

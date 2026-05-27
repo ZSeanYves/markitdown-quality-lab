@@ -74,7 +74,12 @@ def load_manifest(path):
         "label_path",
         "notes",
     }
-    missing = sorted(required - set(rows[0].keys())) if rows else sorted(required)
+    if rows:
+        keys = set(rows[0].keys())
+    else:
+        with open(path, "r", encoding="utf-8", newline="") as f:
+            keys = set(csv.DictReader(f, delimiter="\t").fieldnames or [])
+    missing = sorted(required - keys)
     if missing:
         raise SystemExit(f"manifest missing required columns: {', '.join(missing)}")
     return rows
@@ -396,7 +401,7 @@ def write_json(path, payload):
 
 def main():
     parser = argparse.ArgumentParser(description="Train or evaluate the local text block classifier spike.")
-    parser.add_argument("--lab-root", help="PDF model-training root. Defaults to MARKITDOWN_LAYOUT_LAB or sibling markitdown-quality-lab/pdf_model_training when available.")
+    parser.add_argument("--lab-root", help="Text block classifier root. Defaults to MARKITDOWN_LAYOUT_LAB or repo-local markitdown-quality-lab/pdf_model_training/text_block_classifier.")
     parser.add_argument("--model-root", help="Model artifact root. Defaults to MARKITDOWN_LAYOUT_MODEL, lab-root/models, or legacy fallbacks.")
     parser.add_argument("--manifest", default=None)
     parser.add_argument("--train-features", default=None)
@@ -423,7 +428,7 @@ def main():
         manifest_path = default_manifest_path(repo_root, layout_lab_root)
     if not manifest_path.exists():
         raise SystemExit(
-            "manifest not found; pass --manifest or set MARKITDOWN_LAYOUT_LAB / MARKITDOWN_QUALITY_LAB"
+            "manifest not found; pass --manifest or set MARKITDOWN_LAYOUT_LAB / MARKITDOWN_QUALITY_LAB to the text_block_classifier root"
         )
 
     train_features = args.train_features or str(default_feature_dir(layout_lab_root, repo_root))

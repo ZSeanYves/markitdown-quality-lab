@@ -1,0 +1,35 @@
+dataset_id	source_label	target_model	target_label	mapping_confidence	mapping_notes
+doclaynet	Title	text_block_classifier	heading	high	Page title or major heading.
+doclaynet	Section-header	text_block_classifier	heading	high	Section-level heading.
+doclaynet	Text	text_block_classifier	paragraph	high	Primary running text blocks.
+doclaynet	List-item	text_block_classifier	list_item	high	Bulleted or numbered list blocks.
+doclaynet	Caption	text_block_classifier	caption	high	Figure/table caption blocks.
+doclaynet	Page-header	text_block_classifier	footer_header_noise	high	Repetitive top margin noise.
+doclaynet	Page-footer	text_block_classifier	footer_header_noise	high	Repetitive bottom margin noise.
+doclaynet	Table	text_block_classifier	table_like	high	Table regions.
+doclaynet	Footnote	text_block_classifier	keep_as_text	medium	Usable text but often outside main narrative flow.
+doclaynet	Formula	text_block_classifier	uncertain	medium	Math blocks are not first-class text-block labels yet.
+doclaynet	Picture	text_block_classifier	uncertain	low	Non-text region; keep as context, not direct target.
+publaynet	title	text_block_classifier	heading	high	Page or article title blocks.
+publaynet	text	text_block_classifier	paragraph	high	Main text regions.
+publaynet	list	text_block_classifier	list_item	high	List regions.
+publaynet	table	text_block_classifier	table_like	high	Table regions.
+publaynet	figure	text_block_classifier	uncertain	low	Figure box is not a caption; use as context or negative only.
+pubtables_1m	table	text_block_classifier	table_like	high	Primary reliable mapping from detection subset.
+docbank	Title	text_block_classifier	heading	high	Token-level title tags aggregate to heading blocks.
+docbank	Section	text_block_classifier	heading	high	Section headers map cleanly to heading.
+docbank	Paragraph	text_block_classifier	paragraph	high	Main body text.
+docbank	List	text_block_classifier	list_item	high	List tokens aggregate cleanly.
+docbank	Caption	text_block_classifier	caption	high	Captions map directly.
+docbank	Table	text_block_classifier	table_like	high	Table tokens or regions map directly.
+docbank	Footer	text_block_classifier	footer_header_noise	medium	Footer tokens often correspond to page noise.
+docbank	Abstract	text_block_classifier	keep_as_text	medium	Useful text but not a primary Markdown block target.
+docbank	Reference	text_block_classifier	keep_as_text	medium	Bibliography text; not a primary Markdown block target.
+docbank	Equation	text_block_classifier	uncertain	medium	Equation blocks are out of current text-block label space.
+tablebank	table	text_block_classifier	table_like	high	Only reliable mapping in TableBank.
+funsd	header	text_block_classifier	heading	medium	Form header or title-like content.
+funsd	question	text_block_classifier	form_row	medium	Key side of key-value form rows.
+funsd	answer	text_block_classifier	form_row	medium	Value side of key-value form rows.
+funsd	other	text_block_classifier	keep_as_text	low	Catch-all bucket; use carefully.
+cord	menu.*	text_block_classifier	form_row	low	Receipt line items behave like row groups, but domain is receipt-specific.
+cord	sub_total|total|tax	text_block_classifier	form_row	low	Summary rows are structurally similar to form rows.

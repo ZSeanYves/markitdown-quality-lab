@@ -48,7 +48,11 @@ def resolve_output_dir(raw_path, repo_root, layout_lab_root):
 
 def ensure_columns(rows, path):
     required = {"sample_id", "pdf_path", "record_kind", "split"}
-    keys = set(rows[0].keys()) if rows else set()
+    if rows:
+        keys = set(rows[0].keys())
+    else:
+        with open(path, "r", encoding="utf-8", newline="") as f:
+            keys = set(csv.DictReader(f, delimiter="\t").fieldnames or [])
     missing = sorted(required - keys)
     if missing:
         raise SystemExit(f"{path} missing required columns: {', '.join(missing)}")
@@ -93,7 +97,7 @@ def main():
     )
     parser.add_argument(
         "--lab-root",
-        help="PDF model-training root. Defaults to MARKITDOWN_LAYOUT_LAB or repo-local markitdown-quality-lab/pdf_model_training.",
+        help="Text block classifier root. Defaults to MARKITDOWN_LAYOUT_LAB or repo-local markitdown-quality-lab/pdf_model_training/text_block_classifier.",
     )
     parser.add_argument(
         "--corpus-root",
@@ -161,7 +165,7 @@ def main():
         if abs_manifest is None:
             raise SystemExit(
                 f"manifest not found: {manifest_path}\n"
-                "hint: pass --lab-root or set MARKITDOWN_LAYOUT_LAB / MARKITDOWN_QUALITY_LAB"
+                "hint: pass --lab-root or set MARKITDOWN_LAYOUT_LAB / MARKITDOWN_QUALITY_LAB to the text_block_classifier root"
             )
         rows = read_tsv(str(abs_manifest))
         ensure_columns(rows, manifest_path)

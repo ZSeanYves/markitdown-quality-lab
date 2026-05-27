@@ -152,8 +152,6 @@ def near_distance(row, key, max_value):
 
 def load_manifest_rows(path):
     rows = read_tsv(path)
-    if not rows:
-        return []
     required = {
         "sample_id",
         "pdf_path",
@@ -163,7 +161,12 @@ def load_manifest_rows(path):
         "label_path",
         "notes",
     }
-    missing = sorted(required - set(rows[0].keys()))
+    if rows:
+        keys = set(rows[0].keys())
+    else:
+        with open(path, "r", encoding="utf-8", newline="") as f:
+            keys = set(csv.DictReader(f, delimiter="\t").fieldnames or [])
+    missing = sorted(required - keys)
     if missing:
         raise SystemExit(f"{path} missing required columns: {', '.join(missing)}")
     return rows
@@ -1443,7 +1446,7 @@ def main():
     )
     parser.add_argument(
         "--lab-root",
-        help="PDF model-training root. Defaults to MARKITDOWN_LAYOUT_LAB or repo-local markitdown-quality-lab/pdf_model_training.",
+        help="Text block classifier root. Defaults to MARKITDOWN_LAYOUT_LAB or repo-local markitdown-quality-lab/pdf_model_training/text_block_classifier.",
     )
     parser.add_argument(
         "--model-root",
@@ -1489,7 +1492,7 @@ def main():
         if resolved is None:
             raise SystemExit(
                 f"manifest not found: {path}\n"
-                "hint: pass --lab-root or set MARKITDOWN_LAYOUT_LAB / MARKITDOWN_QUALITY_LAB"
+                "hint: pass --lab-root or set MARKITDOWN_LAYOUT_LAB / MARKITDOWN_QUALITY_LAB to the text_block_classifier root"
             )
         manifests.append(resolved)
     feature_dirs = []
@@ -1498,7 +1501,7 @@ def main():
         if resolved is None:
             raise SystemExit(
                 f"feature dir not found: {path}\n"
-                "hint: pass --lab-root or set MARKITDOWN_LAYOUT_LAB / MARKITDOWN_QUALITY_LAB"
+                "hint: pass --lab-root or set MARKITDOWN_LAYOUT_LAB / MARKITDOWN_QUALITY_LAB to the text_block_classifier root"
             )
         feature_dirs.append(str(resolved))
     output_dir = resolve_existing_path(

@@ -23,7 +23,7 @@ training corpus.
 Meaningful training data should live under:
 
 ```text
-pdf_model_training/local_only/datasets/<dataset>/
+pdf_model_training/text_block_classifier/local_only/datasets/<dataset>/
 ```
 
 Use local-only storage for:
@@ -53,7 +53,7 @@ the main route.
 Teacher-side artifacts may be large and slow. Keep them under:
 
 ```text
-pdf_model_training/local_only/artifacts/
+pdf_model_training/text_block_classifier/local_only/artifacts/
 ```
 
 Examples:

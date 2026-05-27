@@ -20,8 +20,8 @@ usage() {
   cat <<'EOF'
 usage: ./markitdown-quality-lab/pdf_model_training/text_block_classifier/scripts/evaluate.sh [--smoke] [--heldout] [--manifest <path>] [--lab-root <path>] [--model-root <path>] [--corpus-root <path>]
 
-default manifest: text_block_classifier/manifest.block_draft.tsv
-legacy reference: text_block_classifier/manifest.example.tsv
+default manifest: text_block_classifier/manifests/manifest.tsv
+legacy references: text_block_classifier/archive/old_manifests/*.legacy.tsv
 EOF
 }
 
@@ -83,7 +83,7 @@ fi
 
 mkdir -p "$FEATURE_DIR" "$PRED_DIR" "$EVAL_DIR"
 
-MANIFEST_PATH="${MANIFEST_OVERRIDE:-$MODEL_ROOT/manifest.block_draft.tsv}"
+MANIFEST_PATH="${MANIFEST_OVERRIDE:-$MODEL_ROOT/manifests/manifest.tsv}"
 MODEL_PATH="$OUT_ROOT/models/text_block_classifier_linear.json"
 mkdir -p "$(dirname "$MODEL_PATH")"
 
