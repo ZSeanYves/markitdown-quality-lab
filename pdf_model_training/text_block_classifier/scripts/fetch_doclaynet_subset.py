@@ -8,18 +8,21 @@ import hashlib
 import io
 import json
 import random
+import shutil
 import time
 import urllib.request
+from dataclasses import dataclass
+from pathlib import Path
 from urllib.error import HTTPError, URLError
 import zipfile
 from collections import Counter, defaultdict
-from pathlib import Path
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 MODEL_ROOT = SCRIPT_DIR.parent
 DEFAULT_OUTPUT_ROOT = MODEL_ROOT / "local_only" / "datasets" / "doclaynet"
 DEFAULT_MAPPING = MODEL_ROOT / "adapters" / "doclaynet_mapping.tsv"
+DEFAULT_CACHE_DIR = DEFAULT_OUTPUT_ROOT / "cache"
 CORE_URL = "https://codait-cos-dax.s3.us.cloud-object-storage.appdomain.cloud/dax-doclaynet/1.0.0/DocLayNet_core.zip"
 EXTRA_URL = "https://codait-cos-dax.s3.us.cloud-object-storage.appdomain.cloud/dax-doclaynet/1.0.0/DocLayNet_extra.zip"
 LICENSE_NAME = "CDLA-Permissive-1.0"
@@ -46,8 +49,9 @@ SUBSET_MANIFEST_FIELDS = [
     "annotations_json_sha256",
     "text_cells_root",
     "text_cells_json_count",
-    "core_url",
-    "extra_url",
+    "text_cells_status",
+    "core_source",
+    "extra_source",
     "license",
     "notes",
 ]
@@ -55,6 +59,76 @@ SUBSET_MANIFEST_FIELDS = [
 
 class DownloadError(RuntimeError):
     pass
+
+
+@dataclass
+class ZipSource:
+    label: str
+    source_ref: str
+    zip_file: zipfile.ZipFile | None
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Create a local-only DocLayNet subset for text_block_classifier. "
+            "Supports local zip cache, explicit cache download, and remote range smoke."
+        )
+    )
+    parser.add_argument("--subset-id", default="smoke50_v1")
+    parser.add_argument("--output-root", default=str(DEFAULT_OUTPUT_ROOT))
+    parser.add_argument("--mapping", default=str(DEFAULT_MAPPING))
+    parser.add_argument("--cache-dir", default=str(DEFAULT_CACHE_DIR))
+    parser.add_argument("--seed", type=int, default=13)
+    parser.add_argument("--train-pages", type=int, default=30)
+    parser.add_argument("--dev-pages", type=int, default=10)
+    parser.add_argument("--heldout-pages", type=int, default=10)
+    parser.add_argument("--pages", type=int, default=None, help="Set total pages with 70/15/15 split.")
+    parser.add_argument("--core-url", default=CORE_URL)
+    parser.add_argument("--extra-url", default=EXTRA_URL)
+    parser.add_argument("--core-zip", default=None, help="Use a local DocLayNet_core.zip instead of remote range.")
+    parser.add_argument("--extra-zip", default=None, help="Use a local DocLayNet_extra.zip instead of remote range.")
+    parser.add_argument(
+        "--download-cache",
+        action="store_true",
+        help="Download full core/extra zips into local_only cache before subset extraction.",
+    )
+    parser.add_argument(
+        "--skip-text-cells",
+        action="store_true",
+        help="Only extract subset COCO JSONs; skip extra JSON text cells.",
+    )
+    parser.add_argument(
+        "--allow-missing-text-cells",
+        action="store_true",
+        help="If extra/text-cell acquisition fails, keep COCO-only subset and mark text_cells_status=missing.",
+    )
+    parser.add_argument(
+        "--require-text-cells",
+        action="store_true",
+        help="Fail if text cells cannot be extracted.",
+    )
+    parser.add_argument(
+        "--resume-existing",
+        action="store_true",
+        help="Reuse already extracted files and partial cache downloads when possible.",
+    )
+    parser.add_argument(
+        "--manifest-out",
+        default=None,
+        help="Optional explicit subset manifest path. Default: <subset_root>/subset_manifest.tsv",
+    )
+    parser.add_argument(
+        "--annotations-out",
+        default=None,
+        help="Optional explicit subset annotations root. Default: <subset_root>/annotations",
+    )
+    parser.add_argument(
+        "--text-cells-out",
+        default=None,
+        help="Optional explicit text-cells root. Default: <subset_root>/text_cells",
+    )
+    return parser.parse_args()
 
 
 def urlopen_with_retry(
@@ -126,32 +200,6 @@ class HTTPRangeReader(io.RawIOBase):
         return data
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Download a local-only DocLayNet subset without fetching the full dataset."
-    )
-    parser.add_argument("--subset-id", default="smoke50_v1")
-    parser.add_argument("--output-root", default=str(DEFAULT_OUTPUT_ROOT))
-    parser.add_argument("--mapping", default=str(DEFAULT_MAPPING))
-    parser.add_argument("--seed", type=int, default=13)
-    parser.add_argument("--train-pages", type=int, default=30)
-    parser.add_argument("--dev-pages", type=int, default=10)
-    parser.add_argument("--heldout-pages", type=int, default=10)
-    parser.add_argument("--core-url", default=CORE_URL)
-    parser.add_argument("--extra-url", default=EXTRA_URL)
-    parser.add_argument(
-        "--skip-text-cells",
-        action="store_true",
-        help="Only extract subset COCO JSONs; skip extra JSON text cells.",
-    )
-    parser.add_argument(
-        "--resume-existing",
-        action="store_true",
-        help="Reuse already extracted extra JSON files when rerunning the same subset_id.",
-    )
-    return parser.parse_args()
-
-
 def read_json_bytes(payload: bytes, *, source: str) -> dict:
     try:
         data = json.loads(payload.decode("utf-8"))
@@ -183,6 +231,17 @@ def sha256_bytes(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        while True:
+            chunk = handle.read(1024 * 1024)
+            if not chunk:
+                break
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def write_json(path: Path, payload: dict) -> str:
     path.parent.mkdir(parents=True, exist_ok=True)
     raw = json.dumps(payload, ensure_ascii=False, indent=2).encode("utf-8")
@@ -196,6 +255,37 @@ def write_tsv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> 
         writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t")
         writer.writeheader()
         writer.writerows(rows)
+
+
+def ensure_subset_root(root: Path, subset_id: str) -> Path:
+    subset_root = root / subset_id
+    subset_root.mkdir(parents=True, exist_ok=True)
+    return subset_root
+
+
+def normalize_page_plan(args: argparse.Namespace) -> tuple[int, int, int]:
+    if args.pages is not None:
+        if args.pages <= 0:
+            raise DownloadError("--pages must be > 0")
+        train_pages = max(1, round(args.pages * 0.70))
+        dev_pages = max(1, round(args.pages * 0.15))
+        heldout_pages = max(1, args.pages - train_pages - dev_pages)
+        return train_pages, dev_pages, heldout_pages
+    return args.train_pages, args.dev_pages, args.heldout_pages
+
+
+def build_category_lookup(categories: list[dict]) -> dict[int, str]:
+    out: dict[int, str] = {}
+    for category in categories:
+        if not isinstance(category, dict):
+            continue
+        category_id = category.get("id")
+        name = category.get("name")
+        if isinstance(category_id, int) and isinstance(name, str):
+            out[category_id] = name
+    if not out:
+        raise DownloadError("no usable categories in DocLayNet JSON")
+    return out
 
 
 def mapped_labels_for_image(
@@ -221,20 +311,6 @@ def mapped_labels_for_image(
             continue
         labels.add(target_label)
     return labels
-
-
-def build_category_lookup(categories: list[dict]) -> dict[int, str]:
-    out: dict[int, str] = {}
-    for category in categories:
-        if not isinstance(category, dict):
-            continue
-        category_id = category.get("id")
-        name = category.get("name")
-        if isinstance(category_id, int) and isinstance(name, str):
-            out[category_id] = name
-    if not out:
-        raise DownloadError("no usable categories in DocLayNet JSON")
-    return out
 
 
 def select_images(
@@ -326,8 +402,83 @@ def extract_subset_payload(
     return subset_payload, doc_categories, source_labels, len(annotations)
 
 
-def open_remote_zip(url: str) -> zipfile.ZipFile:
-    return zipfile.ZipFile(HTTPRangeReader(url))
+def resolve_cached_zip(path: Path, *, expected_url: str, resume_existing: bool) -> Path | None:
+    if path.is_file() and path.stat().st_size > 0:
+        return path
+    part_path = path.with_suffix(path.suffix + ".part")
+    if resume_existing and part_path.is_file() and part_path.stat().st_size > 0:
+        return part_path
+    return None
+
+
+def download_full_zip(url: str, destination: Path, *, resume_existing: bool) -> Path:
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    part_path = destination.with_suffix(destination.suffix + ".part")
+    existing_size = 0
+    mode = "wb"
+    if resume_existing and part_path.is_file():
+        existing_size = part_path.stat().st_size
+        mode = "ab"
+    req = urllib.request.Request(url)
+    if existing_size > 0:
+        req.add_header("Range", f"bytes={existing_size}-")
+    with urlopen_with_retry(req, timeout=120, attempts=5, backoff_seconds=2.0) as resp:
+        content_range = resp.headers.get("Content-Range")
+        if existing_size > 0 and not content_range:
+            # Server ignored Range; restart cleanly.
+            existing_size = 0
+            mode = "wb"
+        total_length = resp.headers.get("Content-Length")
+        with part_path.open(mode) as handle:
+            while True:
+                chunk = resp.read(1024 * 1024)
+                if not chunk:
+                    break
+                handle.write(chunk)
+    shutil.move(str(part_path), str(destination))
+    return destination
+
+
+def open_zip_from_path(path: Path, *, label: str) -> ZipSource:
+    if not path.is_file():
+        raise DownloadError(f"missing {label} zip: {path}")
+    return ZipSource(label=label, source_ref=str(path), zip_file=zipfile.ZipFile(path))
+
+
+def open_zip_from_remote(url: str, *, label: str) -> ZipSource:
+    return ZipSource(label=label, source_ref=url, zip_file=zipfile.ZipFile(HTTPRangeReader(url)))
+
+
+def resolve_zip_source(
+    *,
+    label: str,
+    explicit_zip: str | None,
+    remote_url: str,
+    cache_dir: Path,
+    cache_filename: str,
+    download_cache: bool,
+    resume_existing: bool,
+    allow_remote_range: bool,
+) -> ZipSource:
+    if explicit_zip:
+        return open_zip_from_path(Path(explicit_zip).expanduser(), label=label)
+
+    cache_path = cache_dir / cache_filename
+    cached = resolve_cached_zip(cache_path, expected_url=remote_url, resume_existing=resume_existing)
+    if cached is not None and cached.suffix == ".zip":
+        return open_zip_from_path(cached, label=label)
+
+    if download_cache:
+        downloaded = download_full_zip(remote_url, cache_path, resume_existing=resume_existing)
+        return open_zip_from_path(downloaded, label=label)
+
+    if allow_remote_range:
+        return open_zip_from_remote(remote_url, label=label)
+
+    raise DownloadError(
+        f"{label} requires either --{label.replace('-', '_')}-zip, "
+        f"a cached zip under {cache_path}, or --download-cache"
+    )
 
 
 def read_zip_entry(zf: zipfile.ZipFile, name: str) -> bytes:
@@ -338,25 +489,70 @@ def read_zip_entry(zf: zipfile.ZipFile, name: str) -> bytes:
         raise DownloadError(f"zip entry not found: {name}") from exc
 
 
-def ensure_subset_root(root: Path, subset_id: str) -> Path:
-    subset_root = root / subset_id
-    subset_root.mkdir(parents=True, exist_ok=True)
-    return subset_root
+def validate_json_file(path: Path) -> None:
+    raw = path.read_bytes()
+    read_json_bytes(raw, source=str(path))
 
 
 def main() -> int:
     args = parse_args()
     output_root = Path(args.output_root).expanduser()
+    cache_dir = Path(args.cache_dir).expanduser()
     subset_root = ensure_subset_root(output_root, args.subset_id)
     mapping = load_mapping(Path(args.mapping))
+    train_pages, dev_pages, heldout_pages = normalize_page_plan(args)
+    annotations_root = (
+        Path(args.annotations_out).expanduser()
+        if args.annotations_out
+        else subset_root / "annotations"
+    )
+    text_cells_root = (
+        Path(args.text_cells_out).expanduser()
+        if args.text_cells_out
+        else subset_root / "text_cells"
+    )
+    subset_manifest_path = (
+        Path(args.manifest_out).expanduser()
+        if args.manifest_out
+        else subset_root / "subset_manifest.tsv"
+    )
 
-    core_zip = open_remote_zip(args.core_url)
-    extra_zip = None if args.skip_text_cells else open_remote_zip(args.extra_url)
+    core_source = resolve_zip_source(
+        label="core",
+        explicit_zip=args.core_zip,
+        remote_url=args.core_url,
+        cache_dir=cache_dir,
+        cache_filename="DocLayNet_core.zip",
+        download_cache=args.download_cache,
+        resume_existing=args.resume_existing,
+        allow_remote_range=True,
+    )
+
+    extra_source: ZipSource | None = None
+    text_cells_status = "skipped" if args.skip_text_cells else "missing"
+    extra_error: str | None = None
+    if not args.skip_text_cells:
+        try:
+            extra_source = resolve_zip_source(
+                label="extra",
+                explicit_zip=args.extra_zip,
+                remote_url=args.extra_url,
+                cache_dir=cache_dir,
+                cache_filename="DocLayNet_extra.zip",
+                download_cache=args.download_cache,
+                resume_existing=args.resume_existing,
+                allow_remote_range=not args.download_cache and not args.extra_zip,
+            )
+        except Exception as exc:  # noqa: BLE001
+            extra_error = str(exc)
+            if args.require_text_cells or not args.allow_missing_text_cells:
+                raise
+            print(f"text-cells source unavailable, continuing COCO-only: {exc}")
 
     split_specs = [
-        ("train", "train", args.train_pages),
-        ("val", "dev", args.dev_pages),
-        ("test", "heldout", args.heldout_pages),
+        ("train", "train", train_pages),
+        ("val", "dev", dev_pages),
+        ("test", "heldout", heldout_pages),
     ]
 
     manifest_rows: list[dict[str, str]] = []
@@ -367,7 +563,7 @@ def main() -> int:
             continue
         entry_name = f"COCO/{official_split}.json"
         split_payload = read_json_bytes(
-            read_zip_entry(core_zip, entry_name),
+            read_zip_entry(core_source.zip_file, entry_name),  # type: ignore[arg-type]
             source=entry_name,
         )
         images = split_payload.get("images")
@@ -395,7 +591,7 @@ def main() -> int:
             split_payload,
             selected_images,
         )
-        output_json_path = subset_root / "core" / "COCO" / f"{official_split}.json"
+        output_json_path = annotations_root / f"{official_split}.json"
         json_sha = write_json(output_json_path, subset_payload)
         print(
             f"selected split={official_split} local_split={local_split} "
@@ -422,36 +618,49 @@ def main() -> int:
                 ),
                 "annotations_json_path": str(output_json_path),
                 "annotations_json_sha256": json_sha,
-                "text_cells_root": str(subset_root / "extra" / "JSON"),
+                "text_cells_root": str(text_cells_root),
                 "text_cells_json_count": "0",
-                "core_url": args.core_url,
-                "extra_url": args.extra_url,
+                "text_cells_status": "pending" if extra_source is not None else text_cells_status,
+                "core_source": core_source.source_ref,
+                "extra_source": extra_source.source_ref if extra_source is not None else (args.extra_zip or args.extra_url),
                 "license": LICENSE_NAME,
-                "notes": "local-only DocLayNet subset extracted by range-aware zip reader",
+                "notes": "local-only DocLayNet subset",
             }
         )
 
     extracted_json_count = 0
-    if extra_zip is not None and selected_stems:
-        text_root = subset_root / "extra" / "JSON"
-        text_root.mkdir(parents=True, exist_ok=True)
-        for stem in sorted(selected_stems):
-            entry_name = f"JSON/{stem}.json"
-            target_path = text_root / f"{stem}.json"
-            if args.resume_existing and target_path.is_file() and target_path.stat().st_size > 0:
-                extracted_json_count += 1
-            else:
-                payload = read_zip_entry(extra_zip, entry_name)
-                target_path.write_bytes(payload)
-                extracted_json_count += 1
-            if extracted_json_count % 25 == 0:
-                print(
-                    f"extracted text cells: {extracted_json_count}/{len(selected_stems)}"
-                )
-        for row in manifest_rows:
-            row["text_cells_json_count"] = str(extracted_json_count)
+    if extra_source is not None and selected_stems:
+        text_cells_root.mkdir(parents=True, exist_ok=True)
+        try:
+            for stem in sorted(selected_stems):
+                entry_name = f"JSON/{stem}.json"
+                target_path = text_cells_root / f"{stem}.json"
+                if args.resume_existing and target_path.is_file() and target_path.stat().st_size > 0:
+                    validate_json_file(target_path)
+                    extracted_json_count += 1
+                else:
+                    payload = read_zip_entry(extra_source.zip_file, entry_name)  # type: ignore[arg-type]
+                    target_path.write_bytes(payload)
+                    validate_json_file(target_path)
+                    extracted_json_count += 1
+                if extracted_json_count % 25 == 0:
+                    print(f"extracted text cells: {extracted_json_count}/{len(selected_stems)}")
+            text_cells_status = "ready"
+        except Exception as exc:  # noqa: BLE001
+            extra_error = str(exc)
+            if args.require_text_cells or not args.allow_missing_text_cells:
+                raise
+            print(f"text-cell extraction degraded to COCO-only subset: {exc}")
+            text_cells_status = "missing"
+    elif args.skip_text_cells:
+        text_cells_status = "skipped"
 
-    subset_manifest_path = output_root / "subset_manifest.tsv"
+    for row in manifest_rows:
+        row["text_cells_json_count"] = str(extracted_json_count)
+        row["text_cells_status"] = text_cells_status
+        if extra_error:
+            row["notes"] = f"{row['notes']}; text_cells_note={extra_error}"
+
     write_tsv(subset_manifest_path, SUBSET_MANIFEST_FIELDS, manifest_rows)
 
     total_pages = sum(int(row["selected_pages"]) for row in manifest_rows)
@@ -459,9 +668,11 @@ def main() -> int:
     print(
         f"doclaynet subset ready: subset_id={args.subset_id} "
         f"pages={total_pages} annotations={total_annotations} "
-        f"text_cells={extracted_json_count} root={subset_root}"
+        f"text_cells={extracted_json_count} status={text_cells_status}"
     )
     print(f"subset manifest: {subset_manifest_path}")
+    if text_cells_status == "missing":
+        print("next step: supply --extra-zip <local_only/cache/DocLayNet_extra.zip> for stable pilot extraction")
     return 0
 
 

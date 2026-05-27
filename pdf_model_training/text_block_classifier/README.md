@@ -41,6 +41,10 @@ Current status:
   `archive/old_manifests/`
 * repo-manual labels are archived under `archive/repo_manual_labels/`
 * historical model JSON files remain under `models/` for reference only
+* local-only DocLayNet acquisition now has three intended modes:
+  `local zip cache` for stable pilot/teacher runs, explicit `download-cache`
+  for resumable full-zip caching under `local_only/`, and `remote range smoke`
+  only for small recovery checks
 
 Next action:
 
@@ -48,6 +52,8 @@ Next action:
 * keep gold and weak-source evaluation separate
 * do not reactivate repo-manual sample manifests as the recommended training
   route
+* prefer `--core-zip` / `--extra-zip` or `--download-cache` for `pilot500_v1`
+  and larger DocLayNet subsets; do not rely on remote range for large runs
 
 Do not mix:
 
