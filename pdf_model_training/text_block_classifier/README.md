@@ -37,8 +37,10 @@ Current status:
 * the current checked manifest is a draft/example with block and schema-review
   rows only, not a production training manifest
 * `manifest.block_draft.tsv` is the cleaner block-only draft for future
-  text-block intake review
-* `manifest.example.tsv` remains as the migrated legacy draft reference
+  text-block intake review and is now the default manifest for local helper
+  scripts
+* `manifest.example.tsv` remains as the migrated legacy draft reference, not
+  the default entrypoint
 * historical model JSON files remain here for reference only
 
 Next action:

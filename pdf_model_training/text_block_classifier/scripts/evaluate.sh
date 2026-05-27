@@ -18,7 +18,10 @@ CORPUS_ROOT_OVERRIDE=""
 
 usage() {
   cat <<'EOF'
-usage: ./markitdown-quality-lab/pdf_model_training/scripts/evaluate.sh [--smoke] [--heldout] [--manifest <path>] [--lab-root <path>] [--model-root <path>] [--corpus-root <path>]
+usage: ./markitdown-quality-lab/pdf_model_training/text_block_classifier/scripts/evaluate.sh [--smoke] [--heldout] [--manifest <path>] [--lab-root <path>] [--model-root <path>] [--corpus-root <path>]
+
+default manifest: text_block_classifier/manifest.block_draft.tsv
+legacy reference: text_block_classifier/manifest.example.tsv
 EOF
 }
 
@@ -80,7 +83,7 @@ fi
 
 mkdir -p "$FEATURE_DIR" "$PRED_DIR" "$EVAL_DIR"
 
-MANIFEST_PATH="${MANIFEST_OVERRIDE:-$MODEL_ROOT/manifest.example.tsv}"
+MANIFEST_PATH="${MANIFEST_OVERRIDE:-$MODEL_ROOT/manifest.block_draft.tsv}"
 MODEL_PATH="$OUT_ROOT/models/text_block_classifier_linear.json"
 mkdir -p "$(dirname "$MODEL_PATH")"
 
@@ -122,16 +125,42 @@ TRAIN_CMD+=(
 "${TRAIN_CMD[@]}"
 
 if [[ "$RUN_HELDOUT" -eq 1 ]]; then
-  tail -n +2 "$MANIFEST_PATH" | while IFS=$'\t' read -r sample_id pdf_path record_kind split label_source label_path notes; do
-    [[ -n "$sample_id" ]] || continue
-    if [[ "$split" != "heldout" ]]; then
-      continue
-    fi
-    moon run "$MAIN_ROOT/doc_parse/pdf/layout_model_tool" -- infer \
-      --model "$MODEL_PATH" \
-      --features "$FEATURE_DIR/$sample_id.features.tsv" \
-      --output "$PRED_DIR/$sample_id.predictions.tsv"
-  done
+  python3 - "$MANIFEST_PATH" "$FEATURE_DIR" "$PRED_DIR" "$MODEL_PATH" "$MAIN_ROOT" <<'PY'
+import csv
+import subprocess
+import sys
+from pathlib import Path
+
+manifest_path = Path(sys.argv[1])
+feature_dir = Path(sys.argv[2])
+pred_dir = Path(sys.argv[3])
+model_path = Path(sys.argv[4])
+main_root = Path(sys.argv[5])
+
+with manifest_path.open("r", encoding="utf-8") as f:
+    for row in csv.DictReader(f, delimiter="\t"):
+        sample_id = (row.get("sample_id") or "").strip()
+        if not sample_id or (row.get("split") or "").strip() != "heldout":
+            continue
+        feature_path = feature_dir / f"{sample_id}.features.tsv"
+        pred_path = pred_dir / f"{sample_id}.predictions.tsv"
+        subprocess.run(
+            [
+                "moon",
+                "run",
+                str(main_root / "doc_parse/pdf/layout_model_tool"),
+                "--",
+                "infer",
+                "--model",
+                str(model_path),
+                "--features",
+                str(feature_path),
+                "--output",
+                str(pred_path),
+            ],
+            check=True,
+        )
+PY
 
   EVAL_CMD=(python3 "$MODEL_ROOT/scripts/train.py")
   if [[ -n "$LAB_ROOT_OVERRIDE" ]]; then

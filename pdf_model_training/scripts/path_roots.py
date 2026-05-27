@@ -170,6 +170,9 @@ def discover_model_root(
 def default_manifest_path(repo_root: Path = REPO_ROOT, layout_lab_root: Path | None = None) -> Path:
     block_root = text_block_classifier_root(layout_lab_root or LAYOUT_LAB_ROOT)
     if block_root is not None:
+        candidate = block_root / "manifest.block_draft.tsv"
+        if candidate.exists():
+            return candidate
         candidate = block_root / "manifest.example.tsv"
         if candidate.exists():
             return candidate

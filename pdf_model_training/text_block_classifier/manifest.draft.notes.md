@@ -1,7 +1,9 @@
 # Text Block Classifier Manifest Notes
 
-`manifest.example.tsv` is a checked-in draft/example for schema and script
-defaults.
+`manifest.block_draft.tsv` is the checked-in block-only draft for current local
+script defaults.
+
+`manifest.example.tsv` remains as the migrated legacy draft reference.
 
 It is not the final teacher-training manifest.
 

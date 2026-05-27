@@ -12,7 +12,10 @@ SPLIT_FILTER=""
 
 usage() {
   cat <<'EOF'
-usage: ./markitdown-quality-lab/pdf_model_training/scripts/export_features.sh [--split train|heldout] [--manifest <path>] [--lab-root <path>] [--corpus-root <path>] [--out-dir <path>]
+usage: ./markitdown-quality-lab/pdf_model_training/text_block_classifier/scripts/export_features.sh [--split train|heldout] [--manifest <path>] [--lab-root <path>] [--corpus-root <path>] [--out-dir <path>]
+
+default manifest: text_block_classifier/manifest.block_draft.tsv
+legacy reference: text_block_classifier/manifest.example.tsv
 EOF
 }
 
@@ -80,7 +83,7 @@ fi
 if [[ -n "$MANIFEST_OVERRIDE" ]]; then
   CMD+=(--manifest "$MANIFEST_OVERRIDE")
 else
-  CMD+=(--manifest "$MODEL_ROOT/manifest.example.tsv")
+  CMD+=(--manifest "$MODEL_ROOT/manifest.block_draft.tsv")
 fi
 if [[ -n "$OUT_DIR_OVERRIDE" ]]; then
   CMD+=(--output-dir "$OUT_DIR_OVERRIDE")
