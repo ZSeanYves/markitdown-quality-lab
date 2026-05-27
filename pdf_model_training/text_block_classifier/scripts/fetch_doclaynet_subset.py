@@ -8,7 +8,9 @@ import hashlib
 import io
 import json
 import random
+import time
 import urllib.request
+from urllib.error import HTTPError, URLError
 import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -55,12 +57,36 @@ class DownloadError(RuntimeError):
     pass
 
 
+def urlopen_with_retry(
+    request: urllib.request.Request,
+    *,
+    timeout: int,
+    attempts: int = 5,
+    backoff_seconds: float = 1.5,
+):
+    last_exc: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            return urllib.request.urlopen(request, timeout=timeout)
+        except (HTTPError, URLError, TimeoutError, OSError) as exc:
+            last_exc = exc
+            if attempt >= attempts:
+                break
+            sleep_seconds = backoff_seconds * attempt
+            print(
+                f"retrying urlopen attempt={attempt}/{attempts} "
+                f"sleep={sleep_seconds:.1f}s url={request.full_url} error={exc}"
+            )
+            time.sleep(sleep_seconds)
+    raise DownloadError(f"failed to open {request.full_url}: {last_exc}") from last_exc
+
+
 class HTTPRangeReader(io.RawIOBase):
     def __init__(self, url: str) -> None:
         self.url = url
         self.pos = 0
         req = urllib.request.Request(url, method="HEAD")
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urlopen_with_retry(req, timeout=60) as resp:
             self.length = int(resp.headers["Content-Length"])
 
     def seekable(self) -> bool:
@@ -94,7 +120,7 @@ class HTTPRangeReader(io.RawIOBase):
             self.url,
             headers={"Range": f"bytes={self.pos}-{end}"},
         )
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urlopen_with_retry(req, timeout=120) as resp:
             data = resp.read()
         self.pos += len(data)
         return data
@@ -117,6 +143,11 @@ def parse_args() -> argparse.Namespace:
         "--skip-text-cells",
         action="store_true",
         help="Only extract subset COCO JSONs; skip extra JSON text cells.",
+    )
+    parser.add_argument(
+        "--resume-existing",
+        action="store_true",
+        help="Reuse already extracted extra JSON files when rerunning the same subset_id.",
     )
     return parser.parse_args()
 
@@ -366,6 +397,10 @@ def main() -> int:
         )
         output_json_path = subset_root / "core" / "COCO" / f"{official_split}.json"
         json_sha = write_json(output_json_path, subset_payload)
+        print(
+            f"selected split={official_split} local_split={local_split} "
+            f"pages={len(selected_images)} annotations={annotation_count}"
+        )
 
         for image in selected_images:
             file_name = image.get("file_name")
@@ -402,9 +437,13 @@ def main() -> int:
         text_root.mkdir(parents=True, exist_ok=True)
         for stem in sorted(selected_stems):
             entry_name = f"JSON/{stem}.json"
-            payload = read_zip_entry(extra_zip, entry_name)
-            (text_root / f"{stem}.json").write_bytes(payload)
-            extracted_json_count += 1
+            target_path = text_root / f"{stem}.json"
+            if args.resume_existing and target_path.is_file() and target_path.stat().st_size > 0:
+                extracted_json_count += 1
+            else:
+                payload = read_zip_entry(extra_zip, entry_name)
+                target_path.write_bytes(payload)
+                extracted_json_count += 1
             if extracted_json_count % 25 == 0:
                 print(
                     f"extracted text cells: {extracted_json_count}/{len(selected_stems)}"

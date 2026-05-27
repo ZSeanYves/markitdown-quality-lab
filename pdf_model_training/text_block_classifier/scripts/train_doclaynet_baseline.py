@@ -22,6 +22,7 @@ META_COLUMNS = {
     "source_page_id",
     "source_region_id",
     "page_no",
+    "feature_set",
     "source_label",
     "target_label",
     "split",
@@ -71,6 +72,11 @@ def parse_args() -> argparse.Namespace:
         required=True,
         help="Local-only root for models/reports, e.g. text_block_classifier/local_only.",
     )
+    parser.add_argument(
+        "--feature-set-name",
+        default="baseline_v1",
+        help="Feature set label to record in reports.",
+    )
     return parser.parse_args()
 
 
@@ -85,6 +91,13 @@ def write_tsv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> 
         writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t")
         writer.writeheader()
         writer.writerows(rows)
+
+
+def truncate_text(raw: str, limit: int = 140) -> str:
+    collapsed = " ".join(raw.split())
+    if len(collapsed) <= limit:
+        return collapsed
+    return collapsed[: limit - 3] + "..."
 
 
 def feature_columns(rows: list[dict[str, str]]) -> list[str]:
@@ -217,6 +230,62 @@ def safe_ratio(numerator: float, denominator: float) -> float:
     return numerator / denominator
 
 
+def write_error_analysis(
+    path: Path,
+    metrics: dict,
+    prediction_rows: list[dict[str, str]],
+) -> None:
+    rows_by_confusion: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
+    for row in prediction_rows:
+        if row["gold_label"] == row["predicted_label"]:
+            continue
+        rows_by_confusion[(row["gold_label"], row["predicted_label"])].append(row)
+
+    lines = ["# Error Analysis", ""]
+    lines.append(f"- run_id: `{metrics['run_id']}`")
+    lines.append(f"- model_type: `{metrics['model_type']}`")
+    lines.append(f"- feature_set: `{metrics.get('feature_set', 'unknown')}`")
+    lines.append("")
+
+    for split_payload in metrics["split_metrics"]:
+        lines.append(f"## Split `{split_payload['split']}`")
+        lines.append(f"- macro_f1: `{split_payload['macro_f1']:.4f}`")
+        lines.append(f"- accuracy: `{split_payload['accuracy']:.4f}`")
+        low_support = ", ".join(split_payload["low_support_labels"]) or "none"
+        zero_recall = ", ".join(split_payload["zero_recall_labels"]) or "none"
+        lines.append(f"- low_support_labels: `{low_support}`")
+        lines.append(f"- zero_recall_labels: `{zero_recall}`")
+        lines.append("- top_confusions:")
+        for item in split_payload["top_confusions"][:5]:
+            lines.append(
+                f"  - `{item['gold_label']} -> {item['predicted_label']}` count=`{item['count']}`"
+            )
+        lines.append("")
+
+        for item in split_payload["top_confusions"][:3]:
+            key = (item["gold_label"], item["predicted_label"])
+            examples = [
+                row for row in rows_by_confusion.get(key, [])
+                if row["split"] == split_payload["split"]
+            ][:3]
+            if not examples:
+                continue
+            lines.append(
+                f"### Examples `{item['gold_label']} -> {item['predicted_label']}`"
+            )
+            for example in examples:
+                lines.append(
+                    f"- `{example['sample_id']}` conf=`{example['confidence']}` text=`{truncate_text(example['text'])}`"
+                )
+            lines.append("")
+
+    lines.append("## Notes")
+    lines.append("- Current failures are most useful for feature and data-scaling analysis, not runtime decisions.")
+    lines.append("- Confusions may reflect both feature weakness and DocLayNet label ambiguity.")
+    lines.append("- Consider larger DocLayNet pilot, stronger context features, and targeted specialist corpora before distillation.")
+    path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+
+
 def main() -> int:
     args = parse_args()
     feature_rows = read_rows(Path(args.features))
@@ -283,6 +352,7 @@ def main() -> int:
     metrics = {
         "run_id": args.run_id,
         "model_type": "sklearn_logistic_regression_balanced",
+        "feature_set": args.feature_set_name,
         "dataset_source": "doclaynet",
         "row_count": len(feature_rows),
         "feature_columns": columns,
@@ -307,6 +377,7 @@ def main() -> int:
     write_tsv(report_dir / "per_label.tsv", PER_LABEL_FIELDS, all_per_label)
     write_tsv(report_dir / "confusion.tsv", CONFUSION_FIELDS, all_confusions)
     write_tsv(report_dir / "predictions.tsv", PREDICTION_FIELDS, all_predictions)
+    write_error_analysis(report_dir / "error_analysis.md", metrics, all_predictions)
 
     print(
         f"baseline training complete: run_id={args.run_id} "

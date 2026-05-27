@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import math
 import re
 from collections import Counter
 from pathlib import Path
@@ -26,7 +25,7 @@ INPUT_FIELDS = [
     "notes",
 ]
 
-OUTPUT_FIELDS = [
+BASE_OUTPUT_FIELDS = [
     "sample_id",
     "source_dataset",
     "source_page_id",
@@ -80,10 +79,41 @@ OUTPUT_FIELDS = [
     "long_text",
 ]
 
+V2_EXTRA_FIELDS = [
+    "feature_set",
+    "token_count",
+    "starts_with_alpha_marker",
+    "no_terminal_period",
+    "has_terminal_period",
+    "title_case_short",
+    "all_caps_short",
+    "section_number_prefix",
+    "contains_table_delimiters",
+    "left_indent_bucket",
+    "relative_x_bucket",
+    "relative_width_bucket",
+    "y_position_bucket",
+    "short_line_with_marker",
+    "continuation_indent_like",
+    "list_marker_type",
+    "prev_gap_norm",
+    "next_gap_norm",
+    "prev_same_left_band",
+    "next_same_left_band",
+    "prev_width_ratio",
+    "next_width_ratio",
+    "prev_text_len_norm",
+    "next_text_len_norm",
+    "prev_ends_period",
+    "next_starts_marker",
+]
+
 URL_RE = re.compile(r"https?://|www\.")
 EMAIL_RE = re.compile(r"\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b")
 NUMBERED_RE = re.compile(r"^\s*(\(?\d+[\).]|[A-Za-z][\).])\s+")
 BULLET_RE = re.compile(r"^\s*([\-*•]|[0-9]+\.)\s+")
+ALPHA_MARKER_RE = re.compile(r"^\s*[A-Za-z][\).]\s+")
+SECTION_PREFIX_RE = re.compile(r"^\s*((\d+(\.\d+)+)|(\d+\.)|([A-Z]\.)|([IVXLC]+\.)|(\([A-Za-z0-9]+\)))\s+")
 WORD_RE = re.compile(r"[A-Za-z0-9]+")
 
 
@@ -93,6 +123,12 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--input", required=True, help="Adapter TSV path.")
     parser.add_argument("--output", required=True, help="Feature TSV path.")
+    parser.add_argument(
+        "--feature-set",
+        default="baseline_v1",
+        choices=["baseline_v1", "baseline_v2"],
+        help="Feature set version to emit.",
+    )
     return parser.parse_args()
 
 
@@ -138,6 +174,96 @@ def all_caps_ratio(tokens: list[str]) -> float:
     return caps / len(tokens)
 
 
+def parse_page_no(raw: str) -> float:
+    try:
+        return float(raw or 0)
+    except ValueError:
+        return 0.0
+
+
+def list_marker_type(text: str) -> float:
+    stripped = text.lstrip()
+    if not stripped:
+        return 0.0
+    if re.match(r"^[-*•]\s+", stripped):
+        return 1.0
+    if re.match(r"^\(?\d+[\).]\s+", stripped):
+        return 2.0
+    if re.match(r"^[A-Za-z][\).]\s+", stripped):
+        return 3.0
+    return 0.0
+
+
+def bucket(value: float, thresholds: list[float]) -> float:
+    for index, threshold in enumerate(thresholds):
+        if value <= threshold:
+            return float(index)
+    return float(len(thresholds))
+
+
+def region_sort_key(row: dict[str, str]) -> tuple[float, float, float]:
+    x, y, _, _ = parse_bbox(row["bbox"])
+    return (parse_page_no(row["page_no"]), y, x)
+
+
+def v2_context(
+    rows: list[dict[str, str]],
+    index: int,
+) -> dict[str, str]:
+    row = rows[index]
+    bbox_x, bbox_y, bbox_w, bbox_h = parse_bbox(row["bbox"])
+    norm = 1025.0
+    prev_row = rows[index - 1] if index > 0 and rows[index - 1]["source_page_id"] == row["source_page_id"] else None
+    next_row = rows[index + 1] if index + 1 < len(rows) and rows[index + 1]["source_page_id"] == row["source_page_id"] else None
+
+    def prev_next_gap(current, other):
+        if other is None:
+            return 1.0
+        ox, oy, ow, oh = parse_bbox(other["bbox"])
+        gap = max(0.0, oy - (bbox_y + bbox_h)) if oy >= bbox_y else max(0.0, bbox_y - (oy + oh))
+        return min(gap / norm, 1.0)
+
+    def width_ratio(other):
+        if other is None or bbox_w <= 0:
+            return 0.0
+        _, _, ow, _ = parse_bbox(other["bbox"])
+        return ow / bbox_w
+
+    def text_len_norm(other):
+        if other is None:
+            return 0.0
+        return min(len(other["text"]) / 200.0, 1.0)
+
+    def same_left_band(other):
+        if other is None:
+            return 0.0
+        ox, _, _, _ = parse_bbox(other["bbox"])
+        return 1.0 if abs(ox - bbox_x) / norm <= 0.03 else 0.0
+
+    def ends_period(other):
+        if other is None:
+            return 0.0
+        return 1.0 if other["text"].rstrip().endswith(".") else 0.0
+
+    def starts_marker(other):
+        if other is None:
+            return 0.0
+        return 1.0 if (BULLET_RE.search(other["text"]) or NUMBERED_RE.search(other["text"]) or ALPHA_MARKER_RE.search(other["text"])) else 0.0
+
+    return {
+        "prev_gap_norm": f"{prev_next_gap(row, prev_row):.6f}",
+        "next_gap_norm": f"{prev_next_gap(row, next_row):.6f}",
+        "prev_same_left_band": f"{same_left_band(prev_row):.0f}",
+        "next_same_left_band": f"{same_left_band(next_row):.0f}",
+        "prev_width_ratio": f"{width_ratio(prev_row):.6f}",
+        "next_width_ratio": f"{width_ratio(next_row):.6f}",
+        "prev_text_len_norm": f"{text_len_norm(prev_row):.6f}",
+        "next_text_len_norm": f"{text_len_norm(next_row):.6f}",
+        "prev_ends_period": f"{ends_period(prev_row):.0f}",
+        "next_starts_marker": f"{starts_marker(next_row):.0f}",
+    }
+
+
 def build_feature_row(row: dict[str, str]) -> dict[str, str]:
     text = row["text"]
     text_chars = list(text)
@@ -154,7 +280,7 @@ def build_feature_row(row: dict[str, str]) -> dict[str, str]:
     avg_word_len = safe_ratio(sum(len(token) for token in tokens), len(tokens))
     bbox_area = (bbox_w * bbox_h) / (norm * norm)
     aspect = safe_ratio(bbox_w, bbox_h if bbox_h else 1.0)
-    page_no = float(row["page_no"] or 0)
+    page_no = parse_page_no(row["page_no"])
 
     return {
         "sample_id": row["sample_id"],
@@ -211,10 +337,49 @@ def build_feature_row(row: dict[str, str]) -> dict[str, str]:
     }
 
 
-def write_rows(path: Path, rows: list[dict[str, str]]) -> None:
+def build_feature_rows(rows: list[dict[str, str]], feature_set: str) -> list[dict[str, str]]:
+    ordered_rows = sorted(rows, key=region_sort_key)
+    output_rows: list[dict[str, str]] = []
+    for index, row in enumerate(ordered_rows):
+        out = build_feature_row(row)
+        if feature_set == "baseline_v2":
+            text = row["text"]
+            tokens = WORD_RE.findall(text)
+            bbox_x, bbox_y, bbox_w, bbox_h = parse_bbox(row["bbox"])
+            base_width = bbox_w / 1025.0
+            x_norm = bbox_x / 1025.0
+            y_norm = bbox_y / 1025.0
+            marker_type = list_marker_type(text)
+            short_text = len(tokens) <= 6
+            out.update(
+                {
+                    "feature_set": feature_set,
+                    "token_count": str(len(tokens)),
+                    "starts_with_alpha_marker": "1" if ALPHA_MARKER_RE.search(text) else "0",
+                    "no_terminal_period": "1" if text.strip() and not text.rstrip().endswith(".") else "0",
+                    "has_terminal_period": "1" if text.rstrip().endswith(".") else "0",
+                    "title_case_short": "1" if short_text and float(out["title_token_ratio"]) >= 0.6 else "0",
+                    "all_caps_short": "1" if short_text and float(out["all_caps_ratio"]) >= 0.6 else "0",
+                    "section_number_prefix": "1" if SECTION_PREFIX_RE.search(text) else "0",
+                    "contains_table_delimiters": "1" if ("|" in text or "\t" in text or "  " in text) else "0",
+                    "left_indent_bucket": f"{bucket(x_norm, [0.08, 0.16, 0.24, 0.32]):.0f}",
+                    "relative_x_bucket": f"{bucket(x_norm, [0.15, 0.30, 0.45, 0.60, 0.75]):.0f}",
+                    "relative_width_bucket": f"{bucket(base_width, [0.20, 0.35, 0.50, 0.70, 0.85]):.0f}",
+                    "y_position_bucket": f"{bucket(y_norm, [0.10, 0.25, 0.50, 0.75, 0.90]):.0f}",
+                    "short_line_with_marker": "1" if short_text and marker_type > 0 else "0",
+                    "continuation_indent_like": "1" if marker_type == 0.0 and x_norm >= 0.12 and len(tokens) >= 4 else "0",
+                    "list_marker_type": f"{marker_type:.0f}",
+                }
+            )
+            out.update(v2_context(ordered_rows, index))
+        output_rows.append(out)
+    return output_rows
+
+
+def write_rows(path: Path, rows: list[dict[str, str]], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=OUTPUT_FIELDS, delimiter="\t")
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -224,12 +389,15 @@ def main() -> int:
     rows = read_rows(Path(args.input))
     if not rows:
         raise SystemExit("adapter TSV has no rows")
-    feature_rows = [build_feature_row(row) for row in rows]
-    write_rows(Path(args.output), feature_rows)
+    feature_rows = build_feature_rows(rows, args.feature_set)
+    fieldnames = list(BASE_OUTPUT_FIELDS)
+    if args.feature_set == "baseline_v2":
+        fieldnames.extend(V2_EXTRA_FIELDS)
+    write_rows(Path(args.output), feature_rows, fieldnames)
     label_counts = Counter(row["target_label"] for row in feature_rows)
     print(
-        f"feature build complete: rows={len(feature_rows)} "
-        f"labels={dict(sorted(label_counts.items()))} output={args.output}"
+        f"feature build complete: feature_set={args.feature_set} rows={len(feature_rows)} "
+        f"cols={len(fieldnames)} labels={dict(sorted(label_counts.items()))} output={args.output}"
     )
     return 0
 
