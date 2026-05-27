@@ -424,17 +424,50 @@ def download_full_zip(url: str, destination: Path, *, resume_existing: bool) -> 
         req.add_header("Range", f"bytes={existing_size}-")
     with urlopen_with_retry(req, timeout=120, attempts=5, backoff_seconds=2.0) as resp:
         content_range = resp.headers.get("Content-Range")
+        content_length = resp.headers.get("Content-Length")
         if existing_size > 0 and not content_range:
             # Server ignored Range; restart cleanly.
             existing_size = 0
             mode = "wb"
-        total_length = resp.headers.get("Content-Length")
+        total_size = None
+        if content_range:
+            try:
+                total_size = int(content_range.rsplit("/", 1)[1])
+            except Exception:  # noqa: BLE001
+                total_size = None
+        elif content_length:
+            try:
+                total_size = existing_size + int(content_length)
+            except Exception:  # noqa: BLE001
+                total_size = None
+        print(
+            f"downloading cache zip: url={url} "
+            f"resume_bytes={existing_size} "
+            f"target={destination} total_bytes={total_size}"
+        )
         with part_path.open(mode) as handle:
+            written = existing_size
+            last_report = existing_size
             while True:
                 chunk = resp.read(1024 * 1024)
                 if not chunk:
                     break
                 handle.write(chunk)
+                written += len(chunk)
+                if written - last_report >= 128 * 1024 * 1024:
+                    if total_size:
+                        percent = written / total_size * 100.0
+                        print(
+                            f"cache download progress: {destination.name} "
+                            f"{written}/{total_size} bytes ({percent:.1f}%)"
+                        )
+                    else:
+                        print(
+                            f"cache download progress: {destination.name} "
+                            f"{written} bytes"
+                        )
+                    last_report = written
+        print(f"cache download finished: {destination.name} bytes={written}")
     shutil.move(str(part_path), str(destination))
     return destination
 
