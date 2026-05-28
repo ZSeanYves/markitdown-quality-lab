@@ -8,12 +8,15 @@ import json
 import pickle
 from collections import Counter, defaultdict
 from pathlib import Path
+from typing import Any
 
 import numpy as np
+from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+from sklearn.utils.class_weight import compute_sample_weight
 
 
 META_COLUMNS = {
@@ -60,6 +63,18 @@ PREDICTION_FIELDS = [
     "notes",
 ]
 
+MODEL_KIND_CHOICES = [
+    "logistic_regression_balanced",
+    "random_forest_balanced",
+    "hist_gradient_boosting_balanced",
+]
+
+MODEL_TYPE_BY_KIND = {
+    "logistic_regression_balanced": "sklearn_logistic_regression_balanced",
+    "random_forest_balanced": "sklearn_random_forest_balanced",
+    "hist_gradient_boosting_balanced": "sklearn_hist_gradient_boosting_balanced",
+}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -76,6 +91,12 @@ def parse_args() -> argparse.Namespace:
         "--feature-set-name",
         default="baseline_v1",
         help="Feature set label to record in reports.",
+    )
+    parser.add_argument(
+        "--model-kind",
+        default="logistic_regression_balanced",
+        choices=MODEL_KIND_CHOICES,
+        help="Offline teacher/baseline family. Default keeps the historical logistic baseline.",
     )
     return parser.parse_args()
 
@@ -120,9 +141,65 @@ def split_rows(rows: list[dict[str, str]]) -> dict[str, list[dict[str, str]]]:
     return out
 
 
+def build_model(model_kind: str) -> Any:
+    if model_kind == "logistic_regression_balanced":
+        return Pipeline(
+            steps=[
+                ("scale", StandardScaler()),
+                (
+                    "clf",
+                    LogisticRegression(
+                        max_iter=1000,
+                        class_weight="balanced",
+                    ),
+                ),
+            ]
+        )
+    if model_kind == "random_forest_balanced":
+        return RandomForestClassifier(
+            n_estimators=300,
+            min_samples_leaf=2,
+            class_weight="balanced_subsample",
+            n_jobs=-1,
+            random_state=0,
+        )
+    if model_kind == "hist_gradient_boosting_balanced":
+        return HistGradientBoostingClassifier(
+            loss="log_loss",
+            learning_rate=0.05,
+            max_iter=300,
+            max_leaf_nodes=63,
+            min_samples_leaf=20,
+            early_stopping=True,
+            validation_fraction=0.1,
+            n_iter_no_change=20,
+            random_state=0,
+        )
+    raise ValueError(f"unsupported model kind: {model_kind}")
+
+
+def fit_model(model: Any, model_kind: str, x_train: np.ndarray, y_train: np.ndarray) -> None:
+    if model_kind == "hist_gradient_boosting_balanced":
+        sample_weight = compute_sample_weight(class_weight="balanced", y=y_train)
+        model.fit(x_train, y_train, sample_weight=sample_weight)
+        return
+    model.fit(x_train, y_train)
+
+
+def model_classes(model: Any) -> list[str]:
+    classes = getattr(model, "classes_", None)
+    if classes is not None:
+        return list(classes)
+    if isinstance(model, Pipeline):
+        clf = model.named_steps.get("clf")
+        if clf is not None and hasattr(clf, "classes_"):
+            return list(clf.classes_)
+    raise AttributeError("model does not expose classes_")
+
+
 def evaluate_split(
     split_name: str,
-    model: Pipeline,
+    model: Any,
     rows: list[dict[str, str]],
     columns: list[str],
     labels: list[str],
@@ -131,7 +208,7 @@ def evaluate_split(
     gold = [row["target_label"] for row in rows]
     predicted = list(model.predict(x))
     probabilities = model.predict_proba(x)
-    probability_by_label = {label: index for index, label in enumerate(model.classes_)}
+    probability_by_label = {label: index for index, label in enumerate(model_classes(model))}
 
     precision, recall, f1, support = precision_recall_fscore_support(
         gold,
@@ -309,19 +386,8 @@ def main() -> int:
     x_train = rows_to_matrix(train_rows, columns)
     y_train = np.array([row["target_label"] for row in train_rows])
 
-    model = Pipeline(
-        steps=[
-            ("scale", StandardScaler()),
-            (
-                "clf",
-                LogisticRegression(
-                    max_iter=1000,
-                    class_weight="balanced",
-                ),
-            ),
-        ]
-    )
-    model.fit(x_train, y_train)
+    model = build_model(args.model_kind)
+    fit_model(model, args.model_kind, x_train, y_train)
 
     local_root = Path(args.output_root).expanduser()
     model_dir = local_root / "models" / args.run_id
@@ -351,7 +417,8 @@ def main() -> int:
 
     metrics = {
         "run_id": args.run_id,
-        "model_type": "sklearn_logistic_regression_balanced",
+        "model_type": MODEL_TYPE_BY_KIND[args.model_kind],
+        "model_kind": args.model_kind,
         "feature_set": args.feature_set_name,
         "dataset_source": "doclaynet",
         "row_count": len(feature_rows),
@@ -381,6 +448,7 @@ def main() -> int:
 
     print(
         f"baseline training complete: run_id={args.run_id} "
+        f"model_kind={args.model_kind} "
         f"train={len(train_rows)} dev={len(dev_rows)} heldout={len(heldout_rows)} "
         f"report_dir={report_dir}"
     )
