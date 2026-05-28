@@ -2,6 +2,7 @@
 .tmp/
 local_eval/
 reports/
+
 pdf_model_training/layout_recovery_model/local_only/*
 !pdf_model_training/layout_recovery_model/local_only/README.md
 pdf_model_training/layout_recovery_model/local_only/**/*
