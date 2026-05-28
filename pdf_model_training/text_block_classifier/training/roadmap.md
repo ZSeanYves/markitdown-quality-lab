@@ -24,6 +24,7 @@ Current target:
 * HGB feature-importance and error-bucket audit
 * `PubTables` specialist scaffold
 * distillation policy hardening
+* distillation v0 high-confidence hint export
 
 Deliverables:
 
@@ -31,6 +32,14 @@ Deliverables:
 * tracked `distillation_policy.md`
 * tracked `PubTables` specialist adapter skeleton
 * tracked roadmap and specialist notes
+* tracked hint-export script plus local-only v0 eval
+
+Stage 1 status:
+
+* teacher audit done
+* `PubTables` scaffold done
+* distillation v0 hint export done
+* next step is moving from export to gated hint design, not runtime hookup
 
 ## Stage 2 Next
 
@@ -40,6 +49,7 @@ Next target:
 * narrow `table_like` / weak `caption` specialist experiment
 * teacher + specialist evaluation on boundary slices
 * explicit source-separated evaluation
+* v1 rule-gated hint design for stable labels
 
 Rules for Stage 2:
 
@@ -61,6 +71,7 @@ Primary buckets to distill first:
 * `footer_header_noise`
 * `table_like`
 * `heading`
+* `keep_as_text`
 * high-confidence `paragraph`
 * high-confidence `list_item`
 

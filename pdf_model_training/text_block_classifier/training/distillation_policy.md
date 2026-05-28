@@ -203,3 +203,83 @@ Not allowed this round:
    * rule candidates
    * abstain conditions
    * compact candidate representations
+
+## Distillation v0: High-Confidence Hint Export
+
+The first concrete distillation artifact is a local-only hint export from the
+`pilot3000_v1 baseline_v3 HGB` teacher.
+
+Current export script:
+
+* `scripts/export_hgb_distilled_hints.py`
+
+Current output schema:
+
+* `sample_id`
+* `split`
+* `source_page_id`
+* `source_region_id`
+* `page_no`
+* `bbox`
+* `text`
+* `gold_label`
+* `predicted_label`
+* `confidence`
+* `threshold`
+* `hint_label`
+* `hint_action`
+* `hint_status`
+* `reason`
+
+Current policy:
+
+* allowed labels:
+  * `footer_header_noise`
+  * `heading`
+  * `keep_as_text`
+  * `list_item`
+  * `paragraph`
+  * `table_like`
+* deny labels:
+  * `caption`
+* `gold_label` is used only for offline evaluation, never for hint emission
+* low-confidence or denied predictions remain `no_override`
+
+Current `heldout` v0 results:
+
+* threshold `>= 0.90`
+  * coverage `0.5491`
+  * emitted accuracy `0.9561`
+  * emitted macro F1 `0.8207`
+  * wrong emitted count `268`
+* threshold `>= 0.95`
+  * coverage `0.4204`
+  * emitted accuracy `0.9737`
+  * emitted macro F1 `0.8340`
+  * wrong emitted count `123`
+
+Current label interpretation:
+
+* `footer_header_noise`
+  * ready for rule-hint exploration
+* `heading`
+  * ready for rule-hint exploration
+* `keep_as_text`
+  * ready for rule-hint exploration
+* `list_item`
+  * keep teacher-only for now
+* `paragraph`
+  * keep teacher-only for now
+* `table_like`
+  * keep teacher-only for now
+* `caption`
+  * deny for now
+
+Important caution:
+
+* v0 is still local-only and offline-only
+* v0 does not authorize convert/runtime integration
+* v0 only justifies the next design step:
+  * rule-gated hint planning
+  * specialist-backed boundary experiments
+  * fail-closed routing design
