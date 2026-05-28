@@ -250,12 +250,12 @@ Current `heldout` v0 results:
 * threshold `>= 0.90`
   * coverage `0.5491`
   * emitted accuracy `0.9561`
-  * emitted macro F1 `0.8207`
+  * fail-closed heldout macro F1 `0.6442`
   * wrong emitted count `268`
 * threshold `>= 0.95`
   * coverage `0.4204`
   * emitted accuracy `0.9737`
-  * emitted macro F1 `0.8340`
+  * fail-closed heldout macro F1 `0.5845`
   * wrong emitted count `123`
 
 Current label interpretation:
@@ -274,6 +274,13 @@ Current label interpretation:
   * keep teacher-only for now
 * `caption`
   * deny for now
+
+Interpretation note:
+
+* these v0 metrics score the whole heldout split under fail-closed abstention,
+  not just the covered slice
+* this is intentionally stricter than the earlier confidence-gating audit, which
+  only described the quality of the covered subset
 
 Important caution:
 
