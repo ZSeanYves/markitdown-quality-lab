@@ -1,0 +1,7 @@
+source_label	source_label_description	target_task	target_label	mapping_confidence	use_for_training	notes
+table	page-level or PDF-coordinate table region	convert_block_classification	table_like	high	yes	source_role=specialist;gold_scope=table_only
+table_caption_probe	weak caption candidate found near a table region	convert_block_classification	caption	low	review	source_role=specialist;weak_probe_only=true;never_gold_eval=true
+table_cell	individual cell or structure object inside a table	convert_block_classification	uncertain	low	no	source_role=specialist;do_not_map_to_page_semantics=true
+table_row	row structure object inside a table	convert_block_classification	uncertain	low	no	source_role=specialist;do_not_map_to_page_semantics=true
+table_column	column structure object inside a table	convert_block_classification	uncertain	low	no	source_role=specialist;do_not_map_to_page_semantics=true
+table_header	header cell or projected header structure	convert_block_classification	uncertain	low	no	source_role=specialist;do_not_map_to_page_semantics=true

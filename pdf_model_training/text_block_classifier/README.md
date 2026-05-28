@@ -45,10 +45,16 @@ Current status:
   `local zip cache` for stable pilot/teacher runs, explicit `download-cache`
   for resumable full-zip caching under `local_only/`, and `remote range smoke`
   only for small recovery checks
+* current offline teacher baseline is `HistGradientBoostingClassifier` on
+  `baseline_v3` features; current `pilot3000_v1` heldout macro F1 is `0.8097`
+* `PubTables-1M` is currently scoped as a specialist source for
+  `table_like` and weak `caption` probing only
 
 Next action:
 
 * adapt mature public datasets into block-label exports under local-only flows
+* audit and distill the current HGB teacher before any runtime proposal
+* keep `PubTables` specialist work isolated from `DocLayNet` gold heldout
 * keep gold and weak-source evaluation separate
 * do not reactivate repo-manual sample manifests as the recommended training
   route

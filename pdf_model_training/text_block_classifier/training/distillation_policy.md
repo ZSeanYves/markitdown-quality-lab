@@ -1,50 +1,205 @@
-# PDF Model Distillation Policy
+# PDF Text Block Distillation Policy
 
-This policy defines the heavy-training to lightweight-runtime boundary for the
-two PDF assist-model targets.
+This policy defines how `text_block_classifier` can move from rich offline
+teacher training to future, tightly constrained runtime hints.
 
-## Teacher Boundary
+## Current Teacher Status
 
-Teacher training may be:
+* current primary offline teacher: `HistGradientBoostingClassifier`
+* best current gold result:
+  * `DocLayNet pilot3000_v1 baseline_v3`
+  * heldout macro F1 = `0.8097`
+  * heldout accuracy = `0.8269`
+* teacher is local-only and offline-only
+* teacher is not a convert/runtime dependency
 
-* local-only
-* dataset-rich
-* slow
-* large
+Current interpretation:
 
-Teacher inputs may combine:
+* the `HGB` teacher route is strong enough to justify distillation work
+* the historical logistic baseline is still useful for lightweight comparison,
+  but it is not the current quality ceiling
+* `caption` remains the weakest major label and should not be treated as solved
 
-* `DocLayNet` gold data
-* `PubLayNet` weak-layout supplements
-* `PubTables-1M` table-specialist subsets
-* existing repo-specific local labels
+## Distillation Goals
 
-Teacher models are offline analysis tools. They are not CLI dependencies.
+Teacher outputs are only useful if they can be reduced into runtime-safe forms.
+The preferred distillation targets are:
 
-## Distillation Targets
+1. high-confidence hints
+2. rule suggestions for obvious buckets
+3. compact decision tables and thresholds
+4. small auxiliary model candidates only if size/speed/closure stay controlled
 
-Teacher outputs are only useful if they can be distilled into smaller,
-reviewable forms such as:
+The intended priority is:
 
-1. rule suggestions
-2. feature-importance summaries
-3. error-cluster reports
-4. confidence thresholds
-5. lightweight classifier candidates
+1. deterministic rules remain primary
+2. distilled hints may assist rules
+3. compact model candidates are optional and must fail closed
 
-## Runtime Boundary
+## What We Are Distilling
 
-If runtime is ever revisited later:
+The current teacher is strongest on:
 
-* deterministic rules remain primary
-* runtime candidates must stay lightweight
-* runtime support must be optional
-* all model influence must fail closed
-* parser/layout and convert-layer targets must remain separate
+* `footer_header_noise`
+* `table_like`
+* `heading`
+* `paragraph`
+* `list_item`
 
-Not allowed:
+The current teacher is weaker on:
 
-* direct runtime use of a heavy teacher checkpoint
-* flattening `layout_recovery_model` and `text_block_classifier` into one label
-  space
-* treating weak-label datasets as gold eval
+* `caption`
+* patent/legal short numbered lines
+* affiliation/address lines
+* form-like short rows
+* table/caption boundary cases
+
+This means the first distillation targets should be:
+
+* strong `footer_header_noise` hints
+* strong `table_like` hints
+* strong `heading` hints
+* high-confidence `paragraph` / `list_item` hints when the marker and geometry
+  signals agree
+
+`caption` should remain conservative until a specialist path improves that
+boundary.
+
+## Fail-Closed Policy
+
+Distillation must fail closed.
+
+Required behavior:
+
+* low confidence -> no override
+* conflicting signal -> no override
+* unsupported layout family -> no override
+* specialist disagreement -> no override unless the specialist is explicitly
+  trusted for that narrow boundary
+* unseen or weakly supervised source -> no gold-style override
+
+Runtime-oriented distilled outputs should prefer:
+
+* abstain / keep rules
+* `unknown`
+* `uncertain`
+* label-specific “hint only” behavior
+
+They should not silently relabel broad page content without confidence and
+agreement checks.
+
+## Confidence Gating Direction
+
+Current `pilot3000_v1` HGB heldout audit shows:
+
+* confidence `>= 0.80`:
+  * coverage `0.6955`
+  * covered macro F1 `0.9153`
+* confidence `>= 0.90`:
+  * coverage `0.5601`
+  * covered macro F1 `0.9457`
+* confidence `>= 0.95`:
+  * coverage `0.4289`
+  * covered macro F1 `0.9649`
+
+Current labels with the clearest fail-closed potential:
+
+* at `>= 0.90`: `footer_header_noise`, `list_item`, `paragraph`
+* at `>= 0.95`: `footer_header_noise`, `heading`, `keep_as_text`,
+  `list_item`, `paragraph`
+
+Current caution:
+
+* `caption` improves with confidence but still needs specialist support before
+  it should be trusted as a broad override class
+* `table_like` is strong, but table/caption boundary handling still benefits
+  from a dedicated specialist path
+
+## Feature Families Most Worth Distilling
+
+The current HGB teacher relies most on:
+
+* bbox / geometry
+* text lexical ratios and punctuation shape
+* list marker / section prefix families
+* page position
+* caption cue families
+* some neighbor context and alignment
+
+Most promising direct rule candidates:
+
+* header/footer position plus low-text-density cues
+* numbered/list-marker patterns
+* short heading-like text without terminal punctuation
+* strong table-like geometry plus tabular text hints
+
+Less suitable for direct naive rules:
+
+* caption-only overrides
+* patent/legal boundary cases
+* address / affiliation / key-value short rows
+
+These should stay teacher-driven or specialist-driven until more evidence is
+available.
+
+## Specialist Data Policy
+
+`PubTables-1M` is a specialist source, not a replacement gold source.
+
+Allowed role:
+
+* `table_like` specialist
+* optional weak `caption` probe
+
+Required restrictions:
+
+* never mix `PubTables` rows into `DocLayNet` gold heldout
+* never present `PubTables`-assisted results as pure `DocLayNet` gold results
+* keep source identity explicit in every mixed experiment
+
+`PubLayNet` policy remains:
+
+* weak supplement only
+* never use as gold eval
+
+## Runtime Preconditions
+
+Even if distillation looks promising, no convert/runtime proposal should be made
+before the following gates are passed:
+
+1. `DocLayNet` heldout remains stable after distillation
+2. external PDF quality evaluation shows net benefit
+3. `bash samples/check.sh`
+4. `bash samples/check_quality.sh --format pdf`
+5. `bash samples/bench.sh`
+6. speed regression stays within an agreed threshold
+7. binary/closure size remains acceptable
+8. failure modes remain fail-closed
+
+Only after these gates should a rule-gated convert-layer integration even be
+proposed.
+
+## Explicitly Out Of Scope This Round
+
+Not allowed this round:
+
+* runtime integration
+* convert-layer rewiring
+* direct use of heavy teacher checkpoints in CLI/runtime
+* PDF OCR as the main route
+* replacing deterministic rules with a model-first path
+* committing large models or real dataset bytes
+
+## Near-Term Distillation Plan
+
+1. keep `HGB` as the primary offline teacher
+2. finish teacher audits and error buckets
+3. add a `PubTables` specialist adapter scaffold
+4. run a tiny specialist smoke without polluting gold eval
+5. train a narrow specialist only under local-only conditions
+6. test specialist + teacher gating on the table/caption boundary
+7. convert the strongest evidence into:
+   * confidence thresholds
+   * rule candidates
+   * abstain conditions
+   * compact candidate representations
