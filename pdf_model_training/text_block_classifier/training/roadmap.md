@@ -168,6 +168,7 @@ Only then:
 Current tracked scaffold:
 
 * `scripts/run_external_quality_hint_dry_run.py`
+* `scripts/export_footer_header_manual_review.py`
 * `training/footer_header_noise_report_only_package.md`
 
 Current status:
@@ -205,11 +206,17 @@ Current status:
   blocked from emission in this pass
 * `footer_header_noise` is the only label ready for the next external-quality
   manual-review stage
+* a manual-review export package now exists as the next tracked preparation
+  layer before any larger benchmark claim
 
 Immediate next step from this scaffold:
 
 * keep `footer_header_noise` on the refined `conservative_v2` path unless
   another false-positive cluster appears
+* export and review the manual-review package before any broader benchmark claim
+* if manual review is clean, prepare a larger external-quality footer/header
+  report-only benchmark
+* if manual review finds a new failure cluster, refine guards again
 * expand external-quality coverage through larger/manual review before any
   runtime discussion
 * keep `heading` / `keep_as_text` as later report-only expansions

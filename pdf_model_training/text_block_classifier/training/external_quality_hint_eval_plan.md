@@ -64,6 +64,7 @@ It must not:
 Current tracked runner:
 
 * `scripts/run_external_quality_hint_dry_run.py`
+* `scripts/export_footer_header_manual_review.py`
 * `training/footer_header_noise_report_only_package.md`
 
 Current scope:
@@ -137,6 +138,10 @@ Current recommended report-only package:
 * emit label allowlist stays `footer_header_noise` only
 * current tracked summary:
   * `training/footer_header_noise_report_only_package.md`
+* current manual-review export:
+  * `scripts/export_footer_header_manual_review.py`
+  * local-only `footer_header_manual_review.tsv`
+  * local-only `footer_header_manual_review.md`
 
 What now works:
 
@@ -169,6 +174,7 @@ Current interpretation:
   shells from the small `md_test` variants
 * based on the current `pdf_all_v3_footer_refined` slice, there is no obvious
   additional guard to add before a larger manual review
+* the next step is therefore manual-review packaging, not gate expansion
 
 ## Candidate Questions
 
@@ -182,9 +188,13 @@ The dry run should answer:
 Current next evaluation checklist:
 
 * reuse `conservative_v2` unchanged on a larger PDF slice
+* export a manual-review package that includes emit, hard-conflict, and
+  high-confidence `no_override` rows
 * manually review all emitted hints first
 * audit the `confidence<0.95` `footer_header_noise` rows separately
 * keep `heading` / `keep_as_text` out of this runner expansion for now
+* if review is clean, prepare a larger report-only benchmark
+* if review is not clean, refine guards again without widening labels
 
 ## Recommended First Labels
 
@@ -197,6 +207,7 @@ Current package recommendation:
 * only `footer_header_noise` should move into the next external-quality manual
   review stage
 * `heading` and `keep_as_text` remain later report-only expansions
+* this package still does not authorize runtime or convert-path work
 
 Labels to evaluate later, but not yet enabled in this runner:
 
@@ -231,3 +242,6 @@ After a dry run, the project would still need:
 * speed/closure checks
 * bench review
 * explicit fail-closed review
+
+The manual-review export exists precisely because a clean report-only slice is
+still evidence gathering, not integration approval.

@@ -180,16 +180,78 @@ Remaining open question before any future expansion:
 Based on the current `pdf_all_v3_footer_refined` sample, there is no obvious
 new guard to add before the next manual review stage.
 
+## Manual Review Package v1
+
+Current tracked exporter:
+
+* `scripts/export_footer_header_manual_review.py`
+
+Current local-only outputs:
+
+* `footer_header_manual_review.tsv`
+* `footer_header_manual_review.md`
+
+Current review-row schema:
+
+* `review_id`
+* `row_id`
+* `sample_id`
+* `source_pdf_id`
+* `page_no`
+* `block_id`
+* `bbox`
+* `text_preview`
+* `gate_status`
+* `gate_action`
+* `gate_reason`
+* `predicted_label`
+* `confidence`
+* `cooperative_score`
+* `risk_flags`
+* `review_bucket`
+* `suggested_manual_label`
+* `reviewer_decision`
+* `reviewer_notes`
+
+Current review buckets:
+
+* `emitted_page_number_like`
+* `emitted_edge_noise_like`
+* `blocked_dense_edge_row`
+* `blocked_body_text_risk`
+* `blocked_low_confidence`
+* `blocked_label_not_allowed`
+* `near_miss_high_confidence`
+* `other`
+
+Review intent:
+
+* audit every current emit
+* audit every current hard conflict
+* sample the highest-confidence `no_override` rows before any broader claim
+* prepare manual evidence without changing product output or gate behavior
+
+Why this review stage is required:
+
+* current results are still report-only
+* clean local dry-run counts are not enough for a runtime proposal
+* reviewers still need to confirm that:
+  * emitted page-number-like shells are acceptable
+  * dense edge-row blocks are doing the intended work
+  * high-confidence `no_override` rows are being held back for the right reasons
+
 ## Next Evaluation Checklist
 
 1. Reuse `conservative_v2` unchanged on a larger external-quality PDF slice.
-2. Manually review all emitted hints and confirm they remain isolated
-   page-number-style shells.
-3. Audit the `34` `footer_header_noise` predictions blocked only by
-   `confidence<0.95`, but do not lower the threshold without new evidence.
-4. Keep `heading` guard work separate from this package.
-5. Keep `keep_as_text` guard work separate from this package.
-6. Keep `PubTables` specialist work source-separated from this external-quality
+2. Export the manual-review package and audit all emitted hints.
+3. Audit the high-confidence `no_override` rows before changing any threshold.
+4. If manual review stays clean, prepare a larger external-quality
+   footer/header report-only benchmark.
+5. If manual review finds a new false-positive cluster, refine guards again
+   without widening labels.
+6. Keep `heading` guard work separate from this package.
+7. Keep `keep_as_text` guard work separate from this package.
+8. Keep `PubTables` specialist work source-separated from this external-quality
    package.
-7. Keep runtime proposals paused until after larger report-only evidence and
+9. Keep runtime proposals paused until after larger report-only evidence and
    explicit manual review.
