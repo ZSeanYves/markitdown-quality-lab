@@ -175,10 +175,27 @@ Current status:
 * report-only only
 * can reuse the normal external-quality PDF path without mutating outputs
 * can export legacy block candidates for side-channel review
-* still blocked on the missing bridge from external PDF blocks to
+* now includes a tracked bridge from external PDF block candidates to
   `baseline_v3` / `HGB` cooperative features
+* `smoke20_v2` capability is `ready`
+  * rows `20`
+  * candidates `135`
+  * emitted hints `12`
+* `pdf_all_v2` capability is `ready`
+  * rows `77`
+  * candidates `360`
+  * emitted hints `12`
+* current non-emit majority is teacher label disagreement
+  * `heading`
+  * `paragraph`
+  * `table_like`
+* current emitted examples stay narrow and report-only
+* body-risk rows with `central_body_band` / `sentence_like` signals remain
+  blocked from emission in this pass
 
 Immediate next step from this scaffold:
 
-* build the external-PDF block candidate to teacher-feature bridge
-* then rerun external-quality dry run with real cooperative scoring
+* refine `footer_header_noise` guards only if real error review justifies it
+* keep `heading` / `keep_as_text` as later report-only expansions
+* continue `PubTables` specialist work separately
+* keep runtime proposal paused until after more external-quality evidence

@@ -241,6 +241,62 @@ Interpretation:
   row should be surfaced for audit, not override”
 * `no_override` means “keep rules only”
 
+## External-Quality Status
+
+Current tracked runner:
+
+* `scripts/run_external_quality_hint_dry_run.py`
+
+Current enabled label:
+
+* `footer_header_noise`
+
+Current bridge/runtime boundary:
+
+* report-only only
+* offline `HGB` teacher only
+* no runtime hook
+* no convert-path mutation
+
+Current `smoke20_v2` result under:
+
+* conservative profile
+* `model_confidence >= 0.95`
+* `cooperative_score >= 0.85`
+
+Observed outcome:
+
+* capability status: `ready`
+* bridge compatibility: `ready`
+* candidate rows: `135`
+* emitted hints: `12`
+* blocked hard conflicts: `7`
+* dominant blocked reasons:
+  * `label_not_allowed:paragraph`
+  * `confidence<0.95`
+  * `label_not_allowed:heading`
+
+Current `pdf_all_v2` result under the same profile:
+
+* capability status: `ready`
+* candidate rows: `360`
+* emitted hints: `12`
+* blocked hard conflicts: `7`
+* dominant blocked reasons:
+  * `label_not_allowed:heading`
+  * `label_not_allowed:paragraph`
+  * `confidence<0.95`
+  * `label_not_allowed:table_like`
+
+Interpretation:
+
+* the cooperative gate is no longer blocked on feature compatibility
+* the current conservative pass is still narrow by design
+* most non-emits are caused by teacher label disagreement, not cooperative
+  score failure
+* central-body and sentence-like body-risk rows are being retained as
+  `no_override` rather than leaking into `emit`
+
 ## Runtime Note
 
 This policy is not a runtime approval.
