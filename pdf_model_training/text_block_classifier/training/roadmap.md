@@ -185,17 +185,25 @@ Current status:
   * rows `77`
   * candidates `360`
   * emitted hints `12`
+* `pdf_all_v3_footer_refined` capability is `ready`
+  * rows `77`
+  * candidates `360`
+  * emitted hints `6`
 * current non-emit majority is teacher label disagreement
   * `heading`
   * `paragraph`
   * `table_like`
-* current emitted examples stay narrow and report-only
+* footer/header refinement now blocks dense multi-column edge-row booking cells
+  that slipped through `pdf_all_v2`
+* current emitted examples are now only the isolated page-number-style shells
+  from the `md_test` / section-numbering variants
 * body-risk rows with `central_body_band` / `sentence_like` signals remain
   blocked from emission in this pass
 
 Immediate next step from this scaffold:
 
-* refine `footer_header_noise` guards only if real error review justifies it
+* keep `footer_header_noise` on the refined `conservative_v2` path unless
+  another false-positive cluster appears
 * keep `heading` / `keep_as_text` as later report-only expansions
 * continue `PubTables` specialist work separately
 * keep runtime proposal paused until after more external-quality evidence

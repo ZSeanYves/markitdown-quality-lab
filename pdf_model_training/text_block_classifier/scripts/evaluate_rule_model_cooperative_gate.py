@@ -59,6 +59,23 @@ PROFILES = {
             "context_min": 0.35,
         },
     },
+    "conservative_v2": {
+        "footer_header_noise": {
+            "weights": (0.35, 0.40, 0.20, 1.00, 0.05),
+            "rule_min": 0.45,
+            "context_min": 0.40,
+        },
+        "heading": {
+            "weights": (0.30, 0.35, 0.25, 1.00, 0.10),
+            "rule_min": 0.55,
+            "context_min": 0.45,
+        },
+        "keep_as_text": {
+            "weights": (0.35, 0.30, 0.25, 1.00, 0.10),
+            "rule_min": 0.45,
+            "context_min": 0.35,
+        },
+    },
     "balanced": {
         "footer_header_noise": {
             "weights": (0.40, 0.32, 0.18, 0.95, 0.05),
@@ -98,6 +115,9 @@ PROFILES = {
 
 class CooperativeGateError(RuntimeError):
     pass
+
+
+FOOTER_REFINED_PROFILES = {"conservative_v2"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -288,6 +308,29 @@ def central_body_conflict(row: dict[str, str]) -> bool:
     )
 
 
+def dense_edge_multi_column_conflict(row: dict[str, str]) -> bool:
+    return (
+        edge_position(row)
+        and as_bool(row, "short_text")
+        and as_float(row, "prev_gap_norm") <= 0.01
+        and as_float(row, "next_gap_norm") <= 0.01
+        and row.get("prev_overlap_ratio_bucket", "") == "0"
+        and row.get("next_overlap_ratio_bucket", "") == "0"
+        and row.get("prev_same_left_band", "") == "0"
+        and row.get("next_same_left_band", "") == "0"
+    )
+
+
+def edge_row_index_conflict(row: dict[str, str]) -> bool:
+    return (
+        edge_position(row)
+        and as_bool(row, "very_short_text")
+        and as_float(row, "prev_gap_norm") <= 0.01
+        and as_float(row, "next_gap_norm") <= 0.01
+        and as_float(row, "next_width_ratio") >= 3.0
+    )
+
+
 REFERENCE_RE = re.compile(
     r"(\bS\.I\.\b|\bSchedule\b|\bSection\b|\bRegulation\b|\bArt(?:icle)?\b|\([0-9A-Za-z/]+\)|\bc\.\s*\d+)",
     re.IGNORECASE,
@@ -298,7 +341,11 @@ def reference_like_text(text: str) -> bool:
     return bool(REFERENCE_RE.search(text))
 
 
-def footer_header_noise_scores(row: dict[str, str], text: str) -> tuple[float, float, float, bool, list[str]]:
+def footer_header_noise_scores(
+    row: dict[str, str],
+    text: str,
+    profile: str,
+) -> tuple[float, float, float, bool, list[str]]:
     reasons: list[str] = []
     word_count = as_float(row, "word_count")
     text_len = as_float(row, "text_len")
@@ -349,6 +396,11 @@ def footer_header_noise_scores(row: dict[str, str], text: str) -> tuple[float, f
         hard_conflict = True
     if sentence_like_conflict(row) and not as_bool(row, "contains_page_hint") and not edge_position(row):
         reasons.append("sentence_like_body_conflict")
+        hard_conflict = True
+    if profile in FOOTER_REFINED_PROFILES and (
+        dense_edge_multi_column_conflict(row) or edge_row_index_conflict(row)
+    ):
+        reasons.append("dense_edge_row_conflict")
         hard_conflict = True
 
     return rule_support, context, soft_penalty, hard_conflict, reasons
@@ -469,9 +521,14 @@ def keep_as_text_scores(row: dict[str, str], text: str) -> tuple[float, float, f
     return rule_support, context, soft_penalty, hard_conflict, reasons
 
 
-def score_label(label: str, row: dict[str, str], text: str) -> tuple[float, float, float, bool, list[str]]:
+def score_label(
+    label: str,
+    row: dict[str, str],
+    text: str,
+    profile: str,
+) -> tuple[float, float, float, bool, list[str]]:
     if label == "footer_header_noise":
-        return footer_header_noise_scores(row, text)
+        return footer_header_noise_scores(row, text, profile)
     if label == "heading":
         return heading_scores(row, text)
     if label == "keep_as_text":
@@ -544,7 +601,7 @@ def evaluate_row(
         )
 
     rule_support, context_sanity, conflict_penalty, hard_conflict, conflict_reasons = score_label(
-        candidate_label, feature_row, text
+        candidate_label, feature_row, text, profile
     )
     profile_cfg = PROFILES[profile][candidate_label]
 

@@ -132,6 +132,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--profile",
         default="conservative",
+        choices=sorted(cooperative_gate.PROFILES),
         help="Cooperative profile label recorded in reports.",
     )
     parser.add_argument(

@@ -111,6 +111,22 @@ Current `pdf_all_v2` readout:
 * no-override rows: `341`
 * hard conflicts: `7`
 
+Current `pdf_all_v3_footer_refined` readout:
+
+* capability status: `ready`
+* selected rows: `77`
+* rows with approved inputs processed: `76`
+* skipped license rows: `1`
+* legacy footer-header candidate rows: `360`
+* matched legacy feature rows: `360`
+* output feature rows: `360`
+* predicted labels unchanged from `pdf_all_v2`
+* emitted hints: `6`
+* no-override rows: `341`
+* hard conflicts: `13`
+* newly blocked reason:
+  * `dense_edge_row_conflict = 6`
+
 What now works:
 
 * find PDF rows from the external-quality manifest
@@ -128,10 +144,16 @@ Current interpretation:
   `footer_header_noise`
 * most candidate rows are still blocked because the teacher prefers
   `heading`/`paragraph`/`table_like`, not because the bridge is missing
-* emitted hints remain narrow and mostly page-number / schedule-shell style
-  rows
+* `pdf_all_v2` still allowed a small group of false-positive edge-row booking
+  cells through as emitted hints
+* `pdf_all_v3_footer_refined` adds a narrower guard for dense multi-column
+  edge-row cells, removing those booking-row false positives without driving
+  coverage to `0`
 * central-body and sentence-like risk rows are being kept out of `emit` in the
   current pass
+* `form_key_value` alone was not the right blocker, because the suspicious
+  booking row also emitted non-`form_key_value` cells like `2`, `3`, and
+  `12/26-12/31`
 
 ## Candidate Questions
 

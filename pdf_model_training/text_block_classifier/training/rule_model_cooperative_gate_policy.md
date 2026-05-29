@@ -288,6 +288,28 @@ Current `pdf_all_v2` result under the same profile:
   * `confidence<0.95`
   * `label_not_allowed:table_like`
 
+Refined `pdf_all_v3_footer_refined` result under:
+
+* `conservative_v2`
+* same `model_confidence >= 0.95`
+* same `cooperative_score >= 0.85`
+
+Observed outcome:
+
+* capability status: `ready`
+* candidate rows: `360`
+* emitted hints: `6`
+* blocked hard conflicts: `13`
+* new blocked reason:
+  * `dense_edge_row_conflict = 6`
+
+Refinement intent:
+
+* keep `conservative` unchanged
+* add a narrower `footer_header_noise` guard only in `conservative_v2`
+* block dense multi-column edge-row cells that look like schedule/table rows,
+  not isolated page-number shells
+
 Interpretation:
 
 * the cooperative gate is no longer blocked on feature compatibility
@@ -296,6 +318,9 @@ Interpretation:
   score failure
 * central-body and sentence-like body-risk rows are being retained as
   `no_override` rather than leaking into `emit`
+* `form_key_value` should not be treated as a blanket hard conflict:
+  the stronger external-quality failure mode was dense edge-row structure, and
+  that row included both `form_key_value` and non-`form_key_value` cells
 
 ## Runtime Note
 
