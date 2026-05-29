@@ -168,6 +168,7 @@ Only then:
 Current tracked scaffold:
 
 * `scripts/run_external_quality_hint_dry_run.py`
+* `training/footer_header_noise_report_only_package.md`
 
 Current status:
 
@@ -189,6 +190,9 @@ Current status:
   * rows `77`
   * candidates `360`
   * emitted hints `6`
+* current recommended external-quality profile is `conservative_v2`
+  * `model_confidence_threshold = 0.95`
+  * `cooperative_threshold = 0.85`
 * current non-emit majority is teacher label disagreement
   * `heading`
   * `paragraph`
@@ -199,11 +203,15 @@ Current status:
   from the `md_test` / section-numbering variants
 * body-risk rows with `central_body_band` / `sentence_like` signals remain
   blocked from emission in this pass
+* `footer_header_noise` is the only label ready for the next external-quality
+  manual-review stage
 
 Immediate next step from this scaffold:
 
 * keep `footer_header_noise` on the refined `conservative_v2` path unless
   another false-positive cluster appears
+* expand external-quality coverage through larger/manual review before any
+  runtime discussion
 * keep `heading` / `keep_as_text` as later report-only expansions
 * continue `PubTables` specialist work separately
 * keep runtime proposal paused until after more external-quality evidence

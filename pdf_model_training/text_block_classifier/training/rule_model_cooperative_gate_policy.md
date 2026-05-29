@@ -102,6 +102,17 @@ The formula only applies after:
   * `w_conflict = 1.00`
   * `w_label_risk = 0.10`
 
+### Conservative v2
+
+`conservative_v2` keeps the same weights as `conservative`.
+
+Its current purpose is narrower:
+
+* keep the same fail-closed score mix
+* add an extra `footer_header_noise` hard conflict for dense edge-row cells in
+  the external-quality report-only path
+* leave `heading` and `keep_as_text` unchanged
+
 ### Balanced
 
 * `footer_header_noise`
@@ -158,8 +169,14 @@ Initial cooperative score thresholds to compare:
 
 Suggested first default for a future dry run:
 
-* conservative profile
+* `conservative_v2` profile
 * `cooperative_score >= 0.85`
+
+Current external-quality default:
+
+* `model confidence >= 0.95`
+* `cooperative_score >= 0.85`
+* emit allowlist: `footer_header_noise` only
 
 ## Hard Conflicts
 
@@ -173,6 +190,8 @@ Hard conflicts:
 * central dense paragraph region
 * table/caption/list conflict
 * strong compact heading shape conflict
+* dense multi-column edge-row structure in the `conservative_v2`
+  external-quality path
 
 ### `heading`
 
@@ -246,6 +265,7 @@ Interpretation:
 Current tracked runner:
 
 * `scripts/run_external_quality_hint_dry_run.py`
+* `training/footer_header_noise_report_only_package.md`
 
 Current enabled label:
 
@@ -313,6 +333,8 @@ Refinement intent:
 Interpretation:
 
 * the cooperative gate is no longer blocked on feature compatibility
+* `conservative_v2` is the current recommended external-quality report-only
+  profile for `footer_header_noise`
 * the current conservative pass is still narrow by design
 * most non-emits are caused by teacher label disagreement, not cooperative
   score failure
@@ -321,6 +343,10 @@ Interpretation:
 * `form_key_value` should not be treated as a blanket hard conflict:
   the stronger external-quality failure mode was dense edge-row structure, and
   that row included both `form_key_value` and non-`form_key_value` cells
+* `footer_header_noise` is the only label that should proceed to the next
+  external-quality manual review stage
+* `heading` and `keep_as_text` still need separate guard work and should not be
+  widened in this package
 
 ## Runtime Note
 

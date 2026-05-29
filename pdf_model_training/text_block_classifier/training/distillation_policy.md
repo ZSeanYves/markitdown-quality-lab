@@ -414,6 +414,7 @@ Current v1 runtime note:
 
 * v1 still does not authorize convert/runtime integration
 * the only next step after v1 is a report-only external-quality dry run
+* the tracked external-quality package should stay `footer_header_noise` only
 
 ## Cooperative Gate v0 Readout
 
@@ -467,6 +468,8 @@ Current label interpretation after cooperative filtering:
 
 * `footer_header_noise`
   * still the clearest external-quality report-only candidate
+  * current recommended package profile is `conservative_v2`
+  * current next step is larger/manual external-quality review, not runtime
 * `heading`
   * still needs more guard refinement because the remaining residual risk is
     mostly paragraph-like content
@@ -477,6 +480,8 @@ Important note:
 
 * these cooperative results still do not authorize runtime integration
 * they only justify the next report-only step:
-  * external-quality dry-run planning for `footer_header_noise`
+  * external-quality manual review for `footer_header_noise`
   * more guard refinement for `heading`
   * more guard refinement for `keep_as_text`
+* `paragraph`, `list_item`, `table_like`, and `caption` remain outside this
+  package

@@ -64,6 +64,7 @@ It must not:
 Current tracked runner:
 
 * `scripts/run_external_quality_hint_dry_run.py`
+* `training/footer_header_noise_report_only_package.md`
 
 Current scope:
 
@@ -127,6 +128,16 @@ Current `pdf_all_v3_footer_refined` readout:
 * newly blocked reason:
   * `dense_edge_row_conflict = 6`
 
+Current recommended report-only package:
+
+* label: `footer_header_noise`
+* profile: `conservative_v2`
+* `model_confidence_threshold = 0.95`
+* `cooperative_threshold = 0.85`
+* emit label allowlist stays `footer_header_noise` only
+* current tracked summary:
+  * `training/footer_header_noise_report_only_package.md`
+
 What now works:
 
 * find PDF rows from the external-quality manifest
@@ -154,6 +165,10 @@ Current interpretation:
 * `form_key_value` alone was not the right blocker, because the suspicious
   booking row also emitted non-`form_key_value` cells like `2`, `3`, and
   `12/26-12/31`
+* the current remaining emit surface is only the isolated page-number-style
+  shells from the small `md_test` variants
+* based on the current `pdf_all_v3_footer_refined` slice, there is no obvious
+  additional guard to add before a larger manual review
 
 ## Candidate Questions
 
@@ -164,11 +179,24 @@ The dry run should answer:
 * do `keep_as_text` hints mostly land on references/footnotes rather than body?
 * how many potential regressions are being avoided by `no_override`?
 
+Current next evaluation checklist:
+
+* reuse `conservative_v2` unchanged on a larger PDF slice
+* manually review all emitted hints first
+* audit the `confidence<0.95` `footer_header_noise` rows separately
+* keep `heading` / `keep_as_text` out of this runner expansion for now
+
 ## Recommended First Labels
 
 The first external-quality dry run should only include:
 
 * `footer_header_noise`
+
+Current package recommendation:
+
+* only `footer_header_noise` should move into the next external-quality manual
+  review stage
+* `heading` and `keep_as_text` remain later report-only expansions
 
 Labels to evaluate later, but not yet enabled in this runner:
 
