@@ -193,3 +193,19 @@ The next step after v1, if results are strong enough, is:
 
 Only after that could a future gated design be proposed, and that would still
 be separate from runtime implementation.
+
+## Cooperative Gate Note
+
+v1 is still a threshold-plus-guard surface.
+
+It does not yet model:
+
+* explicit rule support weighting
+* explicit context sanity weighting
+* explicit conflict penalties
+* cooperative scoring against existing PDF rule evidence
+
+Those pieces move into the next report-only stage:
+
+* `rule_model_cooperative_gate_policy.md`
+* `scripts/evaluate_rule_model_cooperative_gate.py`

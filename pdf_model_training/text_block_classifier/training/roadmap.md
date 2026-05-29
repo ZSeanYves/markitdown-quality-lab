@@ -102,6 +102,47 @@ Current v1 interpretation:
   * `footer_header_noise` is ready for an external-quality dry run
   * `heading` and `keep_as_text` still need more guard refinement
 
+## Stage 3.5 Cooperative Gate
+
+Immediate next target:
+
+* rule-model cooperative scoring
+* profile comparison:
+  * conservative
+  * balanced
+  * model-heavy
+* identify a dry-run-ready profile without fighting the existing rules
+
+Requirements:
+
+* rules remain primary
+* hard conflicts block regardless of model confidence
+* emitted hints stay report-only
+* runtime proposal remains paused
+
+Current first-pass result:
+
+* raw v1 baseline:
+  * emitted rows `1219`
+  * coverage `0.1096`
+  * emitted accuracy `0.9779`
+* best current cooperative profile:
+  * `conservative @ 0.85`
+  * emitted rows `698`
+  * coverage `0.0628`
+  * emitted accuracy `0.9957`
+  * wrong emitted `3`
+
+Interpretation:
+
+* the cooperative gate is doing the right kind of work:
+  * lower coverage
+  * lower wrong-emitted risk
+  * stronger agreement with rule evidence
+* `footer_header_noise` remains the best dry-run candidate
+* `heading` and `keep_as_text` still need more guard refinement before they
+  should move to an external-quality dry run
+
 ## Stage 4 Runtime Preconditions
 
 Only after distillation evidence is mature should runtime be discussed.

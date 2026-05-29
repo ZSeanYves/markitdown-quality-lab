@@ -390,7 +390,93 @@ Current v1 warning:
 * `caption` remains denied
 * `paragraph`, `list_item`, and `table_like` remain outside the v1 gated set
 
+## Cooperative Gate Direction
+
+The next stage after v1 is not runtime hookup.
+
+It is a report-only cooperative gate that combines:
+
+* model confidence
+* rule support
+* context sanity
+* conflict penalties
+* label-risk penalties
+
+Important interpretation:
+
+* rules stay primary
+* hard conflicts still block regardless of model confidence
+* the model is only allowed to reinforce rule-compatible candidates
+* this inherits the old fail-closed / reason-tag / no-override discipline
+  without inheriting the old mixed block/layout scope
+
 Current v1 runtime note:
 
 * v1 still does not authorize convert/runtime integration
 * the only next step after v1 is a report-only external-quality dry run
+
+## Cooperative Gate v0 Readout
+
+The first cooperative gate pass is still local-only and report-only.
+
+Evaluator:
+
+* `scripts/evaluate_rule_model_cooperative_gate.py`
+
+Input policy:
+
+* allowed labels remain only:
+  * `footer_header_noise`
+  * `heading`
+  * `keep_as_text`
+* hard conflicts still beat model confidence
+* `paragraph`, `list_item`, `table_like`, and `caption` remain outside the
+  cooperative emit surface
+
+Current `pilot3000_v1` heldout comparison:
+
+* v1 baseline:
+  * emitted rows `1219`
+  * coverage `0.1096`
+  * emitted accuracy `0.9779`
+* cooperative `conservative @ 0.85`:
+  * emitted rows `698`
+  * coverage `0.0628`
+  * emitted accuracy `0.9957`
+  * wrong emitted `3`
+* cooperative `balanced @ 0.85`:
+  * emitted rows `297`
+  * coverage `0.0267`
+  * emitted accuracy `1.0000`
+  * wrong emitted `0`
+* cooperative `model_heavy @ 0.80`:
+  * emitted rows `342`
+  * coverage `0.0307`
+  * emitted accuracy `1.0000`
+  * wrong emitted `0`
+
+Interpretation:
+
+* the cooperative gate succeeds when judged as a rule-preserving filter
+* it meaningfully reduces wrong emitted cases relative to raw v1
+* the best current tradeoff is `conservative @ 0.85`
+* `balanced` and `model_heavy` become too sparse under the current hard
+  conflicts to justify as the first dry-run surface
+
+Current label interpretation after cooperative filtering:
+
+* `footer_header_noise`
+  * still the clearest external-quality report-only candidate
+* `heading`
+  * still needs more guard refinement because the remaining residual risk is
+    mostly paragraph-like content
+* `keep_as_text`
+  * remains too sparse under current guards and should stay report-only
+
+Important note:
+
+* these cooperative results still do not authorize runtime integration
+* they only justify the next report-only step:
+  * external-quality dry-run planning for `footer_header_noise`
+  * more guard refinement for `heading`
+  * more guard refinement for `keep_as_text`
