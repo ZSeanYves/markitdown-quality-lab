@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""Legacy report-only local eval surface for archived mixed PDF gate experiments.
+
+This script is preserved for historical comparison and compatibility only.
+It is not the current primary route for DocLayNet teacher training,
+distillation, or specialist experiments.
+"""
 import argparse
 import collections
 import csv
@@ -35,6 +41,12 @@ from train import (
     write_json,
     write_tsv,
 )
+
+# Compatibility note:
+# - this file keeps the older report-only gate presets
+# - it should not be treated as the current text-block runtime proposal path
+# - boundary rows are intentionally skipped during block eval, which is one more
+#   sign that the old route mixed scopes that are now split
 
 
 BLOCK_LABELS = {

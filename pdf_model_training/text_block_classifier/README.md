@@ -34,6 +34,11 @@ Current status:
 * this directory now owns a full per-model training layout:
   `dataset/`, `adapters/`, `labels/`, `manifests/`, `training/`,
   `evaluation/`, `models/`, `reports/`, `scripts/`, `local_only/`, `archive/`
+* PR 1 boundary cleanup keeps legacy mixed assets only as compatibility
+  reference:
+  * old `pdf_layout_classifier` names remain historical
+  * old mixed manifests remain archived
+  * old JSON model metadata remain reference-only under `models/`
 * `manifests/manifest.tsv` is the only current recommended manifest entrypoint
 * the current active manifest is intentionally header-only until mature public
   annotated dataset adapter outputs are reviewed
@@ -49,6 +54,11 @@ Current status:
   `baseline_v3` features; current `pilot3000_v1` heldout macro F1 is `0.8097`
 * `PubTables-1M` is currently scoped as a specialist source for
   `table_like` and weak `caption` probing only
+* current text-block mainline is:
+  * DocLayNet adapter outputs
+  * baseline feature export
+  * HGB teacher training
+  * distillation v0 / v1 planning
 
 Next action:
 
@@ -66,3 +76,4 @@ Do not mix:
 * parser/layout boundary rows from `layout_recovery_model`
 * `PubLayNet` weak rows into `DocLayNet` gold eval
 * repo-manual sanity labels into the current recommended manifest
+* legacy `pdf_layout_classifier` compatibility assets into the current mainline

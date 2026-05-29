@@ -19,6 +19,14 @@ Current conclusion:
 This audit does not propose runtime integration. It only defines boundaries,
 legacy status, and a cleanup plan.
 
+Status update:
+
+* PR 1 boundary cleanup has now split the main-repo debug eval manifest into
+  explicit block-assist and boundary-assist surfaces while keeping the old
+  mixed manifest for compatibility
+* PR 1 also marks legacy tracked JSON model metadata and compatibility scripts
+  more explicitly as historical surfaces
+
 ## Discovered Legacy Routes
 
 ### Main historical mixed route

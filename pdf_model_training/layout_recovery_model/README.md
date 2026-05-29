@@ -35,6 +35,8 @@ Current status:
 * this directory now owns a full per-model training layout:
   `dataset/`, `adapters/`, `labels/`, `manifests/`, `training/`,
   `evaluation/`, `models/`, `reports/`, `scripts/`, `local_only/`, `archive/`
+* PR 1 boundary cleanup reinforces that this route is separate from the
+  text-block `HGB` teacher and distillation line
 * `manifests/manifest.tsv` is the only current recommended manifest entrypoint
 * the current active manifest is intentionally header-only until mature public
   dataset adapters are defined
@@ -52,3 +54,4 @@ Do not mix:
 * `paragraph`, `heading`, `caption`, `list_item`, `form_row` block semantics
   from `text_block_classifier`
 * old repo-manual boundary rows into the current recommended manifest
+* text-block distillation hints into parser/layout training manifests

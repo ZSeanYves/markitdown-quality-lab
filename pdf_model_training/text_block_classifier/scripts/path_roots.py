@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+"""Shared path helpers with legacy fallback support.
+
+The fallback names and prefixes below are retained only so archived manifests,
+legacy metadata, and historical local eval runs can still resolve paths.
+Current recommended flows should prefer the quality-lab `text_block_classifier`
+tree and its `manifests/`, `scripts/`, and `local_only/` layout.
+"""
 from __future__ import annotations
 
 import os

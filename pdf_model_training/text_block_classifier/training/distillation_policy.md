@@ -319,3 +319,5 @@ Interpretation:
 * `layout_recovery_model` remains `Task B`
 * old mixed `pdf_layout_classifier` manifests and legacy boundary labels must
   not be reintroduced into current text-block distillation
+* legacy `pdf_layout_linear_*` metadata and report-only local eval presets are
+  compatibility artifacts, not distillation candidates

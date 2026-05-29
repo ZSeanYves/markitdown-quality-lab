@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""Legacy compatibility training spike for archived text-block PDF manifests.
+
+This script is kept so historical local experiments can still be reproduced.
+It is not the current recommended training entrypoint for the DocLayNet HGB
+teacher or distillation line.
+"""
 import argparse
 import csv
 import json
@@ -23,6 +29,11 @@ from path_roots import (
     resolve_existing_path,
     resolve_layout_lab_path,
 )
+
+# Compatibility note:
+# - this script still understands old manifest shapes and mixed row identity
+# - current recommended training flows use DocLayNet adapter rows plus
+#   `build_doclaynet_baseline_features.py` and `train_doclaynet_baseline.py`
 
 
 RESERVED_COLUMNS = {

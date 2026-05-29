@@ -41,6 +41,8 @@ Stage 1 status:
 * distillation v0 hint export done
 * boundary audit shows the old `pdf_layout_classifier` route mixed block and
   boundary tasks
+* PR 1 boundary cleanup now marks legacy model metadata and compatibility
+  scripts explicitly as historical surfaces
 * next step is moving from export to gated hint design, not runtime hookup
 
 ## Stage 2 Next
