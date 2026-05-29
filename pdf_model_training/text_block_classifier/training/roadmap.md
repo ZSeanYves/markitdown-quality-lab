@@ -43,7 +43,9 @@ Stage 1 status:
   boundary tasks
 * PR 1 boundary cleanup now marks legacy model metadata and compatibility
   scripts explicitly as historical surfaces
-* next step is moving from export to gated hint design, not runtime hookup
+* v1 gated hint design now exists as a report-only heldout evaluator
+* current v1 best dry-run candidate is `footer_header_noise`
+* next step is external-quality dry-run planning, not runtime hookup
 
 ## Stage 2 Next
 
@@ -54,6 +56,7 @@ Next target:
 * teacher + specialist evaluation on boundary slices
 * explicit source-separated evaluation
 * v1 rule-gated hint design for stable labels
+* external-quality report-only dry-run planning for v1 labels
 
 Rules for Stage 2:
 
@@ -88,6 +91,16 @@ Buckets that still need caution:
 * address / affiliation rows
 * form-like short rows
 * anything inherited from old boundary/layout manifests
+
+Current v1 interpretation:
+
+* `footer_header_noise`, `heading`, and `keep_as_text` are the only v1 gate
+  candidates
+* `paragraph`, `list_item`, `table_like`, and `caption` stay outside the v1
+  gated surface
+* after the first heldout pass:
+  * `footer_header_noise` is ready for an external-quality dry run
+  * `heading` and `keep_as_text` still need more guard refinement
 
 ## Stage 4 Runtime Preconditions
 

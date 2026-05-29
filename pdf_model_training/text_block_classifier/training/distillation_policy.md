@@ -321,3 +321,76 @@ Interpretation:
   not be reintroduced into current text-block distillation
 * legacy `pdf_layout_linear_*` metadata and report-only local eval presets are
   compatibility artifacts, not distillation candidates
+
+## Distillation v1: Label-Specific Gated Hints
+
+Distillation v1 tightens v0 further.
+
+Scope:
+
+* still offline-only
+* still report-only
+* still `Task A` only
+
+Allowed v1 labels:
+
+* `footer_header_noise`
+* `heading`
+* `keep_as_text`
+
+Still blocked in v1:
+
+* `paragraph`
+* `list_item`
+* `table_like`
+* `caption`
+
+Required v1 gate conditions:
+
+1. confidence `>= 0.95`
+2. label-specific sanity guard
+3. conflict detection
+4. `no_override` fallback when any guard fails
+
+Current v1 artifact:
+
+* `scripts/evaluate_distillation_v1_gates.py`
+* `training/distillation_v1_gate_policy.md`
+
+Current v1 heldout goal:
+
+* reduce candidate coverage further than v0
+* keep or improve emitted precision
+* identify which labels are safe enough for a future external-quality dry run
+
+Current `pilot3000_v1` heldout v1 result at `0.95`:
+
+* total rows: `11123`
+* v0 emitted rows: `4676`
+* v1 emitted rows: `1219`
+* v1 coverage: `0.1096`
+* v1 emitted accuracy: `0.9779`
+* v1 emitted macro F1: `0.2648`
+
+Current v1 interpretation:
+
+* `footer_header_noise`
+  * ready for external-quality dry-run planning
+  * precision `0.9975`, recall `0.5770`, F1 `0.7311`
+* `heading`
+  * still needs more guard work
+  * precision `0.9670`, recall `0.4099`, F1 `0.5758`
+* `keep_as_text`
+  * still needs more guard work
+  * precision `0.9778`, recall `0.3793`, F1 `0.5466`
+
+Current v1 warning:
+
+* the main residual wrong-emitted pair is still `paragraph -> heading`
+* `caption` remains denied
+* `paragraph`, `list_item`, and `table_like` remain outside the v1 gated set
+
+Current v1 runtime note:
+
+* v1 still does not authorize convert/runtime integration
+* the only next step after v1 is a report-only external-quality dry run
