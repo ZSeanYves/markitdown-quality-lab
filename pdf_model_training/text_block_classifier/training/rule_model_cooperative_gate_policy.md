@@ -330,3 +330,23 @@ Current label outcome:
 * `keep_as_text`
   * still too sparse under current cooperative rules and should stay
     report-only
+
+## External Quality Dry-Run Note
+
+The first external-quality runner now exists as a tracked scaffold:
+
+* `scripts/run_external_quality_hint_dry_run.py`
+
+Current interpretation:
+
+* it can reuse the normal PDF quality path unchanged
+* it can collect report-only Markdown/metadata outputs
+* it can export legacy block candidates for `footer_header_noise` auditing
+* it still cannot emit real cooperative hints because arbitrary external PDF
+  blocks do not yet have a teacher-compatible `baseline_v3` feature bridge
+
+So the current external-quality state is:
+
+* useful for capability checking
+* useful for conflict/risk review
+* not yet a real cooperative-hint evaluation surface

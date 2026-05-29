@@ -162,3 +162,23 @@ Only then:
 * propose convert-layer gated integration
 * keep deterministic rules primary
 * keep model influence optional and reversible
+
+## Stage 3.8 External Quality Scaffold
+
+Current tracked scaffold:
+
+* `scripts/run_external_quality_hint_dry_run.py`
+
+Current status:
+
+* `footer_header_noise` only
+* report-only only
+* can reuse the normal external-quality PDF path without mutating outputs
+* can export legacy block candidates for side-channel review
+* still blocked on the missing bridge from external PDF blocks to
+  `baseline_v3` / `HGB` cooperative features
+
+Immediate next step from this scaffold:
+
+* build the external-PDF block candidate to teacher-feature bridge
+* then rerun external-quality dry run with real cooperative scoring

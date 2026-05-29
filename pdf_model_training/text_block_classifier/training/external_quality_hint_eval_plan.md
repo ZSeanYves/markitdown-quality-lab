@@ -58,6 +58,49 @@ It must not:
    * suspicious rows for manual review
 5. compare the report against the original quality run without mutating outputs
 
+## Current v0 Scaffold Status
+
+Current tracked runner:
+
+* `scripts/run_external_quality_hint_dry_run.py`
+
+Current scope:
+
+* format `pdf` only
+* label `footer_header_noise` only
+* report-only
+* no expected mutation
+* no `samples/check_quality.sh` behavior change
+
+Current `smoke20` readout:
+
+* capability status: `partial`
+* selected rows: `20`
+* rows with approved inputs processed: `19`
+* skipped license rows: `1`
+* legacy footer-header candidate rows: `135`
+* emitted hints: `0`
+* no-override rows: `135`
+* conflict-flagged candidate rows: `57`
+
+What already works:
+
+* find PDF rows from the external-quality manifest
+* resolve local input files
+* run the normal quality helper unchanged and keep its Markdown/metadata outputs
+* export legacy block-level PDF candidates in a side channel
+
+Current blocker:
+
+* there is still no bridge from arbitrary external-quality PDF blocks into the
+  `baseline_v3` / `HGB` teacher feature surface
+
+Interpretation:
+
+* the runner is useful today as a capability and risk-audit scaffold
+* it is not yet a true teacher-hint dry run
+* until the feature bridge exists, emitted model hints must remain `0`
+
 ## Candidate Questions
 
 The dry run should answer:
