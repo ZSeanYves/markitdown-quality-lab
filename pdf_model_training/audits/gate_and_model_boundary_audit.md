@@ -26,6 +26,24 @@ Status update:
   mixed manifest for compatibility
 * PR 1 also marks legacy tracked JSON model metadata and compatibility scripts
   more explicitly as historical surfaces
+* verified in code on 2026-05-29:
+  * `debug/debug_app.mbt` still probes
+    `markitdown-quality-lab/pdf_model_training/manifest.tsv`, but the current
+    quality-lab tree exposes per-model manifests under
+    `text_block_classifier/manifests/manifest.tsv` and
+    `layout_recovery_model/manifests/manifest.tsv`
+  * current fallback therefore lands on the tracked mixed debug manifest by
+    default
+  * `layout-assist-eval` reads row split but does not branch on
+    `record_kind=block|boundary`
+  * current `build_pdf_layout_assist_summary(...)` builds block-style assist
+    features only, so boundary rows in the mixed/default manifest do not
+    exercise a real `Task B` evaluation path
+* verified in code on 2026-05-29:
+  * `convert/pdf_layout/*` is not imported by the normal `convert/pdf` runtime
+    path
+  * it is currently referenced by debug/compatibility surfaces only:
+    `convert/pdf_debug/*` and `doc_parse/pdf/layout_model_tool`
 
 ## Discovered Legacy Routes
 
@@ -93,11 +111,12 @@ This split is already described correctly in:
 | `convert/pdf/pdf_layout_gate.mbt` | `Task C` | `safe_to_keep` | current narrow gated runtime surface |
 | `convert/pdf/pdf_merge_decision.mbt` | `Task B` + `Task C` | `safe_to_keep` | boundary policy for cross-page merge; must stay separate from block classifier hints |
 | `convert/pdf/pdf_layout_features.mbt` | `mixed_task` | `needs_split` | exports block features and boundary features under one `layout` surface |
+| `convert/pdf_layout/*` | `mixed_task` | `legacy_debug_only` | validates `task=pdf_layout_classifier`, accepts `record_kind=block|boundary`, and is not on the normal runtime path |
 | `doc_parse/pdf/api/pdf_api.mbt` | `Task B` | `safe_to_keep` | already states parser-facing output and higher-layer semantic separation |
 | `doc_parse/pdf/layout_model_tool/main.mbt` | `mixed_layer` | `needs_split` | one tool handles `record-kind block|boundary` under old `layout_model_tool` name |
 | `convert/pdf_debug/pdf_layout_assist.mbt` | `mixed_layer` | `document_only` | report-only provider abstraction; label suggestions are block-like but packaged as `layout_assist` |
-| `debug/debug_app.mbt` | `mixed_layer` | `document_only` | layout-assist eval currently loads mixed manifests |
-| `debug/testdata/layout_assist_eval/manifest.tsv` | `mixed_task` | `needs_split` | mixes block samples and boundary samples in one eval manifest |
+| `debug/debug_app.mbt` | `mixed_layer` | `document_only` | default resolver still probes a stale top-level quality-lab manifest path, then falls back to the tracked mixed manifest; current eval path also ignores `record_kind` |
+| `debug/testdata/layout_assist_eval/manifest.tsv` | `mixed_task` | `needs_rewire` | kept as compatibility alias, but it is still the default tracked fallback and still mixes block samples and boundary samples |
 
 ### Quality-lab current active routes
 
@@ -178,6 +197,24 @@ model is learning:
 
 This encourages “one assist summary for everything”, which is convenient for
 debugging but bad for architectural clarity.
+
+### 5. Implementation drift confusion
+
+Some of the current confusion is no longer just naming; it is control-flow drift:
+
+* split tracked manifests now exist:
+  * `debug/testdata/layout_assist_eval/block_assist_manifest.tsv`
+  * `debug/testdata/layout_assist_eval/boundary_assist_manifest.tsv`
+* but `debug/debug_app.mbt` still defaults to:
+  * `MARKITDOWN_QUALITY_LAB/pdf_model_training/manifest.tsv`
+  * `markitdown-quality-lab/pdf_model_training/manifest.tsv`
+  * `debug/testdata/layout_assist_eval/manifest.tsv`
+* the first two paths are stale in the current quality-lab tree
+* the third path is the mixed compatibility alias
+* current `layout-assist-eval` does not use `record_kind` to choose a
+  block-specific or boundary-specific evaluation routine
+* current assist summary generation is block-oriented, so boundary rows are not
+  genuine parser/layout eval coverage
 
 ## Relationship To HGB Distillation v0
 
@@ -312,14 +349,17 @@ Recommended next cleanup:
 * stop any default path fallback from preferring
   `samples/pdf_layout_classifier/` or `.external/layout_model/`
 * keep mixed old manifests only under `archive/`
+* retire stale top-level `pdf_model_training/manifest.tsv` references from docs
+  and debug fallback resolution
 
 ### Phase 3: split debug/eval surfaces
 
 Recommended follow-up:
 
-* split `debug/testdata/layout_assist_eval/manifest.tsv` into:
-  * block-assist eval
-  * boundary-assist eval
+* stop defaulting `layout-assist-eval` to the mixed compatibility alias
+* require an explicit block-assist or boundary-assist manifest surface
+* if boundary eval remains in the main repo, add a boundary-specific summary
+  path instead of reusing `build_pdf_layout_assist_summary(...)`
 * rename report surfaces so “layout assist” does not imply one model for both
   tasks
 
