@@ -39,6 +39,8 @@ Stage 1 status:
 * teacher audit done
 * `PubTables` scaffold done
 * distillation v0 hint export done
+* boundary audit shows the old `pdf_layout_classifier` route mixed block and
+  boundary tasks
 * next step is moving from export to gated hint design, not runtime hookup
 
 ## Stage 2 Next
@@ -56,6 +58,7 @@ Rules for Stage 2:
 * do not pollute `DocLayNet` gold heldout
 * keep `PubTables` as specialist-only
 * treat `caption` as weak/specialist until proven stable
+* clean up legacy mixed block/boundary references before any v1 hint proposal
 
 ## Stage 3 Distillation
 
@@ -69,11 +72,12 @@ Distillation target:
 Primary buckets to distill first:
 
 * `footer_header_noise`
-* `table_like`
 * `heading`
 * `keep_as_text`
-* high-confidence `paragraph`
-* high-confidence `list_item`
+* only later:
+  * `table_like`
+  * high-confidence `paragraph`
+  * high-confidence `list_item`
 
 Buckets that still need caution:
 
@@ -81,6 +85,7 @@ Buckets that still need caution:
 * patent/legal short-numbered lines
 * address / affiliation rows
 * form-like short rows
+* anything inherited from old boundary/layout manifests
 
 ## Stage 4 Runtime Preconditions
 

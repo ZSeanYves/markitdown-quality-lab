@@ -290,3 +290,32 @@ Important caution:
   * rule-gated hint planning
   * specialist-backed boundary experiments
   * fail-closed routing design
+
+## Boundary Scope Clarification
+
+This policy is only for convert-layer text block semantics.
+
+In scope:
+
+* `paragraph`
+* `heading`
+* `footer_header_noise`
+* `caption`
+* `table_like`
+* `list_item`
+* `keep_as_text`
+
+Out of scope:
+
+* reading order
+* cross-page merge / no-merge
+* column detection
+* parser-side region recovery
+* multi-column parser risk
+
+Interpretation:
+
+* `text_block_classifier` distillation is `Task A` plus `Task C`
+* `layout_recovery_model` remains `Task B`
+* old mixed `pdf_layout_classifier` manifests and legacy boundary labels must
+  not be reintroduced into current text-block distillation
