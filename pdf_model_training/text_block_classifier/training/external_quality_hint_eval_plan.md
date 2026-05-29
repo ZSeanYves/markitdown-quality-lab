@@ -66,6 +66,7 @@ Current tracked runner:
 * `scripts/run_external_quality_hint_dry_run.py`
 * `scripts/export_footer_header_manual_review.py`
 * `scripts/summarize_footer_header_manual_review.py`
+* `scripts/export_footer_header_review_visual_pack.py`
 * `training/footer_header_noise_report_only_package.md`
 
 Current scope:
@@ -141,11 +142,15 @@ Current recommended report-only package:
   * `training/footer_header_noise_report_only_package.md`
 * current manual-review export:
   * `scripts/export_footer_header_manual_review.py`
+  * `scripts/export_footer_header_review_visual_pack.py`
   * `scripts/summarize_footer_header_manual_review.py`
   * local-only `footer_header_manual_review.tsv`
   * local-only `footer_header_manual_review.md`
   * local-only `footer_header_manual_review_summary.tsv`
   * local-only `footer_header_manual_review_summary.md`
+  * local-only `v1_visual/footer_header_manual_review.enriched.tsv`
+  * local-only `v1_visual/review_index.md`
+  * local-only `v1_visual/review_index.html`
 
 What now works:
 
@@ -194,7 +199,10 @@ Current next evaluation checklist:
 * reuse `conservative_v2` unchanged on a larger PDF slice
 * export a manual-review package that includes emit, hard-conflict, and
   high-confidence `no_override` rows
-* manually review all emitted hints first
+* export the visual pack before manual review
+* manually review all emitted hints from the visual pack, not the bare TSV
+* use `v1_visual/review_index.md` or `v1_visual/review_index.html` as the
+  primary audit surface
 * fill `reviewer_decision` / `reviewer_notes` inside
   `footer_header_manual_review.tsv`
 * run `scripts/summarize_footer_header_manual_review.py`
@@ -208,6 +216,9 @@ Manual review contract:
 
 * blank `reviewer_decision` rows are allowed and summarize as `blank`
 * a fully blank package should return `waiting_for_manual_review`
+* the preferred audit surface is the visual pack, not the bare TSV
+* visual-pack fallback to path-only review is acceptable when `PyMuPDF/fitz`
+  is unavailable
 * do not use an unreviewed package as justification for runtime work
 * keep `heading` and `keep_as_text` paused until this footer/header review lane
   is complete
@@ -265,3 +276,8 @@ still evidence gathering, not integration approval.
 The manual-review summary exists because filled reviewer decisions, not dry-run
 counts alone, are the gate for deciding whether to keep the profile unchanged,
 refine guards, or expand the benchmark.
+
+The manual-review visual pack exists because a bare TSV does not provide enough
+context to judge accept/reject decisions safely; reviewers need direct PDF
+paths, produced Markdown paths, and page/crop views when the renderer is
+available.

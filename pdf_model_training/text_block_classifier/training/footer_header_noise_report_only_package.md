@@ -186,6 +186,7 @@ Current tracked exporter:
 
 * `scripts/export_footer_header_manual_review.py`
 * `scripts/summarize_footer_header_manual_review.py`
+* `scripts/export_footer_header_review_visual_pack.py`
 
 Current local-only outputs:
 
@@ -193,6 +194,9 @@ Current local-only outputs:
 * `footer_header_manual_review.md`
 * `footer_header_manual_review_summary.tsv`
 * `footer_header_manual_review_summary.md`
+* `v1_visual/footer_header_manual_review.enriched.tsv`
+* `v1_visual/review_index.md`
+* `v1_visual/review_index.html`
 
 Current review-row schema:
 
@@ -236,16 +240,37 @@ Review intent:
 
 Manual review workflow:
 
-1. open `footer_header_manual_review.tsv`
-2. fill `reviewer_decision`
-3. fill `reviewer_notes` for any keep/refine/expand evidence
-4. run `scripts/summarize_footer_header_manual_review.py`
-5. read the summary report and choose:
+1. start from `scripts/export_footer_header_review_visual_pack.py`
+2. open `v1_visual/review_index.md` or `v1_visual/review_index.html`
+3. use the enriched row context instead of the bare TSV:
+   * input PDF path
+   * produced Markdown path
+   * metadata path
+   * page image / bbox crop when a renderer is available
+   * per-review Markdown entry files
+4. fill `reviewer_decision`
+5. fill `reviewer_notes` for any keep/refine/expand evidence
+6. run `scripts/summarize_footer_header_manual_review.py`
+7. read the summary report and choose:
    * `keep profile unchanged`
    * `refine guard`
    * `adjust threshold`
    * `expand benchmark`
    * `pause`
+
+Visual-pack fallback rule:
+
+* the preferred audit surface is the visual pack, not the bare TSV
+* if `PyMuPDF/fitz` is available, the visual pack should render page PNGs and
+  bbox crops
+* if `PyMuPDF/fitz` is missing, the visual pack should still export:
+  * resolved PDF path
+  * produced Markdown path
+  * metadata path
+  * open-command hints
+  * review index and per-review entry files
+* missing render capability must not block the report-only review package from
+  being exported
 
 Expected decision meanings:
 
@@ -265,6 +290,8 @@ Current no-review fallback:
 * a fully blank package should summarize to `waiting_for_manual_review`
 * no runtime, convert, or parser proposal should move forward until review rows
   are filled
+* no runtime, convert, or parser proposal should move forward from a bare TSV
+  review without the visual-pack context
 
 Why this review stage is required:
 

@@ -170,6 +170,7 @@ Current tracked scaffold:
 * `scripts/run_external_quality_hint_dry_run.py`
 * `scripts/export_footer_header_manual_review.py`
 * `scripts/summarize_footer_header_manual_review.py`
+* `scripts/export_footer_header_review_visual_pack.py`
 * `training/footer_header_noise_report_only_package.md`
 
 Current status:
@@ -211,11 +212,17 @@ Current status:
   layer before any larger benchmark claim
 * a manual-review summary step now exists so reviewer decisions can be turned
   into a keep/refine/adjust/expand recommendation without touching runtime
+* a manual-review visual-pack step now exists so reviewers can audit against
+  resolved PDF paths, quality outputs, and optional page/crop renders instead
+  of a bare TSV
 
 Immediate next step from this scaffold:
 
 * keep `footer_header_noise` on the refined `conservative_v2` path unless
   another false-positive cluster appears
+* export the visual pack before asking for reviewer decisions
+* use `v1_visual/review_index.md` or `v1_visual/review_index.html` as the
+  primary review surface
 * open `footer_header_manual_review.tsv` and fill `reviewer_decision` /
   `reviewer_notes`
 * run `scripts/summarize_footer_header_manual_review.py`
@@ -229,5 +236,7 @@ Immediate next step from this scaffold:
   runtime discussion
 * keep `heading` / `keep_as_text` as later report-only expansions and paused in
   this lane
+* if `PyMuPDF/fitz` is missing locally, allow path-only visual-pack fallback
+  instead of blocking the report-only review workflow
 * continue `PubTables` specialist work separately
 * keep runtime proposal paused until after more external-quality evidence
