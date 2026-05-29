@@ -65,6 +65,7 @@ Current tracked runner:
 
 * `scripts/run_external_quality_hint_dry_run.py`
 * `scripts/export_footer_header_manual_review.py`
+* `scripts/summarize_footer_header_manual_review.py`
 * `training/footer_header_noise_report_only_package.md`
 
 Current scope:
@@ -140,8 +141,11 @@ Current recommended report-only package:
   * `training/footer_header_noise_report_only_package.md`
 * current manual-review export:
   * `scripts/export_footer_header_manual_review.py`
+  * `scripts/summarize_footer_header_manual_review.py`
   * local-only `footer_header_manual_review.tsv`
   * local-only `footer_header_manual_review.md`
+  * local-only `footer_header_manual_review_summary.tsv`
+  * local-only `footer_header_manual_review_summary.md`
 
 What now works:
 
@@ -174,7 +178,7 @@ Current interpretation:
   shells from the small `md_test` variants
 * based on the current `pdf_all_v3_footer_refined` slice, there is no obvious
   additional guard to add before a larger manual review
-* the next step is therefore manual-review packaging, not gate expansion
+* the next step is therefore manual-review summarization, not gate expansion
 
 ## Candidate Questions
 
@@ -191,10 +195,22 @@ Current next evaluation checklist:
 * export a manual-review package that includes emit, hard-conflict, and
   high-confidence `no_override` rows
 * manually review all emitted hints first
+* fill `reviewer_decision` / `reviewer_notes` inside
+  `footer_header_manual_review.tsv`
+* run `scripts/summarize_footer_header_manual_review.py`
+* use the summary recommendation to decide `keep/refine/adjust/expand/pause`
 * audit the `confidence<0.95` `footer_header_noise` rows separately
 * keep `heading` / `keep_as_text` out of this runner expansion for now
 * if review is clean, prepare a larger report-only benchmark
 * if review is not clean, refine guards again without widening labels
+
+Manual review contract:
+
+* blank `reviewer_decision` rows are allowed and summarize as `blank`
+* a fully blank package should return `waiting_for_manual_review`
+* do not use an unreviewed package as justification for runtime work
+* keep `heading` and `keep_as_text` paused until this footer/header review lane
+  is complete
 
 ## Recommended First Labels
 
@@ -245,3 +261,7 @@ After a dry run, the project would still need:
 
 The manual-review export exists precisely because a clean report-only slice is
 still evidence gathering, not integration approval.
+
+The manual-review summary exists because filled reviewer decisions, not dry-run
+counts alone, are the gate for deciding whether to keep the profile unchanged,
+refine guards, or expand the benchmark.

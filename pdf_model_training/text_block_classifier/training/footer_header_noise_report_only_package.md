@@ -185,11 +185,14 @@ new guard to add before the next manual review stage.
 Current tracked exporter:
 
 * `scripts/export_footer_header_manual_review.py`
+* `scripts/summarize_footer_header_manual_review.py`
 
 Current local-only outputs:
 
 * `footer_header_manual_review.tsv`
 * `footer_header_manual_review.md`
+* `footer_header_manual_review_summary.tsv`
+* `footer_header_manual_review_summary.md`
 
 Current review-row schema:
 
@@ -231,6 +234,38 @@ Review intent:
 * sample the highest-confidence `no_override` rows before any broader claim
 * prepare manual evidence without changing product output or gate behavior
 
+Manual review workflow:
+
+1. open `footer_header_manual_review.tsv`
+2. fill `reviewer_decision`
+3. fill `reviewer_notes` for any keep/refine/expand evidence
+4. run `scripts/summarize_footer_header_manual_review.py`
+5. read the summary report and choose:
+   * `keep profile unchanged`
+   * `refine guard`
+   * `adjust threshold`
+   * `expand benchmark`
+   * `pause`
+
+Expected decision meanings:
+
+* `emit` rows:
+  * `accept`
+  * `reject`
+  * `unsure`
+* blocked rows:
+  * `keep_blocked`
+  * `should_emit`
+  * `needs_new_guard`
+  * `out_of_scope`
+
+Current no-review fallback:
+
+* blank or empty `reviewer_decision` is treated as `blank`
+* a fully blank package should summarize to `waiting_for_manual_review`
+* no runtime, convert, or parser proposal should move forward until review rows
+  are filled
+
 Why this review stage is required:
 
 * current results are still report-only
@@ -250,7 +285,7 @@ Why this review stage is required:
 5. If manual review finds a new false-positive cluster, refine guards again
    without widening labels.
 6. Keep `heading` guard work separate from this package.
-7. Keep `keep_as_text` guard work separate from this package.
+7. Keep `keep_as_text` guard work separate from this package and paused here.
 8. Keep `PubTables` specialist work source-separated from this external-quality
    package.
 9. Keep runtime proposals paused until after larger report-only evidence and

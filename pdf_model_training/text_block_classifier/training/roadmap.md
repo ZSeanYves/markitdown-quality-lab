@@ -169,6 +169,7 @@ Current tracked scaffold:
 
 * `scripts/run_external_quality_hint_dry_run.py`
 * `scripts/export_footer_header_manual_review.py`
+* `scripts/summarize_footer_header_manual_review.py`
 * `training/footer_header_noise_report_only_package.md`
 
 Current status:
@@ -208,17 +209,25 @@ Current status:
   manual-review stage
 * a manual-review export package now exists as the next tracked preparation
   layer before any larger benchmark claim
+* a manual-review summary step now exists so reviewer decisions can be turned
+  into a keep/refine/adjust/expand recommendation without touching runtime
 
 Immediate next step from this scaffold:
 
 * keep `footer_header_noise` on the refined `conservative_v2` path unless
   another false-positive cluster appears
+* open `footer_header_manual_review.tsv` and fill `reviewer_decision` /
+  `reviewer_notes`
+* run `scripts/summarize_footer_header_manual_review.py`
+* use the summary to decide whether to keep the profile, refine guards, adjust
+  threshold, or expand the benchmark
 * export and review the manual-review package before any broader benchmark claim
 * if manual review is clean, prepare a larger external-quality footer/header
   report-only benchmark
 * if manual review finds a new failure cluster, refine guards again
 * expand external-quality coverage through larger/manual review before any
   runtime discussion
-* keep `heading` / `keep_as_text` as later report-only expansions
+* keep `heading` / `keep_as_text` as later report-only expansions and paused in
+  this lane
 * continue `PubTables` specialist work separately
 * keep runtime proposal paused until after more external-quality evidence
