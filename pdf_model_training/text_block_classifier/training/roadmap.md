@@ -51,6 +51,8 @@ Stage 1 status:
 
 Next target:
 
+* return to offline PDF model work after the 2026-05-31 external-quality
+  expansion checkpoint
 * tiny real `PubTables` local-only adapter smoke
 * narrow `table_like` / weak `caption` specialist experiment
 * teacher + specialist evaluation on boundary slices
@@ -142,6 +144,37 @@ Interpretation:
 * `footer_header_noise` remains the best dry-run candidate
 * `heading` and `keep_as_text` still need more guard refinement before they
   should move to an external-quality dry run
+
+## Stage 3.7 Quality Expansion Checkpoint
+
+Checkpoint: 2026-05-31
+
+Status:
+
+* external-quality expansion checkpoint is complete
+* `bash samples/check.sh` is green
+* `bash samples/check_quality.sh` is green on the expanded ready corpus
+* `bash samples/check_quality.sh --format pdf` is green
+* per-format quality checks are green
+* runtime proposal remains paused
+
+Interpretation:
+
+* the converter-quality baseline is clean enough to return to offline PDF
+  model training and evaluation
+* remaining quality expansion items are follow-up coverage work, not blockers:
+  * HTML strong/conservative noteref external samples remain thin
+  * EPUB strong-noteref external samples remain thin
+  * PDF footnote body association is still unimplemented
+  * metadata sidecar `note_definitions` serialization remains future work
+* external-quality should be used as a regression guard, not as unreviewed model
+  training gold
+* `DocLayNet`, `PubTables`, and model-specific corpora remain the training/eval
+  sources
+
+See also:
+
+* `../../audits/pdf_model_return_checkpoint.md`
 
 ## Stage 4 Runtime Preconditions
 
