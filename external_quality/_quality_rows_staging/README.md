@@ -56,17 +56,20 @@ repo runner can merge both surfaces:
   `samples/quality_corpus/external_manifest.local.tsv` is now a legacy fallback,
   not the recommended long-term home for tracked external/local quality rows
 * current migration dry-run result:
-  * `292` rows converted to canonical `external_quality/...`
+  * `302` rows converted to canonical `external_quality/...`
   * `0` rows still require compatibility-tree-only paths
   * `14` rows remain unchanged because they are repo-owned or non-external
   * `1` pending-review placeholder remains missing:
     `sources/paddleocr/ppstructure_reference.pdf`
+  * current manifest snapshot has `316` data rows:
+    `315` approved rows and `1` pending-review placeholder
 
 ## Validation
 
 From the main repository root:
 
 ```bash
-bash samples/check_quality.sh --lab-manifest markitdown-quality-lab/external_quality/_quality_rows_staging/manifest.tsv
-bash samples/check_quality.sh --lab-manifest markitdown-quality-lab/external_quality/_quality_rows_staging/manifest.tsv --format pdf
+bash samples/check_quality.sh
+bash samples/check_quality.sh --format pdf
+bash samples/check_quality.sh --format markdown
 ```
