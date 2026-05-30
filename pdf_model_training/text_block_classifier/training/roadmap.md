@@ -176,6 +176,42 @@ See also:
 
 * `../../audits/pdf_model_return_checkpoint.md`
 
+## Stage 3.9 Overnight Goal And Runtime Blockers
+
+Checkpoint: 2026-05-31
+
+Status:
+
+* the overnight offline PDF model goal is complete
+* `pilot3000_v1` / `baseline_v3` HGB remains the best current
+  `text_block_classifier` teacher
+  * heldout macro F1 `0.8097`
+  * heldout accuracy `0.8269`
+* offline teacher quality is good enough for continued report-only
+  distillation work
+* runtime integration remains blocked
+
+Current blockers:
+
+* `footer_header_noise` has the only promising external-quality report-only
+  path, but its manual-review TSV still has no filled reviewer decisions
+* `heading` and `keep_as_text` are not safe default emit labels
+* `layout_recovery_model` is blocked by Task B data readiness, not model code
+* external-quality remains validation/report-only data, not training gold
+
+Next phase:
+
+* finish the `footer_header_noise` manual review and rerun the summary
+* acquire mature Task B data for `layout_recovery_model`
+* only after both blockers clear, consider a disabled-by-default runtime
+  proposal
+
+See also:
+
+* `../../audits/overnight_pdf_model_goal_report.md`
+* `../../audits/footer_header_noise_manual_review_blocker.md`
+* `../../audits/layout_recovery_model_data_readiness.md`
+
 ## Stage 4 Runtime Preconditions
 
 Only after distillation evidence is mature should runtime be discussed.
