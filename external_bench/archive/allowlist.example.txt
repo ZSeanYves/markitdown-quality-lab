@@ -1,0 +1,4 @@
+# One approved payload URL per line.
+# Keep this file small and reviewed. Do not add bulk mirror roots.
+# Example:
+# https://example.invalid/example.pdf

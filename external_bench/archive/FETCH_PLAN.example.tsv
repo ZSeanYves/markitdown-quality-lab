@@ -1,0 +1,2 @@
+fetch_id	source_group	format	source_url	expected_rel_path	expected_size_class	max_bytes	sha256_expected	fetch_method	enabled	notes
+example_pdf_large	irs_forms_pubs	pdf	https://example.invalid/example.pdf	corpus/pdf/irs_forms_pubs/large/example.pdf	large	104857600	sha256-placeholder	manual_allowlist	no	example only; do not fetch

@@ -11,6 +11,10 @@ run against payloads in `../`.
   Example row template carried over from the main repository legacy workflow.
 * `source_catalog.tsv`
   Source catalog migrated from the old `external_sources.tsv`.
+* `XML_SAMPLES.tsv`
+  XML-specific sidecar metadata for existing XML quality payloads. This file
+  records source IDs, URLs, attribution, size, SHA-256, and strict XML-real
+  acceptance status without changing the runner-facing `manifest.tsv` schema.
 
 ## Path style
 
@@ -63,6 +67,8 @@ repo runner can merge both surfaces:
     `sources/paddleocr/ppstructure_reference.pdf`
   * current manifest snapshot has `316` data rows:
     `315` approved rows and `1` pending-review placeholder
+* format-specific sidecars may record file hashes and stricter acceptance
+  status when the canonical quality manifest intentionally omits those fields
 
 ## Validation
 

@@ -1,0 +1,501 @@
+Entry	Entry Name	Protein names	Organism	Length
+D6VTK4	STE2_YEAST	Pheromone alpha factor receptor	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	431
+O14455	RL36B_YEAST	Large ribosomal subunit protein eL36B (60S ribosomal protein L36-B) (L39) (YL39)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	100
+P00358	G3P2_YEAST	Glyceraldehyde-3-phosphate dehydrogenase 2 (GAPDH 2) (EC 1.2.1.12) (Triose-phosphate dehydrogenase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	332
+P00359	G3P3_YEAST	Glyceraldehyde-3-phosphate dehydrogenase 3 (GAPDH 3) (EC 1.2.1.12) (Triose-phosphate dehydrogenase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	332
+P00360	G3P1_YEAST	Glyceraldehyde-3-phosphate dehydrogenase 1 (GAPDH 1) (EC 1.2.1.12) (Triose-phosphate dehydrogenase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	332
+P00401	COX1_YEAST	Cytochrome c oxidase subunit 1 (EC 7.1.1.9) (Cytochrome c oxidase polypeptide I)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	534
+P00424	COX5A_YEAST	Cytochrome c oxidase subunit 5A, mitochondrial (Cytochrome c oxidase polypeptide Va)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	153
+P00431	CCPR_YEAST	Cytochrome c peroxidase, mitochondrial (CCP) (EC 1.11.1.5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	361
+P00549	KPYK1_YEAST	Pyruvate kinase 1 (PK 1) (EC 2.7.1.40) (cell division cycle protein 19)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	500
+P00830	ATPB_YEAST	ATP synthase subunit beta, mitochondrial (EC 7.1.2.2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	511
+P00927	THDH_YEAST	Threonine dehydratase, mitochondrial (EC 4.3.1.19) (Threonine deaminase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	576
+P00937	TRPG_YEAST	Multifunctional tryptophan biosynthesis protein [Includes: Anthranilate synthase component 2 (AS) (EC 4.1.3.27) (Anthranilate synthase, glutamine amidotransferase component); Indole-3-glycerol phosphate synthase (EC 4.1.1.48) (PRAI)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	484
+P00958	SYMC_YEAST	Methionine--tRNA ligase, cytoplasmic (EC 6.1.1.10) (Methionyl-tRNA synthetase) (MetRS)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	751
+P01120	RAS2_YEAST	Ras-like protein 2 (EC 3.6.5.2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	322
+P02829	HSP82_YEAST	ATP-dependent molecular chaperone HSP82 (82 kDa heat shock protein) (Heat shock protein Hsp90 heat-inducible isoform)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	709
+P02992	EFTU_YEAST	Elongation factor Tu, mitochondrial (EF-Tu) (EC 3.6.5.3) (tufM)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	437
+P03965	CARB_YEAST	Carbamoyl phosphate synthase arginine-specific large chain (CPS) (CPSase) (CPSase-arg) (EC 6.3.4.16) (EC 6.3.5.5) (Ammonium-dependent carbamoyl phosphate synthetase) (Arginine-specific carbamoyl phosphate synthetase, ammonia chain) (Carbamoyl phosphate synthase A) (CPS-A) (Glutamine-dependent carbamoyl phosphate synthetase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1118
+P04039	COX8_YEAST	Cytochrome c oxidase subunit 8, mitochondrial (Cytochrome c oxidase polypeptide VIII)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	78
+P04817	CAN1_YEAST	Arginine permease CAN1 (Canavanine resistance protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	590
+P05150	OTC_YEAST	Ornithine carbamoyltransferase (EC 2.1.3.3) (Ornithine transcarbamylase) (OTCase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	338
+P05318	RLA1_YEAST	Large ribosomal subunit protein P1A (P1A) (60S acidic ribosomal protein P1-alpha) (A1) (L12eIIA) (YP1alpha)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	106
+P05319	RLA2_YEAST	Large ribosomal subunit protein P2A (P2A) (60S acidic ribosomal protein P2-alpha) (A2) (L12eIB) (L44) (YP2alpha)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	106
+P05375	PLMT_YEAST	Phosphatidyl-N-methylethanolamine N-methyltransferase (EC 2.1.1.17) (EC 2.1.1.71) (Overproducer of inositol protein 3) (Phospholipid methyltransferase) (PLMT)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	206
+P05737	RL7A_YEAST	Large ribosomal subunit protein uL30A (60S ribosomal protein L7-A) (L6) (RP11) (YL8)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	244
+P05740	RL17A_YEAST	Large ribosomal subunit protein uL22A (60S ribosomal protein L17-A) (L20A) (YL17)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	184
+P05748	RL15A_YEAST	Large ribosomal subunit protein eL15A (60S ribosomal protein L15-A) (L13) (RP15R) (YL10) (YP18)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	204
+P05756	RS13_YEAST	Small ribosomal subunit protein uS15 (40S ribosomal protein S13) (S27a) (YS15)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	151
+P06101	CDC37_YEAST	Hsp90 co-chaperone Cdc37 (Cell division control protein 37) (Hsp90 chaperone protein kinase-targeting subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	506
+P06245	KAPB_YEAST	cAMP-dependent protein kinase type 2 (PKA 2) (EC 2.7.11.11)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	380
+P06780	RHO1_YEAST	GTP-binding protein RHO1 (EC 3.6.5.2) (Rho-type GTPase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	209
+P06782	SNF1_YEAST	Carbon catabolite-derepressing protein kinase (EC 2.7.11.1) (Sucrose nonfermentating protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	633
+P06843	SPT2_YEAST	Protein SPT2 (Negative regulator of Ty transcription)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	333
+P07213	TOM70_YEAST	Mitochondrial import receptor subunit TOM70 (70 kDa mitochondrial outer membrane protein) (Translocase of outer membrane 70 kDa subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	617
+P07260	IF4E_YEAST	Eukaryotic translation initiation factor 4E (eIF-4E) (eIF4E) (eIF-4F 25 kDa subunit) (mRNA cap-binding protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	213
+P07264	LEUC_YEAST	3-isopropylmalate dehydratase (EC 4.2.1.33) (Alpha-IPM isomerase) (IPMI) (Isopropylmalate isomerase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	779
+P07267	CARP_YEAST	Saccharopepsin (EC 3.4.23.25) (Aspartate protease) (PrA) (Proteinase A) (Carboxypeptidase Y-deficient protein 4) (Proteinase YSCA)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	405
+P07277	ERG12_YEAST	Mevalonate kinase (MK) (MvK) (EC 2.7.1.36) (Ergosterol biosynthesis protein 12) (Regulation of autonomous replication protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	443
+P07280	RS19A_YEAST	Small ribosomal subunit protein eS19A (40S ribosomal protein S19-A) (RP55A) (S16a) (YP45) (YS16A)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	144
+P07834	CDC4_YEAST	Cell division control protein 4 (E3 ubiquitin ligase complex SCF subunit CDC4) (F-box protein CDC4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	779
+P07866	LTE1_YEAST	Guanine nucleotide exchange factor LTE1 (Low temperature essential protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1435
+P07991	OAT_YEAST	Ornithine aminotransferase (OTAse) (EC 2.6.1.13) (Ornithine--oxo-acid aminotransferase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	424
+P08018	PBS2_YEAST	MAP kinase kinase PBS2 (EC 2.7.12.2) (Polymyxin B resistance protein 2) (Suppressor of fluoride sensitivity 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	668
+P08425	SYFM_YEAST	Phenylalanine--tRNA ligase, mitochondrial (EC 6.1.1.20) (Phenylalanyl-tRNA synthetase) (PheRS)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	469
+P08456	PSS_YEAST	CDP-diacylglycerol--serine O-phosphatidyltransferase (EC 2.7.8.8) (Phosphatidylserine synthase) (PSS)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	276
+P08524	ERG20_YEAST	Farnesyl pyrophosphate synthase (FPP synthase) (FPS) (EC 2.5.1.10) ((2E,6E)-farnesyl diphosphate synthase) (Dimethylallyltranstransferase) (EC 2.5.1.1) (Farnesyl diphosphate synthase) (Geranyltranstransferase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	352
+P08525	QCR8_YEAST	Cytochrome b-c1 complex subunit 8, mitochondrial (Complex III subunit 8) (Complex III subunit VII) (Ubiquinol-cytochrome c oxidoreductase subunit 8) (Ubiquinol-cytochrome c reductase complex 11 kDa protein) (Ubiquinone-binding protein QP-C)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	94
+P08679	CISY2_YEAST	Citrate synthase, peroxisomal (EC 2.3.3.16)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	460
+P08964	MYO1_YEAST	Myosin-1 (Type II myosin)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1928
+P09232	PRTB_YEAST	Cerevisin (EC 3.4.21.48) (Proteinase YSCB) (Vacuolar protease B) (PrB)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	635
+P09435	HSP73_YEAST	Heat shock protein SSA3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	649
+P09620	KEX1_YEAST	Pheromone-processing carboxypeptidase KEX1 (EC 3.4.16.6) (Carboxypeptidase D) (Killer expression defective protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	729
+P09798	CDC16_YEAST	Anaphase-promoting complex subunit CDC16 (Cell division control protein 16)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	840
+P09938	RIR2_YEAST	Ribonucleoside-diphosphate reductase small chain 1 (EC 1.17.4.1) (Ribonucleotide reductase R2 subunit 1) (Ribonucleotide reductase small subunit 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	399
+P0C0T4	RS25B_YEAST	Small ribosomal subunit protein eS25B (40S ribosomal protein S25-B) (RP45) (S31) (YS23)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	108
+P0C0V8	RS21A_YEAST	Small ribosomal subunit protein eS21A (40S ribosomal protein S21-A) (S26) (YS25)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	87
+P0C0W9	RL11A_YEAST	Large ribosomal subunit protein uL5A (60S ribosomal protein L11-A) (L16) (RP39) (YL22)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	174
+P0C2J0	YP13B_YEAST	Transposon Ty1-PR2 Gag-Pol polyprotein (Gag-Pol-p199) (TY1A-TY1B) (Transposon Ty1 TYA-TYB polyprotein) (p190) [Cleaved into: Capsid protein (CA) (Gag-p45) (p54); Ty1 protease (PR) (EC 3.4.23.-) (Pol-p20) (p23); Integrase (IN) (Pol-p71) (p84) (p90); Reverse transcriptase/ribonuclease H (RT) (RT-RH) (EC 2.7.7.49) (EC 2.7.7.7) (EC 3.1.26.4) (Pol-p63) (p60)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1756
+P0C2J1	YP14B_YEAST	Transposon Ty1-PR3 Gag-Pol polyprotein (Gag-Pol-p199) (TY1A-TY1B) (Transposon Ty1 TYA-TYB polyprotein) (p190) [Cleaved into: Capsid protein (CA) (Gag-p45) (p54); Ty1 protease (PR) (EC 3.4.23.-) (Pol-p20) (p23); Integrase (IN) (Pol-p71) (p84) (p90); Reverse transcriptase/ribonuclease H (RT) (RT-RH) (EC 2.7.7.49) (EC 2.7.7.7) (EC 3.1.26.4) (Pol-p63) (p60)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1755
+P0C5R9	RNK_YEAST	V-type proton ATPase subunit f (V-ATPase subunit f)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	85
+P0CT04	IPB2_YEAST	Protease B inhibitor 2 (Proteinase inhibitor I(B)2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	75
+P0CX31	RS24A_YEAST	Small ribosomal subunit protein eS24A (40S ribosomal protein S24-A) (RP50)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	135
+P0CX32	RS24B_YEAST	Small ribosomal subunit protein eS24B (40S ribosomal protein S24-B) (RP50)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	135
+P0CX36	RS4B_YEAST	Small ribosomal subunit protein eS4B (40S ribosomal protein S4-B) (RP5) (S7) (YS6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	261
+P0CX44	RL1B_YEAST	Large ribosomal subunit protein uL1B (60S ribosomal protein L1-B) (L10a)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	217
+P0CX47	RS11A_YEAST	Small ribosomal subunit protein uS17A (40S ribosomal protein S11-A) (RP41) (S18) (YS12)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	156
+P0CX50	RL18B_YEAST	Large ribosomal subunit protein eL18B (60S ribosomal protein L18-B) (RP28)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	186
+P0CX56	RS18B_YEAST	Small ribosomal subunit protein uS13B (40S ribosomal protein S18-B)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	146
+P0CX77	ASP22_YEAST	L-asparaginase 2-2 (EC 3.5.1.1) (L-asparaginase II) (L-asparagine amidohydrolase II) (ASP II)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	362
+P0CY06	MTAL1_YEAST	Mating-type protein ALPHA1 (MATalpha1 protein) (Alpha-1 activator)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	175
+P0CZ17	ASP21_YEAST	L-asparaginase 2-1 (EC 3.5.1.1) (L-asparaginase II) (L-asparagine amidohydrolase II) (ASP II)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	362
+P10614	CP51_YEAST	Lanosterol 14-alpha demethylase CYP51 (EC 1.14.14.154) (Cytochrome P450 51) (Cytochrome P450-14DM) (Cytochrome P450-LIA1) (CYPLI) (Ergosterol biosynthetic protein 11) (Lanosterol C14-C32 lyase) (Sterol 14-alpha demethylase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	530
+P11154	PYC1_YEAST	Pyruvate carboxylase 1 (EC 6.4.1.1) (Pyruvic carboxylase 1) (PCB 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1178
+P11491	PPB_YEAST	Repressible alkaline phosphatase (EC 3.1.3.1) (Fructose-2,6-bisphosphate 6-phosphatase) (EC 3.1.3.54) (Membrane-bound repressible alkaline phosphatase) [Cleaved into: Soluble alkaline phosphatase (EC 3.1.7.6) (Farnesyl diphosphatase)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	566
+P11709	BIK1_YEAST	Nuclear fusion protein BIK1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	440
+P11710	FUS1_YEAST	Nuclear fusion protein FUS1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	512
+P11747	TAF13_YEAST	Transcription initiation factor TFIID subunit 13 (Function unknown 81 protein) (TAFII-19) (TAFII19) (TBP-associated factor 13) (TBP-associated factor 19 kDa)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	167
+P11938	RAP1_YEAST	DNA-binding protein RAP1 (Repressor/activator site-binding protein) (SBF-E) (TUF)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	827
+P12709	G6PI_YEAST	Glucose-6-phosphate isomerase (GPI) (EC 5.3.1.9) (D-hexose-6-phosphate anomerase) (Glucose-6-phosphate C2-epimerase) (EC 5.1.3.-) (Phosphoglucose isomerase) (PGI) (Phosphohexose isomerase) (PHI)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	554
+P12753	RAD50_YEAST	DNA repair protein RAD50 (EC 3.6.-.-) (153 kDa protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1312
+P13099	TOP3_YEAST	DNA topoisomerase 3 (EC 5.6.2.1) (DNA topoisomerase III)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	656
+P14737	RAD9_YEAST	DNA repair protein RAD9	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1309
+P14741	EI2BA_YEAST	Translation initiation factor eIF2B subunit alpha (GCD complex subunit GCN3) (Guanine nucleotide exchange factor subunit GCN3) (Translational activator GCN3) (eIF2B GDP-GTP exchange factor subunit alpha)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	305
+P14747	PP2B2_YEAST	Serine/threonine-protein phosphatase 2B catalytic subunit A2 (EC 3.1.3.16) (Calcineurin A2) (Calmodulin-binding protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	604
+P14832	CYPH_YEAST	Peptidyl-prolyl cis-trans isomerase (PPIase) (EC 5.2.1.8) (Cyclophilin) (CPH) (Cyclosporin A-binding protein) (PPI-II) (Rotamase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	162
+P14906	SEC63_YEAST	Protein translocation protein SEC63 (Protein NPL1) (Sec62/63 complex 73 kDa subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	663
+P15442	GCN2_YEAST	eIF-2-alpha kinase GCN2 (EC 2.7.11.1) (General control non-derepressible protein 2) (Serine/threonine-protein kinase GCN2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1659
+P15565	TRM1_YEAST	tRNA (guanine(26)-N(2))-dimethyltransferase, mitochondrial (EC 2.1.1.216) (tRNA 2,2-dimethylguanosine-26 methyltransferase) (tRNA(guanine-26,N(2)-N(2)) methyltransferase) (tRNA(m(2,2)G26)dimethyltransferase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	570
+P15625	SYFA_YEAST	Phenylalanine--tRNA ligase alpha subunit (EC 6.1.1.20) (Phenylalanyl-tRNA synthetase alpha subunit) (PheRS)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	503
+P16387	ODPA_YEAST	Pyruvate dehydrogenase E1 component subunit alpha, mitochondrial (EC 1.2.4.1) (Pyruvate dehydrogenase complex component E1 alpha) (PDHE1-A)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	420
+P16451	ODPX_YEAST	Pyruvate dehydrogenase complex protein X component, mitochondrial (Dihydrolipoamide dehydrogenase-binding protein of pyruvate dehydrogenase complex) (E3-binding protein) (Pyruvate dehydrogenase complex component E3BP)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	410
+P16522	CDC23_YEAST	Anaphase-promoting complex subunit CDC23 (Cell division control protein 23)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	626
+P16622	HEMH_YEAST	Ferrochelatase, mitochondrial (EC 4.98.1.1) (Heme synthase) (Protoheme ferro-lyase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	393
+P16661	ALG1_YEAST	Chitobiosyldiphosphodolichol beta-mannosyltransferase (EC 2.4.1.142) (Asparagine-linked glycosylation protein 1) (Beta-1,4-mannosyltransferase) (GDP-Man:GlcNAc2-PP-dolichol mannosyltransferase) (GDP-mannose-dolichol diphosphochitobiose mannosyltransferase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	449
+P16664	RGP1_YEAST	Guanine nucleotide exchange factor subunit RGP1 (Reduced growth phenotype protein 1) (Rgp1p)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	663
+P17064	FCY2_YEAST	Purine-cytosine permease FCY2 (PCP FCY2) (Cytosine/purine transport protein FCY2) (Fluorocytosine resistance protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	533
+P17695	GLRX2_YEAST	Glutaredoxin-2 (EC 1.11.1.9) (EC 2.5.1.18) (Glutathione-dependent oxidoreductase 2) (Thioltransferase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	143
+P17709	HXKG_YEAST	Glucokinase-1 (EC 2.7.1.2) (Glucose kinase 1) (GLK-1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	500
+P18888	SNF6_YEAST	Transcription regulatory protein SNF6 (SWI/SNF complex component SNF6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	332
+P19262	ODO2_YEAST	Dihydrolipoyllysine-residue succinyltransferase component of 2-oxoglutarate dehydrogenase complex, mitochondrial (DLST) (EC 2.3.1.61) (2-oxoglutarate dehydrogenase complex component E2) (OGDC-E2) (OGDHC subunit E2) (Alpha-ketoglutarate dehydrogenase subunit E2) (alpha-KGDHC subunit E2) (Dihydrolipoamide succinyltransferase component of 2-oxoglutarate dehydrogenase complex)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	463
+P19658	EXO70_YEAST	Exocyst complex component EXO70 (Exocyst complex protein of 70 kDa)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	623
+P19659	MED15_YEAST	Mediator of RNA polymerase II transcription subunit 15 (Autonomous replication regulatory protein 3) (Basal expression activator protein 1) (Defective silencing suppressor protein 4) (Mediator complex subunit 15) (Transcription regulatory protein GAL11) (Ty insertion suppressor protein 13)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1081
+P20053	PRP4_YEAST	U4/U6 small nuclear ribonucleoprotein PRP4 (Pre-mRNA-processing protein 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	465
+P20133	PGTB2_YEAST	Geranylgeranyl transferase type-2 subunit beta (EC 2.5.1.60) (Geranylgeranyl transferase type II subunit beta) (GGTase-II-beta) (Type II protein geranyl-geranyltransferase subunit beta) (PGGT) (YPT1/SEC4 proteins geranylgeranyltransferase subunit beta)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	325
+P20424	SRP54_YEAST	Signal recognition particle subunit SRP54 (EC 3.6.5.4) (Signal recognition particle 54 kDa protein homolog)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	541
+P20447	DBP3_YEAST	ATP-dependent RNA helicase DBP3 (EC 3.6.4.13) (DEAD box protein 3) (Helicase CA3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	523
+P20449	DBP5_YEAST	ATP-dependent RNA helicase DBP5 (EC 3.6.4.13) (DEAD box protein 5) (Helicase CA5/6) (Ribonucleic acid-trafficking protein 8)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	482
+P20459	IF2A_YEAST	Eukaryotic translation initiation factor 2 subunit alpha (eIF-2-alpha) (eIF-2A) (eIF-2alpha) (eIF2-alpha)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	304
+P20676	NUP1_YEAST	Nucleoporin NUP1 (Nuclear pore protein NUP1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1076
+P20840	SAG1_YEAST	Alpha-agglutinin (AG-alpha-1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	650
+P20967	ODO1_YEAST	2-oxoglutarate dehydrogenase, mitochondrial (OGDH) (EC 1.2.4.2) (2-oxoglutarate dehydrogenase complex component E1) (OGDC-E1) (OGDHC subunit E1) (Alpha-ketoglutarate dehydrogenase complex subunit E1) (alpha-KGDHC subunit E1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1014
+P21192	ACE2_YEAST	Metallothionein expression activator	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	770
+P21373	UTR1_YEAST	NAD(+) kinase (EC 2.7.1.23) (Unknown transcript 1 protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	530
+P21538	REB1_YEAST	DNA-binding protein REB1 (QBP)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	810
+P21651	RE107_YEAST	Recombination protein 107 (Meiotic recombination protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	314
+P21957	OPI1_YEAST	Transcriptional repressor OPI1 (Negative regulator of phospholipid biosynthesis) (Overproducer of inositol protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	404
+P22137	CLH_YEAST	Clathrin heavy chain	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1653
+P22138	RPA2_YEAST	DNA-directed RNA polymerase I subunit RPA135 (EC 2.7.7.6) (DNA-directed RNA polymerase I 135 kDa polypeptide) (A135) (DNA-directed RNA polymerase I polypeptide 2) (RNA polymerase I subunit 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1203
+P22139	RPAB5_YEAST	DNA-directed RNA polymerases I, II, and III subunit RPABC5 (RNA polymerases I, II, and III subunit ABC5) (ABC10-beta) (ABC8) (DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	70
+P22149	AFT1_YEAST	Iron-regulated transcriptional activator AFT1 (Activator of iron transcription protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	690
+P22204	DBF2_YEAST	Cell cycle protein kinase DBF2 (EC 2.7.11.1) (Dumbbell forming protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	572
+P22219	VPS15_YEAST	Serine/threonine-protein kinase VPS15 (EC 2.7.11.1) (Golgi-retention defective mutant protein 8) (Vacuolar protein sorting-associated protein 15)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1454
+P22224	SEC15_YEAST	Exocyst complex component SEC15	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	910
+P22579	SIN3_YEAST	Transcriptional regulatory protein SIN3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1536
+P23201	SPA2_YEAST	Protein SPA2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1466
+P23301	IF5A1_YEAST	Eukaryotic translation initiation factor 5A-1 (eIF-5A-1) (Hypusine-containing protein HP2) (eIF-4D)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	157
+P23561	STE11_YEAST	Serine/threonine-protein kinase STE11 (EC 2.7.11.25)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	717
+P23615	SPT6_YEAST	Transcription elongation factor SPT6 (Chromatin elongation factor SPT6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1451
+P23643	VPS3_YEAST	Vacuolar protein sorting-associated protein 3 (Vacuolar protein-targeting protein 17)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1011
+P23724	PSB6_YEAST	Proteasome subunit beta type-6 (Multicatalytic endopeptidase complex subunit C5) (Proteasome component C5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	241
+P23900	FPS1_YEAST	Glycerol uptake/efflux facilitator protein	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	669
+P24276	SSD1_YEAST	Protein SSD1 (Protein SRK1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1250
+P24868	CG21_YEAST	G2/mitotic-specific cyclin-1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	471
+P25037	UBP1_YEAST	Ubiquitin carboxyl-terminal hydrolase 1 (EC 3.4.19.12) (Deubiquitinating enzyme 1) (Ubiquitin thioesterase 1) (Ubiquitin-specific-processing protease 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	809
+P25040	TSR4_YEAST	uS5 assembly chaperone (20S rRNA accumulation protein 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	408
+P25042	ROX1_YEAST	Repressor ROX1 (Heme-dependent repression factor) (Hypoxic function repressor)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	368
+P25046	MED19_YEAST	Mediator of RNA polymerase II transcription subunit 19 (Hypoxic gene repressor protein 3) (Mediator complex subunit 19) (Negative regulator of URS2 protein 3) (SNF1 suppressor protein 7)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	220
+P25298	RNA14_YEAST	mRNA 3'-end-processing protein RNA14	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	677
+P25303	SCJ1_YEAST	DnaJ-related protein SCJ1 (J protein SCJ1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	377
+P25341	KIN82_YEAST	Serine/threonine-protein kinase KIN82 (EC 2.7.11.1) (Flippase kinase 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	720
+P25368	RRP7_YEAST	Ribosomal RNA-processing protein 7	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	297
+P25374	NFS1_YEAST	Cysteine desulfurase (EC 2.8.1.7) (tRNA-splicing protein SPL1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	497
+P25377	ADH7_YEAST	NADP-dependent alcohol dehydrogenase 7 (EC 1.1.1.2) (NADP-dependent alcohol dehydrogenase VII) (ADHVII)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	361
+P25382	NLE1_YEAST	Ribosome assembly protein 4 (Notchless protein homolog 1) (Ribosome biogenesis factor RSA4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	515
+P25389	KCC4_YEAST	Probable serine/threonine-protein kinase KCC4 (EC 2.7.11.1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1037
+P25443	RS2_YEAST	Small ribosomal subunit protein uS5 (40S ribosomal protein S2) (Omnipotent suppressor protein SUP44) (RP12) (S4) (YS5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	254
+P25453	DMC1_YEAST	Meiotic recombination protein DMC1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	334
+P25491	MAS5_YEAST	Mitochondrial protein import protein MAS5 (Yeast dnaJ protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	409
+P25583	MET14_YEAST	Karyogamy protein KAR4	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	335
+P25588	MRC1_YEAST	Mediator of replication checkpoint protein 1 (DNA replication checkpoint mediator MRC1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1096
+P25618	CWH43_YEAST	Protein CWH43 (Calcofluor white hypersensitive protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	953
+P25641	ATG15_YEAST	Putative lipase ATG15 (EC 3.1.1.3) (Autophagy-related protein 15) (Cytoplasm to vacuole targeting protein 17)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	520
+P25642	IMG2_YEAST	Large ribosomal subunit protein mL49 (54S ribosomal protein IMG2, mitochondrial) (Integrity of mitochondrial genome protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	146
+P25847	MSH2_YEAST	DNA mismatch repair protein MSH2 (MutS protein homolog 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	964
+P26570	PPZ1_YEAST	Serine/threonine-protein phosphatase PP-Z1 (EC 3.1.3.16)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	692
+P27472	GYS2_YEAST	Glycogen [starch] synthase isoform 2 (EC 2.4.1.11)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	705
+P27515	URK1_YEAST	Uridine kinase (EC 2.7.1.48) (Uridine monophosphokinase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	501
+P27796	THIK_YEAST	3-ketoacyl-CoA thiolase, peroxisomal (EC 2.3.1.16) (Acetyl-CoA acyltransferase) (Beta-ketothiolase) (Peroxisomal 3-oxoacyl-CoA thiolase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	417
+P28007	GAR1_YEAST	H/ACA ribonucleoprotein complex subunit GAR1 (Glycine/arginine-rich protein 1) (snoRNP protein GAR1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	205
+P28240	ACEA_YEAST	Isocitrate lyase (ICL) (EC 4.1.3.1) (Methylisocitrate lyase) (MICA) (EC 4.1.3.30) (Threo-D(S)-isocitrate glyoxylate-lyase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	557
+P28241	IDH2_YEAST	Isocitrate dehydrogenase [NAD] subunit 2, mitochondrial (EC 1.1.1.41) (Isocitric dehydrogenase) (NAD(+)-specific ICDH)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	369
+P28272	PYRD_YEAST	Dihydroorotate dehydrogenase (fumarate) (DHOD) (DHODase) (DHOdehase) (EC 1.3.98.1) (Dihydroorotate oxidase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	314
+P28321	MGLL_YEAST	Monoglyceride lipase (MGL) (EC 3.1.1.23) (Fatty acid ethyl ester hydrolase) (FAEE hydrolase) (Monoacylglycerol hydrolase) (MAG hydrolase) (MGH) (Monoacylglycerol lipase) (MAG lipase) (MAGL) (Serine hydrolase YJU3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	313
+P28495	CAPZA_YEAST	F-actin-capping protein subunit alpha	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	268
+P28707	SBA1_YEAST	Co-chaperone protein SBA1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	216
+P28737	MSP1_YEAST	Outer mitochondrial transmembrane helix translocase (EC 7.4.2.-) (Mitochondrial sorting of proteins) (Tat-binding homolog 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	362
+P28777	AROC_YEAST	Chorismate synthase ARO2 (EC 1.5.1.38) (EC 4.2.3.5) (5-enolpyruvylshikimate-3-phosphate phospholyase) (Aromatic amino acid requiring protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	376
+P28795	PEX3_YEAST	Peroxisomal biogenesis factor 3 (Peroxin-3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	441
+P28817	HIBCH_YEAST	Small ribosomal subunit protein mS47 (3-hydroxyisobutyryl-CoA hydrolase, mitochondrial) (EC 3.1.2.4) (3-hydroxyisobutyryl-coenzyme A hydrolase) (HIB-CoA hydrolase) (HIBYL-CoA-H)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	500
+P29311	BMH1_YEAST	Protein BMH1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	267
+P29465	CHS3_YEAST	Chitin synthase 3 (EC 2.4.1.16) (Chitin-UDP acetyl-glucosaminyl transferase 3) (Class-IV chitin synthase 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1165
+P29547	EF1G1_YEAST	Elongation factor 1-gamma 1 (EF-1-gamma 1) (Calcium and membrane-binding protein 1) (Calcium phospholipid-binding protein) (CPBP) (Eukaryotic elongation factor 1Bgamma 1) (eEF1Bgamma 1) (Translation elongation factor 1B gamma 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	415
+P30605	ITR1_YEAST	Myo-inositol transporter 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	584
+P30620	PSO2_YEAST	DNA cross-link repair protein PSO2/SNM1 (EC 3.1.-.-)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	661
+P30771	RENT1_YEAST	ATP-dependent helicase NAM7 (EC 3.6.4.12) (EC 3.6.4.13) (Nonsense-mediated mRNA decay protein 1) (Nuclear accommodation of mitochondria 7 protein) (Up-frameshift suppressor 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	971
+P30952	MLS1_YEAST	Malate synthase 1 (EC 2.3.3.9)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	554
+P31244	RAD16_YEAST	DNA repair protein RAD16 (EC 3.6.4.-) (ATP-dependent helicase RAD16)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	790
+P31374	PSK1_YEAST	Serine/threonine-protein kinase PSK1 (EC 2.7.11.1) (PAS kinase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1356
+P31378	NTH1_YEAST	Endonuclease III homolog 1 (EC 3.2.2.-) (EC 4.2.99.18) (Bifunctional DNA N-glycosylase/DNA-(apurinic or apyrimidinic site) lyase 1) (DNA glycosylase/AP lyase 1) (Endonuclease III-like glycosylase 1) (Redoxyendonuclease 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	399
+P31380	FUN30_YEAST	Chromatin remodeling protein FUN30 (EC 3.6.4.-) (Chromatin remodeler FUN30)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1131
+P31412	VATC_YEAST	V-type proton ATPase subunit C (V-ATPase subunit C) (V-ATPase 42 kDa subunit) (Vacuolar proton pump subunit C)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	392
+P32179	MET22_YEAST	3'(2'),5'-bisphosphate nucleotidase (EC 3.1.3.7) (3'(2'),5-bisphosphonucleoside 3'(2')-phosphohydrolase) (3'-phosphoadenosine-5'-phosphate phosphatase) (3'-phosphoadenosine-5'-phosphatase) (PAP phosphatase) (PAPase) (DPNPase) (Halotolerance protein HAL2) (Methionine-requiring protein 22)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	357
+P32318	THI4_YEAST	Thiamine thiazole synthase (EC 2.4.2.60) (Thiazole biosynthetic enzyme)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	326
+P32329	YPS1_YEAST	Aspartic proteinase 3 (EC 3.4.23.41) (Proprotein convertase) (Yapsin-1) [Cleaved into: Aspartic proteinase 3 subunit alpha; Aspartic proteinase 3 subunit beta]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	569
+P32334	MSB2_YEAST	Signaling mucin MSB2 (Multicopy suppressor of bud emergence 2) (Osmosensor MSB2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1306
+P32336	NUD1_YEAST	Protein NUD1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	851
+P32338	RME1_YEAST	Zinc finger protein RME1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	300
+P32343	SSH4_YEAST	Protein SSH4 (Multicopy suppressor of leflunomide protein 4) (Suppressor of SHR3 null mutation protein 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	579
+P32347	DCUP_YEAST	Uroporphyrinogen decarboxylase (UPD) (URO-D) (EC 4.1.1.37) (Porphyrinogen carboxylyase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	362
+P32363	GPI3_YEAST	Phosphatidylinositol N-acetylglucosaminyltransferase GPI3 subunit (GPI-GlcNAc transferase complex subunit GPI3) (GPI-GnT subunit GPI3) (EC 2.4.1.198) (GlcNAc-PI synthesis protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	452
+P32364	SMY1_YEAST	Kinesin-related protein SMY1 (Suppressor protein SMY1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	656
+P32367	TFC1_YEAST	Transcription factor tau 95 kDa subunit (TFIIIC 95 kDa subunit) (Transcription factor C subunit 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	649
+P32368	SAC1_YEAST	Phosphatidylinositol-3-phosphatase SAC1 (EC 3.1.3.64) (Phosphatidylinositol-4-phosphate phosphatase) (Recessive suppressor of secretory defect)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	623
+P32381	ARP2_YEAST	Actin-related protein 2 (Actin-like protein ARP2) (Actin-like protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	391
+P32386	YBT1_YEAST	ATP-dependent bile acid permease	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1661
+P32419	MDHP_YEAST	Malate dehydrogenase, peroxisomal (EC 1.1.1.37)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	343
+P32454	APE2_YEAST	Aminopeptidase 2, mitochondrial (AP-II) (Aminopeptidase II) (EC 3.4.11.-) (YscII)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	952
+P32457	CDC3_YEAST	Cell division control protein 3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	520
+P32465	HXT1_YEAST	Low-affinity glucose transporter HXT1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	570
+P32473	ODPB_YEAST	Pyruvate dehydrogenase E1 component subunit beta, mitochondrial (EC 1.2.4.1) (Pyruvate dehydrogenase complex component E1 beta) (PDHE1-B)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	366
+P32478	HS150_YEAST	Cell wall mannoprotein HSP150 (150 kDa heat shock glycoprotein) (Covalently-linked cell wall protein 7) (Protein with internal repeats 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	413
+P32486	KRE6_YEAST	Beta-glucan synthesis-associated protein KRE6 (Killer toxin-resistance protein 6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	720
+P32490	MKK1_YEAST	MAP kinase kinase MKK1/SSP32 (EC 2.7.12.2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	508
+P32492	MYO4_YEAST	Myosin-4 (SWI5-dependent HO expression protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1471
+P32494	NGG1_YEAST	SAGA complex subunit NGG1 (Chromatin-remodeling complexes subunit NGG1) (Transcriptional adapter 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	702
+P32496	RPN12_YEAST	26S proteasome regulatory subunit RPN12 (Nuclear integrity protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	274
+P32521	PAN1_YEAST	Actin cytoskeleton-regulatory complex protein PAN1 (Mitochondrial distribution of proteins protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1480
+P32561	RPD3_YEAST	Histone deacetylase RPD3 (EC 3.5.1.98) (Transcriptional regulatory protein RPD3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	433
+P32567	PAH1_YEAST	Phosphatidic acid phosphohydrolase 1 (PAP1) (EC 3.1.3.4) (Protein SMP2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	862
+P32569	MED17_YEAST	Mediator of RNA polymerase II transcription subunit 17 (Mediator complex subunit 17) (Suppressor of RNA polymerase B 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	687
+P32589	HSP7F_YEAST	Heat shock protein homolog SSE1 (Chaperone protein MSI3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	693
+P32597	STH1_YEAST	Nuclear protein STH1/NPS1 (EC 3.6.4.12) (ATP-dependent helicase STH1) (Chromatin structure-remodeling complex protein STH1) (SNF2 homolog)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1359
+P32607	RTG1_YEAST	Retrograde regulation protein 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	177
+P32610	VATD_YEAST	V-type proton ATPase subunit D (V-ATPase subunit D) (Vacuolar proton pump subunit D)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	256
+P32617	IES6_YEAST	Chromatin-remodeling complex subunit IES6 (Ino eighty subunit 6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	166
+P32639	BRR2_YEAST	Pre-mRNA-splicing helicase BRR2 (EC 3.6.4.13) (Protein Snu246)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	2163
+P32643	TMT1_YEAST	Trans-aconitate 3-methyltransferase (EC 2.1.1.145)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	299
+P32767	KA122_YEAST	Importin beta-like protein KAP122 (Karyopherin-122) (Pleiotropic drug resistance regulatory protein 6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1081
+P32769	HBS1_YEAST	Elongation factor 1 alpha-like protein (EC 3.6.5.-)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	611
+P32773	TOA1_YEAST	Transcription initiation factor IIA large subunit (TFIIA large subunit) (TFIIA 32 kDa subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	286
+P32776	TFB1_YEAST	General transcription and DNA repair factor IIH subunit TFB1 (TFIIH subunit TFB1) (RNA polymerase II transcription factor B 73 kDa subunit) (RNA polymerase II transcription factor B p73 subunit) (RNA polymerase II transcription factor B subunit 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	642
+P32784	GPT1_YEAST	Glycerol-3-phosphate O-acyltransferase 1 (G-3-P acyltransferase 1) (GPAT 1) (EC 2.3.1.15) (Dihydroxyacetone phosphate acyltransferase 1) (DHAP-AT 1) (EC 2.3.1.42) (Glycerol-3-phosphate / dihydroxyacetone phosphate acyltransferase 1) (Suppressor of choline-transport mutants 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	759
+P32794	AFG2_YEAST	ATPase family gene 2 protein (EC 3.6.4.10) (Diazaborine resistance gene 1 protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	780
+P32795	YME1_YEAST	Mitochondrial inner membrane i-AAA protease supercomplex subunit YME1 (EC 3.4.24.-) (Protein OSD1) (Tat-binding homolog 11) (Yeast mitochondrial escape protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	747
+P32798	COT1_YEAST	Vacuolar zinc transporter COT1 (Cobalt toxicity protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	439
+P32801	ELM1_YEAST	Serine/threonine-protein kinase ELM1 (EC 2.7.11.1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	640
+P32830	TIM12_YEAST	Mitochondrial import inner membrane translocase subunit TIM12 (Mitochondrial regulator of splicing 5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	109
+P32842	VATL2_YEAST	V-type proton ATPase subunit c' (V-ATPase subunit c') (Proteolipid protein VMA11) (Trifluoperazine resistance protein 3) (V-ATPase 16 kDa proteolipid subunit 2) (Vacuolar proton pump c' subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	164
+P32844	SEC6_YEAST	Exocyst complex component SEC6	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	805
+P32854	PEP12_YEAST	Syntaxin PEP12 (Carboxypeptidase Y-deficient protein 12) (Vacuolar protein sorting-associated protein 6) (Vacuolar protein-targeting protein 13)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	288
+P32860	NFU1_YEAST	NifU-like protein, mitochondrial	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	256
+P32898	PREP_YEAST	Presequence protease, mitochondrial (PreP) (EC 3.4.24.-) (Metalloprotease of 112 kDa) (Pitrilysin metalloproteinase) (Protease M)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	989
+P32902	RT04_YEAST	Small ribosomal subunit protein uS2m (37S ribosomal protein MRP4, mitochondrial)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	394
+P32908	SMC1_YEAST	Structural maintenance of chromosomes protein 1 (DA-box protein SMC1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1225
+P32914	SPT4_YEAST	Transcription elongation factor SPT4 (Chromatin elongation factor SPT4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	102
+P32939	YPT7_YEAST	Ypt/Rab-type GTPase YPT7 (Ypt7p) (Vacuolar morphology protein 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	208
+P33202	UFD4_YEAST	Ubiquitin fusion degradation protein 4 (UB fusion protein 4) (EC 2.3.2.-) (HECT-type E3 ubiquitin transferase UFD4) (EC 2.3.2.26)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1483
+P33204	ARPC4_YEAST	Actin-related protein 2/3 complex subunit 4 (Arp2/3 complex 20 kDa) (p20-ARC)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	171
+P33328	SNC2_YEAST	Synaptobrevin homolog 2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	115
+P33401	PGM1_YEAST	Phosphoglucomutase 1 (PGM 1) (EC 5.4.2.2) (Glucose phosphomutase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	570
+P33419	SPC29_YEAST	Spindle pole component 29	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	253
+P33421	SDH3_YEAST	Succinate dehydrogenase [ubiquinone] cytochrome b subunit, mitochondrial	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	198
+P33775	PMT1_YEAST	Dolichyl-phosphate-mannose--protein mannosyltransferase 1 (EC 2.4.1.109)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	817
+P33891	TIP20_YEAST	Protein transport protein TIP20	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	701
+P34087	RPB7_YEAST	DNA-directed RNA polymerase II subunit RPB7 (RNA polymerase II subunit B7) (B16)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	171
+P34163	TGL1_YEAST	Sterol esterase TGL1 (EC 3.1.1.13) (Triglyceride lipase-cholesterol esterase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	548
+P34164	SIP2_YEAST	SNF1 protein kinase subunit beta-2 (Protein SPM2) (SNF1-interacting protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	415
+P34217	PIN4_YEAST	RNA-binding protein PIN4 (Psi inducibility protein 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	668
+P34230	PXA2_YEAST	Peroxisomal long-chain fatty acid import protein 1 (Peroxisomal ABC transporter 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	853
+P34233	ASH1_YEAST	Transcriptional regulatory protein ASH1 (Daughter cells HO repressor protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	588
+P34241	URB1_YEAST	Nucleolar pre-ribosomal-associated protein 1 (Unhealthy ribosome biogenesis protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1764
+P34730	BMH2_YEAST	Protein BMH2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	273
+P34756	FAB1_YEAST	1-phosphatidylinositol 3-phosphate 5-kinase FAB1 (Phosphatidylinositol 3-phosphate 5-kinase) (EC 2.7.1.150) (Formation of aploid and binucleate cells protein 1) (Styryl dye vacuolar localization protein 7) (Type III PIP kinase) (PIPkin-III)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	2278
+P34758	SCD5_YEAST	Protein SCD5 (Protein FTB1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	872
+P34760	TSA1_YEAST	Peroxiredoxin TSA1 (Prx) (EC 1.11.1.24) (Cytoplasmic thiol peroxidase 1) (cTPx 1) (Protector protein) (PRP) (Thiol-specific antioxidant protein 1) (Thioredoxin peroxidase type Ia) (TPx type Ia) (Thioredoxin-dependent peroxide reductase) (Thioredoxin-dependent peroxiredoxin TSA1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	196
+P34761	WHI3_YEAST	Protein WHI3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	661
+P35180	TOM20_YEAST	Mitochondrial import receptor subunit TOM20 (Mitochondrial 20 kDa outer membrane protein) (Protein MAS20) (Translocase of outer membrane 20 kDa subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	183
+P35191	MDJ1_YEAST	DnaJ homolog 1, mitochondrial	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	511
+P35207	SKI2_YEAST	Antiviral helicase SKI2 (EC 3.6.4.13) (Superkiller protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1287
+P35208	SPT10_YEAST	Protein SPT10	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	640
+P35729	NU120_YEAST	Nucleoporin NUP120 (Nuclear pore protein NUP120)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1037
+P35844	KES1_YEAST	Oxysterol-binding protein homolog 4 (Bypass SECl4 recessive protein 3) (KRE11-1 suppressor protein 1) (Protein KES1) (Oxysterol-binding protein-related protein 4) (ORP 4) (OSBP-related protein 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	434
+P36027	MID2_YEAST	Cell wall integrity sensor MID2 (Mating pheromone-induced death protein 2) (Protein kinase A interference protein 1) (Serine-rich multicopy suppressor protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	376
+P36033	FRE2_YEAST	Ferric/cupric reductase transmembrane component 2 (EC 1.16.1.9) (Ferric-chelate reductase 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	711
+P36047	SDS22_YEAST	Protein phosphatase 1 regulatory subunit SDS22	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	338
+P36048	SN114_YEAST	Pre-mRNA-splicing factor SNU114 (114 kDa U5 small nuclear ribonucleoprotein component) (Growth inhibitory protein 10)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1008
+P36075	CUE2_YEAST	Endonuclease CUE2 (Coupling of ubiquitin conjugation to ER degradation protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	443
+P36081	PSG1_YEAST	PMA1 stabilization in the Golgi protein 1 [Cleaved into: PSG1-N'; PSG1-C']	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	392
+P36091	DCW1_YEAST	Mannan endo-1,6-alpha-mannosidase DCW1 (EC 3.2.1.101) (Defective cell wall 1) (Endo-alpha-1->6-D-mannanase DCW1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	449
+P36096	TUL1_YEAST	Transmembrane E3 ubiquitin-protein ligase 1 (EC 2.3.2.27) (RING-type E3 ubiquitin transferase TUL1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	758
+P36107	AUR1_YEAST	Inositol phosphorylceramide synthase catalytic subunit AUR1 (IPC synthase catalytic subunit AUR1) (EC 2.7.1.227) (Aureobasidin A resistance protein) (Phosphatidylinositol:ceramide phosphoinositol transferase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	401
+P36124	SET3_YEAST	SET domain-containing protein 3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	751
+P36135	UTH1_YEAST	Probable secreted beta-glucosidase UTH1 (EC 3.2.1.-) (Youth protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	365
+P36142	HFL1_YEAST	Vacuole membrane protein HFL1 (Has fused lysosomes protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	418
+P36525	RM24_YEAST	Large ribosomal subunit protein bL28m (54S ribosomal protein L24, mitochondrial) (YmL14/YmL24)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	258
+P37020	GEF1_YEAST	Anion/proton exchange transporter GEF1 (CLC protein GEF1) (ClC-A) (ClC-Y1) (Voltage-gated chloride channel) [Cleaved into: GEF1 N-terminal; GEF1 C-terminal]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	779
+P37291	GLYC_YEAST	Serine hydroxymethyltransferase, cytosolic (SHMT) (EC 2.1.2.1) (Glycine hydroxymethyltransferase) (Serine methylase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	469
+P37370	VRP1_YEAST	Verprolin	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	817
+P38070	YPK3_YEAST	Serine/threonine-protein kinase YPK3 (EC 2.7.11.1) (Ribosomal S6 kinase homolog YPK3) (S6K homolog YPK3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	525
+P38077	ATPG_YEAST	ATP synthase subunit gamma, mitochondrial (F-ATPase gamma subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	311
+P38109	ATG42_YEAST	Vacuolar serine-type carboxypeptidase ATG42 (EC 3.4.16.5) (Carboxypeptidase C) (CPC)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	508
+P38121	DPOA2_YEAST	DNA polymerase alpha subunit B (DNA polymerase I subunit B) (DNA polymerase alpha:primase complex p86 subunit) (Pol alpha-primase complex p86 subunit) (DNA polymerase-primase complex p74 subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	705
+P38129	TAF5_YEAST	SAGA complex/transcription factor TFIID complex subunit TAF5 (TAFII-90) (TBP-associated factor 5) (TBP-associated factor 90 kDa) (Transcription initiation factor TFIID subunit 5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	798
+P38132	MCM7_YEAST	DNA replication licensing factor MCM7 (EC 3.6.4.12) (Cell division control protein 47) (Minichromosome maintenance protein 7)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	845
+P38137	FAT2_YEAST	Oxalate--CoA ligase (EC 6.2.1.8) (Acyl-activating enzyme 3) (Oxalyl-CoA synthetase) (Peroxisomal-coenzyme A synthetase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	543
+P38144	ISW1_YEAST	ISWI chromatin-remodeling complex ATPase ISW1 (EC 3.6.4.-)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1129
+P38149	DUG2_YEAST	Probable di- and tripeptidase DUG2 (EC 3.4.-.-) (Deficient in utilization of glutathione protein 2) (GSH degradosomal complex subunit DUG2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	878
+P38212	RCR1_YEAST	Protein RCR1 (Resistance to Congo red protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	213
+P38228	TCM62_YEAST	Mitochondrial chaperone TCM62	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	572
+P38255	RXT2_YEAST	Transcriptional regulatory protein RXT2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	430
+P38261	EXO84_YEAST	Exocyst complex component EXO84 (Exocyst complex protein of 84 kDa) (U1 SNP1-associating protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	753
+P38272	SHE3_YEAST	SWI5-dependent HO expression protein 3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	425
+P38274	HSL7_YEAST	Protein arginine N-methyltransferase HSL7 (EC 2.1.1.320) (Histone synthetic lethal protein 7) (Type II protein arginine N-methyltransferase) (Type II PRMT)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	827
+P38287	CSH1_YEAST	Mannosyl phosphorylinositol ceramide synthase CSH1 (EC 2.4.1.370) (CSG1/SUR1 homolog 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	376
+P38310	FTH1_YEAST	Iron transporter FTH1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	465
+P38316	ATG12_YEAST	Ubiquitin-like protein ATG12 (Autophagy-related protein 12)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	186
+P38326	SWC5_YEAST	SWR1-complex protein 5	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	303
+P38329	VHC1_YEAST	Vacuolar cation-chloride cotransporter 1 (Vacuolar homolog of CCC family protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1120
+P38348	HSM3_YEAST	DNA mismatch repair protein HSM3 (Enhanced spontaneous mutability protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	480
+P38352	SAF1_YEAST	SCF-associated factor 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	637
+P38356	BSD2_YEAST	Metal homeostatis protein BSD2 (Bypass SOD defects protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	321
+P38360	ATU1_YEAST	P-type cation-transporting ATPase (EC 7.2.2.21) (Cadmium resistance protein 2) (Cadmium-translocating P-type ATPase) (Cd(2+)-exporting ATPase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1216
+P38428	CUE1_YEAST	Coupling of ubiquitin conjugation to ER degradation protein 1 (Kinetochore-defect suppressor 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	203
+P38431	IF5_YEAST	Eukaryotic translation initiation factor 5 (eIF-5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	405
+P38623	RCK2_YEAST	Serine/threonine-protein kinase RCK2 (EC 2.7.11.1) (CAM kinase-like protein kinase CLK1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	610
+P38624	PSB1_YEAST	Proteasome subunit beta type-1 (EC 3.4.25.1) (Macropain subunit PRE3) (Multicatalytic endopeptidase complex subunit PRE3) (Proteasome component PRE3) (Proteinase YSCE subunit PRE3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	215
+P38632	NSE2_YEAST	E3 SUMO-protein ligase MMS21 (EC 2.3.2.-) (E3 SUMO-protein transferase MMS21) (Methyl methanesulfonate-sensitivity protein 21) (Non-structural maintenance of chromosome element 2) (Non-SMC element 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	267
+P38688	SRP72_YEAST	Signal recognition particle subunit SRP72 (Signal recognition particle 72 kDa protein homolog)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	640
+P38691	KSP1_YEAST	Serine/threonine-protein kinase KSP1 (EC 2.7.11.1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1029
+P38712	RRP3_YEAST	ATP-dependent rRNA helicase RRP3 (EC 3.6.4.13) (Ribosomal RNA-processing protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	501
+P38719	DBP8_YEAST	ATP-dependent RNA helicase DBP8 (EC 3.6.4.13) (DEAD box protein 8)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	431
+P38754	RL14B_YEAST	Large ribosomal subunit protein eL14B (60S ribosomal protein L14-B)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	138
+P38770	BRL1_YEAST	Nucleus export protein BRL1 (BRR6-like protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	471
+P38788	SSZ1_YEAST	Ribosome-associated complex subunit SSZ1 (DnaK-related protein SSZ1) (Heat shock protein 70 homolog SSZ1) (Pleiotropic drug resistance protein 13)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	538
+P38789	SSF1_YEAST	Ribosome biogenesis protein SSF1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	453
+P38828	LSM12_YEAST	Protein LSM12 (Sm-like protein 12)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	187
+P38830	NDT80_YEAST	Meiosis-specific transcription factor NDT80	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	627
+P38855	PEX18_YEAST	Peroxisomal membrane protein PEX18 (Peroxin-18)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	283
+P38873	KOG1_YEAST	Target of rapamycin complex 1 subunit KOG1 (TORC1 subunit KOG1) (Kontroller of growth protein 1) (Local anesthetic-sensitive protein 24) (Regulatory-associated protein of TOR) (Raptor)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1557
+P38879	NACA_YEAST	Nascent polypeptide-associated complex subunit alpha (NAC-alpha) (Alpha-NAC) (GAL4 DNA-binding enhancer protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	174
+P38881	NVJ1_YEAST	Nucleus-vacuole junction protein 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	321
+P38888	MNL1_YEAST	ER degradation-enhancing alpha-mannosidase-like protein 1 (EC 3.2.1.24)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	796
+P38889	SKN7_YEAST	Transcription factor SKN7 (Peroxide sensitivity protein 9)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	622
+P38928	AXL2_YEAST	Axial budding pattern protein 2 (Bud site selection protein 10) (Suppressor of RHO3 protein 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	823
+P38931	SSN2_YEAST	Mediator of RNA polymerase II transcription subunit 13 (Mediator complex subunit 13) (Protein SCA1) (Suppressor of RNA polymerase B SSN2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1420
+P38954	IPT1_YEAST	Inositolphosphotransferase 1 (EC 2.7.1.228) (Mannosyl diphosphorylinositol ceramide synthase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	527
+P38959	VPS41_YEAST	Vacuolar protein sorting-associated protein 41 (Vacuolar morphogenesis protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	992
+P38996	NAB3_YEAST	Nuclear polyadenylated RNA-binding protein 3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	802
+P39008	POP2_YEAST	Poly(A) ribonuclease POP2 (EC 3.1.13.4) (CCR4-associated factor 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	433
+P39012	GAA1_YEAST	GPI transamidase component GAA1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	614
+P39014	MET30_YEAST	F-box protein MET30 (E3 ubiquitin ligase complex SCF(Met30) subunit MET30) (Methionine-requiring protein 30)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	640
+P39078	TCPD_YEAST	T-complex protein 1 subunit delta (TCP-1-delta) (CCT-delta)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	528
+P39104	PIK1_YEAST	Phosphatidylinositol 4-kinase PIK1 (PI4-kinase) (PtdIns-4-kinase) (EC 2.7.1.67)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1066
+P39109	YCFI_YEAST	Metal resistance protein YCF1 (ABC-type Cd(2+) transporter) (EC 7.2.2.2) (ABC-type glutathione-S-conjugate transporter) (EC 7.6.2.3) (Yeast cadmium factor 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1515
+P39113	CAT8_YEAST	Regulatory protein CAT8	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1433
+P39516	RS14B_YEAST	Small ribosomal subunit protein uS11B (40S ribosomal protein S14-B) (RP59B)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	138
+P39526	LAA1_YEAST	AP-1 accessory protein LAA1 (Large AP-1 accessory protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	2014
+P39676	FHP_YEAST	Flavohemoprotein (EC 1.14.12.17) (Flavohemoglobin) (Hemoglobin-like protein) (Nitric oxide dioxygenase) (NO oxygenase) (NOD)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	399
+P39723	MBO1_YEAST	Gamma tubulin complex adapter SPC72	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	622
+P39724	BOL3_YEAST	BolA-like protein 3 (Altered inheritance of mitochondria protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	118
+P39726	GCSH_YEAST	Glycine cleavage system H protein, mitochondrial (Glycine decarboxylase complex subunit H)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	170
+P39727	ERV46_YEAST	ER-derived vesicles protein ERV46	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	415
+P39744	NOC2_YEAST	Nucleolar complex protein 2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	710
+P39875	EXO1_YEAST	Exodeoxyribonuclease 1 (EC 3.1.-.-) (Exodeoxyribonuclease I) (EXO I) (Exonuclease I) (Protein DHS1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	702
+P39904	VPS52_YEAST	Vacuolar protein sorting-associated protein 52 (Suppressor of actin mutation protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	641
+P39926	SSO2_YEAST	Protein SSO2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	295
+P39928	SLN1_YEAST	Osmosensing histidine protein kinase SLN1 (EC 2.7.13.3) (Osmolarity two-component system protein SLN1) (Tyrosine phosphatase-dependent protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1220
+P39929	SNF7_YEAST	Vacuolar-sorting protein SNF7 (DOA4-independent degradation protein 1) (Sucrose nonfermenting protein 7) (Vacuolar protein-sorting-associated protein 32)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	240
+P39943	MIG3_YEAST	Transcription corepressor MIG3 (Multicopy inhibitor of growth protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	394
+P39962	KC13_YEAST	Casein kinase I homolog 3 (EC 2.7.11.1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	524
+P39984	HAT2_YEAST	Histone acetyltransferase type B subunit 2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	401
+P39986	SPF1_YEAST	Endoplasmic reticulum transmembrane helix translocase (EC 7.4.2.-) (Complexed with DOR1 protein 1) (Endoplasmic reticulum P5A-ATPase) (Sensitivity to the P.farinosa killer toxin protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1215
+P39995	EAF5_YEAST	Chromatin modification-related protein EAF5 (ESA1-associated factor 5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	279
+P39998	EDC3_YEAST	Enhancer of mRNA-decapping protein 3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	551
+P40003	VAB2_YEAST	Biogenesis of lysosome-related organelles complex 1 subunit VAB2 (BLOC-1 subunit VAB2) (VAC8-binding protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	282
+P40005	PFD2_YEAST	Prefoldin subunit 2 (Genes involved in microtubule biogenesis protein 4) (Gim complex subunit 4) (GimC subunit 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	111
+P40023	EDC2_YEAST	Enhancer of mRNA-decapping protein 2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	145
+P40034	JHD1_YEAST	JmjC domain-containing histone demethylation protein 1 (EC 1.14.11.27) (Jumonji/ARID domain-containing protein 1) (ScJHDM1) ([Histone-H3]-lysine-36 demethylase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	492
+P40054	SERA_YEAST	D-3-phosphoglycerate dehydrogenase 1 (3-PGDH 1) (EC 1.1.1.95) (2-oxoglutarate reductase) (EC 1.1.1.399)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	469
+P40055	UTP7_YEAST	U3 small nucleolar RNA-associated protein 7 (U3 snoRNA-associated protein 7) (U three protein 7)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	554
+P40059	DOT6_YEAST	Transcriptional regulatory protein DOT6 (Disrupter of telomere silencing protein 6) (PAC-binding factor 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	670
+P40061	TSC11_YEAST	Target of rapamycin complex 2 subunit TSC11 (TORC2 subunit TSC11) (Adheres voraciously to TOR2 protein 3) (Temperature-sensitive CSG2 suppressor protein 11)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1430
+P40073	SHO1_YEAST	High osmolarity signaling protein SHO1 (Osmosensor SHO1) (Suppressor of SUA8-1 mutation) (Synthetic high osmolarity-sensitive protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	367
+P40075	SCS2_YEAST	Vesicle-associated membrane protein-associated protein SCS2 (VAMP-associated protein SCS2) (Choline sensitivity suppressor protein 2) (VAP homolog 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	244
+P40091	PEA2_YEAST	Protein PEA2 (Protein PPF2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	420
+P40094	COG3_YEAST	Conserved oligomeric Golgi complex subunit 3 (COG complex subunit 3) (Component of oligomeric Golgi complex 3) (Protein SEC34)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	801
+P40152	PPN2_YEAST	Zinc-dependent endopolyphosphatase (EC 3.6.1.10) (Vacuolar polyphosphatase PPN2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	326
+P40167	ZC3HD_YEAST	Sporulation-specific with a leucine zipper motif protein 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	298
+P40218	LDO45_YEAST	Lipid droplet organization protein LDO45 (Lipid droplet organization 45 KDa protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	412
+P40219	LDO16_YEAST	Lipid droplet organization protein LDO16 (Lipid droplet organization 16 KDa protein) (Outer spore wall protein 5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	148
+P40303	PSA4_YEAST	Proteasome subunit alpha type-4 (Macropain subunit PRE6) (Multicatalytic endopeptidase complex subunit PRE6) (Proteasome component PRE6) (Proteinase YSCE subunit PRE6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	254
+P40339	RFC4_YEAST	Replication factor C subunit 4 (Replication factor C4) (Activator 1 37 kDa subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	323
+P40345	PDAT_YEAST	Phospholipid:diacylglycerol acyltransferase (PDAT) (EC 2.3.1.158) (LCAT-related open reading frame 1) (Lecithin cholesterol acyl transferase-related open reading frame 1) (Triacylglycerol synthase) (TAG synthase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	661
+P40438	VTH1_YEAST	VPS10 homolog 1 (Sortilin VTH1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1549
+P40460	NDC80_YEAST	Kinetochore protein NDC80 (80 kDa spindle component protein) (Nuclear division cycle protein 80) (Two-hybrid interaction with DMC1 protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	691
+P40467	ASG1_YEAST	Activator of stress genes 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	964
+P40482	SEC24_YEAST	Protein transport protein SEC24 (Abnormal nuclear morphology 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	926
+P40484	MOB1_YEAST	DBF2 kinase activator protein MOB1 (MPS1 binder 1) (Maintenance of ploidy protein MOB1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	314
+P40485	SLM1_YEAST	Phosphatidylinositol 4,5-bisphosphate-binding protein SLM1 (Synthetic lethal with MSS4 protein 1) (TORC2 effector protein SLM1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	686
+P40489	XBP1_YEAST	Transcriptional repressor XBP1 (XhoI site-binding protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	647
+P40492	FYV10_YEAST	GID complex subunit 9 (EC 2.3.2.27) (Function required for yeast viability protein 10) (Glucose-induced degradation protein 9) (Probable E3 ubiquitin-protein ligase GID9)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	516
+P40495	LYS12_YEAST	Homoisocitrate dehydrogenase, mitochondrial (HIcDH) (EC 1.1.1.87)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	371
+P40513	MAM33_YEAST	Mitochondrial acidic protein MAM33	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	266
+P40537	ULP2_YEAST	Ubiquitin-like-specific protease 2 (EC 3.4.22.-)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1034
+P40541	SCC3_YEAST	Cohesin subunit SCC3 (Irregular cell behavior protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1150
+P40548	SNL1_YEAST	HSP70 co-chaperone SNL1 (Suppressor of NUP116-C lethal)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	159
+P40554	URM1_YEAST	Ubiquitin-related modifier 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	99
+P40557	EPS1_YEAST	ER-retained PMA1-suppressing protein 1 (EC 5.3.4.1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	701
+P40558	CFD1_YEAST	Cytosolic Fe-S cluster assembly factor CFD1 (Cytosolic Fe-S cluster-deficient protein 1) (Ribosomal export protein 19)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	293
+P40955	CHS6_YEAST	Chitin biosynthesis protein CHS6 (Protein CSD3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	746
+P40959	MVP1_YEAST	Sorting nexin MVP1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	511
+P40961	PHB1_YEAST	Prohibitin-1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	287
+P40968	PRP17_YEAST	Pre-mRNA-processing factor 17 (Cell division control protein 40)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	455
+P40970	LCB2_YEAST	Serine palmitoyltransferase 2 (SPT 2) (EC 2.3.1.50) (Long chain base biosynthesis protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	561
+P40988	FET4_YEAST	Low-affinity Fe(2+) transport protein (Low-affinity Fe(II) transport protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	552
+P41543	OST1_YEAST	Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit 1 (N-linked oligosaccharyl transferase subunit 1) (Oligosaccharyl transferase 64 kDa subunit) (Oligosaccharyl transferase subunit OST1) (Oligosaccharyl transferase subunit alpha)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	476
+P41695	BUB1_YEAST	Spindle assembly checkpoint serine/threonine-protein kinase BUB1 (EC 2.7.11.1) (Checkpoint serine/threonine-protein kinase BUB1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1021
+P41800	MMM1_YEAST	Maintenance of mitochondrial morphology protein 1 (Mitochondrial outer membrane protein MMM1) (Yeast mitochondrial escape protein 6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	426
+P41813	FKH2_YEAST	Fork head protein homolog 2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	862
+P41921	GSHR_YEAST	Glutathione reductase (GR) (GRase) (EC 1.8.1.7)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	483
+P41948	MEP2_YEAST	Ammonium transporter MEP2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	499
+P42951	LSB6_YEAST	Phosphatidylinositol 4-kinase LSB6 (PI4-kinase) (PtdIns-4-kinase) (EC 2.7.1.67) (LAS seventeen-binding protein 6) (LAS17-binding protein 6)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	607
+P43122	QRI7_YEAST	tRNA N6-adenosine threonylcarbamoyltransferase, mitochondrial (EC 2.3.1.234) (N6-L-threonylcarbamoyladenine synthase) (t(6)A synthase) (t(6)A37 threonylcarbamoyladenosine biosynthesis protein QRI7) (tRNA threonylcarbamoyladenosine biosynthesis protein QRI7)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	407
+P43497	CWP2_YEAST	Cell wall protein CWP2 (Low pH resistance protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	92
+P43558	OTU1_YEAST	Ubiquitin thioesterase OTU1 (EC 3.4.19.12) (OTU domain-containing protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	301
+P43564	MIL1_YEAST	Probable lipase MIL1 (EC 3.1.1.-) (Medium adaptin-interacting ligand 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1073
+P43567	AGX1_YEAST	Alanine--glyoxylate aminotransferase 1 (EC 2.6.1.44)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	385
+P43585	VTC2_YEAST	Vacuolar transporter chaperone complex subunit 2 (Phosphate metabolism protein 1) (SPX-dependent polyphosphate polymerase VTC subunit 2) (Vacuolar membrane polyphosphate polymerase accessory subunit 2) (PolyP polymerase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	828
+P43586	LOC1_YEAST	60S ribosomal subunit assembly/export protein LOC1 (Localization of ASH1 mRNA protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	204
+P43610	IRC5_YEAST	Uncharacterized ATP-dependent helicase IRC5 (EC 3.6.4.-) (Increased recombination centers protein 5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	853
+P43636	ALG2_YEAST	Alpha-1,3/1,6-mannosyltransferase ALG2 (EC 2.4.1.132) (EC 2.4.1.257) (Asparagine-linked glycosylation protein 2) (GDP-Man:Man(1)GlcNAc(2)-PP-Dol alpha-1,3-mannosyltransferase) (GDP-Man:Man(1)GlcNAc(2)-PP-dolichol mannosyltransferase) (GDP-Man:Man(2)GlcNAc(2)-PP-Dol alpha-1,6-mannosyltransferase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	503
+P43639	CSK2B_YEAST	Casein kinase II subunit beta (CK II beta)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	278
+P45976	FIP1_YEAST	Pre-mRNA polyadenylation factor FIP1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	327
+P46959	TRM61_YEAST	tRNA (adenine(58)-N(1))-methyltransferase catalytic subunit TRM61 (EC 2.1.1.220) (General control non-derepressible protein 14) (Protein GCD14) (tRNA(m1A58)-methyltransferase subunit TRM61) (tRNA(m1A58)MTase subunit TRM61)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	383
+P46984	GON7_YEAST	EKC/KEOPS complex subunit GON7 (Low-dye-binding protein 6) (Polarized growth chromatin-associated controller 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	123
+P46990	RL17B_YEAST	Large ribosomal subunit protein uL22B (60S ribosomal protein L17-B) (L20) (YL17)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	184
+P46995	SET2_YEAST	Histone-lysine N-methyltransferase, H3 lysine-36 specific (EC 2.1.1.359) (Lysine N-methyltransferase 3) (SET domain-containing protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	733
+P47013	DS1P1_YEAST	Dihydrosphingosine 1-phosphate phosphatase LCB3 (EC 3.1.3.-) (Long-chain base protein 3) (Sphingolipid resistance protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	409
+P47016	NIT2_YEAST	Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.128) (Nitrilase homolog 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	307
+P47026	GWT1_YEAST	GPI-anchored wall transfer protein 1 (EC 2.3.-.-)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	490
+P47032	PRY1_YEAST	Protein PRY1 (Pathogenesis-related protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	299
+P47037	SMC3_YEAST	Structural maintenance of chromosomes protein 3 (DA-box protein SMC3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1230
+P47043	ZAP1_YEAST	Zinc-responsive transcriptional regulator ZAP1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	880
+P47047	MTR4_YEAST	ATP-dependent RNA helicase DOB1 (EC 3.6.4.13) (mRNA transport regulator MTR4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1073
+P47074	MAD3_YEAST	Spindle assembly checkpoint component MAD3 (Mitotic MAD3 protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	515
+P47076	RPC9_YEAST	DNA-directed RNA polymerase III subunit RPC9 (RNA polymerase III subunit C9) (RNA polymerase III subunit C17)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	161
+P47100	YJ12B_YEAST	Transposon Ty1-JR2 Gag-Pol polyprotein (Gag-Pol-p199) (TY1A-TY1B) (Transposon Ty1 TYA-TYB polyprotein) (p190) [Cleaved into: Capsid protein (CA) (Gag-p45) (p54); Ty1 protease (PR) (EC 3.4.23.-) (Pol-p20) (p23); Integrase (IN) (Pol-p71) (p84) (p90); Reverse transcriptase/ribonuclease H (RT) (RT-RH) (EC 2.7.7.49) (EC 2.7.7.7) (EC 3.1.26.4) (Pol-p63) (p60)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1755
+P47102	GEA1_YEAST	ARF guanine-nucleotide exchange factor 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1408
+P47104	RAV1_YEAST	Regulator of V-ATPase in vacuolar membrane protein 1 (Suppression of the onset of impotence protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1357
+P47113	BFA1_YEAST	Mitotic check point protein BFA1 (Cell cycle arrest protein BFA1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	574
+P47114	KCH1_YEAST	Low affinity K(+) transporter 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	497
+P47130	CSN12_YEAST	Cop9 signalosome complex subunit 12	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	423
+P47142	VPS25_YEAST	Vacuolar protein-sorting-associated protein 25 (ESCRT-II complex subunit VPS25)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	202
+P47160	ENT3_YEAST	Epsin-3	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	408
+P47169	MET5_YEAST	Sulfite reductase [NADPH] subunit beta (EC 1.8.1.2) (Extracellular mutant protein 17)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1442
+P47912	LCF4_YEAST	Long-chain-fatty-acid--CoA ligase 4 (EC 6.2.1.3) (Fatty acid activator 4) (Fatty acyl-CoA synthetase) (FACS) (Long-chain acyl-CoA synthetase 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	694
+P48231	TCB2_YEAST	Tricalbin-2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1178
+P48237	CCM1_YEAST	Mitochondrial 15S rRNA processing factor CCM1 (COB and COX1 mRNA maturation protein 1) (Degradation of mitochondrial rRNA protein 1) (Required for respiratory growth protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	864
+P48240	MTR3_YEAST	Exosome complex component MTR3 (mRNA transport regulator 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	250
+P48415	SEC16_YEAST	COPII coat assembly protein SEC16 (Protein transport protein SEC16)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	2195
+P48439	OST3_YEAST	Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit 3 (Oligosaccharyl transferase 34 kDa subunit) (Oligosaccharyl transferase subunit OST3) (Oligosaccharyl transferase subunit gamma)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	350
+P48445	BPL1_YEAST	Biotin--protein ligase (EC 6.3.4.-) (Biotin apo-protein ligase) [Includes: Biotin--[methylmalonyl-CoA-carboxytransferase] ligase (EC 6.3.4.9); Biotin--[propionyl-CoA-carboxylase [ATP-hydrolyzing]] ligase (EC 6.3.4.10) (Holocarboxylase synthetase) (HCS); Biotin--[methylcrotonoyl-CoA-carboxylase] ligase (EC 6.3.4.11); Biotin--[acetyl-CoA-carboxylase] ligase (EC 6.3.4.15)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	690
+P48510	DSK2_YEAST	Ubiquitin domain-containing protein DSK2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	373
+P48561	TRF5_YEAST	Poly(A) RNA polymerase protein 1 (EC 2.7.7.19) (Topoisomerase 1-related protein TRF5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	642
+P49018	GPI8_YEAST	GPI-anchor transamidase (GPI transamidase) (EC 3.-.-.-)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	411
+P49367	LYS4_YEAST	Homoaconitase, mitochondrial (EC 4.2.1.36) (Homoaconitate hydratase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	693
+P49435	APT1_YEAST	Adenine phosphoribosyltransferase 1 (APRT 1) (EC 2.4.2.7)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	187
+P49686	NUP42_YEAST	Nucleoporin NUP42 (Nuclear pore protein NUP42)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	430
+P49687	NU145_YEAST	Nucleoporin NUP145 (EC 3.4.21.-) (Nuclear pore protein NUP145) [Cleaved into: Nucleoporin NUP145N (N-NUP145); Nucleoporin NUP145C (C-NUP145)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1317
+P49957	TRM9_YEAST	tRNA (carboxymethyluridine(34)-5-O)-methyltransferase (EC 2.1.1.229) (tRNA (uracil-5-)-methyltransferase TRM9) (tRNA [Um34] methyltransferase) (tRNA methylase 9)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	279
+P49960	SART3_YEAST	U4/U6 snRNA-associated-splicing factor PRP24 (U4/U6 snRNP protein)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	444
+P50078	TOS2_YEAST	Protein TOS2 (Target of SBF 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	622
+P50085	PHB2_YEAST	Prohibitin-2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	310
+P50091	PEX21_YEAST	Peroxisomal protein PEX21 (Peroxin-21)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	288
+P50105	TAF4_YEAST	Transcription initiation factor TFIID subunit 4 (MPT-1) (TAF suppressor gene 2 protein) (TAFII-48) (TBP-associated factor 4) (TBP-associated factor 48 kDa)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	388
+P52491	UBC12_YEAST	NEDD8-conjugating enzyme UBC12 (EC 2.3.2.34) (RUB1-conjugating enzyme) (Ubiquitin carrier protein 12)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	188
+P52960	PIP2_YEAST	Peroxisome proliferation transcriptional regulator (Oleate-activated transcription factor 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	996
+P53093	YIP4_YEAST	Protein YIP4 (YPT-interacting protein 4)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	235
+P53109	AIM14_YEAST	Probable metalloreductase AIM14 (EC 1.16.1.-) (Altered inheritance of mitochondria protein 14)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	570
+P53114	MED5_YEAST	Mediator of RNA polymerase II transcription subunit 5 (Mediator complex subunit 5) (Negative regulator of URS2 protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1132
+P53115	INO80_YEAST	Chromatin-remodeling ATPase INO80 (EC 3.6.4.-) (Inositol-requiring protein 80)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1489
+P53140	RMD9_YEAST	RNA-binding protein RMD9, mitochondrial (Dodecamer binding protein) (DBP) (Required for meiotic nuclear division protein 9)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	646
+P53146	USE1_YEAST	Protein transport protein USE1 (SNARE-like tail-anchored protein 1) (Unconventional SNARE in the endoplasmic reticulum protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	245
+P53150	XRCC4_YEAST	Non-homologous end-joining factor LIF1 (Ligase-interacting factor 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	421
+P53152	MMS2_YEAST	Ubiquitin-conjugating enzyme variant MMS2 (UEV MMS2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	137
+P53159	MPS2_YEAST	Monopolar spindle protein 2	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	387
+P53192	GET1_YEAST	Golgi to ER traffic protein 1 (Guided entry of tail-anchored proteins 1) (Mitochondrial distribution and morphology protein 39)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	235
+P53226	BUD9_YEAST	Bud site selection protein 9	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	547
+P53254	UTP22_YEAST	U3 small nucleolar RNA-associated protein 22 (U3 snoRNA-associated protein 22) (U three protein 22)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1237
+P53290	RAGCD_YEAST	GTP-binding protein GTR2 (EC 3.6.5.-)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	341
+P53301	CRH1_YEAST	Congo red hypersensitive protein 1 [Includes: Chitinase CRH1 (EC 3.2.1.14); Chitin transglycosylase CRH1 (EC 2.4.-.-)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	507
+P53303	ZPR1_YEAST	Zinc finger chaperone ZPR1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	486
+P53311	MPC3_YEAST	Mitochondrial pyruvate carrier 3 (MPC3) (Protein FMP43)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	146
+P53314	CPD1_YEAST	2',3'-cyclic-nucleotide 3'-phosphodiesterase (CPDase) (EC 3.1.4.37)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	239
+P53330	RT102_YEAST	Regulator of Ty1 transposition protein 102	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	157
+P53333	CWC22_YEAST	Pre-mRNA-splicing factor CWC22 (Complexed with CEF1 protein 22)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	577
+P53335	PXR1_YEAST	Protein PXR1 (G-patch nucleolar protein) (PinX1-related protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	271
+P53397	OGG1_YEAST	N-glycosylase/DNA lyase [Includes: 8-oxoguanine DNA glycosylase (EC 3.2.2.-); DNA-(apurinic or apyrimidinic site) lyase (AP lyase) (EC 4.2.99.18)]	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	376
+P53550	DCP2_YEAST	m7GpppN-mRNA hydrolase (EC 3.6.1.62) (Protein PSU1) (mRNA-decapping enzyme subunit 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	970
+P53615	CAN_YEAST	Carbonic anhydrase (EC 4.2.1.1) (Carbonate dehydratase) (Non-classical export protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	221
+P53616	SUN4_YEAST	Probable secreted beta-glucosidase SUN4 (EC 3.2.1.-) (Septation protein SUN4) (Soluble cell wall protein 3)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	420
+P53617	NRD1_YEAST	Protein NRD1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	575
+P53622	COPA_YEAST	Coatomer subunit alpha (Alpha-coat protein) (Alpha-COP) (Retrieval from endoplasmic reticulum protein 1) (Secretory protein 22) (Suppressor of osmo-sensitivity 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1201
+P53633	PRA1_YEAST	Prenylated Rab acceptor 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	176
+P53741	BRE5_YEAST	UBP3-associated protein BRE5 (Brefeldin-A sensitivity protein 5)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	515
+P53769	CWC24_YEAST	Pre-mRNA-splicing factor CWC24 (Complexed with CEF1 protein 24)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	259
+P53838	BOR1_YEAST	Boron transporter 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	576
+P53839	GOR1_YEAST	Glyoxylate reductase 1 (EC 1.1.1.26) (EC 1.1.1.79) (EC 1.1.1.81)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	350
+P53847	DSL1_YEAST	Protein transport protein DSL1 (Dependent on SLY1-20 protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	754
+P53865	CNM67_YEAST	Chaotic nuclear migration protein 67	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	581
+P53866	SQS1_YEAST	Protein SQS1 (Squelch of splicing suppression protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	767
+P53886	APC1_YEAST	Anaphase-promoting complex subunit 1	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1748
+P53897	IGO1_YEAST	mRNA stability protein IGO1 (Initiation of G zero protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	168
+P53905	LSM7_YEAST	LSM complex subunit LSM7	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	115
+P53911	EAF7_YEAST	Chromatin modification-related protein EAF7 (ESA1-associated factor 7)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	425
+P53914	NAT10_YEAST	RNA cytidine acetyltransferase (EC 2.3.1.-) (18S rRNA cytosine acetyltransferase) (Killer toxin-resistance protein 33) (Ribosomal RNA cytidine acetyltransferase 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	1056
+P53915	NRK1_YEAST	Nicotinamide riboside kinase (NRK) (NmR-K) (EC 2.7.1.22) (Nicotinic acid riboside kinase) (EC 2.7.1.173) (Ribosylnicotinamide kinase) (RNK) (Ribosylnicotinic acid kinase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	240
+P53939	NIS1_YEAST	Protein NIS1 (Jumonji domain-interacting protein 1) (Neck protein interacting with septins protein 1)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	407
+P53953	SFB2_YEAST	SED5-binding protein 2 (SEC24-related protein 2)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	876
+P53954	ALG11_YEAST	GDP-Man:Man(3)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase (EC 2.4.1.131) (Alpha-1,2-mannosyltransferase ALG11) (Asparagine-linked glycosylation protein 11) (Glycolipid 2-alpha-mannosyltransferase)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	548
+P53969	SAM50_YEAST	Sorting assembly machinery 50 kDa subunit (TOB complex 55 kDa subunit)	Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	484

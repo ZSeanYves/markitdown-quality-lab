@@ -1,0 +1,131 @@
+bench_id	format	source_group	content_length	content_type	last_modified	etag	final_url	download_status	download_error
+pdf_irs_p17	pdf	irs_publications					https://www.irs.gov/pub/irs-pdf/p17.pdf	reused	
+pdf_irs_f1040	pdf	irs_publications					https://www.irs.gov/pub/irs-pdf/f1040.pdf	reused	
+pdf_irs_p15	pdf	irs_publications					https://www.irs.gov/pub/irs-pdf/p15.pdf	reused	
+pdf_nist_800_53r5	pdf	nist_publications					https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf	reused	
+pdf_nist_800_61r2	pdf	nist_publications					https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf	reused	
+pdf_nist_800_171r3	pdf	nist_publications					https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171r3.pdf	reused	
+pdf_nist_800_207	pdf	nist_publications					https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf	reused	
+pdf_nist_800_218	pdf	nist_publications					https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf	reused	
+pdf_nist_ai_rmf	pdf	nist_publications					https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf	reused	
+pdf_govinfo_budget_2025	pdf	govinfo						catalog_only	
+docx_rail_cif_notes	docx	opendatani						catalog_only	
+docx_ulsterbus_cif_notes	docx	opendatani						catalog_only	
+docx_metro_cif_notes	docx	opendatani						catalog_only	
+docx_bus_stop_defs	docx	opendatani						catalog_only	
+docx_dvla_user_guide	docx	opendatani					https://data.dft.gov.uk/driving-licence-data/driving-licence-data-user-guide-sep-2017.docx	reused	
+docx_manchester_parking_metadata	docx	opendatani						catalog_only	
+docx_trade_union_2020	docx	opendatani						catalog_only	
+docx_trade_union_2022	docx	opendatani						catalog_only	
+docx_trade_union_2023	docx	opendatani						catalog_only	
+docx_trade_union_2024	docx	opendatani						catalog_only	
+pptx_staff_officer	pptx	opendatani						catalog_only	
+pptx_deputy_principal	pptx	opendatani						catalog_only	
+pptx_skills_academy	pptx	opendatani						catalog_only	
+pptx_student_placement_2022	pptx	opendatani						catalog_only	
+pptx_operational_apprentice	pptx	opendatani						catalog_only	
+pptx_so_275969	pptx	opendatani						catalog_only	
+pptx_eo_265817	pptx	opendatani						catalog_only	
+pptx_nhs_diabetes	pptx	nhs_digital					https://files.digital.nhs.uk/A6/CD0E5A/NDA_DPP_MainReport_1718_1.1.pptx	reused	
+pptx_ao_2019	pptx	opendatani						catalog_only	
+pptx_ecgd_orgchart	pptx	govuk_orgcharts					https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/190928/ecgd-structure-chart-march-2012.pptx	reused	
+xlsx_ons_mye24	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2024/mye24tablesuk.xlsx	reused	
+xlsx_ons_myeb_2011_2024	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2011tomid2024/myebtablesuk20112024.xlsx	reused	
+xlsx_ons_ukpop_1838_2024	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/ukpopulationestimates1838to2024/ukpopulationestimates18382024.xlsx	reused	
+xlsx_ons_mye23	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2023/mye23tablesuk.xlsx	reused	
+xlsx_ons_ukpop_1838_2023	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/ukpopulationestimates1838to2023/ukpopulationestimates183820231.xlsx	reused	
+xlsx_ons_myeb_2011_2022	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2011tomid2022/myebtablesuk20112022.xlsx	reused	
+xlsx_ons_mye22	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2022/mye22final.xlsx	reused	
+xlsx_ons_regional_1971_2020	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2001tomid2020detailedtimeseries/regionalpopestimatesenglandandwales19712020.xlsx	reused	
+xlsx_ons_ukpop_1838_2020	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2001tomid2020detailedtimeseries/ukpopulationestimates18382020.xlsx	reused	
+xlsx_ons_ukpop_1838_2019	xlsx	ons					https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2001tomid2019detailedtimeseries/ukpopulationestimates18382019.xlsx	reused	
+html_w3c_wcag22	html	w3c_specs					https://www.w3.org/TR/WCAG22/	reused	
+html_w3c_svg2	html	w3c_specs					https://www.w3.org/TR/SVG2/	reused	
+html_w3c_css_color4	html	w3c_specs					https://www.w3.org/TR/css-color-4/	reused	
+html_w3c_css_grid2	html	w3c_specs					https://www.w3.org/TR/css-grid-2/	reused	
+html_w3c_webaudio	html	w3c_specs					https://www.w3.org/TR/webaudio/	reused	
+html_w3c_uievents	html	w3c_specs					https://www.w3.org/TR/uievents/	reused	
+html_w3c_html_aria	html	w3c_specs					https://www.w3.org/TR/html-aria/	reused	
+html_w3c_accname	html	w3c_specs					https://www.w3.org/TR/accname-1.2/	reused	
+html_w3c_wai_aria	html	w3c_specs					https://www.w3.org/TR/wai-aria-1.2/	reused	
+html_w3c_payment_request	html	w3c_specs					https://www.w3.org/TR/payment-request/	reused	
+epub_gutenberg_moby_dick	epub	gutenberg_books					https://www.gutenberg.org/cache/epub/2701/pg2701-images-3.epub	reused	
+epub_gutenberg_pride	epub	gutenberg_books						failed	('Connection broken: IncompleteRead(156837 bytes read, 24678779 more expected)', IncompleteRead(156837 bytes read, 24678779 more expected))
+epub_gutenberg_frankenstein	epub	gutenberg_books						failed	('Connection broken: IncompleteRead(180503 bytes read, 293858 more expected)', IncompleteRead(180503 bytes read, 293858 more expected))
+epub_gutenberg_dracula	epub	gutenberg_books						failed	('Connection broken: IncompleteRead(234563 bytes read, 367811 more expected)', IncompleteRead(234563 bytes read, 367811 more expected))
+epub_gutenberg_sherlock	epub	gutenberg_books	379421	application/epub+zip	Mon, 01 Jun 2026 13:57:46 GMT		https://www.gutenberg.org/cache/epub/1661/pg1661-images-3.epub	downloaded	
+epub_gutenberg_alice	epub	gutenberg_books					https://www.gutenberg.org/cache/epub/11/pg11-images-3.epub	reused	
+epub_gutenberg_tale_two_cities	epub	gutenberg_books						failed	('Connection broken: IncompleteRead(222118 bytes read, 7699958 more expected)', IncompleteRead(222118 bytes read, 7699958 more expected))
+epub_gutenberg_dorian_gray	epub	gutenberg_books					https://www.gutenberg.org/cache/epub/174/pg174-images-3.epub	reused	
+epub_gutenberg_war_and_peace	epub	gutenberg_books						failed	('Connection broken: IncompleteRead(401638 bytes read, 1434085 more expected)', IncompleteRead(401638 bytes read, 1434085 more expected))
+epub_gutenberg_ulysses	epub	gutenberg_books						failed	('Connection broken: IncompleteRead(512002 bytes read, 982269 more expected)', IncompleteRead(512002 bytes read, 982269 more expected))
+txt_rfc9110	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc9110.txt	reused	
+txt_rfc9111	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc9111.txt	reused	
+txt_rfc9112	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc9112.txt	reused	
+txt_rfc8446	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc8446.txt	reused	
+txt_rfc8259	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc8259.txt	reused	
+txt_rfc3986	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc3986.txt	reused	
+txt_rfc4180	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc4180.txt	reused	
+txt_rfc9000	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc9000.txt	reused	
+txt_rfc5280	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc5280.txt	reused	
+txt_rfc7231	txt	rfc_editor					https://www.rfc-editor.org/rfc/rfc7231.txt	reused	
+csv_usgs_all_day	csv	usgs_feeds					https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.csv	reused	
+csv_usgs_all_week	csv	usgs_feeds					https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv	reused	
+csv_usgs_all_month	csv	usgs_feeds					https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv	reused	
+csv_usgs_significant_month	csv	usgs_feeds					https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.csv	reused	
+csv_usgs_45_month	csv	usgs_feeds					https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv	reused	
+csv_usgs_25_month	csv	usgs_feeds					https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.csv	reused	
+csv_usgs_10_month	csv	usgs_feeds					https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_month.csv	reused	
+csv_owid_co2	csv	owid_grapher					https://ourworldindata.org/grapher/annual-co2-emissions-per-country.csv	reused	
+csv_owid_life_expectancy	csv	owid_grapher					https://ourworldindata.org/grapher/life-expectancy.csv	reused	
+csv_owid_population	csv	owid_grapher					https://ourworldindata.org/grapher/population.csv	reused	
+tsv_uniprot_reviewed	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=reviewed%3Atrue&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_human	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A9606%20AND%20reviewed%3Atrue&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_mouse	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A10090%20AND%20reviewed%3Atrue&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_ecoli	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A562%20AND%20reviewed%3Atrue&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_yeast	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A559292%20AND%20reviewed%3Atrue&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_arabidopsis	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A3702%20AND%20reviewed%3Atrue&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_drosophila	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A7227%20AND%20reviewed%3Atrue&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_brca1	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=gene%3ABRCA1&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_kinase	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=keyword%3AKinase&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+tsv_uniprot_membrane	tsv	uniprot_api					https://rest.uniprot.org/uniprotkb/search?query=keyword%3ATransmembrane&format=tsv&fields=accession,id,protein_name,organism_name,length&size=500	reused	
+json_wb_population	json	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&per_page=20000	reused	
+json_wb_gdp	json	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json&per_page=20000	reused	
+json_wb_life	json	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/SP.DYN.LE00.IN?format=json&per_page=20000	reused	
+json_wb_co2	json	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/EN.ATM.CO2E.KT?format=json&per_page=20000	reused	
+json_wb_internet	json	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/IT.NET.USER.ZS?format=json&per_page=20000	reused	
+json_wb_unemployment	json	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/SL.UEM.TOTL.ZS?format=json&per_page=20000	reused	
+json_usgs_all_month	json	usgs_feeds					https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson	reused	
+json_spdx_licenses	json	spdx_data					https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json	reused	
+json_spdx_exceptions	json	spdx_data	6590	text/plain; charset=utf-8		"W/""9d4e43cb836ca8215b065297121bb7c3d07f5baa0b571516d808396e0290bf74"""	https://raw.githubusercontent.com/spdx/license-list-data/main/json/exceptions.json	downloaded	
+json_wikidata_q42	json	wikidata						failed	HTTPSConnectionPool(host='www.wikidata.org', port=443): Read timed out. (read timeout=15)
+yaml_swagger_petstore	yaml	github_yaml	3369	text/plain; charset=utf-8		"W/""a0960af4c60eed3dcb17adf665b370c442bf43c0b84237dbbcae99edd6b85768"""	https://raw.githubusercontent.com/swagger-api/swagger-petstore/8f0dd286987880b4af7bce552aca3813166f3049/src/main/resources/openapi.yaml	downloaded	
+yaml_k8s_deployment	yaml	github_yaml	211	text/plain; charset=utf-8		"W/""a16c1defff158400065ce7877d621da352da000378cb0cdf18f1a7b992b6d5e3"""	https://raw.githubusercontent.com/kubernetes/website/1e69ab01d15812065622b8fe473e980a0e436947/content/en/examples/application/deployment.yaml	downloaded	
+yaml_k8s_simple_pod	yaml	github_yaml	120	text/plain; charset=utf-8		"W/""ece78e8b59c204c9b23b43ccc1c4faf67123cbb961e1fe0807964b4e828bbb9f"""	https://raw.githubusercontent.com/kubernetes/website/1e69ab01d15812065622b8fe473e980a0e436947/content/en/examples/pods/simple-pod.yaml	downloaded	
+yaml_k8s_load_balancer	yaml	github_yaml	235	text/plain; charset=utf-8		"W/""9a227b7634ebdc95a9f49ade189d64a7139bdefee11c963c7833d45211b63196"""	https://raw.githubusercontent.com/kubernetes/website/1e69ab01d15812065622b8fe473e980a0e436947/content/en/examples/service/load-balancer-example.yaml	downloaded	
+yaml_bitnami_nginx_values	yaml	github_yaml	11133	text/plain; charset=utf-8		"W/""ec62e1dee7c9603ba5b889c107edb76eae17324b36d66039436558726a0c71b6"""	https://raw.githubusercontent.com/bitnami/charts/f9ad394743e85cb52afaded00b2f6c37b4af3157/bitnami/nginx/values.yaml	downloaded	
+yaml_bitnami_postgresql_values	yaml	github_yaml	15305	text/plain; charset=utf-8		"W/""d456b85fffa3b4856f90615ec7d06b15e03015d631d0a4c13c6fe6c5dc5d3d27"""	https://raw.githubusercontent.com/bitnami/charts/f9ad394743e85cb52afaded00b2f6c37b4af3157/bitnami/postgresql/values.yaml	downloaded	
+yaml_prometheus_values	yaml	github_yaml	9958	text/plain; charset=utf-8		"W/""b429c640143b520f940ef4d2ccb38e42aedf128bbd744b94cda03d70f2a9e598"""	https://raw.githubusercontent.com/prometheus-community/helm-charts/efa63abd06f635cd17ea729a8b91c6643c7d802a/charts/prometheus/values.yaml	downloaded	
+yaml_actions_node	yaml	github_yaml	466	text/plain; charset=utf-8		"W/""b2b6b2b4d863ac0c5b9b55c2f43d2482cd0bd05de3191a8e16779b4027fbb263"""	https://raw.githubusercontent.com/actions/starter-workflows/53d347c66d8b0618d2e4616e1b841b649349c6d7/ci/node.js.yml	downloaded	
+yaml_actions_python	yaml	github_yaml	609	text/plain; charset=utf-8		"W/""a84874c8b960304c5a40cbbbb176c32b2ebcdbd54e751b529e0d3b22f6816838"""	https://raw.githubusercontent.com/actions/starter-workflows/53d347c66d8b0618d2e4616e1b841b649349c6d7/ci/python-app.yml	downloaded	
+yaml_grafana_values	yaml	github_yaml						failed	404 Client Error: Not Found for url: https://raw.githubusercontent.com/grafana/helm-charts/0cb44b98b41df1bc345376ac40897453fa88df93/charts/grafana/values.yaml
+xml_wb_population	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=xml&per_page=20000	reused	
+xml_wb_gdp	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=xml&per_page=20000	reused	
+xml_wb_co2	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/EN.ATM.CO2E.KT?format=xml&per_page=20000	reused	
+xml_wb_school	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/SE.PRM.ENRR?format=xml&per_page=20000	reused	
+xml_wb_health	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/SH.XPD.CHEX.GD.ZS?format=xml&per_page=20000	reused	
+xml_wb_forest	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/AG.LND.FRST.ZS?format=xml&per_page=20000	reused	
+xml_wb_electricity	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/EG.USE.ELEC.KH.PC?format=xml&per_page=20000	reused	
+xml_wb_unemployment	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/SL.UEM.TOTL.ZS?format=xml&per_page=20000	reused	
+xml_wb_internet	xml	worldbank_api	0	application/json			https://api.worldbank.org/v2/country/all/indicator/IT.NET.USER.ZS?format=xml&per_page=20000	downloaded	
+xml_wb_life	xml	worldbank_api					https://api.worldbank.org/v2/country/all/indicator/SP.DYN.LE00.IN?format=xml&per_page=20000	reused	
+zip_gutenberg_moby_dick_html	zip	gutenberg_books						failed	('Connection broken: IncompleteRead(448775 bytes read, 627558 more expected)', IncompleteRead(448775 bytes read, 627558 more expected))
+zip_gutenberg_frankenstein_html	zip	gutenberg_books						failed	('Connection broken: IncompleteRead(740496 bytes read, 66862 more expected)', IncompleteRead(740496 bytes read, 66862 more expected))
+zip_gutenberg_dracula_html	zip	gutenberg_books						failed	('Connection broken: IncompleteRead(152976 bytes read, 575731 more expected)', IncompleteRead(152976 bytes read, 575731 more expected))
+zip_gutenberg_sherlock_html	zip	gutenberg_books					https://www.gutenberg.org/cache/epub/1661/pg1661-h.zip	reused	
+zip_gutenberg_alice_html	zip	gutenberg_books					https://www.gutenberg.org/cache/epub/11/pg11-h.zip	reused	
+zip_census_state	zip	census_tiger						catalog_only	
+zip_census_county	zip	census_tiger						catalog_only	
+zip_census_place	zip	census_tiger						catalog_only	
+zip_census_zcta	zip	census_tiger						catalog_only	
+zip_census_roads_autauga	zip	census_tiger						catalog_only	
