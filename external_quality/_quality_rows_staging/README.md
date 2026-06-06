@@ -11,10 +11,10 @@ run against payloads in `../`.
   Example row template carried over from the main repository legacy workflow.
 * `source_catalog.tsv`
   Source catalog migrated from the old `external_sources.tsv`.
-* `XML_SAMPLES.tsv`
-  XML-specific sidecar metadata for existing XML quality payloads. This file
-  records source IDs, URLs, attribution, size, SHA-256, and strict XML-real
-  acceptance status without changing the runner-facing `manifest.tsv` schema.
+* `HTML_SAMPLES.tsv`
+  HTML-only metadata sidecar for per-sample `size_bytes`, `sha256`,
+  attribution, and `strict_status` without changing the generic manifest
+  schema.
 
 ## Path style
 
@@ -56,6 +56,9 @@ repo runner can merge both surfaces:
 
 * quality assertions are still interpreted by the main repository runner
 * this lab is not a release artifact
+* the generic external manifest intentionally stays small and runner-oriented;
+  format-specific metadata closure such as HTML-real `sha256` or
+  `strict_status` may live in sidecars like `HTML_SAMPLES.tsv`
 * the old main-repo
   `samples/quality_corpus/external_manifest.local.tsv` is now a legacy fallback,
   not the recommended long-term home for tracked external/local quality rows
