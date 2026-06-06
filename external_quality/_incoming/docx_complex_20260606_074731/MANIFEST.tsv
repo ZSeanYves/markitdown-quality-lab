@@ -1,0 +1,20 @@
+id	local_path	tags	expected_focus	notes
+apache_poi_complex_numbered_lists	files/apache_poi_complex_numbered_lists.docx	numbering;lists;restart	numbering/list overrides	numbering/list restarts and complex numbered lists
+apache_poi_numbering_overrides	files/apache_poi_numbering_overrides.docx	numbering;overrides	numbering overrides	numbering overrides
+apache_poi_diff_first_page_headfoot	files/apache_poi_diff_first_page_headfoot.docx	headers;footers;sections	header/footer slots	first/default header footer slots
+apache_poi_field_codes	files/apache_poi_field_codes.docx	fields	field lowering	complex field codes
+apache_poi_fld_simple	files/apache_poi_fld_simple.docx	fields;fldSimple	fldSimple lowering	simple field instruction/result
+apache_poi_table_columns	files/apache_poi_table_columns.docx	tables;grid	table structure	table column and grid handling
+apache_poi_various_pictures	files/apache_poi_various_pictures.docx	images;drawings	image extraction/assets	multiple picture formats
+apache_poi_drawing	files/apache_poi_drawing.docx	drawings;images	drawing/media lowering	drawing markup
+apache_poi_shapes_with_text	files/apache_poi_shapes_with_text.docx	vml;shapes;textbox	shape/textbox text extraction	VML/text shapes with text
+apache_poi_smarttag_snippet	files/apache_poi_smarttag_snippet.docx	smartTag;content-wrapper	smartTag child inline lowering	smartTag wrappers
+apache_poi_delins	files/apache_poi_delins.docx	tracked-changes;ins;del	tracked changes	tracked insertion/deletion markup
+python_docx_blk_inner_content	files/python_docx_blk_inner_content.docx	tables;paragraphs;sections	block content traversal	block inner content fixture
+python_docx_sct_inner_content	files/python_docx_sct_inner_content.docx	sections;headers;footers	section content traversal	section inner content fixture
+python_docx_having_images	files/python_docx_having_images.docx	images;assets	image assets	known image fixture
+mammoth_comments	files/mammoth_comments.docx	comments	comments appendix	comments fixture
+mammoth_endnotes	files/mammoth_endnotes.docx	endnotes;notes	endnote numbering	endnotes fixture
+mammoth_footnote_hyperlink	files/mammoth_footnote_hyperlink.docx	footnotes;hyperlinks	footnote hyperlink lowering	footnote hyperlink fixture
+mammoth_text_box	files/mammoth_text_box.docx	textbox;vml	textbox extraction	text box fixture
+mammoth_tables	files/mammoth_tables.docx	tables	table lowering	table fixture
