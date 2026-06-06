@@ -1,1 +1,0 @@
-../../../../../../sources/markitdown-repo/packages/markitdown/tests/test_files/expected_outputs/movie-theater-booking-2024.md

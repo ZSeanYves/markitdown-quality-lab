@@ -1,3 +1,0 @@
-Page 1
----
-Signal text remains after noise.

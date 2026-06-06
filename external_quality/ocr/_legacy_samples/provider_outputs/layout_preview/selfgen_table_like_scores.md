@@ -1,1 +1,0 @@
-Team Pts Ada 10 Lin 20

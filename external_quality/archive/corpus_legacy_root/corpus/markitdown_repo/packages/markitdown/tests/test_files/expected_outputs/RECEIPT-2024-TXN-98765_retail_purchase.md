@@ -1,1 +1,0 @@
-../../../../../../sources/markitdown-repo/packages/markitdown/tests/test_files/expected_outputs/RECEIPT-2024-TXN-98765_retail_purchase.md

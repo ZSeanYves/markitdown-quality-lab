@@ -1,1 +1,0 @@
-../../../../sources/markitdown-repo/packages/markitdown/tests/_test_vectors.py

@@ -1,5 +1,0 @@
-Date: 2026-05-22
-
-Total: 123.45
-
-Status: Paid
