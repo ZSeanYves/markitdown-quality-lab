@@ -1,1 +1,0 @@
-../../../../sources/idpf-epub-testsuite_repo/epub/util/ruby/mangle_font_adobe.rb

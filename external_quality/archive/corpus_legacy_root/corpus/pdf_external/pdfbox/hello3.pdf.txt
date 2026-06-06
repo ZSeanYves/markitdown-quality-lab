@@ -1,1 +1,0 @@
-../../sources/pdfbox/pdf/hello3.pdf.txt

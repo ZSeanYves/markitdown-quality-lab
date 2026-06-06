@@ -1,1 +1,0 @@
-../sources/pandoc/COPYING.md

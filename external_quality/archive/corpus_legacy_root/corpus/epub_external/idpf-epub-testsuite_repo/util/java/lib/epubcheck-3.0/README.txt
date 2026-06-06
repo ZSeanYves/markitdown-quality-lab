@@ -1,1 +1,0 @@
-../../../../../../sources/idpf-epub-testsuite_repo/epub/util/java/lib/epubcheck-3.0/README.txt
