@@ -20,11 +20,14 @@ Target labels:
 * `separator`
 * `link_text`
 * `keep_as_text`
-* `unknown`
+* `code_like`
+* `footnote_like`
+* `page_number_noise`
 * `uncertain`
 
 Dataset sources:
 
+* shared `DocLayNet` dataset hub under `../datasets/doclaynet/`
 * `DocLayNet` gold source
 * `PubLayNet` weak-layout supplement
 * `PubTables-1M` table specialist
@@ -52,6 +55,8 @@ Current status:
   only for small recovery checks
 * current offline teacher baseline is `HistGradientBoostingClassifier` on
   `baseline_v3` features; current `pilot3000_v1` heldout macro F1 is `0.8097`
+* current selected-row and split summaries are tracked under `dataset/`
+* current distilled training-loop summary is tracked under `reports/`
 * `PubTables-1M` is currently scoped as a specialist source for
   `table_like` and weak `caption` probing only
 * current text-block mainline is:
@@ -73,7 +78,7 @@ Next action:
 
 Do not mix:
 
-* parser/layout boundary rows from `layout_recovery_model`
+* parser/layout boundary rows from `layout_recovery`
 * `PubLayNet` weak rows into `DocLayNet` gold eval
 * repo-manual sanity labels into the current recommended manifest
 * legacy `pdf_layout_classifier` compatibility assets into the current mainline

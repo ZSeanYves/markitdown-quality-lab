@@ -7,9 +7,13 @@ doclaynet	Caption	text_block_classifier	caption	high	Figure/table caption blocks
 doclaynet	Page-header	text_block_classifier	footer_header_noise	high	Repetitive top margin noise.
 doclaynet	Page-footer	text_block_classifier	footer_header_noise	high	Repetitive bottom margin noise.
 doclaynet	Table	text_block_classifier	table_like	high	Table regions.
-doclaynet	Footnote	text_block_classifier	keep_as_text	medium	Usable text but often outside main narrative flow.
+doclaynet	Footnote	text_block_classifier	keep_as_text	medium	Usable text but often outside main narrative flow; candidate source for future footnote_like review.
 doclaynet	Formula	text_block_classifier	uncertain	medium	Math blocks are not first-class text-block labels yet.
 doclaynet	Picture	text_block_classifier	uncertain	low	Non-text region; keep as context, not direct target.
+doclaynet	derived_page_number	text_block_classifier	page_number_noise	low	Derived only from repeated edge text or page-position review; not an upstream DocLayNet class.
+doclaynet	derived_link_text	text_block_classifier	link_text	low	Derived only from URL/text features; not an upstream DocLayNet class.
+doclaynet	derived_code_like	text_block_classifier	code_like	low	Derived only from text/font features; not an upstream DocLayNet class.
+doclaynet	derived_separator	text_block_classifier	separator	low	Derived only from geometry/vector context; not an upstream DocLayNet class.
 publaynet	title	text_block_classifier	heading	high	Page or article title blocks.
 publaynet	text	text_block_classifier	paragraph	high	Main text regions.
 publaynet	list	text_block_classifier	list_item	high	List regions.

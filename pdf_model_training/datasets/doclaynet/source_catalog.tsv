@@ -1,0 +1,2 @@
+dataset_id	source_name	source_url	license	redistribution	raw_cache_status	current_cache_path	canonical_local_only_path	model_uses	notes
+doclaynet	DocLayNet	https://github.com/DS4SD/DocLayNet	CDLA-Permissive-1.0	ok	local_zip_cache_present	pdf_model_training/text_block_classifier/local_only/datasets/doclaynet/cache	pdf_model_training/datasets/doclaynet/local_only	layout_recovery;text_block_classifier	Full core and extra zip cache observed locally; keep raw bytes ignored and do not move during scaffold work.

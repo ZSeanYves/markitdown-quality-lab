@@ -45,6 +45,6 @@ If runtime is ever revisited later:
 Not allowed:
 
 * direct runtime use of a heavy teacher checkpoint
-* flattening `layout_recovery_model` and `text_block_classifier` into one label
+* flattening `layout_recovery` and `text_block_classifier` into one label
   space
 * treating weak-label datasets as gold eval

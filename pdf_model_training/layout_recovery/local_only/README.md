@@ -23,3 +23,15 @@ Do not commit raw dataset bytes, local manifests, feature dumps, checkpoints,
 or local eval outputs from this directory.
 
 Only this `README.md` is intended to stay tracked in git.
+
+Canonical path:
+
+```text
+pdf_model_training/layout_recovery/local_only/
+```
+
+Historical path name:
+
+```text
+pdf_model_training/layout_recovery_model/local_only/
+```

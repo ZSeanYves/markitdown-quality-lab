@@ -1,4 +1,4 @@
-# Layout Recovery Model Source Policy
+# Layout Recovery Source Policy
 
 Tracked content may include:
 
@@ -15,7 +15,7 @@ Local-only content should include:
 Recommended local-only root:
 
 ```text
-pdf_model_training/layout_recovery_model/local_only/
+pdf_model_training/layout_recovery/local_only/
 ```
 
 Use mature public annotated layout datasets first:

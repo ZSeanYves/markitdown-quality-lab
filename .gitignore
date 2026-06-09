@@ -2,15 +2,27 @@
 .tmp/
 local_eval/
 reports/
+!pdf_model_training/text_block_classifier/reports/
+!pdf_model_training/text_block_classifier/reports/**
+!pdf_model_training/layout_recovery/reports/
+!pdf_model_training/layout_recovery/reports/**
 
 pdf_model_training/layout_recovery_model/local_only/*
 !pdf_model_training/layout_recovery_model/local_only/README.md
 pdf_model_training/layout_recovery_model/local_only/**/*
 !pdf_model_training/layout_recovery_model/local_only/README.md
+pdf_model_training/layout_recovery/local_only/*
+!pdf_model_training/layout_recovery/local_only/README.md
+pdf_model_training/layout_recovery/local_only/**/*
+!pdf_model_training/layout_recovery/local_only/README.md
 pdf_model_training/text_block_classifier/local_only/*
 !pdf_model_training/text_block_classifier/local_only/README.md
 pdf_model_training/text_block_classifier/local_only/**/*
 !pdf_model_training/text_block_classifier/local_only/README.md
+pdf_model_training/datasets/doclaynet/local_only/*
+!pdf_model_training/datasets/doclaynet/local_only/README.md
+pdf_model_training/datasets/doclaynet/local_only/**/*
+!pdf_model_training/datasets/doclaynet/local_only/README.md
 external_quality/ocr/_audit/local_only/*
 !external_quality/ocr/_audit/local_only/README.md
 !external_quality/ocr/_audit/local_only/manifest.local.example.tsv

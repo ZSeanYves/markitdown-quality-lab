@@ -1,4 +1,4 @@
-# Layout Recovery Model Label Schema
+# Layout Recovery Label Schema
 
 Layer:
 
@@ -12,12 +12,16 @@ Purpose:
 
 Representative labels:
 
+* `text_region`
+* `title_region`
+* `section_header_region`
 * `reading_order`
 * `column_region`
 * `table_region`
 * `figure_region`
 * `caption_region`
 * `header_footer_region`
+* `page_number_region`
 * `cross_page_merge`
 * `cross_page_no_merge`
 * `low_signal`
@@ -28,6 +32,8 @@ Representative labels:
 Notes:
 
 * this schema is parser/layout-facing, not convert-layer block semantics
+* DocLayNet directly supports region labels, but not true reading order or
+  cross-page decisions
 * old repo-manual boundary labels under `archive/repo_manual_labels/` are only
   tiny historical reference rows
 * keep region recovery and text-block classification in separate manifests and

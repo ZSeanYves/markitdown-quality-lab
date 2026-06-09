@@ -1,6 +1,6 @@
 # PDF Model Data Policy
 
-This policy applies to both `layout_recovery_model` and
+This policy applies to both `layout_recovery` and
 `text_block_classifier`.
 
 ## Tracked Metadata
@@ -25,6 +25,15 @@ Meaningful training data should live under:
 ```text
 pdf_model_training/text_block_classifier/local_only/datasets/<dataset>/
 ```
+
+For new shared DocLayNet raw-cache/index work, prefer:
+
+```text
+pdf_model_training/datasets/doclaynet/local_only/
+```
+
+The existing full DocLayNet cache remains at the historical text-block path
+until an explicit migration task moves it.
 
 Use local-only storage for:
 

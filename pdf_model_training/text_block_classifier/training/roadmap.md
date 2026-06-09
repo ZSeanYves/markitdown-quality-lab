@@ -196,13 +196,13 @@ Current blockers:
 * `footer_header_noise` has the only promising external-quality report-only
   path, but its manual-review TSV still has no filled reviewer decisions
 * `heading` and `keep_as_text` are not safe default emit labels
-* `layout_recovery_model` is blocked by Task B data readiness, not model code
+* `layout_recovery` is blocked by Task B data readiness, not model code
 * external-quality remains validation/report-only data, not training gold
 
 Next phase:
 
 * finish the `footer_header_noise` manual review and rerun the summary
-* acquire mature Task B data for `layout_recovery_model`
+* acquire mature Task B data for `layout_recovery`
 * only after both blockers clear, consider a disabled-by-default runtime
   proposal
 

@@ -1,0 +1,12 @@
+dataset_id	source_label	target_model	target_label	mapping_confidence	mapping_notes
+doclaynet	Title	layout_recovery	title_region	high	Page or document title region.
+doclaynet	Section-header	layout_recovery	section_header_region	high	Section-level heading region.
+doclaynet	Text	layout_recovery	text_region	high	Primary text-bearing region.
+doclaynet	List-item	layout_recovery	text_region	medium	Text-bearing list region; list semantics belong to text_block_classifier.
+doclaynet	Table	layout_recovery	table_region	high	Direct layout region signal.
+doclaynet	Caption	layout_recovery	caption_region	high	Direct caption-region signal.
+doclaynet	Picture	layout_recovery	figure_region	high	Direct figure-region signal.
+doclaynet	Page-header	layout_recovery	header_footer_region	high	Useful for repeated edge region suppression.
+doclaynet	Page-footer	layout_recovery	header_footer_region	high	Useful for repeated edge region suppression.
+doclaynet	Footnote	layout_recovery	text_region	medium	Text-bearing low-priority region; not a cross-page or footnote-body model target yet.
+doclaynet	Formula	layout_recovery	low_signal	medium	Region exists, but parser/runtime handling needs separate policy.

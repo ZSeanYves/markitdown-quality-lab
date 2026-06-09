@@ -27,3 +27,14 @@ Current recommended line:
 * `scripts/export_hgb_distilled_hints.py`
 * `training/distillation_policy.md`
 * `training/roadmap.md`
+
+Current local-only teacher artifacts:
+
+* `local_only/models/pilot3000_v1_hgb_baseline_v3/model.pkl`
+* `local_only/reports/pilot3000_v1_hgb_baseline_v3/metrics.json`
+
+Runtime boundary:
+
+* do not copy `model.pkl` into the main repo
+* do not wire these teacher artifacts into normal runtime
+* use tracked reports and distilled rule candidates for review only
