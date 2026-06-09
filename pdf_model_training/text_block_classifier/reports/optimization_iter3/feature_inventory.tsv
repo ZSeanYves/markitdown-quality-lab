@@ -1,0 +1,119 @@
+column	column_group	role	availability	non_empty_count	non_zero_count	example_values
+sample_id	provenance/source	metadata	present	11123	11123	doclaynet_heldout_3842_51427|doclaynet_heldout_3804_50843|doclaynet_heldout_3813_50951
+source_dataset	provenance/source	metadata	present	11123	11123	doclaynet
+source_page_id	provenance/source	metadata	present	11123	11123	b37a76240e3dedd1d870d4526c8a9031ab949...|2f4478f13234046bbad5a92068d9dd7b7f9b8...|8ba84c5085b7502b8a253d5ec429690884bfb...
+source_region_id	provenance/source	metadata	present	11123	11123	51427|50843|50951
+page_no	page position	metadata	present	11123	9516	0|1|2
+source_label	provenance/source	metadata	present	11123	11123	Page-header|Section-header|Text
+target_label	provenance/source	metadata	present	11123	11123	footer_header_noise|heading|paragraph
+split	provenance/source	metadata	present	11123	11123	heldout
+text	text shape	metadata	present	11123	11123	Ein Service des Bundesministeriums de...|Table of Contents|10-K 1 a2237254z10-k.htm 10-K QuickLi...
+notes	provenance/source	metadata	present	11123	11123	human_annotation_mapped_by_adapter;Us...|human_annotation_mapped_by_adapter;Ke...|human_annotation_mapped_by_adapter;Ma...
+bbox_x_norm	bbox geometry	model_feature	present	11123	11123	0.469072|0.024135|0.747106
+bbox_y_norm	bbox geometry	model_feature	present	11123	11123	0.013922|0.017009|0.017157
+bbox_w_norm	bbox geometry	model_feature	present	11123	11123	0.445226|0.113015|0.526358
+bbox_h_norm	bbox geometry	model_feature	present	11123	11123	0.026426|0.010357|0.025752
+bbox_area_norm	bbox geometry	model_feature	present	11123	11123	0.011766|0.001171|0.013555
+bbox_aspect_ratio	bbox geometry	model_feature	present	11123	11123	16.847816|10.911681|20.439794
+near_top	page position	model_feature	present	11123	1401	1|0
+near_bottom	page position	model_feature	present	11123	1353	0|1
+near_left	page position	model_feature	present	11123	3282	0|1
+near_right	page position	model_feature	present	11123	2260	1|0
+center_band	page position	model_feature	present	11123	9935	1|0
+page_no_norm	page position	model_feature	present	11123	9516	0.000000|0.020000|0.040000
+text_missing	text shape	model_feature	present	11123	0	0
+text_len	text shape	model_feature	present	11123	11123	132|17|96
+word_count	text shape	model_feature	present	11123	11114	21|3|17
+avg_word_len	text shape	model_feature	present	11123	11114	5.238095|5.000000|4.529412
+digit_ratio	text shape	model_feature	present	11123	6668	0.000000|0.145833|0.600000
+upper_ratio	text shape	model_feature	present	11123	10073	0.053030|0.117647|0.052083
+lower_ratio	text shape	model_feature	present	11123	10004	0.795455|0.764706|0.604167
+punct_ratio	text shape	model_feature	present	11123	9455	0.037879|0.000000|0.062500
+space_ratio	text shape	model_feature	present	11123	10441	0.113636|0.117647|0.135417
+alpha_ratio	text shape	model_feature	present	11123	10860	0.848485|0.882353|0.656250
+title_token_ratio	text shape	model_feature	present	11123	8745	0.333333|0.666667|0.058824
+all_caps_ratio	text shape	model_feature	present	11123	4923	0.000000|0.117647|1.000000
+starts_bullet	list pattern	model_feature	present	11123	1008	0|1
+starts_numbered	list pattern	model_feature	present	11123	1523	0|1
+ends_colon	text shape	model_feature	present	11123	614	0|1
+ends_period	text shape	model_feature	present	11123	3515	0|1
+contains_url	text shape	model_feature	present	11123	91	1|0
+contains_email	text shape	model_feature	present	11123	24	0|1
+contains_pipe	text shape	model_feature	present	11123	45	0|1
+contains_tabular_hint	text shape	model_feature	present	11123	0	0
+contains_figure_hint	text shape	model_feature	present	11123	127	0|1
+contains_table_hint	text shape	model_feature	present	11123	173	0|1
+contains_form_hint	text shape	model_feature	present	11123	469	0|1
+contains_page_hint	text shape	model_feature	present	11123	187	0|1
+has_long_token	text shape	model_feature	present	11123	209	1|0
+has_many_digits	text shape	model_feature	present	11123	2730	0|1
+short_text	text shape	model_feature	present	11123	2792	0|1
+very_short_text	text shape	model_feature	present	11123	1325	0|1
+long_text	text shape	model_feature	present	11123	2332	0|1
+feature_set	provenance/source	metadata	present	11123	11123	baseline_v3
+token_count	text shape	model_feature	present	11123	11114	21|3|17
+starts_with_alpha_marker	list pattern	model_feature	present	11123	257	0|1
+no_terminal_period	text shape	model_feature	present	11123	7608	1|0
+has_terminal_period	text shape	model_feature	present	11123	3515	0|1
+title_case_short	text shape	model_feature	present	11123	1037	0|1
+all_caps_short	text shape	model_feature	present	11123	582	0|1
+section_number_prefix	list pattern	model_feature	present	11123	2018	0|1
+contains_table_delimiters	text shape	model_feature	present	11123	45	0|1
+left_indent_bucket	spacing/indent	model_feature	present	11123	10299	4|0|3
+relative_x_bucket	bbox geometry	model_feature	present	11123	6642	3|0|4
+relative_width_bucket	bbox geometry	model_feature	present	11123	8218	2|0|3
+y_position_bucket	page position	model_feature	present	11123	10310	0|1|2
+short_line_with_marker	list pattern	model_feature	present	11123	524	0|1
+continuation_indent_like	spacing/indent	model_feature	present	11123	5359	1|0
+list_marker_type	list pattern	model_feature	present	11123	1772	0|3|2
+prev_gap_norm	spacing/indent	model_feature	present	11123	10382	1.000000|0.000000|0.003446
+next_gap_norm	spacing/indent	model_feature	present	11123	10382	1.000000|0.000000|0.003446
+prev_same_left_band	spacing/indent	model_feature	present	11123	588	0|1
+next_same_left_band	spacing/indent	model_feature	present	11123	588	0|1
+prev_width_ratio	spacing/indent	model_feature	present	11123	1586	0.000000|46.703611|0.366418
+next_width_ratio	spacing/indent	model_feature	present	11123	1586	0.000000|0.021412|2.729123
+prev_text_len_norm	neighbor context	model_feature	present	11123	1586	0.000000|0.240000|0.050000
+next_text_len_norm	neighbor context	model_feature	present	11123	1586	0.000000|0.005000|0.150000
+prev_ends_period	neighbor context	model_feature	present	11123	536	0|1
+next_starts_marker	neighbor context	model_feature	present	11123	122	0|1
+rich_list_marker_type	list pattern	model_feature	present	11123	2399	0|3|2
+starts_with_roman_marker	list pattern	model_feature	present	11123	353	0|1
+starts_with_paren_marker	list pattern	model_feature	present	11123	1101	0|1
+starts_with_section_word	heading shape	model_feature	present	11123	57	0|1
+section_prefix_depth	heading shape	model_feature	present	11123	2018	0|1|2
+marker_prefix_len_bucket	list pattern	model_feature	present	11123	2150	0|1|2
+indent_bucket_fine	spacing/indent	model_feature	present	11123	10863	6|0|5
+relative_height_bucket	bbox geometry	model_feature	present	11123	6553	1|0|2
+area_bucket	bbox geometry	model_feature	present	11123	7941	2|0|1
+width_height_ratio_bucket	bbox geometry	model_feature	present	11123	10784	5|4|2
+short_marker_line	list pattern	model_feature	present	11123	1078	0|1
+marker_followed_by_upper	list pattern	model_feature	present	11123	1505	0|1
+continuation_after_marker_prev	neighbor context	model_feature	present	11123	58	0|1
+continuation_before_marker_next	neighbor context	model_feature	present	11123	50	0|1
+heading_like_short	heading shape	model_feature	present	11123	3248	0|1
+heading_like_gap_before	spacing/indent	model_feature	present	11123	9731	1|0
+heading_like_gap_after	spacing/indent	model_feature	present	11123	9731	1|0
+isolated_heading_like	heading shape	model_feature	present	11123	2538	0|1
+page_position_bucket_fine	page position	model_feature	present	11123	10932	0|1|2
+right_edge_bucket	bbox geometry	model_feature	present	11123	10516	4|0|2
+text_density_bucket	text shape	model_feature	present	11123	11105	6|4|3
+starts_with_caption_cue	caption association	model_feature	present	11123	104	0|1
+starts_with_table_cue	caption association	model_feature	present	11123	60	0|1
+starts_with_figure_cue	caption association	model_feature	present	11123	44	0|1
+caption_like_short	caption association	model_feature	present	11123	69	0|1
+prev_has_table_cue	neighbor context	model_feature	present	11123	66	0|1
+next_has_table_cue	neighbor context	model_feature	present	11123	74	0|1
+prev_has_figure_cue	neighbor context	model_feature	present	11123	29	0|1
+next_has_figure_cue	neighbor context	model_feature	present	11123	30	0|1
+caption_near_prev_wide	caption association	model_feature	present	11123	41	0|1
+caption_near_next_wide	caption association	model_feature	present	11123	49	0|1
+prev_gap_bucket	spacing/indent	model_feature	present	11123	10335	6|0|1
+next_gap_bucket	spacing/indent	model_feature	present	11123	10335	6|0|1
+prev_x_delta_bucket	spacing/indent	model_feature	present	11123	10656	5|4|0
+next_x_delta_bucket	spacing/indent	model_feature	present	11123	10656	5|4|0
+prev_center_delta_bucket	spacing/indent	model_feature	present	11123	11015	5|3|4
+next_center_delta_bucket	spacing/indent	model_feature	present	11123	11015	5|3|4
+prev_overlap_ratio_bucket	spacing/indent	model_feature	present	11123	793	0|5|4
+next_overlap_ratio_bucket	spacing/indent	model_feature	present	11123	793	0|5|4
+prev_height_ratio	spacing/indent	model_feature	present	11123	1586	0.000000|1.000000|2.374401
+next_height_ratio	spacing/indent	model_feature	present	11123	1586	0.000000|1.000000|0.421159

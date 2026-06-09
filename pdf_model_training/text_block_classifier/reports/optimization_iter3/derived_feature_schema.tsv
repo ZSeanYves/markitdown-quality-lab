@@ -1,0 +1,10 @@
+feature_name	status	source_columns	derivation	notes
+caption_prefix_pattern	available	text	regex enum over figure/table/caption prefixes	Derived from text only; does not replace visual-region proximity.
+text_length_bucket	available	token_count,text	very_short/short/medium/long/very_long by token count	Useful for caption and heading audit.
+starts_with_enumeration_pattern	available	text	boolean over bullet/decimal/alpha/roman/paren prefixes	Clarifies existing marker signals.
+enumeration_prefix_kind	available	text	named enum for bullet/decimal/alpha/roman/paren/none	Candidate replacement for opaque numeric marker type.
+titlecase_ratio	available	title_token_ratio,text	reuse title_token_ratio or recompute from text	Heading guard input.
+uppercase_ratio	available	upper_ratio,text	reuse upper_ratio or recompute from text	Heading guard input.
+ends_with_period	available	ends_period,text	reuse ends_period or inspect stripped text suffix	Heading false-positive guard.
+section_number_prefix	available	section_number_prefix,text	reuse section_number_prefix or regex over text	Heading/list ambiguity guard.
+short_text_score	available	token_count,text	score from token-count buckets	More gradated than short_text/very_short_text booleans.

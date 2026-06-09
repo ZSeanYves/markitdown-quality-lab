@@ -1,0 +1,201 @@
+sample_id	split	source_label	target_label	text_preview	caption_prefix_pattern	text_length_bucket	starts_with_enumeration_pattern	enumeration_prefix_kind	titlecase_ratio	uppercase_ratio	ends_with_period	section_number_prefix	short_text_score
+doclaynet_heldout_4359_57557	heldout	Caption	caption	MODEL AY11238 40X,100X,400X COMPOUND MONOCULAR	none	medium	0	none	0.0000	0.5870	0	0	0.40
+doclaynet_heldout_4359_57558	heldout	Caption	caption	MODEL AY11228 20X,40X STEREO BINOCULAR	none	short	0	none	0.0000	0.6316	0	0	0.75
+doclaynet_heldout_4359_57556	heldout	Caption	caption	MODEL AY11240 40X,100X,400X COMPOUND MONOCULAR	none	medium	0	none	0.0000	0.5870	0	0	0.40
+doclaynet_heldout_4359_57554	heldout	Caption	caption	MODEL AY11230 20X,40X STEREO TRINOCULAR	none	short	0	none	0.0000	0.6410	0	0	0.75
+doclaynet_heldout_4359_57555	heldout	Caption	caption	MODEL AY11232 7X-45X STEREO ZOOM	none	short	0	none	0.0000	0.5938	0	0	0.75
+doclaynet_heldout_5022_67065	heldout	Caption	caption	FIG 2	figure_or_image	very_short	0	none	0.0000	0.6000	0	0	1.00
+doclaynet_heldout_4359_57552	heldout	Caption	caption	MODEL AY11236 40X,100X,400X,1000X COMPOUND	none	medium	0	none	0.0000	0.4524	0	0	0.40
+doclaynet_heldout_4359_57553	heldout	Caption	caption	MODEL AY11234 7X-45X ZOOM STEREO TRINOCULAR	none	medium	0	none	0.0000	0.6744	0	0	0.40
+doclaynet_heldout_2693_35827	heldout	Caption	caption	Figure 1: The SMA light curves for 3C 454.3. The open circles represent the 850 µ m observations, and the open triangles represent the 1mm observations.	figure_or_image	long	0	none	0.1154	0.0461	1	0	0.00
+doclaynet_heldout_2562_33155	heldout	Caption	caption	FIG. 1: (color online) Locus ( ε ) formed by the apexes of C m all the projectile trajectories (continuous line in blue) given by Eqs. (7) and (8) in rectangula	figure_or_image	very_long	0	none	0.0732	0.0316	0	0	0.00
+doclaynet_heldout_2687_35743	heldout	Caption	caption	FIG. 1: Schematics of two spin qubit unit in a DQD consid- ered here. Each spin qubit is represented by a MI. Interaction between qubits is mediated by the two 	figure_or_image	very_long	0	none	0.0462	0.0406	1	0	0.00
+doclaynet_heldout_2693_35838	heldout	Caption	caption	Figure 2: Variability index for our sample (top: 1mm, bottom: 850 µ m), with FSRQs as the hatched distribution and BL Lacs as the solid distribution. There is n	figure_or_image	very_long	0	none	0.0755	0.0310	1	0	0.00
+doclaynet_heldout_2546_32897	heldout	Caption	caption	FIG. 1. The conventional string breaking: the QCD string spanned between the static quark and the static antiquark Q ¯ breaks due to light ¯ pair creation. Q q 	figure_or_image	long	0	none	0.0357	0.0559	0	0	0.00
+doclaynet_heldout_2736_36677	heldout	Caption	caption	Table I VERITAS AGN Detections. The only non-blazar object is the radio galaxy M 87. The blazars discovered at VHE by VERITAS are marked with a dagger.	table	long	0	none	0.1429	0.1722	1	0	0.00
+doclaynet_heldout_2536_32714	heldout	Caption	caption	TABLE I: Contributions of the system factor, ζ , and of ab,ba the overlap between transition frequency and phonon bath spectral properties, C ( ω ), to the calc	table	very_long	0	none	0.0600	0.0336	1	0	0.00
+doclaynet_heldout_2607_34027	heldout	Caption	caption	TABLE I: Correspondence between physical spin operators and pseudo-spin operators in the physical spin singlet sector of the four antiferromagnetically coupled 	table	very_long	0	none	0.0333	0.0350	1	0	0.00
+doclaynet_heldout_2477_31557	heldout	Caption	caption	TABLE I: dx /dA , dy /dA , and d (ln J ) /dA are expressed as sums of terms in 1 / ( D D ), 1 / ( D D ), and 1 / ( D D ). − − − 1 2 2 3 3 1 i i	table	long	0	none	0.0000	0.1119	0	0	0.00
+doclaynet_heldout_2646_34905	heldout	Caption	caption	FIG. 1: Communication protocol: a qubit passes through an Ising spin-star channel. This is repeated in parallel over many identical such channels.	figure_or_image	long	0	none	0.1304	0.0411	1	0	0.00
+doclaynet_heldout_2729_36534	heldout	Caption	caption	Fig. 4. Measured enhancements of the excitation and emission intensity for spheres with a radius of (a) R = 80 nm and (b) R = 150 nm. The solid lines indicate t	figure_or_image	very_long	0	none	0.0545	0.0153	1	0	0.00
+doclaynet_heldout_2557_33048	heldout	Caption	caption	FIG. 2: (color online) The angle θ as a function of the launch angle α for two different values of ε and their inverses.	figure_or_image	long	0	none	0.0476	0.0333	1	0	0.00
+doclaynet_heldout_2557_33049	heldout	Caption	caption	FI G. 3: (color online) (a) First and (b) second derivatives of α as function of θ for various values of parameter ε . Note that major changes occur for θ < π/ 	none	long	0	none	0.0741	0.0309	1	0	0.00
+doclaynet_heldout_2483_31678	heldout	Caption	caption	FIG. 2: (color online) The spectral density at the Fermi sur- face, ( ), as given by Eqs. (7) and (9) at and A$_{ω}$$_{=0}$ k$_{y}$ > k$_{x}$ k respectively. Th	figure_or_image	very_long	0	none	0.0806	0.0279	1	0	0.00
+doclaynet_heldout_2608_34073	heldout	Caption	caption	FIG. 2. The (partial) breaking of the QCD string in the back- ground magnetic field. The distance between created quark and antiquark ¯ is restricted by the mag	figure_or_image	very_long	0	none	0.0714	0.0369	1	0	0.00
+doclaynet_heldout_2658_35131	heldout	Caption	caption	FIG. 5: (Color online) RDF obtained from MC simulations (diamond), BIMSA3 (solid line), and MSA-fit (dot dashed) at two concentrations.	figure_or_image	long	0	none	0.0476	0.1259	1	0	0.00
+doclaynet_heldout_2501_32033	heldout	Caption	caption	FIG. 4: (color online) Curvature of ( ε ) using the polar C m angle as the parameter from Eq. (19). In red line appears the corresponding result for the ellipse	figure_or_image	very_long	0	none	0.1064	0.0332	1	0	0.00
+doclaynet_heldout_2715_36312	heldout	Caption	caption	FIG. 3: (color online) Graphical representation of the self- energy correction of the order 2 in coupling constant, n Eq. (16). Solid vertical and horizontal li	figure_or_image	very_long	0	none	0.0513	0.0145	0	0	0.00
+doclaynet_heldout_522_6409	heldout	Caption	caption	Stephen Gerlach Chairman 21 March 2005	none	short	0	none	0.6667	0.1053	0	0	0.75
+doclaynet_heldout_4018_53713	heldout	Caption	caption	Fig. 1- Coarse Adjustment Knob	figure_or_image	short	0	none	0.8000	0.1333	0	0	0.75
+doclaynet_heldout_543_6616	heldout	Caption	caption	Harris W. Hudson 1 Vice Chairman of the Board	none	medium	0	none	0.5556	0.1333	0	0	0.40
+doclaynet_heldout_543_6615	heldout	Caption	caption	John W. Croghan 2, 3, 4 Chairman, Nominating and Corporate Governance Committee Chairman, Rail-Splitter Capital Management, LLC (an investment management firm)	none	long	0	none	0.5455	0.1006	0	0	0.00
+doclaynet_heldout_543_6617	heldout	Caption	caption	James E. O’Connor 1 Chairman & Chief Executive Officer	none	medium	0	none	0.6667	0.1481	0	0	0.40
+doclaynet_heldout_2639_34754	heldout	Caption	caption	n = 155 R = 0 . 4 Fig. 3. FER results on the , , Tanner code	none	medium	0	none	0.1538	0.1000	0	0	0.00
+doclaynet_heldout_2639_34752	heldout	Caption	caption	n = 4085 R = 0 . 82 Fig. 5. FER results on the , , MacKay code	none	medium	0	none	0.0769	0.1129	0	0	0.00
+doclaynet_heldout_1825_25437	heldout	Caption	caption	TABLE I LANGUAGE VOCABULARY SIZE	table	short	0	none	0.0000	0.8750	0	0	0.75
+doclaynet_heldout_2730_36553	heldout	Caption	caption	FIG. 1: The infinitesimal LLT for a Kerr-Newman black hole with parameters M = 1000, a = 0 . 8 M , Q = 0 . 2 M and v = 0 . 3 , 0 . 5 , 0 . 7 and 0 . 9 for the b	figure_or_image	very_long	0	none	0.0682	0.0602	1	0	0.00
+doclaynet_heldout_543_6620	heldout	Caption	caption	Allan C. Sorensen 2, 3, 4 Presiding Director President & Chief Executive Officer Interim Health Care, Inc. (a provider of temporary labor to the healthcare indu	none	long	0	none	0.4800	0.0788	0	0	0.00
+doclaynet_heldout_543_6618	heldout	Caption	caption	W. Lee Nutter 2, 3, 4 Chairman, Compensation Committee Chairman, President & Chief Executive Officer Rayonier, Inc. (a forest products company)	none	long	1	alpha	0.6000	0.0909	0	1	0.00
+doclaynet_heldout_543_6619	heldout	Caption	caption	Ramon A. Rodriguez 2, 3, 4 Chairman, Audit Committee President & Chief Executive Officer Madsen, Sapp, Mena, Rodriguez & Co. (a public accounting firm)	none	long	0	none	0.6364	0.0993	0	0	0.00
+doclaynet_heldout_543_6621	heldout	Caption	caption	Michael W. Wickham 2, 3, 4 Retired Chairman, President & Chief Executive Officer, Roadway Corporation	none	medium	0	none	0.7143	0.1089	0	0	0.00
+doclaynet_heldout_2626_34452	heldout	Caption	caption	FIG. 8: XTEJ1752-223 light curve. Horizontal scale is in modified Julian days.	figure_or_image	medium	0	none	0.1538	0.1154	1	0	0.00
+doclaynet_heldout_2639_34753	heldout	Caption	caption	n = 768 R = 0 . 75 Fig. 4. FER results on the , , Quasicyclic code	none	medium	0	none	0.1538	0.0909	0	0	0.00
+doclaynet_heldout_1094_14317	heldout	Caption	caption	Gavin Thomas Managing Director and CEO	none	short	0	none	0.6667	0.1842	0	0	0.75
+doclaynet_heldout_2730_36571	heldout	Caption	caption	FIG. 3: The EPR setup in the Kerr-Newman space- time. Gray circles are the observers and the gray square is the EPR source.	figure_or_image	long	0	none	0.1667	0.1057	1	0	0.00
+doclaynet_heldout_2481_31660	heldout	Caption	caption	C$_{E}$ = 1 + Q Q$_{E}$ = C$_{E}$/ 2 FIG. 2: Capacities (solid, thick), (solid, Q thin) and (dashed) of qubit coupled to an Ising spin bath with N = 4 g$_{n}$ Ω	none	very_long	0	none	0.0870	0.0688	1	0	0.00
+doclaynet_heldout_1825_25436	heldout	Caption	caption	TABLE II TWITTER DATA COLLECTION EXPERIMENT RESULTS	table	medium	0	none	0.0000	0.8824	0	0	0.40
+doclaynet_heldout_558_6868	heldout	Caption	caption	Carlos Ghosn President and Chief Executive Officer	none	medium	0	none	0.8571	0.1200	0	0	0.40
+doclaynet_heldout_1287_17233	heldout	Caption	caption	M IKE HANNELL Chairman	none	short	0	none	0.2500	0.5455	0	0	0.75
+doclaynet_heldout_2481_31661	heldout	Caption	caption	N = 100 FIG. 3: Same as Fig. 2, with .	none	medium	0	none	0.2222	0.1579	1	0	0.40
+doclaynet_heldout_311_3924	heldout	Caption	caption	James R. Houghton Chairman and Chief Executive Officer	none	medium	0	none	0.7500	0.1296	0	0	0.40
+doclaynet_heldout_2643_34858	heldout	Caption	caption	FIG. 5: The shifted Fermi sphere (left) and the two-Fermi radii (right) occupations in 2DEG. The occupied states are shown as filled areas, have both identical 	figure_or_image	long	0	none	0.1026	0.0427	1	0	0.00
+doclaynet_heldout_4576_60110	heldout	List-item	list_item	[51] Int. Cl.	none	short	0	none	0.6667	0.1538	1	0	0.75
+doclaynet_heldout_4823_64112	heldout	List-item	list_item	(11) SRA eS	none	short	1	decimal	0.0000	0.3636	0	1	0.75
+doclaynet_heldout_4827_64168	heldout	List-item	list_item	(51) 。Int. Cl. C07D471/04(2006.01)	none	medium	1	decimal	0.2857	0.1176	0	1	0.40
+doclaynet_heldout_4827_64161	heldout	List-item	list_item	(45) 공고일자 2007년02월08일	none	short	1	decimal	0.0000	0.0000	0	1	0.75
+doclaynet_heldout_4842_64420	heldout	List-item	list_item	[75] David Robert Inventors: Bryant, South James Clair Charleston; Nicholson, Saint Albans, both of W. Va.	none	medium	0	none	0.7500	0.1226	1	0	0.00
+doclaynet_heldout_4771_63224	heldout	List-item	list_item	(52) U.S. Cl. CPC .......... (2013.01); C07C 309/42 C07C 309125 (2013.01); (2013.01); C07C 309/29 C07C (2013.01); (2013.01); 309/35 C07C 309/38 (2013.01); G03F 	none	very_long	1	decimal	0.0167	0.0990	0	1	0.00
+doclaynet_heldout_4903_65735	heldout	List-item	list_item	(58) Field of Classification Search ............... 428/36.3, 428/36.7, 36.8, 36.91; 524/526, 571,572, 524/573, 574, 575, 575.5	none	long	1	decimal	0.1200	0.0236	0	1	0.00
+doclaynet_heldout_4919_66084	heldout	List-item	list_item	Field of Classification Search ................... 524/123 (58) See application file for complete search history.	none	medium	0	none	0.2857	0.0354	1	0	0.00
+doclaynet_heldout_4599_60552	heldout	List-item	list_item	(45) Date of publication and mention of the grant of the patent: 27.04.2011 Bulletin 2011/17	none	medium	1	decimal	0.1111	0.0217	0	1	0.00
+doclaynet_heldout_4589_60368	heldout	List-item	list_item	(45) Date of publication and mention of the grant of the patent: 20.04.2011 Bulletin 2011/16	none	medium	1	decimal	0.1111	0.0217	0	1	0.00
+doclaynet_heldout_4599_60567	heldout	List-item	list_item	(51) Int Cl.:	none	short	1	decimal	0.6667	0.1538	0	1	0.75
+doclaynet_heldout_4589_60371	heldout	List-item	list_item	(51) Int Cl.: (2006.01) G06F1/32	none	medium	1	decimal	0.2857	0.1250	0	1	0.40
+doclaynet_heldout_4586_60333	heldout	List-item	list_item	(43) Veröffentlichungstag: 07.04.2021 Patentblatt 2021/14	none	medium	1	decimal	0.2222	0.0351	0	1	0.40
+doclaynet_heldout_4586_60346	heldout	List-item	list_item	(51) Int Cl.:	none	short	1	decimal	0.6667	0.1538	0	1	0.75
+doclaynet_heldout_4823_64113	heldout	List-item	list_item	(43) SBA SERR29ZEAAGE (2017.4.6)	none	short	1	decimal	0.0000	0.4062	0	1	0.75
+doclaynet_heldout_4827_64162	heldout	List-item	list_item	(11) 등록번호 10-0680003	none	short	1	decimal	0.0000	0.0000	0	1	0.75
+doclaynet_heldout_4872_65033	heldout	List-item	list_item	Hartmut Knofel, Michael [75] Inventors: Odenthal; Brockelt, Leverkusen, both of Germany	none	medium	0	none	0.7273	0.0920	0	0	0.40
+doclaynet_heldout_4893_65471	heldout	List-item	list_item	(71) Applicant: Cleobury Mortimer Kudos Blends Ltd., (GB)	none	medium	1	decimal	0.7500	0.1404	0	1	0.40
+doclaynet_heldout_4893_65483	heldout	List-item	list_item	(52) U.S. Cl. CPC ............... A21D 2102 (2013.01); A21D 10104 (2013.01); A21D 21145 (2013.01); A23L 27182 (2016.08)	none	long	1	decimal	0.0476	0.1176	0	1	0.00
+doclaynet_heldout_5022_67047	heldout	List-item	list_item	(51) International Patent Classification: B01J 13/10 C08L 33/26 (2006.0 1) (2006.0 1) 33/14 C08L 67/04 (2006.0 1) (2006.0 1) 01	none	long	1	decimal	0.1071	0.0709	0	1	0.00
+doclaynet_heldout_4827_64163	heldout	List-item	list_item	(24) 등록일자 2007년02월01일	none	short	1	decimal	0.0000	0.0000	0	1	0.75
+doclaynet_heldout_4834_64274	heldout	List-item	list_item	Hirotaka Uchiyama, (75) Inventors: Symmes Twp, OH Janese Christine O’Brien (US); Stickney, Wyoming, OH (US); Jonathan Robert Cetti, Fairfield, OH Ricky Ah-Man W	none	very_long	0	none	0.6341	0.1970	0	0	0.00
+doclaynet_heldout_4735_62611	heldout	List-item	list_item	Jae Chang Jung; Keun Kyu Kong; (75) Inventors: Myoung Soo Kim; Hyoung Gi Kim; Hyeong Soo Kim; Ki Ho Baik, all of (KR) Kyoungki-do	none	long	0	none	0.8000	0.1705	0	0	0.00
+doclaynet_heldout_4823_64114	heldout	List-item	list_item	(51) Int.Cl. COOK 3/14 (2006. 01) HO1L 21/304 (2006.01) B24B 37/00 (2012, 01) CogG 18 (2006. 01)	none	long	1	decimal	0.0909	0.1354	0	1	0.00
+doclaynet_heldout_4823_64128	heldout	List-item	list_item	Fl CO9K 3/14 HOLL 21/304 B24B 37/00 CO9G 1/02	none	medium	0	none	0.0769	0.2889	0	0	0.00
+doclaynet_heldout_4662_61540	heldout	List-item	list_item	(75) Inventors: Concord, NC Kenneth Gonsalves, Charlotte, (US); Mohammed Azam Ali, NC (US)	none	medium	1	decimal	0.6154	0.1778	0	1	0.00
+doclaynet_heldout_4906_65789	heldout	List-item	list_item	Johannes Benkhoff, (75) Inventors: Basel (CH); Bernd Lamatsch, Riehen (CH)	none	medium	0	none	0.7000	0.1486	0	0	0.40
+doclaynet_heldout_4923_66174	heldout	List-item	list_item	Matthew Stewart Gebhart, (75) Inventors: New Deborah Gay Britain, PA (US); Bonnie Fradkin, Horsham, PA (US); Elizabeth Baker, Erdenheim, PA (US); John Michael F	none	very_long	0	none	0.6667	0.1941	0	0	0.00
+doclaynet_heldout_4788_63473	heldout	List-item	list_item	(71) Applicant: Tokyo Shin-Etsu Chemical Co., Ltd., (JP)	none	medium	1	decimal	0.7778	0.1607	0	1	0.40
+doclaynet_heldout_4771_63218	heldout	List-item	list_item	(71) Applicant: SHIN-ETSU CHEMICAL CO., LTD., Tokyo (JP)	none	medium	1	decimal	0.2222	0.4464	0	1	0.40
+doclaynet_heldout_4919_66075	heldout	List-item	list_item	Jean-Marie Bernard, (75) Inventors: Saint Laurent Mathias Dubecq, d’ Agny (FR); Lyons (FR)	none	medium	0	none	0.7143	0.1556	0	0	0.00
+doclaynet_heldout_4846_64484	heldout	List-item	list_item	Tokyo Ohka Kogyo Co., Ltd., (71) Applicant: Kawasaki-shi (JP)	none	medium	0	none	0.7000	0.1475	0	0	0.40
+doclaynet_heldout_4928_66289	heldout	List-item	list_item	(71) Applicant: Halliburton Energy Services, Inc., Houston, TX (US)	none	medium	1	decimal	0.6667	0.1493	0	1	0.40
+doclaynet_heldout_4788_63479	heldout	List-item	list_item	(52) U.S. Cl. (2013.01); G03F G03F CPC .......... 710045 710392 (2013.01); (2013.01); G03F 710382 G03F (2013.01); (2020.02); C08F 220/1802 7/162 (2020.02); C08F	none	long	1	decimal	0.0278	0.1047	0	1	0.00
+doclaynet_heldout_4589_60372	heldout	List-item	list_item	(86) International application number: PCT/US2002/028537	none	medium	1	decimal	0.1429	0.1071	0	1	0.40
+doclaynet_heldout_4586_60334	heldout	List-item	list_item	(21) Anmeldenummer: 19200966.0	none	short	1	decimal	0.2500	0.0333	0	1	0.75
+doclaynet_heldout_4842_64421	heldout	List-item	list_item	Union [73] Carbide Assignee: Chemicals Plastics & Technology Corporation. Danbury. Conn.	none	medium	0	none	0.9000	0.1023	1	0	0.40
+doclaynet_heldout_4903_65720	heldout	List-item	list_item	(75) Inventors: Hudson, OH Chenchy Jeffrey Lin, (US); William L. Hergenrother, Akron, OH (US)	none	medium	1	decimal	0.5714	0.1828	0	1	0.00
+doclaynet_heldout_4928_66299	heldout	List-item	list_item	(58) Field of Classification Search CPC ................................ E21B 33/138; C09K 8/56 See application file for complete search history.	none	long	1	decimal	0.2105	0.0759	1	1	0.00
+doclaynet_heldout_4896_65535	heldout	List-item	list_item	Christian Ochs, Elke (75) Inventors: Burghausen (DE); Fritz-Langhals, Ottobrunn (DE)	none	medium	0	none	0.7273	0.1429	0	0	0.40
+doclaynet_heldout_4599_60548	heldout	List-item	list_item	(86) International application number: PCT/US2007/064961	none	medium	1	decimal	0.1429	0.1071	0	1	0.40
+doclaynet_heldout_4872_65034	heldout	List-item	list_item	Bayer Aktiengesellschaft, [73] Assignee: Leverkusen, Germany	none	short	0	none	0.8333	0.0833	0	0	0.75
+doclaynet_heldout_4599_60551	heldout	List-item	list_item	(21) Application number: 07759411.7	none	short	1	decimal	0.2000	0.0286	0	1	0.75
+doclaynet_heldout_4589_60369	heldout	List-item	list_item	(21) Application number: 02757648.7	none	short	1	decimal	0.2000	0.0286	0	1	0.75
+doclaynet_heldout_4893_65472	heldout	List-item	list_item	Bewdley (GB) (72) Inventor: Daniel James Brown,	none	medium	0	none	0.7143	0.1489	0	0	0.40
+doclaynet_heldout_5022_67046	heldout	List-item	list_item	(74) Agent: DONALDSON & BURKINSHAW LLP; 24 Raf‹ fles Place, #15-00 Clifford Centre, Singapore 048621 (SG).	none	medium	1	decimal	0.3750	0.2830	1	1	0.00
+doclaynet_heldout_4628_61081	heldout	List-item	list_item	(71) Applicant: FUJIFILM Corporation, Tokyo (JP)	none	short	1	decimal	0.5000	0.2708	0	1	0.75
+doclaynet_heldout_4916_65988	heldout	List-item	list_item	Kristian Dahlen, (75) Inventors: Stora Hoga (SE); Roger Carlsson, Save (SE)	none	medium	0	none	0.7273	0.1600	0	0	0.40
+doclaynet_heldout_2886_39609	heldout	List-item	list_item	Subject: Guarantee No< … > Financing Guarantee for the repayment of pre-financing payable under contract < TA Contract number and title > (please quote number a	none	long	0	none	0.2222	0.0419	0	0	0.00
+doclaynet_heldout_4827_64167	heldout	List-item	list_item	(21) 출원번호 10-2004-7013537	none	short	1	decimal	0.0000	0.0000	0	1	0.75
+doclaynet_heldout_4735_62605	heldout	Text	paragraph	US006482565Bl	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4834_64268	heldout	Text	paragraph	US006503413B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4872_65027	heldout	Text	paragraph	US005648520A	none	very_short	0	none	0.0000	0.2500	0	0	1.00
+doclaynet_heldout_4842_64413	heldout	Text	paragraph	US005763671A	none	very_short	0	none	0.0000	0.2500	0	0	1.00
+doclaynet_heldout_4586_60343	heldout	Text	paragraph	(19)	none	very_short	0	none	0.0000	0.0000	0	0	1.00
+doclaynet_heldout_4771_63212	heldout	Text	paragraph	US 20190010119Al	none	very_short	0	none	0.0000	0.1875	0	0	1.00
+doclaynet_heldout_4893_65465	heldout	Text	paragraph	US 20200352177Al	none	very_short	0	none	0.0000	0.1875	0	0	1.00
+doclaynet_heldout_4628_61075	heldout	Text	paragraph	US 20200050106Al	none	very_short	0	none	0.0000	0.1875	0	0	1.00
+doclaynet_heldout_4788_63467	heldout	Text	paragraph	US 20210033970Al	none	very_short	0	none	0.0000	0.1875	0	0	1.00
+doclaynet_heldout_4903_65717	heldout	Text	paragraph	US007335411B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4906_65821	heldout	Text	paragraph	US007144993B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4662_61569	heldout	Text	paragraph	US007049044B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4672_61767	heldout	Text	paragraph	US007851130B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4916_66021	heldout	Text	paragraph	US008846844B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4896_65558	heldout	Text	paragraph	US007902392B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4661_61495	heldout	Text	paragraph	US009423690B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4846_64479	heldout	Text	paragraph	US009164380B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4928_66282	heldout	Text	paragraph	US009840656B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4919_66101	heldout	Text	paragraph	US008188171B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_4923_66204	heldout	Text	paragraph	US006930141B2	none	very_short	0	none	0.0000	0.2308	0	0	1.00
+doclaynet_heldout_2886_39589	heldout	Text	paragraph	<To be completed on paper bearing the letterhead of the financial institution>	none	medium	0	none	0.0833	0.0128	0	0	0.40
+doclaynet_heldout_5587_74322	heldout	Text	paragraph	Washington, D.C. 20549 __________________________	none	short	0	none	0.2500	0.0612	0	0	0.75
+doclaynet_heldout_2760_37141	heldout	Text	paragraph	Bezeichnung der Bauleistung:	none	short	0	none	0.6667	0.0714	0	0	0.75
+doclaynet_heldout_3005_41609	heldout	Text	paragraph	Contract no: [complete]	none	short	0	none	0.3333	0.0435	0	0	0.75
+doclaynet_heldout_5437_72537	heldout	Text	paragraph	Washington, D.C. 20549	none	short	0	none	0.2500	0.1364	0	0	0.75
+doclaynet_heldout_2712_36239	heldout	Text	paragraph	(will be inserted by the editor)	none	short	0	none	0.0000	0.0000	0	0	0.75
+doclaynet_heldout_2760_37170	heldout	Text	paragraph	A-01654-00	none	short	0	none	0.0000	0.1000	0	0	0.75
+doclaynet_heldout_2760_37172	heldout	Text	paragraph	H3.097 N Salzhalle SP Holledau	none	short	0	none	0.3333	0.2000	0	0	0.75
+doclaynet_heldout_4599_60547	heldout	Text	paragraph	EP 2 000 008 B1 (11)	none	short	0	none	0.0000	0.1500	0	0	0.75
+doclaynet_heldout_2604_33943	heldout	Text	paragraph	a M. Limpinsel, A. Wagenpfahl, M. Mingebach, and C. Deibel	none	medium	0	none	0.4000	0.1379	0	0	0.40
+doclaynet_heldout_4359_57526	heldout	Text	paragraph	BARSKA warrants your micrscope to be free from defects in materials and workmanship for one (1) year.	none	medium	0	none	0.0000	0.0594	1	0	0.00
+doclaynet_heldout_2524_32487	heldout	Text	paragraph	, ∗ $^{1}$Yong-Seon Song, 1 $^{2}$Cristiano G. Sabiu, $^{1}$Robert C. Nichol and $^{2}$Christopher J. Miller	none	medium	0	none	0.5000	0.1111	0	0	0.00
+doclaynet_heldout_2606_33995	heldout	Text	paragraph	$^{1,}$∗ $^{2,}$† $^{2, 3,}$‡ S. H. Chiu, T. K. Kuo, and Lu-Xin Liu	none	medium	0	none	0.3571	0.1343	0	0	0.00
+doclaynet_heldout_2713_36244	heldout	Text	paragraph	2 PI Chun-Mei $^{1}$, YANG Shu-Hua2 , and ZHENG Xiao-Ping ∗∗	none	medium	0	none	0.5000	0.2833	0	0	0.40
+doclaynet_heldout_2751_36954	heldout	Text	paragraph	∗ H. Hern´ andez-Salda˜ na	none	short	0	none	0.4000	0.1154	0	0	0.75
+doclaynet_heldout_5437_72538	heldout	Text	paragraph	(Mark One)	none	very_short	0	none	1.0000	0.2000	0	0	1.00
+doclaynet_heldout_4359_57527	heldout	Text	paragraph	BARSKA will repair or replace such product or part thereof which, upon inspection by BARSKA, is found to be defective in materials or workmanship. As a conditio	none	very_long	0	none	0.0189	0.0972	1	0	0.00
+doclaynet_heldout_2604_33944	heldout	Text	paragraph	Experimental Physics VI, Julius-Maximilians-University of W¨urzburg, D-97074 W¨urzburg	none	medium	0	none	0.3846	0.1163	0	0	0.00
+doclaynet_heldout_5437_72539	heldout	Text	paragraph	ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 ☑	none	medium	0	none	0.0000	0.6860	0	0	0.00
+doclaynet_heldout_5587_74326	heldout	Text	paragraph	☒	none	very_short	0	none	0.0000	0.0000	0	0	1.00
+doclaynet_heldout_2524_32488	heldout	Text	paragraph	& $^{1}$Institute of Cosmology Gravitation, University of Portsmouth, Portsmouth, PO1 3FX, UK	none	medium	0	none	0.5000	0.1290	0	0	0.40
+doclaynet_heldout_2751_36955	heldout	Text	paragraph	Departamento de Ciencias B´ asicas, Universidad Aut´ onoma Metropolitana-Azcapotzalco, Av. San Pablo 180, M´ exico 02200 D.F., Mexico.	none	long	0	none	0.5000	0.1045	1	0	0.00
+doclaynet_heldout_5587_74325	heldout	Text	paragraph	ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934	none	medium	0	none	0.0000	0.7024	0	0	0.00
+doclaynet_heldout_2713_36245	heldout	Text	paragraph	1 Department of Physics and Electronics, Hubei University of Education, Wuhan 430205, P.R.China	none	medium	0	none	0.5333	0.1053	0	0	0.00
+doclaynet_heldout_2760_37171	heldout	Text	paragraph	A0165400007	none	very_short	0	none	0.0000	0.0909	0	0	1.00
+doclaynet_heldout_2760_37173	heldout	Text	paragraph	BAU-ELT	none	very_short	0	none	0.0000	0.8571	0	0	1.00
+doclaynet_heldout_2516_32331	heldout	Text	paragraph	a ∗ † ‡ D. Dudal $^{a}$, S.P. Sorella $^{b}$, and N. Vandersickel	none	medium	0	none	0.2727	0.1077	0	0	0.40
+doclaynet_heldout_2700_36000	heldout	Text	paragraph	† ‡ Chad E. Mitchell and Alex J. Dragt	none	medium	0	none	0.5714	0.1579	0	0	0.40
+doclaynet_heldout_2678_35589	heldout	Text	paragraph	1 Fa Wang	none	short	0	none	0.6667	0.2222	0	0	0.75
+doclaynet_heldout_2606_33996	heldout	Text	paragraph	$^{1}$Physics Group, CGE, Chang Gung University, Kwei-Shan 333, Taiwan	none	medium	0	none	0.7273	0.1571	0	0	0.40
+doclaynet_heldout_4359_57525	heldout	Section-header	heading	WARRANTY	none	very_short	0	none	0.0000	1.0000	0	0	1.00
+doclaynet_heldout_5587_74321	heldout	Title	heading	UNITED STATES SECURITIES AND EXCHANGE COMMISSION	none	short	0	none	0.0000	0.8958	0	0	0.75
+doclaynet_heldout_4872_65028	heldout	Title	heading	United States Patent [19]	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_5437_72532	heldout	Title	heading	UNITED STATES SECURITIES AND EXCHANGE COMMISSION	none	short	0	none	0.0000	0.8958	0	0	0.75
+doclaynet_heldout_4834_64269	heldout	Title	heading	United States Patent (12)	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4735_62606	heldout	Title	heading	United States Patent (12)	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4872_65030	heldout	Title	heading	5,648,520 Patent Number: [111	none	short	0	none	0.3333	0.0690	0	0	0.75
+doclaynet_heldout_4842_64414	heldout	Title	heading	United States Patent [19]	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4834_64271	heldout	Title	heading	US 6,503,413 B2 Patent No.: (10)	none	medium	0	none	0.2500	0.1562	0	0	0.40
+doclaynet_heldout_4735_62608	heldout	Title	heading	US 6,482,565 Bl Patent No.: (10)	none	medium	0	none	0.3750	0.1562	0	0	0.40
+doclaynet_heldout_2604_33942	heldout	Title	heading	Investigation of the Photocurrent in Bulk Heterojunction Solar Cells	none	medium	0	none	0.6667	0.0882	0	0	0.40
+doclaynet_heldout_2516_32330	heldout	Title	heading	More on the renormalization of the horizon function of the Gribov-Zwanziger action and the Kugo-Ojima Green function(s)	none	long	0	none	0.3000	0.0504	0	0	0.00
+doclaynet_heldout_4842_64416	heldout	Title	heading	5,763,671 Patent Number: [lll	none	short	0	none	0.3333	0.0690	0	0	0.75
+doclaynet_heldout_4628_61076	heldout	Title	heading	United States c19) Patent Application Publication c12)	none	medium	0	none	0.7143	0.0926	0	0	0.40
+doclaynet_heldout_4771_63213	heldout	Title	heading	United States c19) Patent Application Publication c12)	none	medium	0	none	0.7143	0.0926	0	0	0.40
+doclaynet_heldout_4893_65466	heldout	Title	heading	United States c19) Patent Application Publication c12)	none	medium	0	none	0.7143	0.0926	0	0	0.40
+doclaynet_heldout_4788_63468	heldout	Title	heading	United States c19) Patent Application Publication c12)	none	medium	0	none	0.7143	0.0926	0	0	0.40
+doclaynet_heldout_2751_36953	heldout	Title	heading	On the locus formed by the maximum heights of projectile motion with air resistance	none	medium	0	none	0.0714	0.0120	0	0	0.00
+doclaynet_heldout_2678_35576	heldout	Title	heading	Realization of the Exactly Solvable Kitaev Honeycomb Lattice Model in a Spin Rotation Invariant System	none	medium	0	none	0.7333	0.1078	0	0	0.00
+doclaynet_heldout_2713_36243	heldout	Title	heading	The extension of radiative viscosity to superfluid matter ∗	none	medium	0	none	0.1250	0.0169	0	0	0.40
+doclaynet_heldout_2524_32486	heldout	Title	heading	Statistical Determination of Bulk Flow Motions	none	short	0	none	0.8333	0.1087	0	0	0.75
+doclaynet_heldout_2606_33994	heldout	Title	heading	Neutrino mixing in matter	none	short	0	none	0.2500	0.0400	0	0	0.75
+doclaynet_heldout_2700_35999	heldout	Title	heading	Accurate transfer maps for realistic beamline elements: ∗ Part I, straight elements	none	medium	0	none	0.1818	0.0361	0	0	0.40
+doclaynet_heldout_2491_31843	heldout	Title	heading	Submillimeter Variability and the Gamma-ray Connection in Fermi Blazars	none	medium	0	none	0.6000	0.0845	0	0	0.40
+doclaynet_heldout_4923_66171	heldout	Title	heading	United States Patent (12)	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4923_66169	heldout	Title	heading	US 6,930,141 B2 Patent No.: (10)	none	medium	0	none	0.2500	0.1562	0	0	0.40
+doclaynet_heldout_4827_64159	heldout	Title	heading	(19)대한민국특허청(KR)	none	very_short	0	none	0.0000	0.1333	0	0	1.00
+doclaynet_heldout_4834_64270	heldout	Title	heading	Uchiyama et al.	none	short	0	none	0.3333	0.0667	1	0	0.75
+doclaynet_heldout_4834_64272	heldout	Title	heading	Date of Patent: Jan.7,2003 (45)	none	medium	0	none	0.4286	0.0968	0	0	0.40
+doclaynet_heldout_4735_62609	heldout	Title	heading	Nov. Date of Patent: 19, 2002 (45)	none	medium	0	none	0.4286	0.0882	0	0	0.40
+doclaynet_heldout_4872_65029	heldout	Title	heading	Knof el et al.	none	short	0	none	0.2500	0.0714	1	0	0.75
+doclaynet_heldout_4735_62607	heldout	Title	heading	Jung et al.	none	short	0	none	0.3333	0.0909	1	0	0.75
+doclaynet_heldout_4872_65031	heldout	Title	heading	Date Patent: 15, 1997 Jul. of [45]	none	medium	0	none	0.4286	0.0882	0	0	0.40
+doclaynet_heldout_3842_51428	heldout	Title	heading	Anordnung über Feuerungsanlagen, Anlagen zur Verteilung von Wärme und zur Warmwasserversorgung sowie Brennstofflagerung (Feuerungsanordnung - FeuAO)	none	medium	0	none	0.4375	0.0743	0	0	0.00
+doclaynet_heldout_3804_50844	heldout	Title	heading	Verordnung zur Einreichung von Finanz- und Risikotragfähigkeitsinformationen nach dem Kreditwesengesetz (Finanz- und Risikotragfähigkeitsinformationenverordnung	none	medium	0	none	0.4375	0.0571	0	0	0.00
+doclaynet_heldout_3813_50952	heldout	Title	heading	Verordnung über Kreuzungsanlagen im Zuge von Bundesfernstraßen (Bundesfernstraßenkreuzungsverordnung - FStrKrV)	none	medium	0	none	0.4545	0.0811	0	0	0.40
+doclaynet_heldout_3033_42023	heldout	Title	heading	D. TENDER FORM FOR A SUPPLY CONTRACT	none	medium	1	alpha	0.0000	0.8056	0	1	0.40
+doclaynet_heldout_5437_72533	heldout	Title	heading	Form 10-K	none	short	0	none	0.3333	0.2222	0	0	0.75
+doclaynet_heldout_4842_64415	heldout	Title	heading	Bryant et al.	none	short	0	none	0.3333	0.0769	1	0	0.75
+doclaynet_heldout_4842_64417	heldout	Title	heading	*Jun. Date of Patent: 9, 1998 [45]	none	medium	0	none	0.4286	0.0882	0	0	0.40
+doclaynet_heldout_5375_71777	heldout	Title	heading	UNITED STATES SECURITIES AND EXCHANGE COMMISSION	none	short	0	none	0.0000	0.8958	0	0	0.75
+doclaynet_heldout_4916_65983	heldout	Title	heading	United States Patent c12)	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4896_65532	heldout	Title	heading	United States Patent c12)	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4903_65711	heldout	Title	heading	United States Patent c12)	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4906_65784	heldout	Title	heading	United States Patent c12)	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4661_61496	heldout	Title	heading	United States Patent c12) Takizawa et al.	none	medium	0	none	0.5714	0.0976	1	0	0.40
+doclaynet_heldout_4662_61537	heldout	Title	heading	United States Patent c12)	none	short	0	none	0.7500	0.1200	0	0	0.75
+doclaynet_heldout_4846_64480	heldout	Title	heading	United States Patent c12) Komuro et al.	none	medium	0	none	0.5714	0.1026	1	0	0.40
+doclaynet_heldout_4928_66283	heldout	Title	heading	United States Patent c12) Weaver et al.	none	medium	0	none	0.5714	0.1026	1	0	0.40
+doclaynet_heldout_4672_61737	heldout	Title	heading	United States Patent c12)	none	short	0	none	0.7500	0.1200	0	0	0.75
