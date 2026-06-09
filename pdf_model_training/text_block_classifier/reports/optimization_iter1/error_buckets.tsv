@@ -1,0 +1,51 @@
+rank	split	gold_label	predicted_label	confidence_bucket	count	avg_confidence	max_confidence	predicted_label_group	recommended_next_action
+1	heldout	list_item	paragraph	0.50-0.70	187	0.5933	0.6966	runtime_eligible	feature: strengthen list markers, indentation, and continuation context
+2	heldout	list_item	paragraph	0.70-0.90	158	0.7974	0.8995	runtime_eligible	feature: strengthen list markers, indentation, and continuation context
+3	heldout	paragraph	list_item	0.50-0.70	134	0.5900	0.6987	runtime_eligible	feature: strengthen list markers, indentation, and continuation context
+4	heldout	list_item	heading	0.70-0.90	98	0.8044	0.8997	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+5	heldout	list_item	heading	0.50-0.70	86	0.5998	0.6999	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+6	heldout	list_item	paragraph	>=0.90	82	0.9460	0.9968	runtime_eligible	feature: strengthen list markers, indentation, and continuation context
+7	heldout	paragraph	list_item	0.70-0.90	81	0.8039	0.8993	runtime_eligible	feature: strengthen list markers, indentation, and continuation context
+8	heldout	paragraph	heading	0.50-0.70	64	0.5926	0.6938	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+9	heldout	paragraph	list_item	<0.50	62	0.4280	0.4961	runtime_eligible	feature: strengthen list markers, indentation, and continuation context
+10	heldout	paragraph	heading	<0.50	61	0.4169	0.4977	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+11	heldout	paragraph	heading	0.70-0.90	59	0.7994	0.8968	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+12	heldout	list_item	paragraph	<0.50	57	0.4407	0.4993	runtime_eligible	feature: strengthen list markers, indentation, and continuation context
+13	heldout	paragraph	list_item	>=0.90	50	0.9387	0.9789	runtime_eligible	feature: strengthen list markers, indentation, and continuation context
+14	heldout	heading	list_item	0.50-0.70	44	0.5800	0.6965	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+15	heldout	list_item	heading	<0.50	43	0.4338	0.4959	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+16	heldout	paragraph	caption	0.50-0.70	36	0.5840	0.6848	runtime_eligible	feature/data: add caption association and figure/table proximity review
+17	heldout	paragraph	caption	0.70-0.90	35	0.7880	0.8974	runtime_eligible	feature/data: add caption association and figure/table proximity review
+18	heldout	paragraph	heading	>=0.90	34	0.9436	0.9853	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+19	heldout	heading	paragraph	0.50-0.70	32	0.6036	0.6922	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+20	heldout	caption	heading	0.50-0.70	31	0.6278	0.6972	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+21	heldout	paragraph	caption	<0.50	28	0.4394	0.4973	runtime_eligible	feature/data: add caption association and figure/table proximity review
+22	heldout	heading	list_item	<0.50	23	0.4094	0.4830	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+23	heldout	caption	paragraph	0.50-0.70	21	0.5719	0.6885	runtime_eligible	feature/data: add caption association and figure/table proximity review
+24	heldout	heading	paragraph	0.70-0.90	21	0.8099	0.8803	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+25	heldout	caption	heading	0.70-0.90	20	0.7969	0.8828	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+26	heldout	paragraph	table_like	>=0.90	19	0.9812	0.9986	runtime_eligible	review: inspect label mapping and high-confidence examples
+27	heldout	heading	paragraph	<0.50	18	0.4483	0.4925	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+28	heldout	heading	list_item	0.70-0.90	18	0.7672	0.8912	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+29	heldout	keep_as_text	paragraph	0.50-0.70	15	0.6189	0.6992	runtime_eligible	review: inspect label mapping and high-confidence examples
+30	heldout	list_item	heading	>=0.90	15	0.9261	0.9740	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+31	heldout	keep_as_text	list_item	0.70-0.90	12	0.7899	0.8935	runtime_eligible	review: inspect label mapping and high-confidence examples
+32	heldout	paragraph	keep_as_text	0.50-0.70	12	0.6133	0.6943	runtime_eligible	review: inspect label mapping and high-confidence examples
+33	heldout	table_like	paragraph	0.70-0.90	12	0.8277	0.8921	runtime_eligible	review: inspect label mapping and high-confidence examples
+34	heldout	paragraph	table_like	0.70-0.90	11	0.7663	0.8162	runtime_eligible	review: inspect label mapping and high-confidence examples
+35	heldout	paragraph	caption	>=0.90	11	0.9401	0.9785	runtime_eligible	feature/data: add caption association and figure/table proximity review
+36	heldout	footer_header_noise	heading	0.70-0.90	10	0.7947	0.8479	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+37	heldout	caption	heading	>=0.90	10	0.9507	0.9883	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+38	heldout	paragraph	keep_as_text	0.70-0.90	9	0.7809	0.8610	runtime_eligible	review: inspect label mapping and high-confidence examples
+39	heldout	paragraph	table_like	0.50-0.70	9	0.6014	0.6852	runtime_eligible	review: inspect label mapping and high-confidence examples
+40	heldout	heading	paragraph	>=0.90	8	0.9322	0.9868	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+41	heldout	heading	list_item	>=0.90	8	0.9323	0.9913	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity
+42	heldout	caption	paragraph	<0.50	8	0.4599	0.4965	runtime_eligible	feature/data: add caption association and figure/table proximity review
+43	heldout	table_like	paragraph	0.50-0.70	8	0.6325	0.6985	runtime_eligible	review: inspect label mapping and high-confidence examples
+44	heldout	keep_as_text	list_item	0.50-0.70	7	0.5877	0.6572	runtime_eligible	review: inspect label mapping and high-confidence examples
+45	heldout	keep_as_text	paragraph	0.70-0.90	7	0.8026	0.8696	runtime_eligible	review: inspect label mapping and high-confidence examples
+46	heldout	keep_as_text	list_item	>=0.90	7	0.9805	0.9921	runtime_eligible	review: inspect label mapping and high-confidence examples
+47	heldout	caption	paragraph	0.70-0.90	6	0.7940	0.8889	runtime_eligible	feature/data: add caption association and figure/table proximity review
+48	heldout	keep_as_text	list_item	<0.50	6	0.4044	0.4674	runtime_eligible	review: inspect label mapping and high-confidence examples
+49	heldout	paragraph	keep_as_text	>=0.90	6	0.9318	0.9871	runtime_eligible	review: inspect label mapping and high-confidence examples
+50	heldout	heading	caption	0.70-0.90	6	0.8105	0.8877	runtime_eligible	feature/data: add heading-shape guards and clean title-vs-body ambiguity

@@ -1,0 +1,16 @@
+summary_type	split	label	threshold	precision	coverage	abstain_rate	emitted_count	correct_count	meets_target_precision	notes
+global_selected_threshold	heldout	ALL_RUNTIME_ELIGIBLE	0.70	0.9013	0.7905	0.2095	8793	7925	true	max coverage threshold meeting target, or best available precision if target is missed
+per_label_selected_threshold	heldout	heading	0.85	0.9080	0.6618		1250	1135	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	paragraph	0.70	0.9109	0.7125		3436	3130	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	caption	0.95	0.9053	0.3007		95	86	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	table_like	0.75	0.9010	0.8373		394	355	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	list_item	0.60	0.9020	0.6978		2613	2357	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	footer_header_noise	0.50	0.9768	0.9698		690	674	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	page_number_noise	0.50	0.0000	0.0000		0	0	false	no predictions for label
+per_label_selected_threshold	heldout	keep_as_text	0.75	0.9130	0.6336		161	147	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	uncertain	0.50	0.0000	0.0000		0	0	false	no predictions for label
+per_label_selected_threshold	heldout	form_row	0.50	0.0000	0.0000		0	0	false	no predictions for label
+per_label_selected_threshold	heldout	link_text	0.50	0.0000	0.0000		0	0	false	no predictions for label
+per_label_selected_threshold	heldout	code_like	0.50	0.0000	0.0000		0	0	false	no predictions for label
+per_label_selected_threshold	heldout	separator	0.50	0.0000	0.0000		0	0	false	no predictions for label
+per_label_selected_threshold	heldout	footnote_like	0.50	0.0000	0.0000		0	0	false	no predictions for label

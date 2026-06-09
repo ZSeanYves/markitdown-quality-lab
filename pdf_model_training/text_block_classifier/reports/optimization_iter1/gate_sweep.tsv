@@ -1,0 +1,11 @@
+split	threshold	margin_threshold	total_count	overall_accuracy_no_abstain	macro_f1_no_abstain	runtime_emitted_count	runtime_correct_count	runtime_high_conf_precision	runtime_high_conf_coverage	runtime_abstain_count	runtime_abstain_rate	all_high_conf_count	all_high_conf_accuracy	low_confidence_count	report_only_high_conf_count	margin_available	meets_target_precision
+heldout	0.50		11123	0.8269	0.8097	10522	8940	0.8496	0.9460	601	0.0540	10522	0.8496	601	0	false	false
+heldout	0.55		11123	0.8269	0.8097	10114	8729	0.8631	0.9093	1009	0.0907	10114	0.8631	1009	0	false	false
+heldout	0.60		11123	0.8269	0.8097	9679	8491	0.8773	0.8702	1444	0.1298	9679	0.8773	1444	0	false	false
+heldout	0.65		11123	0.8269	0.8097	9262	8231	0.8887	0.8327	1861	0.1673	9262	0.8887	1861	0	false	false
+heldout	0.70		11123	0.8269	0.8097	8793	7925	0.9013	0.7905	2330	0.2095	8793	0.9013	2330	0	false	true
+heldout	0.75		11123	0.8269	0.8097	8263	7557	0.9146	0.7429	2860	0.2571	8263	0.9146	2860	0	false	true
+heldout	0.80		11123	0.8269	0.8097	7736	7172	0.9271	0.6955	3387	0.3045	7736	0.9271	3387	0	false	true
+heldout	0.85		11123	0.8269	0.8097	7082	6649	0.9389	0.6367	4041	0.3633	7082	0.9389	4041	0	false	true
+heldout	0.90		11123	0.8269	0.8097	6230	5946	0.9544	0.5601	4893	0.4399	6230	0.9544	4893	0	false	true
+heldout	0.95		11123	0.8269	0.8097	4771	4639	0.9723	0.4289	6352	0.5711	4771	0.9723	6352	0	false	true
