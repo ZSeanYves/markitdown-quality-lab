@@ -1,0 +1,18 @@
+summary_type	split	gate_type	label	confidence_threshold	margin_threshold	precision	coverage	abstain_rate	accepted_macro_f1	emitted_count	correct_count	meets_target_precision	notes
+confidence_only_selected_threshold	heldout	confidence_only	ALL_RUNTIME_ELIGIBLE	0.70		0.9013	0.7905	0.2095	0.8862	8793	7925	true	max coverage threshold meeting target, or best available precision if target is missed
+margin_only_selected_threshold	heldout	margin_only	ALL_RUNTIME_ELIGIBLE		0.50	0.9045	0.7753	0.2247	0.8884	8624	7800	true	max coverage margin meeting target, or unavailable when probabilities are missing
+combined_selected_threshold	heldout	combined_confidence_margin	ALL_RUNTIME_ELIGIBLE	0.70	0.00	0.9013	0.7905	0.2095	0.8862	8793	7925	true	max coverage confidence+margin pair meeting target, or unavailable when probabilities are missing
+per_label_selected_threshold	heldout	per_label_confidence	heading	0.85		0.9080	0.6618			1250	1135	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	per_label_confidence	paragraph	0.70		0.9109	0.7125			3436	3130	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	per_label_confidence	caption	0.95		0.9053	0.3007			95	86	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	per_label_confidence	table_like	0.75		0.9010	0.8373			394	355	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	per_label_confidence	list_item	0.60		0.9020	0.6978			2613	2357	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	per_label_confidence	footer_header_noise	0.50		0.9768	0.9698			690	674	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	per_label_confidence	page_number_noise	0.50		0.0000	0.0000			0	0	false	no predictions for label
+per_label_selected_threshold	heldout	per_label_confidence	keep_as_text	0.75		0.9130	0.6336			161	147	true	meets target with max recall_on_gold
+per_label_selected_threshold	heldout	per_label_confidence	uncertain	0.50		0.0000	0.0000			0	0	false	no predictions for label
+per_label_selected_threshold	heldout	per_label_confidence	form_row	0.50		0.0000	0.0000			0	0	false	no predictions for label
+per_label_selected_threshold	heldout	per_label_confidence	link_text	0.50		0.0000	0.0000			0	0	false	no predictions for label
+per_label_selected_threshold	heldout	per_label_confidence	code_like	0.50		0.0000	0.0000			0	0	false	no predictions for label
+per_label_selected_threshold	heldout	per_label_confidence	separator	0.50		0.0000	0.0000			0	0	false	no predictions for label
+per_label_selected_threshold	heldout	per_label_confidence	footnote_like	0.50		0.0000	0.0000			0	0	false	no predictions for label

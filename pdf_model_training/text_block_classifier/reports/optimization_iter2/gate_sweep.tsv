@@ -1,0 +1,11 @@
+split	gate_type	confidence_threshold	margin_threshold	total_count	overall_accuracy_no_abstain	macro_f1_no_abstain	runtime_emitted_count	runtime_correct_count	runtime_high_conf_precision	runtime_high_conf_coverage	runtime_abstain_count	runtime_abstain_rate	accepted_accuracy	accepted_macro_f1	all_accepted_count	report_only_accepted_count	margin_available	meets_target_precision
+heldout	confidence_only	0.50		11123	0.8269	0.8097	10522	8940	0.8496	0.9460	601	0.0540	0.8496	0.8323	10522	0	true	false
+heldout	confidence_only	0.55		11123	0.8269	0.8097	10114	8729	0.8631	0.9093	1009	0.0907	0.8631	0.8445	10114	0	true	false
+heldout	confidence_only	0.60		11123	0.8269	0.8097	9679	8491	0.8773	0.8702	1444	0.1298	0.8773	0.8578	9679	0	true	false
+heldout	confidence_only	0.65		11123	0.8269	0.8097	9262	8231	0.8887	0.8327	1861	0.1673	0.8887	0.8713	9262	0	true	false
+heldout	confidence_only	0.70		11123	0.8269	0.8097	8793	7925	0.9013	0.7905	2330	0.2095	0.9013	0.8862	8793	0	true	true
+heldout	confidence_only	0.75		11123	0.8269	0.8097	8263	7557	0.9146	0.7429	2860	0.2571	0.9146	0.9021	8263	0	true	true
+heldout	confidence_only	0.80		11123	0.8269	0.8097	7736	7172	0.9271	0.6955	3387	0.3045	0.9271	0.9153	7736	0	true	true
+heldout	confidence_only	0.85		11123	0.8269	0.8097	7082	6649	0.9389	0.6367	4041	0.3633	0.9389	0.9304	7082	0	true	true
+heldout	confidence_only	0.90		11123	0.8269	0.8097	6230	5946	0.9544	0.5601	4893	0.4399	0.9544	0.9457	6230	0	true	true
+heldout	confidence_only	0.95		11123	0.8269	0.8097	4771	4639	0.9723	0.4289	6352	0.5711	0.9723	0.9649	4771	0	true	true
