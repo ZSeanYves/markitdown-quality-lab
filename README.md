@@ -1,8 +1,7 @@
 # markitdown-quality-lab
 
 `markitdown-quality-lab` 是 MoonBit `markitdown` 项目的外部质量与性能语料仓。
-它不是主仓 runtime，不包含产品代码，也不是主仓构建依赖。主仓必须能在没有
-本仓的情况下 build、test、run。
+它不是主仓 runtime，不包含产品代码，也不是主仓构建依赖。主仓必须能在没有本仓的情况下 build、test、run。
 
 本仓用于管理三类不适合直接放进主仓的资产：
 
@@ -19,7 +18,7 @@ markitdown-quality-lab/
   pdf_model_training/
   README.md
   LICENSES.md
-```
+````
 
 ## 目录职责
 
@@ -33,8 +32,7 @@ markitdown-quality-lab/
 * 主仓 `samples/check_quality.sh` 消费这里的 `MANIFEST.tsv`。
 * staging、cache、legacy archive 目录不再是正式入口。
 
-正式样例必须由 manifest row 指向。无法确认来源、授权或用途边界的样例不得进入
-正式 manifest。
+正式样例必须由 manifest row 指向。无法确认来源、授权或用途边界的样例不得进入正式 manifest。
 
 ### external_bench/
 
@@ -59,11 +57,11 @@ Benchmark 结果只代表 same-machine / same-corpus / same-parameters 下的方
 
 ## 使用方式
 
-推荐把本仓作为主仓旁边的 sibling checkout：
+推荐将本仓直接放在主仓目录下：
 
 ```text
 markitdown/
-markitdown-quality-lab/
+  markitdown-quality-lab/
 ```
 
 主仓质量检查读取：
@@ -100,11 +98,11 @@ markitdown-quality-lab/external_bench/MANIFEST.tsv
 
 ## 维护原则
 
-* 修改 `MANIFEST.tsv` 或 `SOURCE_CATALOG.tsv` 后，必须同步跑 path check 和
-  license/source check。
+* 修改 `MANIFEST.tsv` 或 `SOURCE_CATALOG.tsv` 后，必须同步跑 path check 和 license/source check。
 * 大规模迁移前先生成 cleanup / migration plan，再执行。
-* `external_quality/` 和 `external_bench/` 保持同构思路：顶层 README、MANIFEST、
-  SOURCE_CATALOG，加格式/source 目录。
-* `SOURCE_CATALOG.tsv` 是来源、授权、review 状态和再分发边界的主索引；不要在 README
-  中手写与 catalog 矛盾的信息。
+* `external_quality/` 和 `external_bench/` 保持同构思路：顶层 README、MANIFEST、SOURCE_CATALOG，加格式/source 目录。
+* `SOURCE_CATALOG.tsv` 是来源、授权、review 状态和再分发边界的主索引；不要在 README 中手写与 catalog 矛盾的信息。
 * 本仓文档可以总结政策和状态，但不能替代 manifest/catalog 的机器可读约束。
+
+```
+
