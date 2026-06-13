@@ -9,6 +9,7 @@ Allowed content:
 * small JSON schema files
 * table schemas for TSV manifests
 * compatibility notes
+* adapter input/output contracts for tiny tracked fixtures
 
 Not allowed:
 

@@ -14,3 +14,10 @@ Every non-synthetic row should preserve:
 * local-only path if the row is not tracked
 
 Weak-source rows must remain distinguishable from gold rows.
+
+For PDF v2 `EvidenceRow` ingestion:
+
+* `gold_label` must remain reviewed/manual only.
+* `weak_label` must remain rule-derived or parser-fact-derived only.
+* product expected Markdown must not be treated as automatic gold.
+* unlabeled rows are allowed and should stay explicit.

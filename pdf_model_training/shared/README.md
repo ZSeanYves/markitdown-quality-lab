@@ -13,12 +13,16 @@ feature_contracts/
 label_provenance/
 report_templates/
 review_guidelines/
+scripts/
 ```
 
 The shared contracts support the two-model boundary:
 
 * `layout_recovery` is parser-facing.
 * `text_block_classifier` is convert-facing.
+* `semantic_arbitration` is a future convert-side relation/arbitration lane for
+  `EvidenceRow`-style PDF v2 signals; it is not a checked standalone training
+  tree yet.
 * `layout_recovery` outputs may become input features for
   `text_block_classifier`.
 * `text_block_classifier` outputs must not feed back into parser-owned
