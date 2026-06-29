@@ -12,7 +12,8 @@ license。
 ## 数据集级来源
 
 * `external_quality/SOURCE_CATALOG.tsv` 是外部质量回归语料的来源和 license 主索引。
-* `external_bench/SOURCE_CATALOG.tsv` 是外部 benchmark 语料的来源和 license 主索引。
+* 当前 `external_bench/` 是策展 benchmark 消费面；来源和 license 信息由
+  `external_bench/MANIFEST.tsv` 中的字段以及外仓文档共同约束。
 * `pdf_model_training/` 的授权信息需要在该目录内部独立维护。当前可参考
   `pdf_model_training/layout_recovery_model/README.md` 和
   `pdf_model_training/text_block_classifier/README.md`；本文件不汇总其中的训练数据、
@@ -63,13 +64,11 @@ license。
 * review/context: `redistributable`, `recommended_use`, `download_mode`, `priority`,
   `notes`, `migration_note`
 
-`external_bench/SOURCE_CATALOG.tsv` 当前使用的 source/license 字段包括：
+`external_bench/MANIFEST.tsv` 当前保留的来源/授权相关字段包括：
 
-* source/origin: `bench_id`, `source_group`, `source_url`, `landing_url`,
-  `target_rel_path`, `source_version`
-* license: `license_spdx`, `license_url`, `terms_url`
-* review/context: `redistributable`, `enabled_tier`, `review_status`,
-  `download_status`, `download_error`, `notes`
+* source/origin: `bench_id`, `source_kind`, `source_ref`
+* integrity/context: `bytes`, `sha256`, `enabled_tier`, `bench_layers`,
+  `tags`, `review_status`, `notes`
 
 两个 catalog 的 schema 不同，不应强行统一。消费端和审计脚本应按各自 schema 读取。
 

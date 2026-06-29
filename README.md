@@ -18,7 +18,7 @@ markitdown-quality-lab/
   pdf_model_training/
   README.md
   LICENSES.md
-````
+```
 
 ## 目录职责
 
@@ -39,9 +39,9 @@ markitdown-quality-lab/
 `external_bench/` 是外部性能 benchmark 语料目录。
 
 * 顶层 `MANIFEST.tsv` 是 benchmark 执行入口。
-* 顶层 `SOURCE_CATALOG.tsv` 是来源和 license 追溯入口。
-* 样例按 `external_bench/<format>/<source_group>/<size_class>/...` 组织。
-* 主仓 `samples/bench.sh` 消费这里的 `MANIFEST.tsv`。
+* 样例按 `external_bench/<format>/<size_class>/...` 组织。
+* 主仓 `bench v2` 默认消费这里的 `MANIFEST.tsv`。
+* 顶层 `README.md` 说明当前策展 benchmark 语料的组织方式。
 
 Benchmark 结果只代表 same-machine / same-corpus / same-parameters 下的方向性反馈，
 用于发现本地回归和相对趋势；它不是通用性能承诺。
@@ -81,7 +81,8 @@ markitdown-quality-lab/external_bench/MANIFEST.tsv
 ## 数据收录规则
 
 * 每个正式样例必须有 manifest row。
-* 每个 source 必须能在对应 `SOURCE_CATALOG.tsv` 中追溯。
+* `external_quality/` 的正式 source 必须能在 `external_quality/SOURCE_CATALOG.tsv` 中追溯。
+* `external_bench/` 的策展 row 必须在 `MANIFEST.tsv` 中保留 `source_ref` 和必要的来源说明。
 * 每个 source 必须有明确 license 和 source origin。
 * 不允许 `UNKNOWN`、空 license 或空 source origin 进入正式 catalog。
 * 不允许 `.tmp`、cache、local-only、staging 路径进入正式 manifest。
@@ -94,15 +95,13 @@ markitdown-quality-lab/external_bench/MANIFEST.tsv
 * 不把 OCR、PDF、model experimental asset 描述为已 shipped runtime capability。
 * 不把本仓作为主仓构建依赖。
 * 不保存 private data、本地 cache、临时下载或未授权数据。
-* 不用 legacy staging/archive 目录作为正式消费面。
+* 不用 legacy staging 目录作为正式消费面。
 
 ## 维护原则
 
 * 修改 `MANIFEST.tsv` 或 `SOURCE_CATALOG.tsv` 后，必须同步跑 path check 和 license/source check。
 * 大规模迁移前先生成 cleanup / migration plan，再执行。
-* `external_quality/` 和 `external_bench/` 保持同构思路：顶层 README、MANIFEST、SOURCE_CATALOG，加格式/source 目录。
-* `SOURCE_CATALOG.tsv` 是来源、授权、review 状态和再分发边界的主索引；不要在 README 中手写与 catalog 矛盾的信息。
+* `external_quality/` 保持 `README + MANIFEST + SOURCE_CATALOG` 结构；
+  `external_bench/` 当前是策展 benchmark 语料面。
+* 不要在 README 中手写与 manifest 或 catalog 记录矛盾的信息。
 * 本仓文档可以总结政策和状态，但不能替代 manifest/catalog 的机器可读约束。
-
-```
-
