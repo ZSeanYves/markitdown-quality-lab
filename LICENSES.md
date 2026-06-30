@@ -23,7 +23,7 @@ license。
 
 | Area | License / SPDX | Source count | Representative sources | Notes |
 | --- | --- | ---: | --- | --- |
-| external_quality | Apache-2.0 | 5 | `pdfbox_tests`, `pdfjs_tests`, `apache_poi_tests`, `markitdown_repo_samples`, `qpdf_tests` | 来自 `SOURCE_CATALOG.tsv`；第三方项目样例需保留上游 notice/attribution 要求。 |
+| external_quality | Apache-2.0 | 6 | `pdfbox_tests`, `pdfjs_tests`, `apache_poi_tests`, `markitdown_repo_samples`, `markitdown_repo_pdf_samples`, `qpdf_tests` | 来自 `SOURCE_CATALOG.tsv`；第三方项目样例需保留上游 notice/attribution 要求。 |
 | external_quality | Public domain | 4 | `ocr_src_0028`, `ocr_src_0029`, `ocr_src_0030`, `ocr_src_0032` | 来自 `SOURCE_CATALOG.tsv`；public-domain/source origin 仍必须记录。 |
 | external_quality | BSD-2-Clause | 3 | `csv_spectrum_repo`, `xlsxwriter_examples`, `csv_spectrum_tests` | 来自 `SOURCE_CATALOG.tsv`；保留上游 license/notice 要求。 |
 | external_quality | MIT | 3 | `python_docx_tests`, `python_pptx_tests`, `openxml_sdk_tests` | 来自 `SOURCE_CATALOG.tsv`；保留上游 license/notice 要求。 |

@@ -12,5 +12,6 @@ Subtrees:
 Boundary:
 
 * this tree is for corpus quality work, not runtime integration
-* PDF OCR is still out of scope here
+* small runtime-facing PDF OCR gate rows are allowed here when they are OCR-suitable, traceable, and kept separate from broader native-text PDF intake
+* the current shipped PDF OCR gate is intentionally narrow: explicit scanned-PDF OCR rows that exercise OCR-only behavior, not future layout/model recovery
 * layout-model training assets do not live here; they belong in `pdf_model_training/`
