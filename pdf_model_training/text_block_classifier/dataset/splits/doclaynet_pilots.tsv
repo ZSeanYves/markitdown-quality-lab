@@ -1,4 +1,0 @@
-subset_id	source_dataset	train_count	dev_count	heldout_count	total_count	split_path	status	notes
-pilot500_v1	doclaynet	9093	1605	1642	12340	pdf_model_training/text_block_classifier/local_only/adapter_outputs/doclaynet/pilot500_v1/splits	local_only	Small smoke/pilot split.
-pilot1000_v1	doclaynet	19306	3412	3285	26003	pdf_model_training/text_block_classifier/local_only/adapter_outputs/doclaynet/pilot1000_v1/splits	local_only	Intermediate pilot split.
-pilot3000_v1	doclaynet	60447	10803	11123	82373	pdf_model_training/text_block_classifier/local_only/adapter_outputs/doclaynet/pilot3000_v1/splits	local_only	Current main teacher split for baseline_v3 reports.

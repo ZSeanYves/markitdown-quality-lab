@@ -26,13 +26,14 @@ license。
 | external_quality | Apache-2.0 | 6 | `pdfbox_tests`, `pdfjs_tests`, `apache_poi_tests`, `markitdown_repo_samples`, `markitdown_repo_pdf_samples`, `qpdf_tests` | 来自 `SOURCE_CATALOG.tsv`；第三方项目样例需保留上游 notice/attribution 要求。 |
 | external_quality | Public domain | 4 | `ocr_src_0028`, `ocr_src_0029`, `ocr_src_0030`, `ocr_src_0032` | 来自 `SOURCE_CATALOG.tsv`；public-domain/source origin 仍必须记录。 |
 | external_quality | BSD-2-Clause | 3 | `csv_spectrum_repo`, `xlsxwriter_examples`, `csv_spectrum_tests` | 来自 `SOURCE_CATALOG.tsv`；保留上游 license/notice 要求。 |
-| external_quality | MIT | 3 | `python_docx_tests`, `python_pptx_tests`, `openxml_sdk_tests` | 来自 `SOURCE_CATALOG.tsv`；保留上游 license/notice 要求。 |
-| external_quality | BSD-3-Clause | 2 | `python_markdown_docs`, `python_markdown_tests` | 来自 `SOURCE_CATALOG.tsv`；保留上游 license/notice 要求。 |
+| external_quality | MIT | 5 | `python_docx_tests`, `python_pptx_tests`, `openxml_sdk_tests`, `toml_test_suite`, `pydantic_repo_toml` | 来自 `SOURCE_CATALOG.tsv`；保留上游 license/notice 要求。 |
+| external_quality | BSD-3-Clause | 5 | `python_markdown_docs`, `python_markdown_tests`, `jupyter_nbformat_notebooks`, `jupyter_notebook_examples`, `jupyterlab_notebooks` | 来自 `SOURCE_CATALOG.tsv`；保留上游 license/notice 要求。 |
 | external_quality | CC-BY-4.0 | 2 | `idpf_epub_testsuite`, `idpf_epub_testsuite_pls` | 来自 `SOURCE_CATALOG.tsv`；注意 attribution。 |
 | external_quality | Apache-2.0 reported by source, verify dataset terms before use | 1 | `tablebank` | Review blocker 风险较高；dataset terms 需独立确认。 |
 | external_quality | CC-BY-2.0 | 1 | `ocr_src_0025` | 来自 `SOURCE_CATALOG.tsv`；注意 attribution。 |
 | external_quality | CC-BY-SA | 1 | `mdn_content_pages` | 来自 `SOURCE_CATALOG.tsv`；documentation sample，注意 attribution/share-alike 边界。 |
 | external_quality | CC0 | 1 | `ocr_src_0031` | 来自 `SOURCE_CATALOG.tsv`；source origin 仍需保留。 |
+| external_quality | CC0-1.0 | 1 | `jsonl_datasets` | 来自 `SOURCE_CATALOG.tsv`；public-domain style synthetic dataset source，仍需保留 origin 和上游 LICENSE 文本。 |
 | external_quality | CDLA-Permissive reported by PaddleOCR docs, verify before use | 1 | `publaynet` | Review blocker 风险较高；dataset terms 需独立确认。 |
 | external_quality | NIST Technical Series public-domain in U.S. with worldwide reprint grant | 1 | `pdf_src_0004` | Government/public-domain style source；仍需记录 origin。 |
 | external_quality | PDM-1.0 | 1 | `ocr_src_0023` | 来自 `SOURCE_CATALOG.tsv`；source origin 仍需保留。 |

@@ -1,8 +1,0 @@
-split	label	label_group	support	precision	recall	f1
-heldout	heading	runtime_eligible	1715	0.7331	0.8793	0.7996
-heldout	paragraph	runtime_eligible	4393	0.8472	0.8329	0.8400
-heldout	caption	runtime_eligible	286	0.5631	0.6084	0.5849
-heldout	table_like	runtime_eligible	424	0.8643	0.9009	0.8822
-heldout	list_item	runtime_eligible	3378	0.8503	0.7783	0.8127
-heldout	footer_header_noise	runtime_eligible	695	0.9684	0.9712	0.9698
-heldout	keep_as_text	runtime_eligible	232	0.8261	0.7371	0.7790

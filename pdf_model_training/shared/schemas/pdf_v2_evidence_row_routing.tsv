@@ -1,6 +1,0 @@
-evidence_kind	source_task	target_model	target_kind	lane_status	allowed_label_status	notes
-cross_page_boundary	semantic_arbitration	semantic_arbitration	merge_split_hint	future_tree	unlabeled;weak;gold	Relation-style merge or split evidence; keep document-grouped splits explicit.
-image_text_boundary	semantic_arbitration	semantic_arbitration	caption_relation_hint	future_tree	unlabeled;weak;gold	Image-text placement or caption association evidence; do not turn phrase cues into gold.
-heading_boundary	semantic_arbitration	semantic_arbitration	heading_boundary_hint	future_tree	unlabeled;weak;gold	Heading-vs-body boundary evidence for future semantic arbitration only.
-header_footer_variant	layout_recovery	layout_recovery	header_footer_region_hint	existing_tree	unlabeled;weak;gold	Parser/layout-facing repeated edge-region evidence.
-column_layout	layout_recovery	layout_recovery	column_reading_order_hint	existing_tree	unlabeled;weak;gold	Parser/layout-facing column and reading-order risk evidence.
