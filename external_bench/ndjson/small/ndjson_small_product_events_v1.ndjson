@@ -1,0 +1,10 @@
+{"event_name": "user_signup", "user_id": "u771", "properties": {"method": "email", "plan": "free"}, "timestamp": "2026-04-26T08:00:00Z"}
+{"event_name": "page_view", "user_id": "u771", "properties": {"path": "/home", "referrer": "direct"}, "timestamp": "2026-04-26T08:00:05Z"}
+{"event_name": "item_added", "user_id": "u771", "properties": {"item_id": "p_99", "category": "electronics"}, "timestamp": "2026-04-26T08:05:12Z"}
+{"event_name": "checkout_started", "user_id": "u771", "properties": {"cart_value": 299.99}, "timestamp": "2026-04-26T08:10:30Z"}
+{"event_name": "purchase_complete", "user_id": "u771", "properties": {"transaction_id": "tx_445", "amount": 299.99}, "timestamp": "2026-04-26T08:12:45Z"}
+{"event_name": "session_start", "user_id": "u882", "properties": {"device": "mobile", "os": "ios"}, "timestamp": "2026-04-26T09:00:00Z"}
+{"event_name": "search_performed", "user_id": "u882", "properties": {"query": "wireless headphones"}, "timestamp": "2026-04-26T09:02:15Z"}
+{"event_name": "click", "user_id": "u882", "properties": {"element_id": "banner_ad_1"}, "timestamp": "2026-04-26T09:03:50Z"}
+{"event_name": "error_encountered", "user_id": "u882", "properties": {"code": 500, "message": "Internal Server Error"}, "timestamp": "2026-04-26T09:04:10Z"}
+{"event_name": "session_end", "user_id": "u882", "properties": {"duration_seconds": 250}, "timestamp": "2026-04-26T09:04:20Z"}

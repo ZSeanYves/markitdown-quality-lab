@@ -1,0 +1,120 @@
+= Asciidoctor
+Dan Allen <https://github.com/mojavelinux[@mojavelinux]>; Sarah White <https://github.com/graphitefriction[@graphitefriction]>
+// settings:
+:idprefix:
+:idseparator: -
+:source-language: ruby
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+// Variables:
+:release-version: 2.0.22
+// URLs:
+:url-org: https://github.com/asciidoctor
+:url-repo: {url-org}/asciidoctor
+:url-asciidoctorj: {url-org}/asciidoctorj
+:url-asciidoctorjs: {url-org}/asciidoctor.js
+:url-gradle-plugin: {url-org}/asciidoctor-gradle-plugin
+:url-maven-plugin: {url-org}/asciidoctor-maven-plugin
+:url-asciidoclet: {url-org}/asciidoclet
+:url-project: https://asciidoctor.org
+ifdef::env-site[:url-project: link:]
+:url-docs: https://docs.asciidoctor.org
+:url-news: {url-project}/news
+:url-manpage: {url-project}/man/asciidoctor
+:url-issues: {url-repo}/issues
+:url-contributors: {url-repo}/graphs/contributors
+:url-rel-file-base: link:
+:url-rel-tree-base: link:
+ifdef::env-site,env-yard[]
+:url-rel-file-base: {url-repo}/blob/HEAD/
+:url-rel-tree-base: {url-repo}/tree/HEAD/
+endif::[]
+:url-changelog: {url-rel-file-base}CHANGELOG.adoc
+:url-contribute: {url-rel-file-base}CONTRIBUTING.adoc
+:url-license: {url-rel-file-base}LICENSE
+:url-tests: {url-rel-tree-base}test
+:url-discuss: https://discuss.asciidoctor.org
+:url-chat: https://chat.asciidoctor.org
+:url-rubygem: https://rubygems.org/gems/asciidoctor
+:url-what-is-asciidoc: {url-docs}/asciidoctor/latest/#relationship-to-asciidoc
+:url-install-docker: https://github.com/asciidoctor/docker-asciidoctor
+:url-opal: https://opalrb.com
+:url-tilt: https://github.com/rtomayko/tilt
+:url-ruby: https://www.ruby-lang.org
+// images:
+:image-url-screenshot: https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor/screenshot.png
+
+{url-project}[Asciidoctor] is a fast, open source, Ruby-based text processor for parsing AsciiDoc(R) into a document model and converting it to output formats such as HTML 5, DocBook 5, manual pages, PDF, EPUB 3, and other formats.
+
+Asciidoctor also has an ecosystem of extensions, converters, build plugins, and tools to help you author and publish content written in {url-what-is-asciidoc}[AsciiDoc].
+You can find the documentation for these projects at {url-docs}.
+
+In addition to running on Ruby, Asciidoctor can be executed on a JVM using {url-asciidoctorj}[AsciidoctorJ] or in any JavaScript environment using {url-asciidoctorjs}[Asciidoctor.js].
+
+ifndef::env-site,env-yard[]
+This document is also available in the following languages: +
+{url-rel-file-base}README-zh_CN.adoc[简体中文]
+|
+{url-rel-file-base}README-de.adoc[Deutsch]
+|
+{url-rel-file-base}README-fr.adoc[Français]
+|
+{url-rel-file-base}README-jp.adoc[日本語]
+endif::[]
+
+.Key documentation
+[.compact]
+* {url-docs}/asciidoctor/latest/[Asciidoctor Documentation]
+* {url-docs}/asciidoc/latest/[AsciiDoc Language Documentation]
+* {url-docs}/asciidoc/latest/syntax-quick-reference/[AsciiDoc Syntax Quick Reference]
+
+ifdef::status[]
+image:https://img.shields.io/gem/v/asciidoctor.svg[Latest Release, link={url-rubygem}]
+image:https://img.shields.io/badge/rubydoc.info-{release-version}-blue.svg[library (API) docs,link=https://www.rubydoc.info/gems/asciidoctor/{release-version}]
+image:https://github.com/asciidoctor/asciidoctor/workflows/CI/badge.svg[Build Status (GitHub Actions),link={url-repo}/actions]
+image:https://img.shields.io/badge/zulip-join_chat-brightgreen.svg[Project Chat (Zulip),link={url-chat}]
+endif::[]
+
+== Sponsors
+
+We want to recognize our {url-project}/supporters[sponsors] for their commitment to improving the state of technical documentation by supporting this project.
+Thank you sponsors!
+Without your generous support, Asciidoctor would not be possible.
+
+You can support this project by becoming a sponsor through https://opencollective.com/asciidoctor[OpenCollective].
+
+== AsciiDoc Processing and Built-in Converters
+
+AsciiDoc is the language. +
+Asciidoctor is the processor.
+
+Asciidoctor reads the AsciiDoc source, as shown in the panel on the left in the image below, and converts it to publishable formats, such as HTML 5, as shown rendered in the panel on the right.
+
+image::{image-url-screenshot}[Preview of AsciiDoc source and corresponding rendered HTML]
+
+Asciidoctor provides built-in {url-docs}/asciidoctor/latest/converters/[converters] for three output formats by default: {url-docs}/asciidoctor/latest/html-backend/[HTML 5], {url-docs}/asciidoctor/latest/docbook-backend/[DocBook 5], and {url-docs}/asciidoctor/latest/manpage-backend/[man page] (short for manual page).
+Additional converters, such as PDF and EPUB 3, are provided by separate gems.
+Asciidoctor also provides an out-of-the-box HTML experience complete with a {url-docs}/asciidoctor/latest/html-backend/default-stylesheet/[default stylesheet] and built-in integrations like Font Awesome (for icons), highlight.js, Rouge, and Pygments (for source highlighting), and MathJax (for STEM processing).
+
+== Asciidoctor Ecosystem
+
+Although Asciidoctor is written in Ruby, it does not mean you need Ruby to use it.
+Asciidoctor can be executed on a JVM using {url-docs}/asciidoctorj/latest/[AsciidoctorJ] or in any JavaScript environment (including the browser) using {url-docs}/asciidoctor.js/latest/[Asciidoctor.js].
+
+Installing an Asciidoctor processor is just the beginning of your publishing experience.
+Asciidoctor gives you access to a ecosystem of extensions and tools, ranging from add-on converters, to extended syntax, to build plugins, to integrated writing and preview environments:
+
+* {url-docs}/diagram-extension/latest/[Asciidoctor Diagram]
+* {url-docs}/maven-tools/latest/[Maven plugin and site module]
+* {url-gradle-plugin}[Gradle plugin]
+* {url-docs}/asciidoclet/latest/[Asciidoclet]
+* {url-docs}/reveal.js-converter/latest/[reveal.js converter]
+* {url-docs}/epub3-converter/latest/[EPUB 3 converter]
+* https://intellij-asciidoc-plugin.ahu
