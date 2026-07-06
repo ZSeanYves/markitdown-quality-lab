@@ -1,8 +1,9 @@
 # Curated External Bench Corpus
 
-`external_bench/` 是当前给主仓 `bench v2` 使用的正式 benchmark 语料面。
+`external_bench/` is the formal benchmark corpus surface currently consumed by
+the main repository `bench v2` flow.
 
-当前目录只保留 runner 直接消费的策展 payload：
+This directory keeps only the curated payloads consumed directly by the runner:
 
 ```text
 external_bench/
@@ -14,11 +15,16 @@ external_bench/
       <file>
 ```
 
-说明：
+Key rules:
 
-* 主仓默认读取 `external_bench/MANIFEST.tsv`。
-* `rel_path` 直接指向本目录下的策展 payload。
-* `source_ref` 保留来源锚点；每一行的来源说明以 `MANIFEST.tsv` 为准。
-* 主仓必须能在没有这个目录的情况下完成 build、unit test 和 repo-local regression。
+- The main repository reads `external_bench/MANIFEST.tsv` by default.
+- `rel_path` points directly to curated payloads inside this directory.
+- `source_ref` keeps the provenance anchor for each row, and
+  `MANIFEST.tsv` remains the canonical row-level source note.
+- Local provenance and redistribution review notes live in
+  `external_bench/_audit/PROVENANCE.md`.
+- The main repository must still complete build, unit test, and repo-local
+  regression runs without this directory present.
 
-这个目录描述的是“正式 benchmark 消费面”，不是“所有外部原始来源池”。
+This directory describes the formal benchmark consumption surface. It is not a
+complete pool of every raw upstream external source.
