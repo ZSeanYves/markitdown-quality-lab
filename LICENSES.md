@@ -20,8 +20,9 @@ Sample licenses apply to the samples themselves. They do not relicense the
   337 are marked `license_review_status=approved`.
 - `external_bench/MANIFEST.tsv` currently contains 131 `accepted` rows and
   9 `missing_candidate` placeholders.
-- `pdf_model_training/` is maintained separately and is intentionally not
-  summarized as part of the formal publish-ready corpus surface here.
+- `external_main_process/` is the repo-owned main-process regression surface.
+  It is not treated as a third-party source catalog and is summarized here only
+  when specific repo-owned files are promoted into `external_quality/`.
 
 ## Evidence registries
 
@@ -31,6 +32,8 @@ Sample licenses apply to the samples themselves. They do not relicense the
   quality rows.
 - `external_bench/MANIFEST.tsv` is the machine-readable entrypoint for the
   curated benchmark corpus.
+- `external_main_process/README.md` documents the repo-owned main-process
+  regression surface and its boundaries.
 - `external_bench/_audit/PROVENANCE.md` records the local provenance review for
   the accepted `copied_from_external_bench` rows.
 - `external_quality/ocr/_audit/PROVENANCE.md`,
@@ -66,6 +69,14 @@ The table below is derived from `external_quality/SOURCE_CATALOG.tsv`.
 | project-owned synthetic | 1 | `ocr_src_0027` | Project-owned synthetic OCR samples are documented as locally generated fixtures. |
 | public-domain dedication | 1 | `ocr_src_0022` | Commons own-work OCR sample retained under a public-domain dedication. |
 | public_domain | 1 | `niosh_publications` | Retention relies on the local NIOSH per-file public-domain note and exact publication URLs. |
+
+Repo-owned note:
+
+- `markitdown_repo_samples`, `markitdown_repo_pdf_samples`,
+  `markitdown_repo_office_samples`, and `markitdown_repo_json_samples` are the
+  explicit repo-owned source entries that bridge project-controlled material
+  from `external_quality/repo_local/` or `external_main_process/` into the
+  formal `external_quality` provenance model.
 
 ## `external_bench` provenance posture
 

@@ -21,10 +21,10 @@ Boundary:
   OCR-suitable, traceable, and kept separate from broader native-text PDF
   intake
 - the current shipped PDF OCR gate is intentionally narrow: explicit
-  scanned-PDF OCR rows that exercise OCR-only behavior, not future
-  layout-model recovery
-- layout-model training assets do not live here; they belong in
-  `pdf_model_training/`
+  scanned-PDF OCR rows that exercise OCR-only behavior, not broader future
+  PDF-structure recovery work
+- broader repo-owned PDF expected outputs, OCR fixtures, and RAG payloads live
+  under `external_main_process/pdf/`, not in this external-quality subtree
 
 Local audit notes:
 
