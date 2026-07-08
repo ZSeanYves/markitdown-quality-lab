@@ -17,12 +17,9 @@ Boundary:
 - this tree is for corpus quality work, not runtime integration
 - promoted formal rows must still be anchored by
   `external_quality/MANIFEST.tsv` and `external_quality/SOURCE_CATALOG.tsv`
-- small runtime-facing PDF OCR gate rows are allowed here when they are
-  OCR-suitable, traceable, and kept separate from broader native-text PDF
-  intake
-- the current shipped PDF OCR gate is intentionally narrow: explicit
-  scanned-PDF OCR rows that exercise OCR-only behavior, not broader future
-  PDF-structure recovery work
+- accurate-only scanned-PDF OCR rows now live under
+  `external_accurate/repo_local/pdf/ocr/`, so this tree stays focused on
+  broader PDF quality and native-reader coverage
 - broader repo-owned PDF expected outputs, OCR fixtures, and RAG payloads live
   under `external_main_process/pdf/`, not in this external-quality subtree
 
@@ -34,3 +31,10 @@ Local audit notes:
   the promoted NIOSH PDFs
 - `nist/_audit/PROVENANCE.md` records the NIST technical-series licensing
   anchor used for retained NIST samples
+
+Current promoted source highlights:
+
+- `pdf/qpdf/` now includes compact Apache-2.0 qpdf fixtures for hybrid xref
+  traversal and object-stream-backed text recovery, complementing the existing
+  internal-destination and outline samples with coverage that is directly
+  relevant to the native reader's xref-driven path.

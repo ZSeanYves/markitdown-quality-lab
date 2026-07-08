@@ -14,10 +14,10 @@ Sample licenses apply to the samples themselves. They do not relicense the
 
 ## Current formal status
 
-- `external_quality/SOURCE_CATALOG.tsv` currently contains 49 sources, and all
-  49 are marked `redistributable=ok`.
-- `external_quality/MANIFEST.tsv` currently contains 337 formal rows, and all
-  337 are marked `license_review_status=approved`.
+- `external_quality/SOURCE_CATALOG.tsv` currently contains 50 sources, and all
+  50 are marked `redistributable=ok`.
+- `external_quality/MANIFEST.tsv` currently contains 340 formal rows, and all
+  340 are marked `license_review_status=approved`.
 - `external_bench/MANIFEST.tsv` currently contains 131 `accepted` rows and
   9 `missing_candidate` placeholders.
 - `external_main_process/` is the repo-owned main-process regression surface.
@@ -36,7 +36,8 @@ Sample licenses apply to the samples themselves. They do not relicense the
   regression surface and its boundaries.
 - `external_bench/_audit/PROVENANCE.md` records the local provenance review for
   the accepted `copied_from_external_bench` rows.
-- `external_quality/ocr/_audit/PROVENANCE.md`,
+- `external_quality/audio/vosk-api/_audit/PROVENANCE.md`,
+  `external_quality/ocr/_audit/PROVENANCE.md`,
   `external_quality/pdf/irs/_audit/PROVENANCE.md`,
   `external_quality/pdf/niosh/_audit/PROVENANCE.md`, and
   `external_quality/pdf/nist/_audit/PROVENANCE.md` record the local public
@@ -48,7 +49,7 @@ The table below is derived from `external_quality/SOURCE_CATALOG.tsv`.
 
 | License / SPDX | Source count | Representative sources | Notes |
 | --- | ---: | --- | --- |
-| Apache-2.0 | 10 | `pdfbox_tests`, `pdfjs_tests`, `apache_poi_tests`, `markitdown_repo_samples`, `markitdown_repo_json_samples`, `odf_toolkit_tests` | Local license mirrors or notice files are retained for major third-party fixture groups. Repo-owned samples are covered by the main repository Apache-2.0 license mirror. |
+| Apache-2.0 | 11 | `pdfbox_tests`, `pdfjs_tests`, `apache_poi_tests`, `markitdown_repo_samples`, `markitdown_repo_json_samples`, `odf_toolkit_tests`, `vosk_api_examples` | Local license mirrors or notice files are retained for major third-party fixture groups. Repo-owned samples are covered by the main repository Apache-2.0 license mirror. |
 | BSD-2-Clause | 2 | `xlsxwriter_examples`, `commonmark_tools_templates` | Keep upstream BSD notice obligations with the mirrored fixture material. |
 | BSD-3-Clause | 8 | `python_markdown_docs`, `python_markdown_tests`, `pandas_repo_docs`, `jsonlines_tests`, `jupyterlab_notebooks` | Python-Markdown and Jupyter-related external docs and fixtures remain tracked with their upstream BSD-family terms. |
 | CC-BY-2.0 | 1 | `ocr_src_0025` | Commons/Flickr OCR material requires attribution in downstream publication contexts. |

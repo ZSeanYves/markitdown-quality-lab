@@ -1,0 +1,54 @@
+{
+  "output_format": "rag_json",
+  "detected_format": "mp3",
+  "parser_mode": "media_pipeline",
+  "convert_mode": "balanced",
+  "metadata_contains": {
+    "audio_backend_name": "vosk",
+    "audio_backend_transport": "native_cli",
+    "audio_codec": "mp3",
+    "audio_segment_count": 2,
+    "title": "audio_main_repo.mp3"
+  },
+  "diagnostics_contains": {
+    "metrics": {
+      "selected_route": "media_pipeline",
+      "provider_invoked": "true",
+      "audio_segment_count": "2",
+      "renderer_name": "RagJsonRenderer"
+    }
+  },
+  "source_map": "null",
+  "chunk_count": {
+    "exact": 4
+  },
+  "chunks": [
+    {
+      "kind": "metadata",
+      "text_contains_all": [
+        "title: audio_main_repo.mp3"
+      ]
+    },
+    {
+      "kind": "text",
+      "text_contains_all": [
+        "duration: 00:00:07.200",
+        "transcript backend: vosk 0.test"
+      ]
+    },
+    {
+      "kind": "text",
+      "text_contains_all": [
+        "[00:00:00.000 - 00:00:03.200]",
+        "audio_main_repo.mp3 hello"
+      ]
+    },
+    {
+      "kind": "text",
+      "text_contains_all": [
+        "[00:00:03.200 - 00:00:07.200]",
+        "world"
+      ]
+    }
+  ]
+}

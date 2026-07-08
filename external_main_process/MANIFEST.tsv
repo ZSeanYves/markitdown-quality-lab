@@ -293,8 +293,6 @@ pdf_rag_pdf_metadata_noise_merge	pdf	rag	pdf/rag/pdf_metadata_noise_merge.pdf	pd
 pdf_rag_pdf_metadata_table_like	pdf	rag	pdf/rag/pdf_metadata_table_like.pdf	pdf/expected/rag/pdf_metadata_table_like.rag.json	
 pdf_rag_pdf_metadata_text_structure	pdf	rag	pdf/rag/pdf_metadata_text_structure.pdf	pdf/expected/rag/pdf_metadata_text_structure.rag.json	
 pdf_rag_pdf_metadata_uri_link	pdf	rag	pdf/rag/pdf_metadata_uri_link.pdf	pdf/expected/rag/pdf_metadata_uri_link.rag.json	
-pdf_ocr_pdf_ocr_single_page	pdf	ocr	pdf/ocr/pdf_ocr_single_page.pdf	pdf/expected/ocr/pdf_ocr_single_page.md	
-pdf_ocr_pdf_ocr_two_page	pdf	ocr	pdf/ocr/pdf_ocr_two_page.pdf	pdf/expected/ocr/pdf_ocr_two_page.md	
 pptx_markdown_pptx_bullet_levels	pptx	markdown	pptx/markdown/pptx_bullet_levels.pptx	pptx/expected/markdown/pptx_bullet_levels.md	
 pptx_markdown_pptx_bullet_property	pptx	markdown	pptx/markdown/pptx_bullet_property.pptx	pptx/expected/markdown/pptx_bullet_property.md	
 pptx_markdown_pptx_callout_blocks_basic	pptx	markdown	pptx/markdown/pptx_callout_blocks_basic.pptx	pptx/expected/markdown/pptx_callout_blocks_basic.md	
@@ -530,3 +528,9 @@ zip_rag_zip_metadata_nested_archive_boundary	zip	rag	zip/rag/zip_metadata_nested
 zip_rag_zip_metadata_unsupported_entries	zip	rag	zip/rag/zip_metadata_unsupported_entries.zip	zip/expected/rag/zip_metadata_unsupported_entries.rag.json	
 zip_assets_zip_duplicate_asset_names	zip	assets	zip/assets/zip_duplicate_asset_names.zip	zip/expected/assets/zip_duplicate_asset_names	
 zip_assets_zip_html_local_image	zip	assets	zip/assets/zip_html_local_image.zip	zip/expected/assets/zip_html_local_image	
+wav_markdown_audio_main_repo	wav	markdown	wav/markdown/audio_main_repo.wav	wav/expected/markdown/audio_main_repo.md	repo-owned synthesized speech sample for canonical wav audio markdown coverage
+wav_rag_audio_main_repo	wav	rag	wav/rag/audio_main_repo.wav	wav/expected/rag/audio_main_repo.rag.json	repo-owned synthesized speech sample for canonical wav audio rag coverage
+mp3_markdown_audio_main_repo	mp3	markdown	mp3/markdown/audio_main_repo.mp3	mp3/expected/markdown/audio_main_repo.md	repo-owned synthesized speech sample for compressed mp3 audio markdown coverage
+mp3_rag_audio_main_repo	mp3	rag	mp3/rag/audio_main_repo.mp3	mp3/expected/rag/audio_main_repo.rag.json	repo-owned synthesized speech sample for compressed mp3 audio rag coverage
+m4a_markdown_audio_main_repo	m4a	markdown	m4a/markdown/audio_main_repo.m4a	m4a/expected/markdown/audio_main_repo.md	repo-owned synthesized speech sample for normalized m4a audio markdown coverage
+m4a_rag_audio_main_repo	m4a	rag	m4a/rag/audio_main_repo.m4a	m4a/expected/rag/audio_main_repo.rag.json	repo-owned synthesized speech sample for normalized m4a audio rag coverage

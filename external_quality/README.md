@@ -28,6 +28,7 @@ Formal control points:
 
 Current format roots include:
 
+- `audio/`
 - `csv/`
 - `docx/`
 - `epub/`
@@ -56,6 +57,10 @@ Migration note:
 
 Current expansion snapshot:
 
+- Audio now includes an Apache-2.0 `vosk-api` speech example group under
+  `audio/vosk-api/`, with the official upstream WAV plus locally derived
+  `mp3` and `m4a` transcodes used to cover the current media-pipeline speech
+  routes across uncompressed and compressed input variants.
 - Markdown now includes a broader BSD-3-Clause Python-Markdown fixture subset
   under `markdown/python-markdown/`, covering footnotes, tables,
   admonitions, and markdown-in-HTML boundary behavior alongside fenced
