@@ -9,7 +9,10 @@ Reviewed files:
 Evidence retained locally:
 - Source-group landing page: https://www.nist.gov/open/license
 - Repository source catalog records this group as: "NIST Technical Series public-domain in U.S. with worldwide reprint grant"
+- Exact publication URLs reviewed for manifest promotion:
+  - https://nvlpubs.nist.gov/nistpubs/jres/120/jres.120.011.pdf
+  - https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2194.pdf
 
 Review conclusion:
 - NIST technical series samples in this repository should remain grouped under the official NIST technical-series licensing page and exact source URLs.
-- Further per-file promotion can rely on this audit note plus exact publication URLs if any formal manifest rows are added later.
+- This note now covers the formal manifest promotion of the retained JRES 120.011 paper sample and NIST TN 2194 report sample in addition to the source-group license review.

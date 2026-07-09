@@ -6,7 +6,7 @@
   "metadata_contains": {
     "audio_backend_name": "vosk",
     "audio_backend_transport": "native_cli",
-    "audio_codec": "wav",
+    "audio_codec": "m4a",
     "audio_segment_count": 2,
     "title": "audio_main_repo.m4a"
   },
