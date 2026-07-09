@@ -1,143 +1,192 @@
 # markitdown-quality-lab
 
-`markitdown-quality-lab` is the external corpus repository for the MoonBit
-`markitdown` project. It is not runtime code, not a product deliverable, and
-not a required build dependency. The main repository must still build, test,
-and run without this repository present.
+`markitdown-quality-lab` is the repo-local corpus and validation lab for the
+MoonBit `markitdown` project.
 
-This repository keeps three repo-local corpus surfaces that should not live
-directly in the main repository:
+It is:
 
-- repo-owned main-process regression fixtures and expected outputs
-- external quality-regression corpus material
-- external performance-benchmark corpus material
+- the checked-out home for formal external regression corpora
+- the checked-out home for curated benchmark payloads and manifests
+- the checked-out home for repo-owned main-process regression fixtures that do
+  not belong in the main runtime repository
 
-## Layout
+It is not:
+
+- runtime code
+- a shipped product artifact
+- a required build dependency for the main repository
+
+The main `markitdown` repository must still build, run, and pass ordinary
+`moon test` without this repository present.
+
+## Root Layout
 
 ```text
 markitdown-quality-lab/
-  external_main_process/
-  external_quality/
-  external_bench/
   README.md
+  LICENSE
   LICENSES.md
+  external_main_process/
+    README.md
+    MANIFEST.tsv
+    <format>/
+      <lane>/
+      expected/<lane>/
+      assets/                # optional
+  external_quality/
+    README.md
+    MANIFEST.tsv
+    SOURCE_CATALOG.tsv
+    <format>/<source>/...
+  external_accurate/
+    README.md
+    MANIFEST.tsv
+    SOURCE_CATALOG.tsv
+    <format>/<source>/...
+  external_bench/
+    README.md
+    MANIFEST.tsv
+    FORMAT_MATRIX.md
+    <format>/<size_class>/<file>
 ```
 
-## Directory roles
+## Directory Roles
 
 ### `external_main_process/`
 
-`external_main_process/` is the repo-owned main-process regression tree.
+`external_main_process/` is the repo-owned main-regression corpus.
 
-- It keeps project-controlled fixtures, expected outputs, and RAG-oriented
-  payloads grouped by format.
-- Typical format subtrees contain `markdown/`, `expected/`, `rag/`, and
-  optional `assets/` directories.
-- It is not a third-party source catalog or a formal external-license surface
-  by itself.
-- Files from this tree only enter the formal provenance summary when an
-  explicit repo-owned source entry in `external_quality/SOURCE_CATALOG.tsv`
-  points at them.
+- It feeds `samples/check_balance.sh` in the main repository.
+- Its machine-readable entrypoint is `external_main_process/MANIFEST.tsv`.
+- It is project-controlled fixture material, not a third-party source pool.
+- Format roots typically use lane-shaped inputs and outputs such as:
+  `markdown/`, `rag/`, `ocr/`, and `expected/<lane>/`.
+- Optional `assets/` directories keep tracked sidecar material for formats
+  like `docx`, `epub`, `html`, `ipynb`, `odt`, `odp`, `pptx`, and `zip`.
+
+Typical shape:
+
+```text
+external_main_process/<format>/
+  markdown/                 # or another input lane
+  rag/                      # optional
+  ocr/                      # optional
+  expected/
+    markdown/
+    rag/
+    ocr/
+    assets/                 # optional
+  assets/                   # optional
+```
+
+This tree is repo-owned and should remain free of unclear third-party
+redistribution material. Promotion from this tree into a formal external
+surface must stay explicitly traceable.
 
 ### `external_quality/`
 
-`external_quality/` is the formal external quality-regression corpus tree.
+`external_quality/` is the formal external balance/default quality-regression
+surface.
 
-- `MANIFEST.tsv` is the formal consumption entrypoint.
-- `SOURCE_CATALOG.tsv` is the source and license tracing index.
+- It feeds `samples/check_balance_quality.sh` in the main repository.
+- `MANIFEST.tsv` is the row-level consumption contract.
+- `SOURCE_CATALOG.tsv` is the source, license, and provenance index.
 - Tracked payloads live under `external_quality/<format>/<source>/...`.
-- The main repository reads this manifest from `samples/check_quality.sh`.
-- Staging, cache, and legacy archive paths are not formal consumption surfaces.
+- This tree is for broader quality signals on the normal product surface, not
+  for accurate-only behavior.
 
-Every formal sample must be referenced by a manifest row. Samples with unclear
-origin, license, privacy, or redistribution boundaries must not enter the
-formal manifest.
+Use this tree for real-world or audited external samples that should influence
+the default quality signal for supported formats.
+
+### `external_accurate/`
+
+`external_accurate/` is the formal accurate-only regression surface.
+
+- It feeds `samples/check_accurate.sh` in the main repository.
+- `MANIFEST.tsv` is the row-level contract.
+- `SOURCE_CATALOG.tsv` is the source, license, and provenance index.
+- Tracked payloads live under `external_accurate/<format>/<source>/...`.
+- This tree is intentionally separate from `external_quality/`.
+
+It exists for:
+
+- accurate-mode output differences
+- route-upgrade evidence
+- provider-truth checks for OCR and PDF OCR
+- feature-specific diagnostics that belong in `markdown`, `debug`, or
+  `provenance` validation views
+
+Current enrolled formats include `docx`, `xlsx`, `pptx`, `odt`, `ods`, `odp`,
+`ocr`, and `pdf`.
 
 ### `external_bench/`
 
-`external_bench/` is the formal external benchmark corpus tree.
+`external_bench/` is the curated benchmark corpus surface.
 
+- It feeds the main repository `bench v2` flow.
 - `MANIFEST.tsv` is the benchmark execution entrypoint.
+- `FORMAT_MATRIX.md` summarizes size-class coverage per format.
 - Tracked payloads live under `external_bench/<format>/<size_class>/...`.
-- The main repository `bench v2` flow reads this manifest by default.
-- The local audit note lives at `external_bench/_audit/PROVENANCE.md`.
 
-Benchmark results are directional signals for same-machine, same-corpus,
-same-parameter comparisons. They are useful for spotting local regressions and
+Benchmark results from this tree are for same-machine, same-corpus,
+same-parameter comparison. They are useful for spotting local regressions and
 relative trends, not for making general performance claims.
 
-## Expected placement
+## Expected Placement
 
-The recommended layout is:
+The official checked-out location is:
 
 ```text
 markitdown/
   markitdown-quality-lab/
 ```
 
-The main repository quality flow reads:
+From the main repository root, the default consumers are:
 
-```text
-markitdown-quality-lab/external_quality/MANIFEST.tsv
-```
-
-The main repository benchmark flow reads:
-
-```text
-markitdown-quality-lab/external_bench/MANIFEST.tsv
-```
-
-Repo-owned format fixtures also live under:
-
-```text
-markitdown-quality-lab/external_main_process/<format>/
-```
+- `samples/check_balance.sh`
+  reads `./markitdown-quality-lab/external_main_process/`
+- `samples/check_balance_quality.sh`
+  reads `./markitdown-quality-lab/external_quality/MANIFEST.tsv`
+- `samples/check_accurate.sh`
+  reads `./markitdown-quality-lab/external_accurate/MANIFEST.tsv`
+- `bench` / `bench v2`
+  reads `./markitdown-quality-lab/external_bench/MANIFEST.tsv`
 
 If this repository is absent, the main repository runtime, parsers,
 converters, and ordinary tests should still work.
 
-## Intake rules
+## Intake Rules
 
-- Every formal sample must have a manifest row.
-- Every formal `external_quality/` source must be traceable in
-  `external_quality/SOURCE_CATALOG.tsv`.
-- Every curated `external_bench/` row must retain `source_ref` and any needed
-  provenance context in `MANIFEST.tsv`.
-- Every promoted repo-owned file reused from `external_main_process/` must be
-  represented by an explicit repo-owned source entry before it enters the
-  formal `external_quality/` surface.
-- Every source must have an explicit license and source origin.
-- `UNKNOWN`, empty license fields, and empty source origins are not allowed in
-  the formal catalog.
-- `.tmp`, cache, local-only, and staging paths are not allowed in formal
-  manifests.
-- Samples with unclear license, provenance, privacy, or redistribution
+- Every formal row must be represented in the relevant `MANIFEST.tsv`.
+- Every formal external source in `external_quality/` and
+  `external_accurate/` must be represented in the corresponding
+  `SOURCE_CATALOG.tsv`.
+- Repo-owned files reused from `external_main_process/` must stay explicitly
+  traceable when promoted into a formal external surface.
+- Every source must have explicit origin, license, and redistribution clarity.
+- `UNKNOWN`, empty license metadata, empty source origin, private data, cache
+  artifacts, and temporary downloads do not belong in formal surfaces.
+- Samples with unclear license, privacy, provenance, or redistribution
   boundaries must stay out of the formal manifests.
-- `external_main_process/` content must remain repo-owned, traceable, and free
-  of private, temporary, or unauthorized tracked material.
-- Sample licenses describe the samples only and do not change the
-  `markitdown` code license.
+- README summaries must not contradict the machine-readable manifest or source
+  catalog files.
 
 ## Non-goals
 
-- This repository does not promise general benchmark conclusions.
-- It does not act as a generic training-data warehouse.
-- It does not act as a build dependency for the main repository.
-- It does not keep private data, local cache, temporary downloads, or
-  unauthorized material as tracked formal assets.
-- It does not use legacy staging directories as formal consumption surfaces.
+- This repository is not a generic training-data warehouse.
+- It is not a runtime dependency for the main repository.
+- It does not justify public benchmark claims beyond local comparative runs.
+- It should not be used as a staging area for `.tmp`, cache, or local-only
+  artifacts.
 
-## Maintenance rules
+## Maintenance Notes
 
 - After changing `MANIFEST.tsv` or `SOURCE_CATALOG.tsv`, rerun the relevant
-  path, source, and license checks.
-- For large migrations, create a cleanup or migration plan before executing it.
-- Keep `external_main_process/` aligned as the repo-owned main-process fixture
-  and expected-output surface.
-- Keep `external_quality/` aligned around the
-  `README + MANIFEST + SOURCE_CATALOG` contract.
-- Keep `external_bench/` aligned as a curated benchmark consumption surface.
-- Do not write README claims that contradict the machine-readable manifest or
-  catalog records.
-- Repository documents may summarize policy and status, but they do not replace
-  the machine-readable constraints in the manifest and catalog files.
+  validation flow in the main repository.
+- Keep subtree README files aligned with the machine-readable contracts.
+- Prefer the subtree-specific README when you need format-level or
+  surface-specific conventions:
+  `external_main_process/README.md`,
+  `external_quality/README.md`,
+  `external_accurate/README.md`,
+  `external_bench/README.md`.
