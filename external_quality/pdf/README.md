@@ -34,6 +34,11 @@ Local audit notes:
 
 Current promoted source highlights:
 
+- `pdf/pdfjs/` now includes additional Apache-2.0 fixtures for embedded
+  OpenType/CFF CID fonts, GBK-EUC and UniJIS predefined-CMap paths, and a
+  tracked 90ms-RKSJ vertical-writing gap row, so the external PDF surface now
+  exercises more of the native reader's current CJK/font decode matrix than
+  the earlier JPX/JBIG2/link-only subset.
 - `pdf/qpdf/` now includes compact Apache-2.0 qpdf fixtures for hybrid xref
   traversal and object-stream-backed text recovery, complementing the existing
   internal-destination and outline samples with coverage that is directly

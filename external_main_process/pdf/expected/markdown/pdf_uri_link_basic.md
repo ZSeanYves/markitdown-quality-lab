@@ -1,1 +1,1 @@
-Visit the example website for details.
+[Visit the example website for details.](https://example.com)
