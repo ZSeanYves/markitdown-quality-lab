@@ -26,5 +26,29 @@ Key rules:
 - The main repository must still complete build, unit test, and repo-local
   regression runs without this directory present.
 
+## Comparison classes
+
+`external_compare` is limited to cases where the locked Microsoft MarkItDown
+environment selects a format-aware converter and both outputs satisfy the
+declared semantic signals. A file merely accepted by `PlainTextConverter` is
+not evidence that MarkItDown implements that format's structure.
+
+The converter registry was re-audited for the release split on 2026-07-12.
+CSV, EPUB, PDF, IPYNB, PPTX, XLS/XLSX, DOCX, HTML, and ZIP have dedicated
+converters relevant to this corpus. TSV, JSON, YAML, XML, subtitle formats,
+JSONL/NDJSON, TOML, EML, TeX, RST, and AsciiDoc fall through to plain-text
+conversion and therefore use `self_baseline`. Markdown and TXT remain
+externally comparable because their source text is already the target content
+semantics.
+
+IPYNB cases containing attachment payloads use `self_baseline`: the locked
+MarkItDown output leaves `attachment:` references without persisted files,
+whereas the product contract requires safe asset materialization. This avoids
+comparing a real asset-writing CLI path with a broken-reference output path.
+
+These classifications are version-specific evidence. A MarkItDown dependency
+update must re-run converter selection and semantic-signal checks before an
+existing class is retained.
+
 This directory describes the formal benchmark consumption surface. It is not a
 complete pool of every raw upstream external source.
