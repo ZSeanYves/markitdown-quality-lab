@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "markitdown self performance baseline",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "platform_key",
+    "runner_class",
+    "review_status",
+    "main_sha",
+    "quality_sha",
+    "fingerprints",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "platform_key": { "enum": ["macos-arm64", "linux-x64"] },
+    "runner_class": { "type": "string", "minLength": 1 },
+    "review_status": { "enum": ["candidate", "approved"] },
+    "main_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "quality_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "fingerprints": {
+      "type": "object",
+      "required": ["moonbit", "python", "os", "arch", "runtime"]
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "bench_id",
+          "tool",
+          "input_sha256",
+          "median_wall_us",
+          "peak_rss_kb",
+          "output_sha256"
+        ],
+        "properties": {
+          "bench_id": { "type": "string", "minLength": 1 },
+          "tool": { "enum": ["moonbit-cli", "moonbit-engine"] },
+          "input_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "median_wall_us": { "type": "integer", "minimum": 1 },
+          "peak_rss_kb": {
+            "oneOf": [
+              { "type": "integer", "minimum": 1 },
+              { "type": "null" }
+            ]
+          },
+          "output_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    }
+  }
+}

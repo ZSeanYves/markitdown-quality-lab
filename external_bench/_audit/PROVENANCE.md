@@ -488,3 +488,12 @@ Residual risk:
   - Dynamic feeds and APIs such as USGS and World Bank should continue to be
     treated as tracked snapshots rather than freshness claims about current
     upstream bytes.
+
+## Project-owned balance audio contracts
+
+- `audio_contract_wav_v1`, `audio_contract_mp3_v1`, and
+  `audio_contract_m4a_v1` are exact copies of the Apache-2.0 main-repository
+  fixtures under `samples/fixtures/contracts/audio/`.
+- They are retained only for deterministic balance-mode self-baseline runs.
+- SHA-256 values and byte sizes are recorded in `external_bench/MANIFEST.tsv`;
+  accurate mode is intentionally excluded from all benchmark suites.
