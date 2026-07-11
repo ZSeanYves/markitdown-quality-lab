@@ -1,16 +1,8 @@
-# alpha/img/img\_red.jpg
-
-> Skipped: unsupported file type: jpg
-
 # alpha/page.html
 
 ![alpha red](assets/archive/alpha_page.html/image01.jpg)
 *Alpha Red*
 Alpha caption
-
-# beta/img/img\_red.jpg
-
-> Skipped: unsupported file type: jpg
 
 # beta/page.html
 

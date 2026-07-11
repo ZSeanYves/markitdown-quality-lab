@@ -10,4 +10,4 @@ Kept.
 
 # unsupported/raw.jpg
 
-> Skipped: unsupported file type: jpg
+![raw.jpg](assets/archive/unsupported_raw.jpg/raw.jpg)

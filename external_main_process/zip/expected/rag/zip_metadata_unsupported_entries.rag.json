@@ -7,8 +7,12 @@
   "diagnostics_contains": {
     "parser_name": "zip_container_parser",
     "metrics": {
-      "renderer_name": "RagJsonRenderer"
-    }
+      "renderer_name": "RagJsonRenderer",
+      "asset_count": "1"
+    },
+    "degraded_features": [
+      "zip_standalone_image_ocr_failed"
+    ]
   },
   "source_map": "required",
   "chunk_count": {
@@ -24,15 +28,7 @@
       "asset_ref_count": 0,
       "text_contains_all": [
         "Body."
-      ],
-      "location_contains": {
-        "container_paths": [
-          "zip_metadata_unsupported_entries.zip"
-        ],
-        "entry_paths": [
-          "notes/readme.md"
-        ]
-      }
+      ]
     },
     {
       "kind": "text",
@@ -43,34 +39,18 @@
       "asset_ref_count": 0,
       "text_contains_all": [
         "> Skipped: unsupported file type: bin"
-      ],
-      "location_contains": {
-        "container_paths": [
-          "zip_metadata_unsupported_entries.zip"
-        ],
-        "entry_paths": [
-          "unsupported/blob.bin"
-        ]
-      }
+      ]
     },
     {
-      "kind": "text",
+      "kind": "image_caption",
       "heading_path": [
         "unsupported/raw.jpg"
       ],
       "source_ref_count": 1,
-      "asset_ref_count": 0,
+      "asset_ref_count": 1,
       "text_contains_all": [
-        "> Skipped: unsupported file type: jpg"
-      ],
-      "location_contains": {
-        "container_paths": [
-          "zip_metadata_unsupported_entries.zip"
-        ],
-        "entry_paths": [
-          "unsupported/raw.jpg"
-        ]
-      }
+        "raw.jpg"
+      ]
     }
   ]
 }
