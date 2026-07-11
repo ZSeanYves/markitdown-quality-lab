@@ -1,0 +1,6 @@
+= Manage Local Images
+
+This fixture retains an official Asciidoctor documentation image as a local
+sidecar and exercises the standard block image macro.
+
+image::wolpertinger.jpg[Wolpertinger]
