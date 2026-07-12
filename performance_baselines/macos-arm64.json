@@ -1,0 +1,865 @@
+{
+  "cases": [
+    {
+      "bench_id": "asciidoc_huge_synthetic_repeated_readme_v1",
+      "input_sha256": "9d47a9a0a60309f4fbdac366db5c2e03830172cc20c91d60652b3be9fdfb7e0b",
+      "median_wall_us": 782593,
+      "output_sha256": "6c95bd8e9eb75af283e2688be51634c188db3c50a8a95d9d577084aed6e7a704",
+      "peak_rss_kb": 212816,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "asciidoc_huge_synthetic_repeated_readme_v1",
+      "input_sha256": "9d47a9a0a60309f4fbdac366db5c2e03830172cc20c91d60652b3be9fdfb7e0b",
+      "median_wall_us": 712313,
+      "output_sha256": "863270a40540b2c3658349521152f599ce2172300ec3d53146c244f04e2ebef1",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "asciidoc_large_synthetic_repeated_readme_v1",
+      "input_sha256": "809cdae9a7798c18a76e424c74739ad2b9ec2f6ce6d7c615d1bc50dd98cdfec7",
+      "median_wall_us": 130664,
+      "output_sha256": "b3b2e75d5bf5d50d3bee23ecc1240112bb701a284176fac27e303dda1d640df4",
+      "peak_rss_kb": 48064,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "asciidoc_large_synthetic_repeated_readme_v1",
+      "input_sha256": "809cdae9a7798c18a76e424c74739ad2b9ec2f6ce6d7c615d1bc50dd98cdfec7",
+      "median_wall_us": 136236,
+      "output_sha256": "d785c11d9892b22ef97343e382c1303bf84cb9b3206ff082aa222ad07b0ec823",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "asciidoc_medium_asciidoctor_readme_v1",
+      "input_sha256": "18c0db23bc4528a768824e5b84bc3a2ad4c62c897cc764c18cac0c4e119eac08",
+      "median_wall_us": 31460,
+      "output_sha256": "e3c832a3907a3f4d948efe7bfd4543e169fd6d9d98ce161ee14088d3a9ddd496",
+      "peak_rss_kb": 5920,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "asciidoc_medium_asciidoctor_readme_v1",
+      "input_sha256": "18c0db23bc4528a768824e5b84bc3a2ad4c62c897cc764c18cac0c4e119eac08",
+      "median_wall_us": 3567,
+      "output_sha256": "b1bbf5250dd1958585a0bf7d6bf093fb708edec22325dd883d1518204757b284",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "audio_contract_m4a_v1",
+      "input_sha256": "acc1c09781afc46c65b9ac200f0849e4bf4a671a257f054e35a781badf2b82dd",
+      "median_wall_us": 1069741,
+      "output_sha256": "c28e7b06e5ecabe6eb9f6b6a1507b0ca2171a25ca5aac9ef9048b371690de2a0",
+      "peak_rss_kb": 176416,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "audio_contract_m4a_v1",
+      "input_sha256": "acc1c09781afc46c65b9ac200f0849e4bf4a671a257f054e35a781badf2b82dd",
+      "median_wall_us": 973943,
+      "output_sha256": "30210db642a5463a5f4c5e9f2c353adfacd984bda12d9c651b19f9169d6bd714",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "audio_contract_mp3_v1",
+      "input_sha256": "db5bd55dfcbb0f7fdbcbf83044dbdc184ebb6e4bc8d482d5564d543bfa400897",
+      "median_wall_us": 1006718,
+      "output_sha256": "ff55448e4c497cceac9f6d96f7996ccfd717c44b98e28b09f745a98ea5913b45",
+      "peak_rss_kb": 180128,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "audio_contract_mp3_v1",
+      "input_sha256": "db5bd55dfcbb0f7fdbcbf83044dbdc184ebb6e4bc8d482d5564d543bfa400897",
+      "median_wall_us": 1134318,
+      "output_sha256": "b414a5b668469ef74b28b7a6d1a2d798404ad4837a45573498d52aa523ada9ec",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "audio_contract_wav_v1",
+      "input_sha256": "dab7f88876960e5a265bdf3666ed58ab44ad780f75daa327ff7ea6aed378aa39",
+      "median_wall_us": 973433,
+      "output_sha256": "45820bda3d3051f7320b124d688a5c86d5045d3a45a1dd90237e1c4f1a107558",
+      "peak_rss_kb": 180736,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "audio_contract_wav_v1",
+      "input_sha256": "dab7f88876960e5a265bdf3666ed58ab44ad780f75daa327ff7ea6aed378aa39",
+      "median_wall_us": 973192,
+      "output_sha256": "37239665e8e18156128d150c043b9f581c1a3536757a256a1a50ad29b3dc5c90",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "eml_huge_synthetic_many_attachments_v1",
+      "input_sha256": "6233946fd97bb37ab92c834d27a6856be812ba2a112b85bba9d6c692a9f1e794",
+      "median_wall_us": 229887,
+      "output_sha256": "2d008148940b8723e5934189b66da0f71be5cda25bb149a7c8c69ab0aff848d9",
+      "peak_rss_kb": 160384,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "eml_huge_synthetic_many_attachments_v1",
+      "input_sha256": "6233946fd97bb37ab92c834d27a6856be812ba2a112b85bba9d6c692a9f1e794",
+      "median_wall_us": 194030,
+      "output_sha256": "ca3726844826229e1bcfcad08ad130eedaf14477266d0630cf0063cb2e77f609",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "eml_large_synthetic_many_attachments_v1",
+      "input_sha256": "afe965800b244bd30ee525e5b75a6ef20326b2452530d307124832f6e01fc145",
+      "median_wall_us": 28926,
+      "output_sha256": "4b2d999b973f7196f1ff245f9e504c13bb64e15d59a570c7d2da435fd580ae19",
+      "peak_rss_kb": 10464,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "eml_large_synthetic_many_attachments_v1",
+      "input_sha256": "afe965800b244bd30ee525e5b75a6ef20326b2452530d307124832f6e01fc145",
+      "median_wall_us": 9537,
+      "output_sha256": "da34f3f6ac6e107c7fe49b6e9c7126afc3156cd40d15f0cd56bd2007aaa4be49",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "eml_medium_apache_james_simple_attachment_v1",
+      "input_sha256": "46da0c106d2dd6bb9e4b63e079a367ddc1a2bd472869a662d86da24918e3499f",
+      "median_wall_us": 12102,
+      "output_sha256": "b4bedc5ce0feb1f8b730bed51d1f7e4d9e37093aa1099f6bbed981b65526a796",
+      "peak_rss_kb": 4320,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "eml_medium_apache_james_simple_attachment_v1",
+      "input_sha256": "46da0c106d2dd6bb9e4b63e079a367ddc1a2bd472869a662d86da24918e3499f",
+      "median_wall_us": 233,
+      "output_sha256": "88e45412b1bd9a60e197be855507738e5f4d734d00aa844da4eb59ee51a6bf89",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ipynb_huge_synthetic_repeated_cells_v1",
+      "input_sha256": "7d1b4046905fa788a6ba167933b25a4b8f5611e6335e92fbad0844f81477470f",
+      "median_wall_us": 572828,
+      "output_sha256": "6ecb1b95abb02b20c8f1f3a79a78d92fbc8022d2bbf133aeb9c726148c8a97c8",
+      "peak_rss_kb": 166304,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ipynb_huge_synthetic_repeated_cells_v1",
+      "input_sha256": "7d1b4046905fa788a6ba167933b25a4b8f5611e6335e92fbad0844f81477470f",
+      "median_wall_us": 374567,
+      "output_sha256": "b574b79ae27c53b9f050fae79b62fa099ed106ac0b094be970ccee5981c3157c",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ipynb_large_synthetic_repeated_cells_v1",
+      "input_sha256": "3510e307509b333b895e2344f9cab4a0a70098fb6052177e6cef83a49106d212",
+      "median_wall_us": 466023,
+      "output_sha256": "7727e99a52474dcd36b0535db51501b98fefab3e6f9d82f8670658331487fe1e",
+      "peak_rss_kb": 50560,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ipynb_large_synthetic_repeated_cells_v1",
+      "input_sha256": "3510e307509b333b895e2344f9cab4a0a70098fb6052177e6cef83a49106d212",
+      "median_wall_us": 317805,
+      "output_sha256": "f6a1cee54c256d4fedaa54260725965d0ab49088c152bade418f3ea39fd2be85",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "json_huge_synthetic_records_v1",
+      "input_sha256": "ca9117ba56dc7fa956f4a29dc7001fb64292b8f9f27b58aec321e0a09753b328",
+      "median_wall_us": 573735,
+      "output_sha256": "567c783b3321694ad82a7039078e206cd88696e97c323504a866bed71b55b0ea",
+      "peak_rss_kb": 152224,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "json_huge_synthetic_records_v1",
+      "input_sha256": "ca9117ba56dc7fa956f4a29dc7001fb64292b8f9f27b58aec321e0a09753b328",
+      "median_wall_us": 517237,
+      "output_sha256": "d7a171a4f4085a993c4fc24953bd0c2e8a4bb4a73651b9c244ad6b889f4f1f53",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "json_large_worldbank_population_v1",
+      "input_sha256": "2bb1839c140419b1cf1aebe61a140bed870917d2d2ba5a3d5afaa342cb50e3a0",
+      "median_wall_us": 233228,
+      "output_sha256": "d84c9f69181fe3aef5db200aecb0b324a8dd558220653d8306288ba672bfaf88",
+      "peak_rss_kb": 93680,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "json_large_worldbank_population_v1",
+      "input_sha256": "2bb1839c140419b1cf1aebe61a140bed870917d2d2ba5a3d5afaa342cb50e3a0",
+      "median_wall_us": 139645,
+      "output_sha256": "38b7c9fe3985467130b33661d956029fb11c162c2fbd129e45078806dd1dc51c",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "json_medium_spdx_licenses_v1",
+      "input_sha256": "c5a51836621ec723afcce3ff5728fd35653d806ca1086ee69f0fa9df28943d9c",
+      "median_wall_us": 37894,
+      "output_sha256": "cf968db5920672d5411ed05899fe3952e72d5159583893ac58c69e2e6a62312e",
+      "peak_rss_kb": 11616,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "json_medium_spdx_licenses_v1",
+      "input_sha256": "c5a51836621ec723afcce3ff5728fd35653d806ca1086ee69f0fa9df28943d9c",
+      "median_wall_us": 16317,
+      "output_sha256": "77741ed47bad6776555e05a1faaae1732418fcca3cb4e41a255c0b849b9b56bc",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "jsonl_huge_synthetic_records_v1",
+      "input_sha256": "9183936feb00ae37f1af426ef1858f37832ef10a4c54fe12904d3d07350657b8",
+      "median_wall_us": 210174,
+      "output_sha256": "ebc335b9077871da64e0be2caeec21a8c04ee0dec06ba1a765e158a2225800a3",
+      "peak_rss_kb": 152560,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "jsonl_huge_synthetic_records_v1",
+      "input_sha256": "9183936feb00ae37f1af426ef1858f37832ef10a4c54fe12904d3d07350657b8",
+      "median_wall_us": 164202,
+      "output_sha256": "60483e5744729353a7586a5eb1d06713f524bbb31c938b306369557545e17f10",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "jsonl_large_synthetic_records_v1",
+      "input_sha256": "0d71d4ea77c9c997379d1993a7416f2ee98f0492bd1094e0d96d3f96a339a4e5",
+      "median_wall_us": 56231,
+      "output_sha256": "ebc335b9077871da64e0be2caeec21a8c04ee0dec06ba1a765e158a2225800a3",
+      "peak_rss_kb": 32592,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "jsonl_large_synthetic_records_v1",
+      "input_sha256": "0d71d4ea77c9c997379d1993a7416f2ee98f0492bd1094e0d96d3f96a339a4e5",
+      "median_wall_us": 45595,
+      "output_sha256": "60483e5744729353a7586a5eb1d06713f524bbb31c938b306369557545e17f10",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "jsonl_medium_synthetic_records_v1",
+      "input_sha256": "1563fe78614556c8c0500de234b808e436574cbff397bd4dce807d9e08e1d3cc",
+      "median_wall_us": 28512,
+      "output_sha256": "ebc335b9077871da64e0be2caeec21a8c04ee0dec06ba1a765e158a2225800a3",
+      "peak_rss_kb": 10976,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "jsonl_medium_synthetic_records_v1",
+      "input_sha256": "1563fe78614556c8c0500de234b808e436574cbff397bd4dce807d9e08e1d3cc",
+      "median_wall_us": 22481,
+      "output_sha256": "60483e5744729353a7586a5eb1d06713f524bbb31c938b306369557545e17f10",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ndjson_huge_synthetic_records_v1",
+      "input_sha256": "9183936feb00ae37f1af426ef1858f37832ef10a4c54fe12904d3d07350657b8",
+      "median_wall_us": 152113,
+      "output_sha256": "ebc335b9077871da64e0be2caeec21a8c04ee0dec06ba1a765e158a2225800a3",
+      "peak_rss_kb": 152528,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ndjson_huge_synthetic_records_v1",
+      "input_sha256": "9183936feb00ae37f1af426ef1858f37832ef10a4c54fe12904d3d07350657b8",
+      "median_wall_us": 145136,
+      "output_sha256": "60483e5744729353a7586a5eb1d06713f524bbb31c938b306369557545e17f10",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ndjson_large_synthetic_records_v1",
+      "input_sha256": "0d71d4ea77c9c997379d1993a7416f2ee98f0492bd1094e0d96d3f96a339a4e5",
+      "median_wall_us": 48278,
+      "output_sha256": "ebc335b9077871da64e0be2caeec21a8c04ee0dec06ba1a765e158a2225800a3",
+      "peak_rss_kb": 32608,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ndjson_large_synthetic_records_v1",
+      "input_sha256": "0d71d4ea77c9c997379d1993a7416f2ee98f0492bd1094e0d96d3f96a339a4e5",
+      "median_wall_us": 37178,
+      "output_sha256": "60483e5744729353a7586a5eb1d06713f524bbb31c938b306369557545e17f10",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ndjson_medium_synthetic_records_v1",
+      "input_sha256": "1563fe78614556c8c0500de234b808e436574cbff397bd4dce807d9e08e1d3cc",
+      "median_wall_us": 34190,
+      "output_sha256": "ebc335b9077871da64e0be2caeec21a8c04ee0dec06ba1a765e158a2225800a3",
+      "peak_rss_kb": 11328,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ndjson_medium_synthetic_records_v1",
+      "input_sha256": "1563fe78614556c8c0500de234b808e436574cbff397bd4dce807d9e08e1d3cc",
+      "median_wall_us": 26463,
+      "output_sha256": "60483e5744729353a7586a5eb1d06713f524bbb31c938b306369557545e17f10",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ocr_huge_commons_menu_scene_text_v1",
+      "input_sha256": "69f1ca5cc00bd4d3e57f3684f1915abfe177db8fb20db49e91efd756d325dace",
+      "median_wall_us": 848179,
+      "output_sha256": "27d80099723e1a154c2ebb480cc58cd945ac405c928c563e2cb7604ed7f2425b",
+      "peak_rss_kb": 150592,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ocr_huge_commons_menu_scene_text_v1",
+      "input_sha256": "69f1ca5cc00bd4d3e57f3684f1915abfe177db8fb20db49e91efd756d325dace",
+      "median_wall_us": 857562,
+      "output_sha256": "6073798409048de0f86df06e1b3b9c3c2d72d87ade97179a95c5d6144a5d27c0",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ocr_large_commons_typewriter_photo_v1",
+      "input_sha256": "cc26ceb9f1307b00fbfae5f13bce96972b0d5a2d417d953fd46057a99b569096",
+      "median_wall_us": 612731,
+      "output_sha256": "b5919e22d6d92e4b741590bc20c70f9a6b422bd058b1ca4d448539cd7f563e87",
+      "peak_rss_kb": 65616,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ocr_large_commons_typewriter_photo_v1",
+      "input_sha256": "cc26ceb9f1307b00fbfae5f13bce96972b0d5a2d417d953fd46057a99b569096",
+      "median_wall_us": 712762,
+      "output_sha256": "d19c2866b6af378c55ba2659de912f5814284f840d91f1a36f662e297b953a98",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ocr_medium_self_multi_column_v1",
+      "input_sha256": "b07d68738a86ee85645328ac526a711a4d2397b332372295b0af5c75b3b4dbb0",
+      "median_wall_us": 573561,
+      "output_sha256": "01cb3b41ed6a60a1cf6ce221567cdedfe4cbd63b67e7f6bf066fb6febc01d829",
+      "peak_rss_kb": 78608,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ocr_medium_self_multi_column_v1",
+      "input_sha256": "b07d68738a86ee85645328ac526a711a4d2397b332372295b0af5c75b3b4dbb0",
+      "median_wall_us": 601846,
+      "output_sha256": "6f1cb672d9d3a30ecb27500bd1991f2c12089377cfb89e6b2179fa989ec8b09d",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "odp_large_odf_toolkit_presentation1_v1",
+      "input_sha256": "9aae24aa8ff6233ecc92b7f47ff13da4cf399998926b120fde7df889d84553b8",
+      "median_wall_us": 49566,
+      "output_sha256": "2830290a912b360f1a700c9f4fa98763a590e88e4e7e094eb388b91f9f5d32bf",
+      "peak_rss_kb": 11264,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "odp_large_odf_toolkit_presentation1_v1",
+      "input_sha256": "9aae24aa8ff6233ecc92b7f47ff13da4cf399998926b120fde7df889d84553b8",
+      "median_wall_us": 21911,
+      "output_sha256": "7a3e1002d3122bd6d5c1825c5dfee8884066d40a74c7683612aca75ba4081a19",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "odp_medium_odf_toolkit_slide_test3_v1",
+      "input_sha256": "bbb3617b6f776d6a285309ff50d73d7d696b8771b08c0aa3aee499d8984056b5",
+      "median_wall_us": 11143,
+      "output_sha256": "490b111c152276ac40597655720e44f1765180951076bbcec0a06915b49bdd34",
+      "peak_rss_kb": 6016,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "odp_medium_odf_toolkit_slide_test3_v1",
+      "input_sha256": "bbb3617b6f776d6a285309ff50d73d7d696b8771b08c0aa3aee499d8984056b5",
+      "median_wall_us": 1588,
+      "output_sha256": "3e77d3cacf9e6e588589cfb855805f1f5e5c4e656358265792b102a4dc14372e",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ods_large_odf_toolkit_st_note_v1",
+      "input_sha256": "eb64768a027b19b1d1270d1c36965899bb3280206a5d9f1aaf1b94fa99ea2561",
+      "median_wall_us": 11736,
+      "output_sha256": "9df99e33a18979c3d5a860372197c9548c58cab76f33d907481bf6454c3d584b",
+      "peak_rss_kb": 4912,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ods_large_odf_toolkit_st_note_v1",
+      "input_sha256": "eb64768a027b19b1d1270d1c36965899bb3280206a5d9f1aaf1b94fa99ea2561",
+      "median_wall_us": 1226,
+      "output_sha256": "a4d1158db9adb6775ecf389435b56555c57e78d30fa69252b12d1880f6bcb0fc",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "ods_medium_odf_toolkit_st_formulas_v1",
+      "input_sha256": "c9d0dda5022a915c068e8e51618d00a37d0918c7a5a705fcc8b824388ee87a68",
+      "median_wall_us": 19181,
+      "output_sha256": "17a530115fc0bd2e5f455b79f5e1252dbe28946f66d61a93181782a5bb56ecc8",
+      "peak_rss_kb": 6144,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "ods_medium_odf_toolkit_st_formulas_v1",
+      "input_sha256": "c9d0dda5022a915c068e8e51618d00a37d0918c7a5a705fcc8b824388ee87a68",
+      "median_wall_us": 5749,
+      "output_sha256": "d4b73f338d8bbf47acbac46c61026e706f634c6c888ddc653c71b771711649ce",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "odt_large_odf_toolkit_feature_images_v1",
+      "input_sha256": "c474449e9347d06f2232e375529442f3c6a0fe4c7cb16ba70737780b77ca5219",
+      "median_wall_us": 31869,
+      "output_sha256": "9ab7fbaf1c7aa50533a5089a18ce2793cb5ac88238d9900f81679dc1edb3e821",
+      "peak_rss_kb": 9200,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "odt_large_odf_toolkit_feature_images_v1",
+      "input_sha256": "c474449e9347d06f2232e375529442f3c6a0fe4c7cb16ba70737780b77ca5219",
+      "median_wall_us": 12296,
+      "output_sha256": "4aafabfc15d87208e18f586291ffe7c6760510548e6d874dc0a721453204e614",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "odt_medium_odf_toolkit_test_text_table_v1",
+      "input_sha256": "cd5f088a506c8b073513448f32bc196e6ca1bbedc439062fa1e26df7f8947218",
+      "median_wall_us": 10769,
+      "output_sha256": "8f0ac926f68347d3813ea569f38cfa5b616b8a5e3b1924fa2f9e7c1eac9f21ae",
+      "peak_rss_kb": 5872,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "odt_medium_odf_toolkit_test_text_table_v1",
+      "input_sha256": "cd5f088a506c8b073513448f32bc196e6ca1bbedc439062fa1e26df7f8947218",
+      "median_wall_us": 3154,
+      "output_sha256": "80a53c9cbc29e8ec16f753f7ebe47432b6ae00e9665425aaf11642825f8c968d",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "rst_huge_synthetic_primer_v1",
+      "input_sha256": "4746b1470de6fc71c8822f4f82b2f42cfad5c6756eabe4428b4accd11e8006c5",
+      "median_wall_us": 452354,
+      "output_sha256": "d6fc25e4050007d19803a4bab5b2b24333fbfe269f2a5c02ce7a503dd587f2f7",
+      "peak_rss_kb": 187024,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "rst_huge_synthetic_primer_v1",
+      "input_sha256": "4746b1470de6fc71c8822f4f82b2f42cfad5c6756eabe4428b4accd11e8006c5",
+      "median_wall_us": 401598,
+      "output_sha256": "b8b17177574b6247a3c779bdf3577e69cc92f9e33369f86618a63a56b3b8a1f6",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "rst_large_synthetic_primer_v1",
+      "input_sha256": "45fd2fe7d226949d840f3a2a64a081867861ffe89b8e9f42b1b5c38a2849586b",
+      "median_wall_us": 78439,
+      "output_sha256": "ff97633f19c3ca0b7394b2714a147b7ee715584298e0271665c8ac62ffaa9088",
+      "peak_rss_kb": 35552,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "rst_large_synthetic_primer_v1",
+      "input_sha256": "45fd2fe7d226949d840f3a2a64a081867861ffe89b8e9f42b1b5c38a2849586b",
+      "median_wall_us": 70105,
+      "output_sha256": "a5d0850413d818a8822cef27519e3b711d28bcbb7f2cf88e334214337f26d208",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "rst_medium_docutils_quickstart_v1",
+      "input_sha256": "31c291293ddf15513e9709faa36da0fb42904a4ec513e7e7d4226d027dad07b9",
+      "median_wall_us": 30661,
+      "output_sha256": "57bc04f8c5e09db93fab435f6b078fae88be61800befec7c4fe41e93fd4418df",
+      "peak_rss_kb": 5184,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "rst_medium_docutils_quickstart_v1",
+      "input_sha256": "31c291293ddf15513e9709faa36da0fb42904a4ec513e7e7d4226d027dad07b9",
+      "median_wall_us": 1061,
+      "output_sha256": "06b3c7ad03368e4b5eabd3f18c44457113bc2a46e335ac9c3fc8c9fbf93ddabb",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "srt_huge_synthetic_repeated_cues_v1",
+      "input_sha256": "8cec6934499cef2e62f2cbdbf821eb6a88ef31821aad4f54c6dbf342c0e458d5",
+      "median_wall_us": 631590,
+      "output_sha256": "05fa79bb7436ade47831139662c1cafc31f106ebd9896618d392f9a4879d10c6",
+      "peak_rss_kb": 213264,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "srt_huge_synthetic_repeated_cues_v1",
+      "input_sha256": "8cec6934499cef2e62f2cbdbf821eb6a88ef31821aad4f54c6dbf342c0e458d5",
+      "median_wall_us": 556690,
+      "output_sha256": "563c2e07b3a2e8bd5580242d2860e28f55dd67f0cebdf6ebe75764a26c847d4c",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "srt_large_synthetic_repeated_cues_v1",
+      "input_sha256": "51ed4d54a86a7687215f17184b98b473cb323b649b2e9e3269070ba1d4013694",
+      "median_wall_us": 94120,
+      "output_sha256": "d05f7277502c9f6f7122cb1c78aa12a3c17d01bedb9b044cf147d80d152840f0",
+      "peak_rss_kb": 40304,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "srt_large_synthetic_repeated_cues_v1",
+      "input_sha256": "51ed4d54a86a7687215f17184b98b473cb323b649b2e9e3269070ba1d4013694",
+      "median_wall_us": 102951,
+      "output_sha256": "75f700e95e5685198f7b9001fbe7ad11d977538f221c49c5b4fdf0a19788b08c",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "srt_medium_synthetic_repeated_cues_v1",
+      "input_sha256": "008ecd25c5ac691af44a482f20d04a9787021d8717524990551c6210b56ef6c7",
+      "median_wall_us": 31786,
+      "output_sha256": "fb39c48c128aca843c14d39a71dd0f2f8a143c61f5342ae0c956886bc8d4705e",
+      "peak_rss_kb": 13360,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "srt_medium_synthetic_repeated_cues_v1",
+      "input_sha256": "008ecd25c5ac691af44a482f20d04a9787021d8717524990551c6210b56ef6c7",
+      "median_wall_us": 13503,
+      "output_sha256": "65745625c701b89a1bfcd04913f4ee68ae1b60b23987e65c33ba57b973985032",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "tex_huge_synthetic_sections_v1",
+      "input_sha256": "ead10e960614050bc4639634d26b998ba63c10b3f56e8c24c69ad280b63577cc",
+      "median_wall_us": 594960,
+      "output_sha256": "396c392aed37090108fdc836ef0a3a8fcf52d568fe5e2ec42a92ce90bf8355d8",
+      "peak_rss_kb": 195280,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "tex_huge_synthetic_sections_v1",
+      "input_sha256": "ead10e960614050bc4639634d26b998ba63c10b3f56e8c24c69ad280b63577cc",
+      "median_wall_us": 490478,
+      "output_sha256": "198ea85b15aec2815c17bac25b40b9416a269885f4d1b0be12c25c0604c27c1f",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "tex_large_synthetic_sections_v1",
+      "input_sha256": "6a8a3b82db1f5729ed7be44f80aca02e48b1b8c1aa22e07d34e21ece7c690554",
+      "median_wall_us": 97347,
+      "output_sha256": "ee07d8b20bdc878cee464f37b9a8650dde69d54bae1e1b8076ba2d773d6aa6c6",
+      "peak_rss_kb": 34672,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "tex_large_synthetic_sections_v1",
+      "input_sha256": "6a8a3b82db1f5729ed7be44f80aca02e48b1b8c1aa22e07d34e21ece7c690554",
+      "median_wall_us": 92089,
+      "output_sha256": "5192d231f65aac1e8f1229fcbe3ca48d30c7ea5f4f91cbd12211ac8ffc58d43e",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "tex_medium_latex2e_sample2e_v1",
+      "input_sha256": "f135855f870c31f1101001bdb75b11e94a23c2605f7ab5dffa1299d53b1977cc",
+      "median_wall_us": 27097,
+      "output_sha256": "b99aa738bcbb7100c6736e96d3c257be9ac17d3c031d59bb6c036239346244c0",
+      "peak_rss_kb": 5040,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "tex_medium_latex2e_sample2e_v1",
+      "input_sha256": "f135855f870c31f1101001bdb75b11e94a23c2605f7ab5dffa1299d53b1977cc",
+      "median_wall_us": 1201,
+      "output_sha256": "ba5955f8b16da30e018130a05b6d630c2220726c3f1a0256e5871a8b9eb22722",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "toml_huge_synthetic_bench_config_v1",
+      "input_sha256": "3c7ca6b227a7cfe93a16800e6ea187363f11e2d86862c669c6ac9a075941f308",
+      "median_wall_us": 354466,
+      "output_sha256": "13ecb38a9c3352179dd674f4aacee8e563d85ffa86b9bfdc1688b10935bb3035",
+      "peak_rss_kb": 88272,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "toml_huge_synthetic_bench_config_v1",
+      "input_sha256": "3c7ca6b227a7cfe93a16800e6ea187363f11e2d86862c669c6ac9a075941f308",
+      "median_wall_us": 250753,
+      "output_sha256": "2d2a0b8e58b7bf7246b2e8cf74df99adb95e3cafb80b2b3e90dceb7027cf497e",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "toml_large_synthetic_bench_config_v1",
+      "input_sha256": "5332081e293833de3d542b4f53ee00296420d5f6465c8bdf32b946704a8a1f94",
+      "median_wall_us": 335329,
+      "output_sha256": "d3edbe31df1b5634a02e3eb3eb4d99245146a7149743f674f5dff8a24ccffc21",
+      "peak_rss_kb": 65040,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "toml_large_synthetic_bench_config_v1",
+      "input_sha256": "5332081e293833de3d542b4f53ee00296420d5f6465c8bdf32b946704a8a1f94",
+      "median_wall_us": 344242,
+      "output_sha256": "09dbe4db1cda3a9d23be4093a456b3e8c5f6a5bee996dc8e0e3198d750495c45",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "toml_medium_pydantic_pyproject_v1",
+      "input_sha256": "8375abce73bfeab0ffd54df6934079380acab1fe0aac515b211c8f307cb53782",
+      "median_wall_us": 10680,
+      "output_sha256": "5df9186cb1edc7679b4a9bb8b883df4d1a158ea490d9cc6d92dedebd33b246c2",
+      "peak_rss_kb": 5104,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "toml_medium_pydantic_pyproject_v1",
+      "input_sha256": "8375abce73bfeab0ffd54df6934079380acab1fe0aac515b211c8f307cb53782",
+      "median_wall_us": 3395,
+      "output_sha256": "730abb671791cf243b149fa09351375ce6016e9afdb60d8a98b4e4108bce4840",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "tsv_huge_synthetic_rows_v1",
+      "input_sha256": "dc96d3e41a23191ae03e7b058b6cd2d588ac67d16a6473539569095041833b07",
+      "median_wall_us": 473853,
+      "output_sha256": "2ba83dfb5cc29289a0b0faacd64d36596bcb25caa99927fa1dabc692fdc208d5",
+      "peak_rss_kb": 213152,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "tsv_huge_synthetic_rows_v1",
+      "input_sha256": "dc96d3e41a23191ae03e7b058b6cd2d588ac67d16a6473539569095041833b07",
+      "median_wall_us": 429725,
+      "output_sha256": "d6c0f22f5413b760d6aee3d6a8e067e310ae747579ffeda3a956622aa929b9dc",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "tsv_large_synthetic_rows_v1",
+      "input_sha256": "8bdd51407dfeccbfd129a0abf5296c564faa25e0e26a566bc9498b33ceca5fcb",
+      "median_wall_us": 83739,
+      "output_sha256": "2ba83dfb5cc29289a0b0faacd64d36596bcb25caa99927fa1dabc692fdc208d5",
+      "peak_rss_kb": 52208,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "tsv_large_synthetic_rows_v1",
+      "input_sha256": "8bdd51407dfeccbfd129a0abf5296c564faa25e0e26a566bc9498b33ceca5fcb",
+      "median_wall_us": 77016,
+      "output_sha256": "d6c0f22f5413b760d6aee3d6a8e067e310ae747579ffeda3a956622aa929b9dc",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "tsv_medium_synthetic_rows_v1",
+      "input_sha256": "fd0eb8adba775dc19f11349d660f128cec452431387c675272062f754a2ec22f",
+      "median_wall_us": 32643,
+      "output_sha256": "2ba83dfb5cc29289a0b0faacd64d36596bcb25caa99927fa1dabc692fdc208d5",
+      "peak_rss_kb": 15072,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "tsv_medium_synthetic_rows_v1",
+      "input_sha256": "fd0eb8adba775dc19f11349d660f128cec452431387c675272062f754a2ec22f",
+      "median_wall_us": 14709,
+      "output_sha256": "d6c0f22f5413b760d6aee3d6a8e067e310ae747579ffeda3a956622aa929b9dc",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "vtt_huge_synthetic_repeated_cues_v1",
+      "input_sha256": "eb219c536c2f54afcae2512be09b89f635dd82188200612e531d3bdbe72808b7",
+      "median_wall_us": 492601,
+      "output_sha256": "5f58a9b0d6894ef8c8c8e68c7829b7ae6974bdacde01a122a4b63d5a769ea436",
+      "peak_rss_kb": 181088,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "vtt_huge_synthetic_repeated_cues_v1",
+      "input_sha256": "eb219c536c2f54afcae2512be09b89f635dd82188200612e531d3bdbe72808b7",
+      "median_wall_us": 473015,
+      "output_sha256": "bc2dc7f563e55890e7a0e400b9c6eb4831e2a27aa307cea49ec44187639d126a",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "vtt_large_synthetic_repeated_cues_v1",
+      "input_sha256": "0bffd7abbc77f818055a14fb14e2d30595272f1bc06ff2d723af8a60e628ead8",
+      "median_wall_us": 83814,
+      "output_sha256": "528059d1fec5304b30a24c68150b0746ca660230361ba678e84352093db66895",
+      "peak_rss_kb": 42944,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "vtt_large_synthetic_repeated_cues_v1",
+      "input_sha256": "0bffd7abbc77f818055a14fb14e2d30595272f1bc06ff2d723af8a60e628ead8",
+      "median_wall_us": 69730,
+      "output_sha256": "da2c9c9681bdc20e460a4673e78b9876922c791c231ca44a13604d82810813d9",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "vtt_medium_synthetic_repeated_cues_v1",
+      "input_sha256": "f22ddab1a5bf7c7daafe17d3d399f4a235f65ab6fc44d6a84719036ef04e26b7",
+      "median_wall_us": 34878,
+      "output_sha256": "26017711d8fcc8d96d26f4e4d31c8d748944881b47ad0e8e3966b2a122c89f10",
+      "peak_rss_kb": 13536,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "vtt_medium_synthetic_repeated_cues_v1",
+      "input_sha256": "f22ddab1a5bf7c7daafe17d3d399f4a235f65ab6fc44d6a84719036ef04e26b7",
+      "median_wall_us": 13266,
+      "output_sha256": "4cf37bed617da6b7dee29823b4d0ae000174326b9d4d17acf1179e6ab3d74c6f",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "xml_huge_synthetic_entries_v1",
+      "input_sha256": "2144c5fdb7eb36b756cf5beb5ca2cf7dda0ab19dd097453a44d64208a655faa4",
+      "median_wall_us": 344111,
+      "output_sha256": "365279163a8882b27babee0f7974fb5bd300f7738eac9438bd02df712d2f98b7",
+      "peak_rss_kb": 222992,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "xml_huge_synthetic_entries_v1",
+      "input_sha256": "2144c5fdb7eb36b756cf5beb5ca2cf7dda0ab19dd097453a44d64208a655faa4",
+      "median_wall_us": 256826,
+      "output_sha256": "dcda93a45b5ef461b7df5058b6926448f0e57d7f09921e0417d35d282d95e501",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "xml_large_worldbank_population_v1",
+      "input_sha256": "0d6b41f1ce4723e21dc8bc1fe3e054d4ce7bfd563d0cb96416824f5460e9f8a8",
+      "median_wall_us": 890200,
+      "output_sha256": "18fc332fda54a6dd7b06050757bcfbc290ce3395dc7fcce0b889a6bc82b31aa3",
+      "peak_rss_kb": 240272,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "xml_large_worldbank_population_v1",
+      "input_sha256": "0d6b41f1ce4723e21dc8bc1fe3e054d4ce7bfd563d0cb96416824f5460e9f8a8",
+      "median_wall_us": 673544,
+      "output_sha256": "b14d039c2609cc0cbc2a30afed49e209b64dee6cb2e871db777cc1645562db6e",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "xml_medium_synthetic_entries_v1",
+      "input_sha256": "2e88409407493451ba8d6e1243ed50c0e1930ec506df35e59a967a01250ee2de",
+      "median_wall_us": 30067,
+      "output_sha256": "eab997693446fabff22dfb72dec618c3fde4f9dc82b1e9430cdfdc967d85705c",
+      "peak_rss_kb": 11856,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "xml_medium_synthetic_entries_v1",
+      "input_sha256": "2e88409407493451ba8d6e1243ed50c0e1930ec506df35e59a967a01250ee2de",
+      "median_wall_us": 9135,
+      "output_sha256": "309f31cf6933948d5fe5c2d3eee5537ad4c6b16bfa3e38a6651c0b2cc497529b",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "yaml_huge_synthetic_catalog_v1",
+      "input_sha256": "df9bf30b08d636205c3a796c45b0bbf2b9d9e2796f91dc269deb0c788bcf8505",
+      "median_wall_us": 330835,
+      "output_sha256": "084c99eaa84e5310e02e845ce49ed6cae4f1cac8fa64e46b3448a330c3811084",
+      "peak_rss_kb": 151616,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "yaml_huge_synthetic_catalog_v1",
+      "input_sha256": "df9bf30b08d636205c3a796c45b0bbf2b9d9e2796f91dc269deb0c788bcf8505",
+      "median_wall_us": 237649,
+      "output_sha256": "54e49ce34763c55eb50472ee9ac6ccc578e9d64d5f1626a284a0117b03f8cdc4",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "yaml_large_synthetic_catalog_v1",
+      "input_sha256": "afab5516a61ceb0b036a509fe20400eaebbc541f74ecc905f6170e638cdc568d",
+      "median_wall_us": 114743,
+      "output_sha256": "80cca3c56be3974856dd8e746f64f948fceee9846e57acd8602843ad3cf10244",
+      "peak_rss_kb": 32112,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "yaml_large_synthetic_catalog_v1",
+      "input_sha256": "afab5516a61ceb0b036a509fe20400eaebbc541f74ecc905f6170e638cdc568d",
+      "median_wall_us": 112437,
+      "output_sha256": "2c056ff383c85cd85de4b9e37879732a0269bd181c0787967e893b1a4d712fae",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    },
+    {
+      "bench_id": "yaml_medium_synthetic_catalog_v1",
+      "input_sha256": "76ef431794b9c601d2e691d0932d883080c4bf88ced7879d032cbff2e3ff9c78",
+      "median_wall_us": 63703,
+      "output_sha256": "04689d4bbade59424bc39d86fafeaff3d8647f9943d4a0efa8a496852320f443",
+      "peak_rss_kb": 14624,
+      "tool": "moonbit-cli"
+    },
+    {
+      "bench_id": "yaml_medium_synthetic_catalog_v1",
+      "input_sha256": "76ef431794b9c601d2e691d0932d883080c4bf88ced7879d032cbff2e3ff9c78",
+      "median_wall_us": 49586,
+      "output_sha256": "63031d19cf90278f693f31640a6c30dc9b191fe8addd61f8011b5673616f94a3",
+      "peak_rss_kb": null,
+      "tool": "moonbit-engine"
+    }
+  ],
+  "fingerprints": {
+    "arch": "arm64",
+    "moonbit": "moon 0.1.20260703 (6fbf8c3 2026-07-03)",
+    "os": "Darwin",
+    "python": "3.11.9",
+    "runtime": "239beecc212f2a10cff14fd3619a40d4bfd7cb6975f821b493b4f120cc53e49a"
+  },
+  "main_sha": "7c1dfc53e14dfc1e078808b398d4767a346ae1d1",
+  "platform_key": "macos-arm64",
+  "quality_sha": "34ef2daa71f2f875c3b324cd124f7d6e29add0c1",
+  "review_status": "approved",
+  "runner_class": "github-macos-15-arm64",
+  "schema_version": 1
+}
