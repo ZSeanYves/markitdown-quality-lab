@@ -1,0 +1,27 @@
+{
+  "source_id": "odf_toolkit_tests",
+  "retrieval_url": "https://github.com/tdf/odftoolkit/tree/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/odfdom/src/test/resources/test-input",
+  "final_url": "https://github.com/tdf/odftoolkit/tree/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/odfdom/src/test/resources/test-input",
+  "retrieved_at": "2026-07-16T00:00:00Z",
+  "source_revision": "cfd3a9fbbda351fad38aad5e112e3598d08e23f0",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/tdf/odftoolkit/blob/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/LICENSE",
+  "license_text_sha256": "8602ea6d698b612adba74accae59ec2a4b88820e933c38d6cbbce6f46a74e680",
+  "payload_sha256": "4dc061ee0d08abfb84116cb3ddbe19b48127352818890e311d81de3d22ca354c",
+  "payload_bytes": 12769,
+  "redistribution_basis": "Apache-2.0 license retained with local fixtures",
+  "privacy_status": "public official test fixtures; no personal or sensitive data",
+  "review_status": "approved",
+  "reviewer": "local quality review",
+  "reviewed_at": "2026-07-16T00:00:00Z",
+  "payloads": [
+    {"path": "XPathTest-foreignPrefix.odp", "payload_sha256": "4dc061ee0d08abfb84116cb3ddbe19b48127352818890e311d81de3d22ca354c", "payload_bytes": 12769},
+    {"path": "XPathTest-foreignPrefix2.odp", "payload_sha256": "2bf65785d57dacb5ea7104c23e097ae371aabd318d31868e66e9b0a398c3199c", "payload_bytes": 57109},
+    {"path": "blank.odp", "payload_sha256": "6541a7c3fb37cf96689f5ec56bff3485dce6a03d52af1bc17c8267e631efac97", "payload_bytes": 9292},
+    {"path": "Presentation1_INVALID.odp", "payload_sha256": "d7b150ef74868f93e0061c62cd8c3b61eb3d1f730f408417e055f556dffdb55e", "payload_bytes": 537154},
+    {"path": "Presentation2.odp", "payload_sha256": "b95311fdc6d31aa46772f9688df9613834f9da7585748fee7e1ce878022b7338", "payload_bytes": 489058},
+    {"path": "Presentation4.odp", "payload_sha256": "c563fcc9add41f23f3be1d40c75d878c71058d9c0a7a94dada5b97b647105e59", "payload_bytes": 414851},
+    {"path": "Presentation5.odp", "payload_sha256": "a124141a1310025a0b63f8dc2c4574b8a65236b4cb90ca5ee331d47500974775", "payload_bytes": 67644},
+    {"path": "Presentation7.odp", "payload_sha256": "0e982ea4d27ad1964ded93043448fcd23604961a977953025d13f474210329af", "payload_bytes": 62877}
+  ]
+}

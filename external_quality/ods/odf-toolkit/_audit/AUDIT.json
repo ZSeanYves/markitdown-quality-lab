@@ -1,0 +1,24 @@
+{
+  "source_id": "odf_toolkit_tests",
+  "retrieval_url": "https://github.com/tdf/odftoolkit/tree/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/odfdom/src/test/resources/test-input",
+  "final_url": "https://github.com/tdf/odftoolkit/tree/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/odfdom/src/test/resources/test-input",
+  "retrieved_at": "2026-07-16T00:00:00Z",
+  "source_revision": "cfd3a9fbbda351fad38aad5e112e3598d08e23f0",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/tdf/odftoolkit/blob/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/LICENSE",
+  "license_text_sha256": "8602ea6d698b612adba74accae59ec2a4b88820e933c38d6cbbce6f46a74e680",
+  "payload_sha256": "14ffd4e64140c2c8918a567a94393442bd6b9b521e5e5445a234e6cb77ca10fb",
+  "payload_bytes": 18833,
+  "redistribution_basis": "Apache-2.0 license retained with local fixtures",
+  "privacy_status": "public official test fixtures; no personal or sensitive data",
+  "review_status": "approved",
+  "reviewer": "local quality review",
+  "reviewed_at": "2026-07-16T00:00:00Z",
+  "payloads": [
+    {"path": "30694.ods", "payload_sha256": "14ffd4e64140c2c8918a567a94393442bd6b9b521e5e5445a234e6cb77ca10fb", "payload_bytes": 18833},
+    {"path": "31383 - viewsettings_import_xml_12.ods", "payload_sha256": "bab62cca7f9a1bfc303fae57cc5085046a78888d62583ca3ebb707b9069b8801", "payload_bytes": 11892},
+    {"path": "34140.ods", "payload_sha256": "0e177df8c8fb70f9024b56de884d940a61ecc24e745c608f46fe55e02838dfbc", "payload_bytes": 11174},
+    {"path": "34323.ods", "payload_sha256": "9df93fc54c3974a774d28483d4b3b17568a218edc95e0a8a2898772b0baf1926", "payload_bytes": 13337},
+    {"path": "34619.ods", "payload_sha256": "3b91621e2c056affa352773693f967ae1b60922910a47ed837d8b02f7680746c", "payload_bytes": 167620}
+  ]
+}
