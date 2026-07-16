@@ -1,0 +1,17 @@
+{
+  "source_id": "apache_james_mime4j_tests",
+  "retrieval_url": "https://github.com/apache/james-mime4j/blob/master/core/src/test/resources/testmsgs/basic-plain.msg",
+  "final_url": "https://raw.githubusercontent.com/apache/james-mime4j/master/core/src/test/resources/testmsgs/basic-plain.msg",
+  "retrieved_at": "2026-07-16T00:00:00Z",
+  "source_revision": "master (local capture; verify before refresh)",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/apache/james-mime4j/blob/master/LICENSE",
+  "license_text_sha256": "f76f44f15a87ca8593787f37d85381cf19091f5f99bef389496c925b1f2fa726",
+  "payload_sha256": "0a70fa67b87c1ecd228d6217504b8c9dc95360ebad5cf74f27bc00e37fc7a43d",
+  "payload_bytes": 280,
+  "redistribution_basis": "Apache-2.0 license retained with the local fixture",
+  "privacy_status": "public upstream test fixture; no personal or sensitive data",
+  "review_status": "approved",
+  "reviewer": "local quality review",
+  "reviewed_at": "2026-07-16T00:00:00Z"
+}
