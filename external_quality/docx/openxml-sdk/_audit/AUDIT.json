@@ -1,0 +1,46 @@
+{
+  "source_id": "openxml_sdk_tests",
+  "retrieval_url": "https://github.com/dotnet/Open-XML-SDK/blob/main/test/DocumentFormat.OpenXml.Tests.Assets/assets/TestFiles/Hyperlink.docx",
+  "final_url": "https://github.com/dotnet/Open-XML-SDK/blob/main/test/DocumentFormat.OpenXml.Tests.Assets/assets/TestFiles/Hyperlink.docx",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MIT",
+  "license_url": "https://raw.githubusercontent.com/dotnet/Open-XML-SDK/main/LICENSE",
+  "license_text_sha256": "ed03ba352313a4ba7019d5bed4bd3218ac17f3e44442a3bb1aaff54dcca9a2bc",
+  "payload_sha256": "cc1057ad19beb45c4c0cdf9caba453519d2ab8b30cf375ae2b46ee27bb3d4280",
+  "payload_bytes": 13049,
+  "redistribution_basis": "approved legacy manifest; MIT evidence retained at external_quality/docx/openxml-sdk/LICENSE-openxml-sdk.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/docx/openxml-sdk/LICENSE-openxml-sdk.txt",
+  "payloads": [
+    {
+      "path": "Comments.docx",
+      "payload_sha256": "cc1057ad19beb45c4c0cdf9caba453519d2ab8b30cf375ae2b46ee27bb3d4280",
+      "payload_bytes": 13049
+    },
+    {
+      "path": "Complex01.docx",
+      "payload_sha256": "d75bb3978e5cbbbd251c2cd1f4c4f123e7c3253292757f203418b8bfdf79ee2c",
+      "payload_bytes": 847839
+    },
+    {
+      "path": "Hyperlink.docx",
+      "payload_sha256": "ebd1f0ae1a9d6ef35c4b301209b135a0bd2f8dfde9c44270bbbea1cd19b3fd66",
+      "payload_bytes": 11478
+    },
+    {
+      "path": "Notes.docx",
+      "payload_sha256": "f49bd9dce04eba878123bcef2cf15c282e557f1cbf3942936852c8543f9754b4",
+      "payload_bytes": 162577
+    },
+    {
+      "path": "svg.docx",
+      "payload_sha256": "1ce06ef88f89c5e14d1d22cd8e4b3a5f70951e7bd53e19053d4942873333d21d",
+      "payload_bytes": 74104
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

@@ -1,0 +1,61 @@
+{
+  "source_id": "apache_poi_tests",
+  "retrieval_url": "https://github.com/apache/poi/blob/trunk/test-data/document/bookmarks.docx",
+  "final_url": "https://github.com/apache/poi/blob/trunk/test-data/document/bookmarks.docx",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://raw.githubusercontent.com/apache/poi/trunk/LICENSE",
+  "license_text_sha256": "6e7c918e5a49f677c1b85a9eb2d035cd85c217fc42af6b4a336964a434001a9c",
+  "payload_sha256": "c1eecbca7de9f99e21c677e1d5b045eaa1d5a442eff4c82f0cbe9af93726a070",
+  "payload_bytes": 103677,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_quality/docx/apache-poi/LICENSE-apache-poi.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/docx/apache-poi/LICENSE-apache-poi.txt",
+  "payloads": [
+    {
+      "path": "VariousPictures.docx",
+      "payload_sha256": "c1eecbca7de9f99e21c677e1d5b045eaa1d5a442eff4c82f0cbe9af93726a070",
+      "payload_bytes": 103677
+    },
+    {
+      "path": "bookmarks.docx",
+      "payload_sha256": "9b93eef9e2ce1ad0e28dc65beab73a896d5d1631a0b7fc73ec6ac279cf36b218",
+      "payload_bytes": 10405
+    },
+    {
+      "path": "comment.docx",
+      "payload_sha256": "23bbfe33e1acf7073253bd87552cbee5be0a07cbd08a479a4bf139f09b1dd6dc",
+      "payload_bytes": 4926
+    },
+    {
+      "path": "deep-table-cell.docx",
+      "payload_sha256": "31c5bfe1f68c98699cb356891de2e02fe223f633706d666c430ca79fd2cdf6bb",
+      "payload_bytes": 17198
+    },
+    {
+      "path": "endnotes.docx",
+      "payload_sha256": "6e2e1b2dabb0ae6b9b26ddd613dca446ba0710ecc8b4008722abc4ed592934e3",
+      "payload_bytes": 13553
+    },
+    {
+      "path": "footnotes.docx",
+      "payload_sha256": "9070094b27ff5201477f4de4b2c027730c66cb889106a1609c5adeed207a59c1",
+      "payload_bytes": 12823
+    },
+    {
+      "path": "table_footnotes.docx",
+      "payload_sha256": "69666500a7dd00600da64cc7676f8939c84df8804967ec2fc75567fad41f21a9",
+      "payload_bytes": 13177
+    },
+    {
+      "path": "testComment.docx",
+      "payload_sha256": "06b63b13f0b78a7179151af52c2282557c1ed204899feee9fcef4ca575344f97",
+      "payload_bytes": 65298
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

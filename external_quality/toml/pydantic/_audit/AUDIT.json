@@ -1,0 +1,26 @@
+{
+  "source_id": "pydantic_repo_toml",
+  "retrieval_url": "https://raw.githubusercontent.com/pydantic/pydantic/main/pyproject.toml",
+  "final_url": "https://raw.githubusercontent.com/pydantic/pydantic/main/pyproject.toml",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MIT",
+  "license_url": "https://raw.githubusercontent.com/pydantic/pydantic/main/LICENSE",
+  "license_text_sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+  "payload_sha256": "8375abce73bfeab0ffd54df6934079380acab1fe0aac515b211c8f307cb53782",
+  "payload_bytes": 9085,
+  "redistribution_basis": "approved legacy manifest; MIT evidence retained at external_quality/toml/pydantic/LICENSE-pydantic.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/toml/pydantic/LICENSE-pydantic.txt",
+  "payloads": [
+    {
+      "path": "pyproject.toml",
+      "payload_sha256": "8375abce73bfeab0ffd54df6934079380acab1fe0aac515b211c8f307cb53782",
+      "payload_bytes": 9085
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

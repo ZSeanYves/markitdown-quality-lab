@@ -1,0 +1,271 @@
+{
+  "source_id": "pdfjs_tests",
+  "retrieval_url": "https://github.com/mozilla/pdf.js",
+  "final_url": "https://github.com/mozilla/pdf.js",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/mozilla/pdf.js/blob/HEAD/LICENSE",
+  "license_text_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+  "payload_sha256": "d50ad3b93685e9d6061f5cc9957c49ca232a0dd0771aad71e4a615f87f2674be",
+  "payload_bytes": 1039,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_quality/pdf/pdfjs/LICENSE-pdfjs.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/pdf/pdfjs/LICENSE-pdfjs.txt",
+  "payloads": [
+    {
+      "path": "90ms_rksj_h_sample.pdf",
+      "payload_sha256": "d50ad3b93685e9d6061f5cc9957c49ca232a0dd0771aad71e4a615f87f2674be",
+      "payload_bytes": 1039
+    },
+    {
+      "path": "ArabicCIDTrueType.pdf",
+      "payload_sha256": "1cad1de912ba29f89a6d8b08bc5b0f84382874ffedab2c8f9e05ef608c265bb1",
+      "payload_bytes": 39370
+    },
+    {
+      "path": "Embedded_font.pdf",
+      "payload_sha256": "4b7588e070cd37c7cfa2ce0a493ba9ec6d57fb36a2ca3c6ab50c74a7818a2f9a",
+      "payload_bytes": 3323
+    },
+    {
+      "path": "IdentityToUnicodeMap_charCodeOf.pdf",
+      "payload_sha256": "81243ff4cca5f7898688008224247d88534cd03e76ac3cbbdc38f925cfbee18f",
+      "payload_bytes": 651
+    },
+    {
+      "path": "SimFang-variant.pdf",
+      "payload_sha256": "e6c6e3fb472f06a3d812bef23afc026e90b33497408122b61d577e0f7df49418",
+      "payload_bytes": 4108
+    },
+    {
+      "path": "XiaoBiaoSong.pdf",
+      "payload_sha256": "1ea20b84d94b90fa1ccb08bdd2e79e710071e0593fde6d547ab1cd4a3ebc0f88",
+      "payload_bytes": 5652
+    },
+    {
+      "path": "annotation-button-widget.pdf",
+      "payload_sha256": "f7b1c9c7b2ecb909f6b168cc1b137230076533f977a205472b212b7f0d3a78d7",
+      "payload_bytes": 23785
+    },
+    {
+      "path": "annotation-choice-widget.pdf",
+      "payload_sha256": "2fcab2aed82afe9775359c1d166fb7aae77e99d25fe03be177e233d02d572538",
+      "payload_bytes": 91556
+    },
+    {
+      "path": "annotation-fileattachment.pdf",
+      "payload_sha256": "b2f3751cd63e2402d95673f763e52fb105e6ce8e0b41406ca6d9965f5c894d43",
+      "payload_bytes": 93322
+    },
+    {
+      "path": "annotation-freetext.pdf",
+      "payload_sha256": "318ed4bead93fa6ff023571b17ddca41e82fe2347b497ea24903a11e1892fb71",
+      "payload_bytes": 86024
+    },
+    {
+      "path": "annotation-highlight-without-appearance.pdf",
+      "payload_sha256": "ea323f17899de03e7499d0e8531c49e873512a26b40058f357ca399312bf65d6",
+      "payload_bytes": 16302
+    },
+    {
+      "path": "annotation-line-without-appearance.pdf",
+      "payload_sha256": "9408cc19a56ef122ea956799a2e5a63b2b3cc70bbd307ed76d2ba89fd9c54fc3",
+      "payload_bytes": 14170
+    },
+    {
+      "path": "annotation-line.pdf",
+      "payload_sha256": "cea9ed8cf5726fa643da0c083bc8db8df790ab5e7ee9a2b62224aab73d9fa742",
+      "payload_bytes": 84943
+    },
+    {
+      "path": "annotation-link-text-popup.pdf",
+      "payload_sha256": "06917202feda6b6bb8b57b048655f946f749bdff5a8bfcb35eb0116f38910312",
+      "payload_bytes": 98997
+    },
+    {
+      "path": "annotation-square-circle-without-appearance.pdf",
+      "payload_sha256": "d0a98bb14150b1bc2bc028876198098c99420ea10d30d43b4f9c5cb36bb023a7",
+      "payload_bytes": 16007
+    },
+    {
+      "path": "annotation-square-circle.pdf",
+      "payload_sha256": "88ed9ed813c3585b3098b9f4eef5107426f7829044117cd87f77bdc38a8e3f72",
+      "payload_bytes": 88740
+    },
+    {
+      "path": "annotation-squiggly-without-appearance.pdf",
+      "payload_sha256": "771698679397da9423bcb26e641c8cba173f00dc54f60656898143403e2bfbdd",
+      "payload_bytes": 15589
+    },
+    {
+      "path": "annotation-strikeout-without-appearance.pdf",
+      "payload_sha256": "9a99e1469ad4e285381016df440fada4d94b9384d051760b145fd63b794943a8",
+      "payload_bytes": 15753
+    },
+    {
+      "path": "annotation-strikeout.pdf",
+      "payload_sha256": "ca7225dbdc6f8a26814cf0d67f5c509589e2cc09ace6bdb04a375a266db5b708",
+      "payload_bytes": 91804
+    },
+    {
+      "path": "annotation-text-widget.pdf",
+      "payload_sha256": "9f091ceb368ad0406094efaa6c50d5033735ee52f383e0973dc53a7467089d7c",
+      "payload_bytes": 93171
+    },
+    {
+      "path": "annotation-text-without-popup.pdf",
+      "payload_sha256": "2e0c788c795ab08178c12d26f73bebb6e18455a885568005770e8b6b947c4ceb",
+      "payload_bytes": 24281
+    },
+    {
+      "path": "annotation-underline-without-appearance.pdf",
+      "payload_sha256": "3a88f23b262ff72e613aecbdd75c2aa76bde7a5e84eef1acac04d355397876b6",
+      "payload_bytes": 15304
+    },
+    {
+      "path": "annotation-underline.pdf",
+      "payload_sha256": "ef04b7049d5cab49c702887c423f20cfecf76d36905772209cc6781425d8f671",
+      "payload_bytes": 92151
+    },
+    {
+      "path": "annotation_hidden_noview.pdf",
+      "payload_sha256": "97fd9418a5e24d326e66734462de0db215d40a6dd0e0734e12924fa364e5b390",
+      "payload_bytes": 12114
+    },
+    {
+      "path": "annotation_hidden_print.pdf",
+      "payload_sha256": "d084450dfbb7d5c53593ed8f0a005553bd0ae797e34b3a1c8c00c7eec2fc5a9d",
+      "payload_bytes": 6539
+    },
+    {
+      "path": "arial_unicode_ab_cidfont.pdf",
+      "payload_sha256": "049a4330710d8470896061acf7ee486735e94cef2769f6cc13fec3cb13bb65aa",
+      "payload_bytes": 13110
+    },
+    {
+      "path": "arial_unicode_en_cidfont.pdf",
+      "payload_sha256": "1c4a08108d8074f543c04e9b2ea2b93a842e2b29eb05ee9d99766f430fd365ab",
+      "payload_bytes": 15779
+    },
+    {
+      "path": "bug_jpx.pdf",
+      "payload_sha256": "4010d808557a72278368c05518367735ed186cbdd04974b8506275f9ac40f999",
+      "payload_bytes": 5451
+    },
+    {
+      "path": "ccitt_EndOfBlock_false.pdf",
+      "payload_sha256": "f2289b94e7e3f05f9e37754c399d3f525edf9444fb32c3279959cf64b575fe62",
+      "payload_bytes": 3256
+    },
+    {
+      "path": "cid_cff.pdf",
+      "payload_sha256": "d894d356411217414fd9040d3d038612e1f4a1598936b2385a76458dd6d64d38",
+      "payload_bytes": 19970
+    },
+    {
+      "path": "cidfont_cmap_overflow.pdf",
+      "payload_sha256": "ecb07ca4b3c6a9fd408db07c29c7e4426fb1bd6ee9e2bbdfa4997b65be602c13",
+      "payload_bytes": 94168
+    },
+    {
+      "path": "cmykjpeg.pdf",
+      "payload_sha256": "659d6b19912f63db988b0b26b9bde0e6d8100667ef162051a4a84ea8e5b90272",
+      "payload_bytes": 374080
+    },
+    {
+      "path": "extract_link.pdf",
+      "payload_sha256": "222f26fe0a53587eba7c1dc6d99cdebc78f80c3316d5502b3e64134c20fc5741",
+      "payload_bytes": 10213
+    },
+    {
+      "path": "file_url_link.pdf",
+      "payload_sha256": "008215b7ccd2caa787789140de7321e36225b6a545442212a6650803c1b820df",
+      "payload_bytes": 856
+    },
+    {
+      "path": "highlight_popup.pdf",
+      "payload_sha256": "c7bcbbc375995dbb04277596cb87233a614a97de8dcbb63d4ae7660df4cc3d8b",
+      "payload_bytes": 12160
+    },
+    {
+      "path": "images.pdf",
+      "payload_sha256": "f7a44ca650d951cfea007440cda297dabbf2cf0c8f77a948a580cc0e99496725",
+      "payload_bytes": 1494439
+    },
+    {
+      "path": "images_1bit_grayscale.pdf",
+      "payload_sha256": "afbed07b9fe25563b2604b81cd7186c91d4356e5428a05322b8b7eae88301e24",
+      "payload_bytes": 4573
+    },
+    {
+      "path": "issue11555.pdf",
+      "payload_sha256": "41f4ecbf71f0ad13f558ce11e34e41d64a0a5347e225c8e6bdae20263f83a173",
+      "payload_bytes": 1132
+    },
+    {
+      "path": "issue2128r.pdf",
+      "payload_sha256": "4820d9475f71cdc7ee60f4f8a5c7ec7268bab9f249305a70b3cc65e5bb1b3a64",
+      "payload_bytes": 1525
+    },
+    {
+      "path": "issue6286.pdf",
+      "payload_sha256": "3499439d8b1b51fcc62c908f8cbd4b08beaf18248b81bf2d73d552ae42fef9aa",
+      "payload_bytes": 1909445
+    },
+    {
+      "path": "jbig2_file_header.pdf",
+      "payload_sha256": "5edb6045fc86ee5fa8e837685a35a57014764d1f72518e136e5e8f13fcf92c8d",
+      "payload_bytes": 774
+    },
+    {
+      "path": "jbig2_symbol_offset.pdf",
+      "payload_sha256": "305b71c67829ef0bb8bddab9fa3ee763dcecd173f5fd996740d17212888fa97d",
+      "payload_bytes": 1157
+    },
+    {
+      "path": "named_dest_collision_for_editor.pdf",
+      "payload_sha256": "c82bcb3934f24c82a80d52838ab90e2b2d0fca7b5c2973e5a482123fe1b84949",
+      "payload_bytes": 811
+    },
+    {
+      "path": "noembed-eucjp.pdf",
+      "payload_sha256": "cadd5b9a27e2de9a11a0cf29b20724cb0f63643387be5e690de35ca35922e45c",
+      "payload_bytes": 1472
+    },
+    {
+      "path": "noembed-sjis.pdf",
+      "payload_sha256": "13fd4811beaf0390d313847e23839db237d1fb65efc839f6d9f534ea52311c95",
+      "payload_bytes": 1472
+    },
+    {
+      "path": "outline_goto_action.pdf",
+      "payload_sha256": "7b653d3e95ca550509abcfd3887754d2ec0c68da330ec03a95c77bdb47479ecc",
+      "payload_bytes": 1061
+    },
+    {
+      "path": "page_with_number_and_link.pdf",
+      "payload_sha256": "f80ff0fe5fd0b0388f6496e243f44e2d5b9b3c5208dd35bae6a32dd1487dc14d",
+      "payload_bytes": 71816
+    },
+    {
+      "path": "paragraph_and_link.pdf",
+      "payload_sha256": "9cf19511a545dd8f5958a590595747c8a150beff2ef8b52e324e21483ffe2562",
+      "payload_bytes": 45232
+    },
+    {
+      "path": "smaskdim.pdf",
+      "payload_sha256": "e03b8359f8b64e1a18a795aa9376bc98d98dca89a828ec20c49a4ac2f36a3d82",
+      "payload_bytes": 29745
+    },
+    {
+      "path": "vertical.pdf",
+      "payload_sha256": "514511143db12309893fb69cdf98c76f2361c20da394f79fdff2c119ed7a4393",
+      "payload_bytes": 6905
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

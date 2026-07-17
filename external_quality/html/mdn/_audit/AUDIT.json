@@ -1,0 +1,41 @@
+{
+  "source_id": "mdn_content_pages",
+  "retrieval_url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main",
+  "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "CC-BY-SA",
+  "license_url": "https://raw.githubusercontent.com/mdn/content/main/LICENSE.md",
+  "license_text_sha256": "97a45d9a5c27c90ad7f058b20a870f11a24717f0eb4585f141948d25b74c4d89",
+  "payload_sha256": "e34e9dcbd3b6ec27cc170dbd974ef343f3726c7012378017aeac8fef9afabae0",
+  "payload_bytes": 184580,
+  "redistribution_basis": "approved legacy manifest; CC-BY-SA evidence retained at external_quality/html/mdn/LICENSE-mdn-content.md",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/html/mdn/LICENSE-mdn-content.md",
+  "payloads": [
+    {
+      "path": "mdn_article_element.html",
+      "payload_sha256": "e34e9dcbd3b6ec27cc170dbd974ef343f3726c7012378017aeac8fef9afabae0",
+      "payload_bytes": 184580
+    },
+    {
+      "path": "mdn_details_element.html",
+      "payload_sha256": "c2aeb1264809fcd23baeb1f81378af2b2262dca6eb41451ba16d12513d9e728a",
+      "payload_bytes": 193813
+    },
+    {
+      "path": "mdn_figure_element.html",
+      "payload_sha256": "b07a0856faab060a9129e4824b1ddb65b5b8ba26f31aeed2e0b949bea56ac8c6",
+      "payload_bytes": 187950
+    },
+    {
+      "path": "mdn_main_element.html",
+      "payload_sha256": "d110c6d87a653079c69ad367cd4c0f93261bb2eddaeaba6d1e4bd5d77abdd5a5",
+      "payload_bytes": 184137
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

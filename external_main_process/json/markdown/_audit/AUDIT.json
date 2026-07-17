@@ -1,0 +1,36 @@
+{
+  "source_id": "markitdown_repo_json_samples",
+  "retrieval_url": "https://github.com/ZSeanYves/markitdown/blob/main/external_main_process/json/markdown/json_array_objects_table.json",
+  "final_url": "https://github.com/ZSeanYves/markitdown/blob/main/external_main_process/json/markdown/json_array_objects_table.json",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/ZSeanYves/markitdown/blob/HEAD/LICENSE",
+  "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "payload_sha256": "877a806796e80487d570e95e4830e827a321f38752e3313f67458c507f94203a",
+  "payload_bytes": 87,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_main_process/json/markdown/LICENSE-markitdown.txt",
+  "privacy_status": "approved legacy manifest classifications: repo_tracked",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_main_process/json/markdown/LICENSE-markitdown.txt",
+  "payloads": [
+    {
+      "path": "json_array_objects_table.json",
+      "payload_sha256": "877a806796e80487d570e95e4830e827a321f38752e3313f67458c507f94203a",
+      "payload_bytes": 87
+    },
+    {
+      "path": "json_bom_utf8.json",
+      "payload_sha256": "581c15a6be3d967cc942c824b07d10be46f4ad9d17a31dd18511bac93300b209",
+      "payload_bytes": 32
+    },
+    {
+      "path": "json_string_escapes.json",
+      "payload_sha256": "a444e39d6eb11e00e184cd887c39509022e8e86f8ef3a7a726fe9e2bd01ad88a",
+      "payload_bytes": 66
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

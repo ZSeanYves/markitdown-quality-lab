@@ -1,0 +1,26 @@
+{
+  "source_id": "pandas_repo_docs",
+  "retrieval_url": "https://github.com/pandas-dev/pandas/blob/main/README.md",
+  "final_url": "https://github.com/pandas-dev/pandas/blob/main/README.md",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-3-Clause",
+  "license_url": "https://raw.githubusercontent.com/pandas-dev/pandas/main/LICENSE",
+  "license_text_sha256": "9850f6b5bdef7346503065807b878deb8058b976c5c329f4c4d23bf4796ce9ae",
+  "payload_sha256": "5c63b18d017b2200be7474166621177a311f461a9a5cf15813b865bacb4f2b9b",
+  "payload_bytes": 11348,
+  "redistribution_basis": "approved legacy manifest; BSD-3-Clause evidence retained at external_quality/markdown/pandas/LICENSE-pandas.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/markdown/pandas/LICENSE-pandas.txt",
+  "payloads": [
+    {
+      "path": "README.md",
+      "payload_sha256": "5c63b18d017b2200be7474166621177a311f461a9a5cf15813b865bacb4f2b9b",
+      "payload_bytes": 11348
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

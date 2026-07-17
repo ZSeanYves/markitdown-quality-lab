@@ -1,0 +1,56 @@
+{
+  "source_id": "toml_test_suite",
+  "retrieval_url": "https://github.com/toml-lang/toml-test/blob/master/tests/valid/key/quoted-dots.toml",
+  "final_url": "https://github.com/toml-lang/toml-test/blob/master/tests/valid/key/quoted-dots.toml",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MIT",
+  "license_url": "https://raw.githubusercontent.com/toml-lang/toml-test/master/LICENSE",
+  "license_text_sha256": "01ef58ee6449fa01a284c10808e27800d66bfea271bc29281125ff8e5642b86f",
+  "payload_sha256": "8d8ea546f954a81ca149a02147ae5f4bf075151cfcd530e62dcf05a04d843ffb",
+  "payload_bytes": 163,
+  "redistribution_basis": "approved legacy manifest; MIT evidence retained at external_quality/toml/toml-test/LICENSE-toml-test.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/toml/toml-test/LICENSE-toml-test.txt",
+  "payloads": [
+    {
+      "path": "array-many.toml",
+      "payload_sha256": "8d8ea546f954a81ca149a02147ae5f4bf075151cfcd530e62dcf05a04d843ffb",
+      "payload_bytes": 163
+    },
+    {
+      "path": "invalid_duplicate_inline_key.toml",
+      "payload_sha256": "a81a4058674a7d0a7f3bf767cc00aee041798cb4b026243c5fc066cabce41866",
+      "payload_bytes": 65
+    },
+    {
+      "path": "invalid_no_datetime_separator.toml",
+      "payload_sha256": "f43e87c2a0cb8f9ab6e8cb186d184f514c794ef09d649c7d64d18a7d80cbedb8",
+      "payload_bytes": 25
+    },
+    {
+      "path": "multiline.toml",
+      "payload_sha256": "d12fc2961c56f0bc029e8734034ddeeab78bfaa188b3f0af6d960b7f98d9adc4",
+      "payload_bytes": 596
+    },
+    {
+      "path": "quoted-dots.toml",
+      "payload_sha256": "16c76d5d35aeaca6a6a073cbdd3bdbeb0c01f1802e629b2be1c26b0993f8a7ce",
+      "payload_bytes": 135
+    },
+    {
+      "path": "raw-multiline.toml",
+      "payload_sha256": "1112d9111d734e0aba840a99f854e1cba071f1e9c5be198ba64798150e05dc18",
+      "payload_bytes": 551
+    },
+    {
+      "path": "timezone.toml",
+      "payload_sha256": "5991f055001b1719eae944c7fd078a9740cebda7e80bf1bb7464b37d6581afff",
+      "payload_bytes": 134
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

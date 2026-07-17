@@ -1,0 +1,26 @@
+{
+  "source_id": "libreoffice_core_tests",
+  "retrieval_url": "https://github.com/LibreOffice/core/blob/master/desktop/qa/data/sheet_with_image.ods",
+  "final_url": "https://github.com/LibreOffice/core/blob/master/desktop/qa/data/sheet_with_image.ods",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MPL-2.0",
+  "license_url": "https://github.com/LibreOffice/core/blob/HEAD/LICENSE",
+  "license_text_sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+  "payload_sha256": "79072e1af580df822597b102f69bbdd8be84d44714c9e7bd047e71dbcc23c2f7",
+  "payload_bytes": 10491,
+  "redistribution_basis": "approved legacy manifest; MPL-2.0 evidence retained at external_quality/ods/libreoffice/LICENSE-libreoffice-mpl.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/ods/libreoffice/LICENSE-libreoffice-mpl.txt",
+  "payloads": [
+    {
+      "path": "sheet_with_image.ods",
+      "payload_sha256": "79072e1af580df822597b102f69bbdd8be84d44714c9e7bd047e71dbcc23c2f7",
+      "payload_bytes": 10491
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

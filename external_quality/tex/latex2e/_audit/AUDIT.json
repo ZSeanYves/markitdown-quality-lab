@@ -1,0 +1,31 @@
+{
+  "source_id": "latex2e_samples",
+  "retrieval_url": "https://github.com/latex3/latex2e/blob/main/base/sample2e.tex",
+  "final_url": "https://github.com/latex3/latex2e/blob/main/base/sample2e.tex",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "LPPL-1.3c",
+  "license_url": "https://github.com/latex3/latex2e/blob/HEAD/LICENSE",
+  "license_text_sha256": "5f05fcf6ef25a6c31bccd2df7c0c46b23107bbeb2ce5cdba74efb5cc357f4dbb",
+  "payload_sha256": "f4a8a4f3ae8d98fa4250af9f24fcf2f477461cd5068756da3c55524b6976b3b7",
+  "payload_bytes": 139,
+  "redistribution_basis": "approved legacy manifest; LPPL-1.3c evidence retained at external_quality/tex/latex2e/LICENSE-latex2e.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/tex/latex2e/LICENSE-latex2e.txt",
+  "payloads": [
+    {
+      "path": "graphics-png-minimal.tex",
+      "payload_sha256": "f4a8a4f3ae8d98fa4250af9f24fcf2f477461cd5068756da3c55524b6976b3b7",
+      "payload_bytes": 139
+    },
+    {
+      "path": "sample2e.tex",
+      "payload_sha256": "f135855f870c31f1101001bdb75b11e94a23c2605f7ab5dffa1299d53b1977cc",
+      "payload_bytes": 7200
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

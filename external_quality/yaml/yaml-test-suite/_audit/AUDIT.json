@@ -1,0 +1,46 @@
+{
+  "source_id": "yaml_test_suite",
+  "retrieval_url": "https://github.com/yaml/yaml-test-suite/blob/main/src/3GZX.yaml",
+  "final_url": "https://github.com/yaml/yaml-test-suite/blob/main/src/3GZX.yaml",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MIT",
+  "license_url": "https://raw.githubusercontent.com/yaml/yaml-test-suite/main/License",
+  "license_text_sha256": "c9562189164244554a69ab3f29d2d93ed9492c165723aaaa5fffc932cdbbfc85",
+  "payload_sha256": "12ba0e323b09f62ce63afdf79ce277b37e17aee679b1b460d494ad3a9939add5",
+  "payload_bytes": 108,
+  "redistribution_basis": "approved legacy manifest; MIT evidence retained at external_quality/yaml/yaml-test-suite/LICENSE-yaml-test-suite.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/yaml/yaml-test-suite/LICENSE-yaml-test-suite.txt",
+  "payloads": [
+    {
+      "path": "alias_anchor.yaml",
+      "payload_sha256": "12ba0e323b09f62ce63afdf79ce277b37e17aee679b1b460d494ad3a9939add5",
+      "payload_bytes": 108
+    },
+    {
+      "path": "block_scalars.yaml",
+      "payload_sha256": "08c4343a8a240ee4f315120c32f816368fcdc7ea9d1b2bcaee4dfeb45c58c3bf",
+      "payload_bytes": 49
+    },
+    {
+      "path": "complex_anchor_flow.yaml",
+      "payload_sha256": "e857fd39ce2e410596f210af56a001ff1e7f2e7849def033e4fdcc3ed07296fd",
+      "payload_bytes": 43
+    },
+    {
+      "path": "directive_document.yaml",
+      "payload_sha256": "0193884b3ff8ebd9a60d9e472b280ef357f80b375d68513d2be87a6a0215edde",
+      "payload_bytes": 76
+    },
+    {
+      "path": "tag_directive_stream.yaml",
+      "payload_sha256": "7a4603f8fb560de01716fb155f242e4b34e4adca3f16644d08a14f1a02947675",
+      "payload_bytes": 86
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

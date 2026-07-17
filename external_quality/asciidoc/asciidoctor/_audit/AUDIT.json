@@ -1,0 +1,36 @@
+{
+  "source_id": "asciidoctor_docs",
+  "retrieval_url": "https://github.com/asciidoctor/asciidoctor/blob/main/test/fixtures/basic.adoc",
+  "final_url": "https://github.com/asciidoctor/asciidoctor/blob/main/test/fixtures/basic.adoc",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MIT",
+  "license_url": "https://github.com/asciidoctor/asciidoctor/blob/HEAD/LICENSE",
+  "license_text_sha256": "41d820abf1b9d31b21f466ee973b8b35045f5f39a1e66a3dc67de36c3db2876d",
+  "payload_sha256": "18c0db23bc4528a768824e5b84bc3a2ad4c62c897cc764c18cac0c4e119eac08",
+  "payload_bytes": 20494,
+  "redistribution_basis": "approved legacy manifest; MIT evidence retained at external_quality/asciidoc/asciidoctor/LICENSE-asciidoctor.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/asciidoc/asciidoctor/LICENSE-asciidoctor.txt",
+  "payloads": [
+    {
+      "path": "README.adoc",
+      "payload_sha256": "18c0db23bc4528a768824e5b84bc3a2ad4c62c897cc764c18cac0c4e119eac08",
+      "payload_bytes": 20494
+    },
+    {
+      "path": "basic.adoc",
+      "payload_sha256": "3d5064dd292dc59babdd4bc466ea6490e0ea6889d0e717081016b3b08fa076af",
+      "payload_bytes": 86
+    },
+    {
+      "path": "manage-images-wolpertinger.adoc",
+      "payload_sha256": "600013510cd174133aca28fee4ffd358a2e3afd809bbdaaf38d27df3dced7dbe",
+      "payload_bytes": 192
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

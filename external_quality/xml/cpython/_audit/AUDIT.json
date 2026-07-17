@@ -1,0 +1,36 @@
+{
+  "source_id": "cpython_xml_tests",
+  "retrieval_url": "https://github.com/python/cpython/blob/main/Lib/test/xmltestdata/simple-ns.xml",
+  "final_url": "https://github.com/python/cpython/blob/main/Lib/test/xmltestdata/simple-ns.xml",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "PSF-2.0",
+  "license_url": "https://github.com/python/cpython/blob/HEAD/LICENSE",
+  "license_text_sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+  "payload_sha256": "9152fc90d3c84314239b59356c452c7d88b88fe8fa96f2f123d25437728bb82e",
+  "payload_bytes": 1036,
+  "redistribution_basis": "approved legacy manifest; PSF-2.0 evidence retained at external_quality/xml/cpython/LICENSE-cpython.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/xml/cpython/LICENSE-cpython.txt",
+  "payloads": [
+    {
+      "path": "expat224_utf8_bug.xml",
+      "payload_sha256": "9152fc90d3c84314239b59356c452c7d88b88fe8fa96f2f123d25437728bb82e",
+      "payload_bytes": 1036
+    },
+    {
+      "path": "simple-ns.xml",
+      "payload_sha256": "fd605526a1004b662620292c1d808ed696b5cc61d9c5748121fd108071239981",
+      "payload_bytes": 152
+    },
+    {
+      "path": "test.xml",
+      "payload_sha256": "9e9d7525d14bf7361d0dbf63325537bdd019c67d7dc265431266c1c13877b1f6",
+      "payload_bytes": 1388
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

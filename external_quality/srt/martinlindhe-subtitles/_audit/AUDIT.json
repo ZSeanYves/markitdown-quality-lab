@@ -1,0 +1,26 @@
+{
+  "source_id": "martinlindhe_subtitles",
+  "retrieval_url": "https://github.com/martinlindhe/subtitles/blob/master/testdata/srt/sample.srt",
+  "final_url": "https://github.com/martinlindhe/subtitles/blob/master/testdata/srt/sample.srt",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MIT",
+  "license_url": "https://github.com/martinlindhe/subtitles/blob/HEAD/LICENSE",
+  "license_text_sha256": "cc62ed8ff88f7d88ff1c241f4dd1b4e600eeeedfa18bcb36900ecf457ed7d95d",
+  "payload_sha256": "484784b337b0c8d039df83b72423c1cf1d4274521ed0592edf2ac4d5702dd681",
+  "payload_bytes": 272,
+  "redistribution_basis": "approved legacy manifest; MIT evidence retained at external_quality/srt/martinlindhe-subtitles/LICENSE-martinlindhe-subtitles.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/srt/martinlindhe-subtitles/LICENSE-martinlindhe-subtitles.txt",
+  "payloads": [
+    {
+      "path": "sample.srt",
+      "payload_sha256": "484784b337b0c8d039df83b72423c1cf1d4274521ed0592edf2ac4d5702dd681",
+      "payload_bytes": 272
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

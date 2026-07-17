@@ -1,0 +1,89 @@
+{
+  "source_id": "odf_toolkit_tests",
+  "retrieval_url": "https://github.com/tdf/odftoolkit/tree/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/odfdom/src/test/resources/test-input",
+  "final_url": "https://github.com/tdf/odftoolkit/tree/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/odfdom/src/test/resources/test-input",
+  "retrieved_at": "2026-07-16T00:00:00Z",
+  "source_revision": "cfd3a9fbbda351fad38aad5e112e3598d08e23f0",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/tdf/odftoolkit/blob/cfd3a9fbbda351fad38aad5e112e3598d08e23f0/LICENSE",
+  "license_text_sha256": "8602ea6d698b612adba74accae59ec2a4b88820e933c38d6cbbce6f46a74e680",
+  "payload_sha256": "fe3ea60623945444d8d3ec9a13a45f38246b68b6e22e6811a66bbb17650b4dbb",
+  "payload_bytes": 14605,
+  "redistribution_basis": "Apache-2.0 license retained with local fixtures",
+  "privacy_status": "public official test fixtures; no personal or sensitive data",
+  "review_status": "approved",
+  "reviewer": "local quality review",
+  "reviewed_at": "2026-07-16T00:00:00Z",
+  "payloads": [
+    {
+      "path": "35585 - no pagebreak.odt",
+      "payload_sha256": "fe3ea60623945444d8d3ec9a13a45f38246b68b6e22e6811a66bbb17650b4dbb",
+      "payload_bytes": 14605
+    },
+    {
+      "path": "BigTable.odt",
+      "payload_sha256": "673f6204ccdb9b0d4a50684e81093469bd89a466a4b215b60b414f13c60490ae",
+      "payload_bytes": 13740
+    },
+    {
+      "path": "CharacterParagraphFormat.odt",
+      "payload_sha256": "22df56465d1acea0ac29383524ca991ad80a61202ad31a3a72c457695d17bd7b",
+      "payload_bytes": 8977
+    },
+    {
+      "path": "ContinueListTest.odt",
+      "payload_sha256": "37d1967810d342d157b763cc7e5ba5b2fb7235511be08812153bfc879cfb2c88",
+      "payload_bytes": 13826
+    },
+    {
+      "path": "EasyListForeignNamespace.odt",
+      "payload_sha256": "29aa66e00f1d8e3e0fa2fc034432480d8153e1b1ae81f144dc75d87592383dce",
+      "payload_bytes": 5590
+    },
+    {
+      "path": "FrameWithTable.odt",
+      "payload_sha256": "469edd1ccac08652ba88aec7250f55c8b882226c363bcc2161cb01ebe3b64828",
+      "payload_bytes": 9220
+    },
+    {
+      "path": "HeaderFooter.odt",
+      "payload_sha256": "0bae2d9c88a5d0159e4e6b102ac4e35276c22b49dba5281d0d6bff7143813f27",
+      "payload_bytes": 28316
+    },
+    {
+      "path": "HelloWorld.odt",
+      "payload_sha256": "8bcab0ccafe0ce80fb85b4b90c4aabef92b101576457e3752a89ecc0f2e73c1b",
+      "payload_bytes": 8302
+    },
+    {
+      "path": "Hyperlink-AOO401.odt",
+      "payload_sha256": "43540998de3db7a0257b39520311db6c9531c6065470bcc41af6338328213d66",
+      "payload_bytes": 8875
+    },
+    {
+      "path": "TestTextTable.odt",
+      "payload_sha256": "cd5f088a506c8b073513448f32bc196e6ca1bbedc439062fa1e26df7f8947218",
+      "payload_bytes": 10245
+    },
+    {
+      "path": "_annotation.odt",
+      "payload_sha256": "f2041f6461f498f3e53cdddcef4137a4965f91a5f30259b90cdae2a60ce1400c",
+      "payload_bytes": 8632
+    },
+    {
+      "path": "feature_images.odt",
+      "payload_sha256": "c474449e9347d06f2232e375529442f3c6a0fe4c7cb16ba70737780b77ca5219",
+      "payload_bytes": 95768
+    },
+    {
+      "path": "footnote.odt",
+      "payload_sha256": "65a3ee27ac1da3b0eb8bc26c7953d4744bcbe58256a8423e718316b3cd6fe1eb",
+      "payload_bytes": 8775
+    },
+    {
+      "path": "hyperlink.odt",
+      "payload_sha256": "8549d6fef6519679ada28c5d77f380c393744e3612f7c3ade35016a227e4da01",
+      "payload_bytes": 9102
+    }
+  ]
+}

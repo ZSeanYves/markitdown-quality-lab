@@ -1,0 +1,3 @@
+# MIME fixtures intentionally preserve upstream CRLF and are reviewed by SHA.
+external_quality/**/*.msg -diff
+external_quality/**/*.eml -diff

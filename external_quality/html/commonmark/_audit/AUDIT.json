@@ -1,0 +1,26 @@
+{
+  "source_id": "commonmark_tools_templates",
+  "retrieval_url": "https://github.com/commonmark/commonmark-spec/blob/master/tools/template.html",
+  "final_url": "https://github.com/commonmark/commonmark-spec/blob/master/tools/template.html",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-2-Clause",
+  "license_url": "https://raw.githubusercontent.com/commonmark/commonmark-spec/master/LICENSE",
+  "license_text_sha256": "3e4806ba6f20073e8ce40da5a0c4b59f7f44287965f538e195a4d734d833557b",
+  "payload_sha256": "cb23b9bda7eabcc95825f636eaa32f48734b52ef24322b649a562d01f46764c1",
+  "payload_bytes": 4285,
+  "redistribution_basis": "approved legacy manifest; BSD-2-Clause evidence retained at external_quality/html/commonmark/LICENSE-commonmark.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/html/commonmark/LICENSE-commonmark.txt",
+  "payloads": [
+    {
+      "path": "template.html",
+      "payload_sha256": "cb23b9bda7eabcc95825f636eaa32f48734b52ef24322b649a562d01f46764c1",
+      "payload_bytes": 4285
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

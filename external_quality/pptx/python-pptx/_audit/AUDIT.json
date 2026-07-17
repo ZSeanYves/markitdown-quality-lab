@@ -1,0 +1,96 @@
+{
+  "source_id": "python_pptx_tests",
+  "retrieval_url": "https://github.com/scanny/python-pptx",
+  "final_url": "https://github.com/scanny/python-pptx",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MIT",
+  "license_url": "https://github.com/scanny/python-pptx/blob/HEAD/LICENSE",
+  "license_text_sha256": "7652f271e46d0d533e9dc463f3b5fcbdcacf4d6a9c8d6b554d15efd0f37f6132",
+  "payload_sha256": "320d242ed8ac66a6db8e4a81da74e006d862611b2da5b181cc41755e6f3b6659",
+  "payload_bytes": 222711,
+  "redistribution_basis": "approved legacy manifest; MIT evidence retained at external_quality/pptx/python-pptx/LICENSE-python-pptx.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/pptx/python-pptx/LICENSE-python-pptx.txt",
+  "payloads": [
+    {
+      "path": "cht-category-access.pptx",
+      "payload_sha256": "320d242ed8ac66a6db8e4a81da74e006d862611b2da5b181cc41755e6f3b6659",
+      "payload_bytes": 222711
+    },
+    {
+      "path": "cht-chart-props.pptx",
+      "payload_sha256": "5b503ad108975f2e2cdb73de538bf07badde89c9f89c03a39b623b3e6cb7d6d3",
+      "payload_bytes": 218303
+    },
+    {
+      "path": "cht-chart-type.pptx",
+      "payload_sha256": "d0a7979d05970aa83fd8406f0829cd0019853a7bc4e16f8cda814586fc2eaccc",
+      "payload_bytes": 1393564
+    },
+    {
+      "path": "cht-charts.pptx",
+      "payload_sha256": "fce05dd2945e8566865a62b48e122e4d2be51f7ca55b124f9bd6821a50819218",
+      "payload_bytes": 77751
+    },
+    {
+      "path": "cht-datalabels.pptx",
+      "payload_sha256": "f0cfec1f27395002568a0157fa9c62b7c940ee65ff23db4b54ae3578f2ff4728",
+      "payload_bytes": 243765
+    },
+    {
+      "path": "cht-legend.pptx",
+      "payload_sha256": "afc0423335a78cf767c1fdbdc5a5bca81181ff2af46ca9c49e647d6e50a5119e",
+      "payload_bytes": 125134
+    },
+    {
+      "path": "cht-series.pptx",
+      "payload_sha256": "b0aafc22914d65e712d9e33cca1677e15f61595fd5a70609ae6feda64159448d",
+      "payload_bytes": 518464
+    },
+    {
+      "path": "ext-rels.pptx",
+      "payload_sha256": "c959a97d2bf687cd142c1a4e8eefe00758162ce78210fc1a608a4a75594a9d27",
+      "payload_bytes": 21457
+    },
+    {
+      "path": "prs-notes.pptx",
+      "payload_sha256": "664dc13965c7ea24688256d1ecd869936ca51a2e94d2aefe0f614bb8554976ea",
+      "payload_bytes": 86792
+    },
+    {
+      "path": "shp-access-chart.pptx",
+      "payload_sha256": "578c330e6fe606074e197d193bc5859c3b7fc31b3de8c217b32212b5cf54b9cc",
+      "payload_bytes": 80038
+    },
+    {
+      "path": "shp-picture.pptx",
+      "payload_sha256": "20b6295563e217804af81f8b5fee5e5cef9e766ac401d825d536ffe6d674edd0",
+      "payload_bytes": 91730
+    },
+    {
+      "path": "shp-shapes.pptx",
+      "payload_sha256": "302dc642b791f49da6057b69a7ef2a0804f61d9469e7e49e9e734ae3305951cc",
+      "payload_bytes": 125205
+    },
+    {
+      "path": "sld-notes-feature.pptx",
+      "payload_sha256": "9a83da2e319161c1e2993de878f65b57ec10e14e3ef418b46354c48350866856",
+      "payload_bytes": 22964
+    },
+    {
+      "path": "tbl-cell.pptx",
+      "payload_sha256": "02df45aad4927c4c471d76d4f638e82e14c42d4db773103cf8f950f73b0ae976",
+      "payload_bytes": 28247
+    },
+    {
+      "path": "test_slides.pptx",
+      "payload_sha256": "8442cac5daafd3211a6a1fff393640cbe5f01faed54d4e00d9aa4fdcba23f7e0",
+      "payload_bytes": 38616
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

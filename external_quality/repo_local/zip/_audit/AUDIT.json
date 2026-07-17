@@ -1,0 +1,81 @@
+{
+  "source_id": "markitdown_repo_samples",
+  "retrieval_url": "https://github.com/ZSeanYves/markitdown/blob/main/external_quality/repo_local/zip/zip_mixed_supported_entries.zip",
+  "final_url": "https://github.com/ZSeanYves/markitdown/blob/main/external_quality/repo_local/zip/zip_mixed_supported_entries.zip",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/ZSeanYves/markitdown/blob/HEAD/LICENSE",
+  "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "payload_sha256": "e3a8069d70f9b4adc54c43137db530df4c4a74fa52a9dc0a3459b0cc40399e7c",
+  "payload_bytes": 118759,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_quality/repo_local/LICENSE-markitdown-repo-local.txt",
+  "privacy_status": "approved legacy manifest classifications: repo_tracked",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/repo_local/LICENSE-markitdown-repo-local.txt",
+  "payloads": [
+    {
+      "path": "zip_assets_namespace.zip",
+      "payload_sha256": "e3a8069d70f9b4adc54c43137db530df4c4a74fa52a9dc0a3459b0cc40399e7c",
+      "payload_bytes": 118759
+    },
+    {
+      "path": "zip_hidden_entries_policy.zip",
+      "payload_sha256": "57f80a12d8db0a38c77c3e54b38606d80beb21983127ab43058c5b494b876828",
+      "payload_bytes": 462
+    },
+    {
+      "path": "zip_html_local_image.zip",
+      "payload_sha256": "31854525050a56b8bea09cfc4ffb2e82cf7711a637c102828d5b81cfa766d81c",
+      "payload_bytes": 85836
+    },
+    {
+      "path": "zip_metadata_assets.zip",
+      "payload_sha256": "8bcea58e20afbd7b00ac1a6985ca7a629d729f159be05e075ee7ada9f0aec199",
+      "payload_bytes": 791
+    },
+    {
+      "path": "zip_metadata_assets_remap.zip",
+      "payload_sha256": "9d876fb9f28f3c63d3c0e235221028aa2e05cf906b88225bd68dd0cd3779fb85",
+      "payload_bytes": 1535
+    },
+    {
+      "path": "zip_metadata_basic.zip",
+      "payload_sha256": "1856b14895b1f76d6558552358bca8ca3245c428014e927b5220bff6b2040232",
+      "payload_bytes": 328
+    },
+    {
+      "path": "zip_metadata_entry_origins.zip",
+      "payload_sha256": "7fd7146272541bf7b87d1820d82d9f05e3cb806b3cd49b973f14f7a766feca92",
+      "payload_bytes": 438
+    },
+    {
+      "path": "zip_metadata_mixed_supported.zip",
+      "payload_sha256": "c573980f35772e46ac63c19822f57ca9c46fe34137ddd299c75ecb73c50fda7d",
+      "payload_bytes": 566
+    },
+    {
+      "path": "zip_metadata_nested_archive_boundary.zip",
+      "payload_sha256": "2ada548916fcd0197cd99a301d14061ca9af80d2ed10318661b3a720819d4015",
+      "payload_bytes": 513
+    },
+    {
+      "path": "zip_metadata_unsupported_entries.zip",
+      "payload_sha256": "0d4a32482575dfd028b04ede13a28c2657655e1857afe46bf9d58ab63890185d",
+      "payload_bytes": 843
+    },
+    {
+      "path": "zip_mixed_supported_entries.zip",
+      "payload_sha256": "15b2d78209c76610152f0b549c3112df01d606c76c2e564fe75a839183f98417",
+      "payload_bytes": 689
+    },
+    {
+      "path": "zip_sorted_entries.zip",
+      "payload_sha256": "76fdd7eb78ef747ce7d8171a0c8a244c5f48a5dfa73d120e782e74eba3ff43ec",
+      "payload_bytes": 697
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

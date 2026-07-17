@@ -1,0 +1,31 @@
+{
+  "source_id": "idpf_epub_testsuite_pls",
+  "retrieval_url": "https://github.com/IDPF/epub-testsuite/tree/main/content/parked-tests/epub30-test-0104",
+  "final_url": "https://github.com/IDPF/epub-testsuite/tree/main/content/parked-tests/epub30-test-0104",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "CC-BY-4.0",
+  "license_url": "https://github.com/IDPF/epub-testsuite/blob/HEAD/LICENSE",
+  "license_text_sha256": "8d3cbe1ef9e356d6e05c2582f890e48b53abf72a24e41770522e54414e962c6f",
+  "payload_sha256": "5fd81fe54c8f1c1f1d990f65be385e344bfde650453eb5d3857306b2b1aa8e9d",
+  "payload_bytes": 308,
+  "redistribution_basis": "approved legacy manifest; CC-BY-4.0 evidence retained at external_quality/epub/idpf-epub-testsuite-repo/LICENSE.md",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/epub/idpf-epub-testsuite-repo/LICENSE.md",
+  "payloads": [
+    {
+      "path": "en-mixed.xml",
+      "payload_sha256": "5fd81fe54c8f1c1f1d990f65be385e344bfde650453eb5d3857306b2b1aa8e9d",
+      "payload_bytes": 308
+    },
+    {
+      "path": "en-x-sampa.xml",
+      "payload_sha256": "d6e51731112b0b81c475c519c07ff1607b8584506686298909e46d40a6659aab",
+      "payload_bytes": 399
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

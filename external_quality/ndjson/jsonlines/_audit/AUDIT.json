@@ -1,0 +1,26 @@
+{
+  "source_id": "jsonlines_tests",
+  "retrieval_url": "https://github.com/wbolster/jsonlines/blob/master/tests/test_jsonlines.py",
+  "final_url": "https://github.com/wbolster/jsonlines/blob/master/tests/test_jsonlines.py",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-3-Clause",
+  "license_url": "https://raw.githubusercontent.com/wbolster/jsonlines/master/LICENSE.rst",
+  "license_text_sha256": "bca354e6392b2421ffb1f1e234545c515433b9291362c1bb9fd100922b90eb42",
+  "payload_sha256": "bc849b35bca5cc07031987707c1deb78da5be5a9cff8805143d7138d5794d3e4",
+  "payload_bytes": 36,
+  "redistribution_basis": "approved legacy manifest; BSD-3-Clause evidence retained at external_quality/ndjson/jsonlines/LICENSE-jsonlines.rst",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/ndjson/jsonlines/LICENSE-jsonlines.rst",
+  "payloads": [
+    {
+      "path": "rfc7464_bom.ndjson",
+      "payload_sha256": "bc849b35bca5cc07031987707c1deb78da5be5a9cff8805143d7138d5794d3e4",
+      "payload_bytes": 36
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

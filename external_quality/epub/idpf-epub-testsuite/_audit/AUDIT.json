@@ -1,0 +1,51 @@
+{
+  "source_id": "idpf_epub_testsuite",
+  "retrieval_url": "https://github.com/IDPF/epub-testsuite/tree/main/content/30/epub30-test-0100",
+  "final_url": "https://github.com/IDPF/epub-testsuite/tree/main/content/30/epub30-test-0100",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "CC-BY-4.0",
+  "license_url": "https://github.com/IDPF/epub-testsuite/blob/HEAD/LICENSE",
+  "license_text_sha256": "8d3cbe1ef9e356d6e05c2582f890e48b53abf72a24e41770522e54414e962c6f",
+  "payload_sha256": "ffdda5aa599e0a6ac9ed9dae8a22ed3ff90b197356453839439947de4c2420f9",
+  "payload_bytes": 1462739,
+  "redistribution_basis": "approved legacy manifest; CC-BY-4.0 evidence retained at external_quality/epub/idpf-epub-testsuite/LICENSE.md",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/epub/idpf-epub-testsuite/LICENSE.md",
+  "payloads": [
+    {
+      "path": "epub30-test-0100.epub",
+      "payload_sha256": "ffdda5aa599e0a6ac9ed9dae8a22ed3ff90b197356453839439947de4c2420f9",
+      "payload_bytes": 1462739
+    },
+    {
+      "path": "epub30-test-0101.epub",
+      "payload_sha256": "15876b25549c32df99eca25eadd241bbe537c51337f8a6d31d62890fdf9c35fd",
+      "payload_bytes": 15650
+    },
+    {
+      "path": "epub30-test-0102.epub",
+      "payload_sha256": "03ab4da6b448a714f3f8b0650a210d2b0322e72b88fe8a9d3a11b576bb615862",
+      "payload_bytes": 22472
+    },
+    {
+      "path": "epub30-test-0110.epub",
+      "payload_sha256": "877f19d5596fc6264dfd3dc5b9c10534642aa32a6f04a2d19e89ba995fb8313e",
+      "payload_bytes": 29316
+    },
+    {
+      "path": "epub30-test-0140.epub",
+      "payload_sha256": "96179aa50eea89e932f9b98f6e8a2dd754520c3819c60212ebc4cbf85a9cee81",
+      "payload_bytes": 1178954
+    },
+    {
+      "path": "epub30-test-0150.epub",
+      "payload_sha256": "079a8681f1e47c5420f427e47577480a7701370d62f3fa5599485c33788505f3",
+      "payload_bytes": 15094
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

@@ -1,0 +1,31 @@
+{
+  "source_id": "niosh_publications",
+  "retrieval_url": "https://www.cdc.gov/niosh/docs/2023-113/2023-113.pdf",
+  "final_url": "https://www.cdc.gov/niosh/docs/2023-113/2023-113.pdf",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "public_domain",
+  "license_url": "https://www.cdc.gov/niosh/docs/2023-113/2023-113.pdf",
+  "license_text_sha256": "fc12b727ccec34de0a5458bd3c30518e695bf53c6c35dc9bb772f6931b49d7c4",
+  "payload_sha256": "4eaf8107bf47fe62c748ee143c126faaad545bbffbd0b2ee2af01129c4458291",
+  "payload_bytes": 819193,
+  "redistribution_basis": "approved legacy manifest; public_domain evidence retained at external_quality/pdf/niosh/LICENSE-EVIDENCE.md",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/pdf/niosh/LICENSE-EVIDENCE.md",
+  "payloads": [
+    {
+      "path": "pdf_manual_niosh_2015_100_0001.pdf",
+      "payload_sha256": "4eaf8107bf47fe62c748ee143c126faaad545bbffbd0b2ee2af01129c4458291",
+      "payload_bytes": 819193
+    },
+    {
+      "path": "pdf_manual_niosh_2023_113_0001.pdf",
+      "payload_sha256": "0d59aff0e0b38247dac29e383e27dc7cb1cab9c2d8a76216c07530261b390fbd",
+      "payload_bytes": 3846870
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

@@ -1,0 +1,31 @@
+{
+  "source_id": "jupyter_nbformat_notebooks",
+  "retrieval_url": "https://github.com/jupyter/nbformat/blob/main/tests/test4.ipynb",
+  "final_url": "https://github.com/jupyter/nbformat/blob/main/tests/test4.ipynb",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-3-Clause",
+  "license_url": "https://github.com/jupyter/nbformat/blob/HEAD/LICENSE",
+  "license_text_sha256": "5ca74e4d2eeb9330b0d129c25f874d3544a13413bc62ae8d367819100d095072",
+  "payload_sha256": "cbb307af0700b884835fa8746778b6a443f2346b335d6250c8f9fd077e9fc85b",
+  "payload_bytes": 1328,
+  "redistribution_basis": "approved legacy manifest; BSD-3-Clause evidence retained at external_quality/ipynb/jupyter-nbformat/LICENSE-nbformat.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/ipynb/jupyter-nbformat/LICENSE-nbformat.txt",
+  "payloads": [
+    {
+      "path": "many_tracebacks.ipynb",
+      "payload_sha256": "cbb307af0700b884835fa8746778b6a443f2346b335d6250c8f9fd077e9fc85b",
+      "payload_bytes": 1328
+    },
+    {
+      "path": "test4.ipynb",
+      "payload_sha256": "5dc37eeddb491f410e21ad561c4811425bda0b04920f7e71e40c76bcc756f4be",
+      "payload_bytes": 17454
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

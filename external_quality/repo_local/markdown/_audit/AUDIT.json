@@ -1,0 +1,26 @@
+{
+  "source_id": "markitdown_repo_samples",
+  "retrieval_url": "https://github.com/ZSeanYves/markitdown/blob/main/external_quality/repo_local/markdown/markdown_local_image.md",
+  "final_url": "https://github.com/ZSeanYves/markitdown/blob/main/external_quality/repo_local/markdown/markdown_local_image.md",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/ZSeanYves/markitdown/blob/HEAD/LICENSE",
+  "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "payload_sha256": "47f9b6eb7fddca00ac452f26d1a0b71e69f636dd85118b260eb3808500833341",
+  "payload_bytes": 86,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_quality/repo_local/LICENSE-markitdown-repo-local.txt",
+  "privacy_status": "approved legacy manifest classifications: repo_tracked",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/repo_local/LICENSE-markitdown-repo-local.txt",
+  "payloads": [
+    {
+      "path": "markdown_local_image.md",
+      "payload_sha256": "47f9b6eb7fddca00ac452f26d1a0b71e69f636dd85118b260eb3808500833341",
+      "payload_bytes": 86
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

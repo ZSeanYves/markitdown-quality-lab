@@ -1,0 +1,51 @@
+{
+  "source_id": "xlsxwriter_examples",
+  "retrieval_url": "https://github.com/jmcnamara/XlsxWriter/blob/main/examples/hide_sheet.py",
+  "final_url": "https://github.com/jmcnamara/XlsxWriter/blob/main/examples/hide_sheet.py",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-2-Clause",
+  "license_url": "https://github.com/jmcnamara/XlsxWriter/blob/HEAD/LICENSE",
+  "license_text_sha256": "8fbb9b28ef0afac1c7d999102fd2634f347448d069c8c821976f3dbd2b3f812c",
+  "payload_sha256": "26c02bbbe10ed29124908c580b3efe24a3495c57624e844c6cf6022786510a8d",
+  "payload_bytes": 6664,
+  "redistribution_basis": "approved legacy manifest; BSD-2-Clause evidence retained at external_quality/xlsx/xlsxwriter/LICENSE-xlsxwriter.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/xlsx/xlsxwriter/LICENSE-xlsxwriter.txt",
+  "payloads": [
+    {
+      "path": "comments1.xlsx",
+      "payload_sha256": "26c02bbbe10ed29124908c580b3efe24a3495c57624e844c6cf6022786510a8d",
+      "payload_bytes": 6664
+    },
+    {
+      "path": "datetimes.xlsx",
+      "payload_sha256": "194ebcb11c975b4b9213a65ab080e0508550838aeb555b2c153f2a5eec91a240",
+      "payload_bytes": 5839
+    },
+    {
+      "path": "hide_row_col.xlsx",
+      "payload_sha256": "7b7c76ce5059e5eef15cf5e8a332aa76c82b71afbf0430360b584f3c46bb7054",
+      "payload_bytes": 5358
+    },
+    {
+      "path": "hide_sheet.xlsx",
+      "payload_sha256": "3b3592e9d8702629436b0115fc3a6df97864c130177c4647f28a9950b825e2a6",
+      "payload_bytes": 6322
+    },
+    {
+      "path": "hyperlink.xlsx",
+      "payload_sha256": "99dea53e6f51b296dd91d612d49d6113fd54ab7a925b5c946eeb0cf76522b78c",
+      "payload_bytes": 5965
+    },
+    {
+      "path": "merge1.xlsx",
+      "payload_sha256": "dc911dc2b053f9c68588776686bdbb3391a5d62238004220bc99deb3572907bd",
+      "payload_bytes": 5539
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}
