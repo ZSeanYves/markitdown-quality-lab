@@ -1,0 +1,26 @@
+{
+  "source_id": "ocr_src_0027",
+  "retrieval_url": "local-generated",
+  "final_url": "local-generated",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "project-owned synthetic",
+  "license_url": "local-generated",
+  "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "payload_sha256": "11d8c3d5a7a573f1e761e41990c83b1bb128b6638b6f4b66b4598362ac2c7034",
+  "payload_bytes": 66316,
+  "redistribution_basis": "approved legacy manifest; project-owned synthetic evidence retained at external_quality/ocr/self_synthetic/LICENSE-markitdown.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/ocr/self_synthetic/LICENSE-markitdown.txt",
+  "payloads": [
+    {
+      "path": "ocr_layout_self_heading_paragraph_0001.png",
+      "payload_sha256": "11d8c3d5a7a573f1e761e41990c83b1bb128b6638b6f4b66b4598362ac2c7034",
+      "payload_bytes": 66316
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

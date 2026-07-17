@@ -1,0 +1,41 @@
+{
+  "source_id": "python_markdown_tests",
+  "retrieval_url": "https://github.com/Python-Markdown/markdown/blob/master/tests/extensions/extra/footnote.txt",
+  "final_url": "https://github.com/Python-Markdown/markdown/blob/master/tests/extensions/extra/footnote.txt",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-3-Clause",
+  "license_url": "https://github.com/Python-Markdown/markdown/blob/HEAD/LICENSE",
+  "license_text_sha256": "7ba4eb6d10b32b2d11dce13821340351cdbbb30ba8ccc67841db2ffd86e79aca",
+  "payload_sha256": "d53164339d916ed0a6def1282a2d29c936d1bda5950484f04a58a4a85db67a9b",
+  "payload_bytes": 1301,
+  "redistribution_basis": "approved legacy manifest; BSD-3-Clause evidence retained at external_quality/markdown/python-markdown/LICENSE-Python-Markdown.md",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/markdown/python-markdown/LICENSE-Python-Markdown.md",
+  "payloads": [
+    {
+      "path": "footnote_extra.md",
+      "payload_sha256": "d53164339d916ed0a6def1282a2d29c936d1bda5950484f04a58a4a85db67a9b",
+      "payload_bytes": 1301
+    },
+    {
+      "path": "footnote_many.md",
+      "payload_sha256": "d44e1aaa2efe302fa71e49c9166fcea34cf7656fa524e6fdc69c1f1c80d8fb55",
+      "payload_bytes": 48144
+    },
+    {
+      "path": "footnote_placeholder.md",
+      "payload_sha256": "c8a3909c5fdfc94916e66be46657c67491c6c82a4dd96b29fbf53e8651afc64c",
+      "payload_bytes": 75
+    },
+    {
+      "path": "yuri_footnotes.md",
+      "payload_sha256": "9bffc01661d3e21f7662a5ce56b690906bb88bb64a2454786a02a884cdd46eb0",
+      "payload_bytes": 1587
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

@@ -15,17 +15,65 @@
   "reviewer": "local quality review",
   "reviewed_at": "2026-07-16T00:00:00Z",
   "payloads": [
-    {"path": "bad-newlines-multiple-parts.msg", "payload_sha256": "7f5a045ad74e3720af250ff784d7a39e66b6d5cd7cac553baa36dc076218c4eb", "payload_bytes": 336},
-    {"path": "base64-encoded-text.msg", "payload_sha256": "5e48e3b1dbd9955ce25483e28f299756fbdc5af9580102d7f2818a8cca7ab288", "payload_bytes": 606},
-    {"path": "base64encoded-rfc822message-nested.msg", "payload_sha256": "ece666871cd9ac00c897aaa396243af3ff9b4500fdabc2de4c9263a4152703f6", "payload_bytes": 567},
-    {"path": "base64encoded-rfc822message.msg", "payload_sha256": "f720c483a05dc9237e0222f5203332dc016beb0601a97597504d8fac1dbc0f1d", "payload_bytes": 276},
-    {"path": "basic-plain-very-long-lines.msg", "payload_sha256": "10df8e9b7d89fe529dff19495d35f13ab9a4e8515917f18c0138ee90bd356f3b", "payload_bytes": 7371},
-    {"path": "basic-plain-with-bad-header-separator.msg", "payload_sha256": "f600a3a872121568b3cd63766791505c2cd5ac9ba2c34a054a63fac8f9275539", "payload_bytes": 378},
-    {"path": "basic-plain.msg", "payload_sha256": "0a70fa67b87c1ecd228d6217504b8c9dc95360ebad5cf74f27bc00e37fc7a43d", "payload_bytes": 280},
-    {"path": "boundary-name-clash.msg", "payload_sha256": "f672cc0a4628a69c21eef243e94c2a3ec4ea58eb1d3a87ca20b1fce56447fdda", "payload_bytes": 1070},
-    {"path": "ending-boundaries.msg", "payload_sha256": "8081bf7ec6e81ab7f5ac001e8430e539738aab9cd35392552044593e47c6b895", "payload_bytes": 756},
-    {"path": "intermediate-boundaries.msg", "payload_sha256": "8b87c1d4e38af44ae155c66652e26aac8d220093ea8ce503aa102f60bbe2619f", "payload_bytes": 808},
-    {"path": "malformedHeader-noheader.msg", "payload_sha256": "823e7dfc212abca9dbfab40eb2e632815cd80565c26b8a46cf07dc00fb304830", "payload_bytes": 92},
-    {"path": "simple-attachment.msg", "payload_sha256": "46da0c106d2dd6bb9e4b63e079a367ddc1a2bd472869a662d86da24918e3499f", "payload_bytes": 2068}
+    {
+      "path": "bad-newlines-multiple-parts.msg",
+      "payload_sha256": "7f5a045ad74e3720af250ff784d7a39e66b6d5cd7cac553baa36dc076218c4eb",
+      "payload_bytes": 336
+    },
+    {
+      "path": "base64-encoded-text.msg",
+      "payload_sha256": "5e48e3b1dbd9955ce25483e28f299756fbdc5af9580102d7f2818a8cca7ab288",
+      "payload_bytes": 606
+    },
+    {
+      "path": "base64encoded-rfc822message-nested.msg",
+      "payload_sha256": "ece666871cd9ac00c897aaa396243af3ff9b4500fdabc2de4c9263a4152703f6",
+      "payload_bytes": 567
+    },
+    {
+      "path": "base64encoded-rfc822message.msg",
+      "payload_sha256": "f720c483a05dc9237e0222f5203332dc016beb0601a97597504d8fac1dbc0f1d",
+      "payload_bytes": 276
+    },
+    {
+      "path": "basic-plain-very-long-lines.msg",
+      "payload_sha256": "10df8e9b7d89fe529dff19495d35f13ab9a4e8515917f18c0138ee90bd356f3b",
+      "payload_bytes": 7371
+    },
+    {
+      "path": "basic-plain-with-bad-header-separator.msg",
+      "payload_sha256": "f600a3a872121568b3cd63766791505c2cd5ac9ba2c34a054a63fac8f9275539",
+      "payload_bytes": 378
+    },
+    {
+      "path": "basic-plain.msg",
+      "payload_sha256": "0a70fa67b87c1ecd228d6217504b8c9dc95360ebad5cf74f27bc00e37fc7a43d",
+      "payload_bytes": 280
+    },
+    {
+      "path": "boundary-name-clash.msg",
+      "payload_sha256": "f672cc0a4628a69c21eef243e94c2a3ec4ea58eb1d3a87ca20b1fce56447fdda",
+      "payload_bytes": 1070
+    },
+    {
+      "path": "ending-boundaries.msg",
+      "payload_sha256": "8081bf7ec6e81ab7f5ac001e8430e539738aab9cd35392552044593e47c6b895",
+      "payload_bytes": 756
+    },
+    {
+      "path": "intermediate-boundaries.msg",
+      "payload_sha256": "8b87c1d4e38af44ae155c66652e26aac8d220093ea8ce503aa102f60bbe2619f",
+      "payload_bytes": 808
+    },
+    {
+      "path": "malformedHeader-noheader.msg",
+      "payload_sha256": "823e7dfc212abca9dbfab40eb2e632815cd80565c26b8a46cf07dc00fb304830",
+      "payload_bytes": 92
+    },
+    {
+      "path": "simple-attachment.msg",
+      "payload_sha256": "46da0c106d2dd6bb9e4b63e079a367ddc1a2bd472869a662d86da24918e3499f",
+      "payload_bytes": 2068
+    }
   ]
 }

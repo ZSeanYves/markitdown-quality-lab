@@ -1,0 +1,36 @@
+{
+  "source_id": "vosk_api_examples",
+  "retrieval_url": "https://github.com/alphacep/vosk-api/blob/master/python/example/test.wav",
+  "final_url": "https://github.com/alphacep/vosk-api/blob/master/python/example/test.wav",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/alphacep/vosk-api/blob/HEAD/LICENSE",
+  "license_text_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+  "payload_sha256": "ce0fb9ce47400eadb8403e9187ea59487f581cedf06769db20e08a109afeda88",
+  "payload_bytes": 62468,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_quality/audio/vosk-api/LICENSE-vosk-api.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/audio/vosk-api/LICENSE-vosk-api.txt",
+  "payloads": [
+    {
+      "path": "vosk_test_official.m4a",
+      "payload_sha256": "ce0fb9ce47400eadb8403e9187ea59487f581cedf06769db20e08a109afeda88",
+      "payload_bytes": 62468
+    },
+    {
+      "path": "vosk_test_official.mp3",
+      "payload_sha256": "d6ea5e591861fb30e1ed4ce84cdb4c9a0125b8ea01bd99d35b427cc23b39fa87",
+      "payload_bytes": 41625
+    },
+    {
+      "path": "vosk_test_official.wav",
+      "payload_sha256": "dcfea5712c43a43ba7ae8083afb39d36993e5a69c46e88b68aaa72b65cb615bb",
+      "payload_bytes": 265914
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

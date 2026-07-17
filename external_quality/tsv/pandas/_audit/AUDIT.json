@@ -1,0 +1,26 @@
+{
+  "source_id": "pandas_parser_data",
+  "retrieval_url": "https://github.com/pandas-dev/pandas/blob/main/pandas/tests/io/parser/data/utf16_ex.txt",
+  "final_url": "https://github.com/pandas-dev/pandas/blob/main/pandas/tests/io/parser/data/utf16_ex.txt",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-3-Clause",
+  "license_url": "https://raw.githubusercontent.com/pandas-dev/pandas/main/LICENSE",
+  "license_text_sha256": "9850f6b5bdef7346503065807b878deb8058b976c5c329f4c4d23bf4796ce9ae",
+  "payload_sha256": "5803be719ed5d0a1109ce25572f12f78b5e6a5ab8cd6f4b9fbae1a4066dc0328",
+  "payload_bytes": 11406,
+  "redistribution_basis": "approved legacy manifest; BSD-3-Clause evidence retained at external_quality/tsv/pandas/LICENSE-pandas.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/tsv/pandas/LICENSE-pandas.txt",
+  "payloads": [
+    {
+      "path": "utf16_ex.tsv",
+      "payload_sha256": "5803be719ed5d0a1109ce25572f12f78b5e6a5ab8cd6f4b9fbae1a4066dc0328",
+      "payload_bytes": 11406
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

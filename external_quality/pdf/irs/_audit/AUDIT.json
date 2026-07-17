@@ -1,0 +1,36 @@
+{
+  "source_id": "irs_forms_public",
+  "retrieval_url": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+  "final_url": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "USGov-PD-reviewed",
+  "license_url": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+  "license_text_sha256": "d8c7ee914af6bfc7a8e00ed247604bb092cf9592786a191215c0f8ec31d09958",
+  "payload_sha256": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+  "payload_bytes": 208845,
+  "redistribution_basis": "approved legacy manifest; USGov-PD-reviewed evidence retained at external_quality/pdf/irs/LICENSE-EVIDENCE.md",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/pdf/irs/LICENSE-EVIDENCE.md",
+  "payloads": [
+    {
+      "path": "pdf_form_irs_fw4_0001.pdf",
+      "payload_sha256": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+      "payload_bytes": 208845
+    },
+    {
+      "path": "pdf_form_irs_fw9_0001.pdf",
+      "payload_sha256": "2d420cbb4123dcf1fb82595b2359cfbb5d81f00b9df9d359fcc7af361d093f53",
+      "payload_bytes": 140815
+    },
+    {
+      "path": "pdf_manual_irs_iw9_0001.pdf",
+      "payload_sha256": "ec609a8bf9fac7da593355a57e49e0aa4d569eaceca3a7a84255104d864b1c34",
+      "payload_bytes": 189808
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

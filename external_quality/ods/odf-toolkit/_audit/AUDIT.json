@@ -15,10 +15,75 @@
   "reviewer": "local quality review",
   "reviewed_at": "2026-07-16T00:00:00Z",
   "payloads": [
-    {"path": "30694.ods", "payload_sha256": "14ffd4e64140c2c8918a567a94393442bd6b9b521e5e5445a234e6cb77ca10fb", "payload_bytes": 18833},
-    {"path": "31383 - viewsettings_import_xml_12.ods", "payload_sha256": "bab62cca7f9a1bfc303fae57cc5085046a78888d62583ca3ebb707b9069b8801", "payload_bytes": 11892},
-    {"path": "34140.ods", "payload_sha256": "0e177df8c8fb70f9024b56de884d940a61ecc24e745c608f46fe55e02838dfbc", "payload_bytes": 11174},
-    {"path": "34323.ods", "payload_sha256": "9df93fc54c3974a774d28483d4b3b17568a218edc95e0a8a2898772b0baf1926", "payload_bytes": 13337},
-    {"path": "34619.ods", "payload_sha256": "3b91621e2c056affa352773693f967ae1b60922910a47ed837d8b02f7680746c", "payload_bytes": 167620}
+    {
+      "path": "30694.ods",
+      "payload_sha256": "14ffd4e64140c2c8918a567a94393442bd6b9b521e5e5445a234e6cb77ca10fb",
+      "payload_bytes": 18833
+    },
+    {
+      "path": "31383 - viewsettings_import_xml_12.ods",
+      "payload_sha256": "bab62cca7f9a1bfc303fae57cc5085046a78888d62583ca3ebb707b9069b8801",
+      "payload_bytes": 11892
+    },
+    {
+      "path": "34140.ods",
+      "payload_sha256": "0e177df8c8fb70f9024b56de884d940a61ecc24e745c608f46fe55e02838dfbc",
+      "payload_bytes": 11174
+    },
+    {
+      "path": "34323.ods",
+      "payload_sha256": "9df93fc54c3974a774d28483d4b3b17568a218edc95e0a8a2898772b0baf1926",
+      "payload_bytes": 13337
+    },
+    {
+      "path": "34619.ods",
+      "payload_sha256": "3b91621e2c056affa352773693f967ae1b60922910a47ed837d8b02f7680746c",
+      "payload_bytes": 167620
+    },
+    {
+      "path": "Basic.ods",
+      "payload_sha256": "0a85fa4cff2979c997970c5abfb7ea98397d1df6b1efe62ce63d5b6fdc898f2a",
+      "payload_bytes": 9021
+    },
+    {
+      "path": "HeaderRowBetweenTableRows.ods",
+      "payload_sha256": "f7b5a927083f03b2057a784f7ea418b107e259827fc968494e65c97382b4f300",
+      "payload_bytes": 5746
+    },
+    {
+      "path": "MergedCells.ods",
+      "payload_sha256": "3f14d61b3cdafd537982f04322b5fc4e71b42a46c99b13d611551057ed5fec5e",
+      "payload_bytes": 3354
+    },
+    {
+      "path": "ST_Formulas.ods",
+      "payload_sha256": "c9d0dda5022a915c068e8e51618d00a37d0918c7a5a705fcc8b824388ee87a68",
+      "payload_bytes": 15984
+    },
+    {
+      "path": "ST_Note.ods",
+      "payload_sha256": "eb64768a027b19b1d1270d1c36965899bb3280206a5d9f1aaf1b94fa99ea2561",
+      "payload_bytes": 29994
+    },
+    {
+      "path": "ST_SpecialCharacter.ods",
+      "payload_sha256": "0f761a5825d847ea0c71052e589f07da8b00995bc311b48dcd2f53b978694e06",
+      "payload_bytes": 15213
+    },
+    {
+      "path": "TestSpreadsheetTable.ods",
+      "payload_sha256": "72e20949fd593e9e3b15791c1fec028f1f23c7cfd2b54644617803854c9ba002",
+      "payload_bytes": 16467
+    },
+    {
+      "path": "drawing_import_xml_MSO15.ods",
+      "payload_sha256": "d5640d131ad34de4aed184629f5eed8e294cab8ccf47e168fcd6fb05ec3e568d",
+      "payload_bytes": 897639
+    },
+    {
+      "path": "formula.ods",
+      "payload_sha256": "036c36f90e0cee1063ae448b13dd7dec800f7fee014a117b6ba1e6bd5bfc6eaf",
+      "payload_bytes": 10653
+    }
   ]
 }

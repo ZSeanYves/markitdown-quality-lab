@@ -1,0 +1,36 @@
+{
+  "source_id": "pdf_src_0004",
+  "retrieval_url": "https://nvlpubs.nist.gov/nistpubs/jres/120/jres.120.011.pdf",
+  "final_url": "https://nvlpubs.nist.gov/nistpubs/jres/120/jres.120.011.pdf",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "public_domain",
+  "license_url": "https://www.nist.gov/open/license",
+  "license_text_sha256": "ee780300ab5510ef7cfa9ffcffc00b9dff203f486c9d635b008df5b0d637a2a9",
+  "payload_sha256": "0290d6ece24874287316f4bf430fef770aa4ec08a2227c8f2c1e5b2ff975e03d",
+  "payload_bytes": 966908,
+  "redistribution_basis": "approved legacy manifest; public_domain evidence retained at external_quality/pdf/nist/LICENSE-EVIDENCE.md",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/pdf/nist/LICENSE-EVIDENCE.md",
+  "payloads": [
+    {
+      "path": "pdf_nist_sp800_207_zero_trust_0001.pdf",
+      "payload_sha256": "0290d6ece24874287316f4bf430fef770aa4ec08a2227c8f2c1e5b2ff975e03d",
+      "payload_bytes": 966908
+    },
+    {
+      "path": "pdf_paper_nist_jres_120_011_0001.pdf",
+      "payload_sha256": "532d0fa6a618ffbcca716cab5038d7064aafd78572adaf4e1593f62c95fdbcf4",
+      "payload_bytes": 1751266
+    },
+    {
+      "path": "pdf_report_nist_tn2194_0001.pdf",
+      "payload_sha256": "6457f17f024551a5ea47baeec8a6f1bbcb0dbd654b667913ed943d32304fce40",
+      "payload_bytes": 1446896
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

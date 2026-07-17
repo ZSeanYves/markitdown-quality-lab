@@ -1,0 +1,31 @@
+{
+  "source_id": "jupyterlab_notebooks",
+  "retrieval_url": "https://github.com/jupyterlab/jupyterlab/blob/main/galata/test/jupyterlab/notebooks/long_outputs.ipynb",
+  "final_url": "https://github.com/jupyterlab/jupyterlab/blob/main/galata/test/jupyterlab/notebooks/long_outputs.ipynb",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-3-Clause",
+  "license_url": "https://github.com/jupyterlab/jupyterlab/blob/HEAD/LICENSE",
+  "license_text_sha256": "9bbb1df45211dd858c7218430cd7b4642e2aa86ce86920198cf64fb91555d36f",
+  "payload_sha256": "70bb6de129726900f5e676cc700c88e1f488c71dcd112dc21584b41c406eac19",
+  "payload_bytes": 4372,
+  "redistribution_basis": "approved legacy manifest; BSD-3-Clause evidence retained at external_quality/ipynb/jupyterlab/LICENSE-jupyterlab.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/ipynb/jupyterlab/LICENSE-jupyterlab.txt",
+  "payloads": [
+    {
+      "path": "long_outputs.ipynb",
+      "payload_sha256": "70bb6de129726900f5e676cc700c88e1f488c71dcd112dc21584b41c406eac19",
+      "payload_bytes": 4372
+    },
+    {
+      "path": "windowed_notebook.ipynb",
+      "payload_sha256": "dbbfa409c524ecac0557327b2c8b63f19dc93ad1214a740925b64934e1d12889",
+      "payload_bytes": 8814
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

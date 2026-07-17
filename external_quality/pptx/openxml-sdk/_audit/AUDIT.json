@@ -1,0 +1,51 @@
+{
+  "source_id": "openxml_sdk_tests",
+  "retrieval_url": "https://github.com/dotnet/Open-XML-SDK",
+  "final_url": "https://github.com/dotnet/Open-XML-SDK",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "MIT",
+  "license_url": "https://raw.githubusercontent.com/dotnet/Open-XML-SDK/main/LICENSE",
+  "license_text_sha256": "ed03ba352313a4ba7019d5bed4bd3218ac17f3e44442a3bb1aaff54dcca9a2bc",
+  "payload_sha256": "83f931b14b8e39177ff11fc2395315843529c3b8bbbc453404fbcde4a6ea2060",
+  "payload_bytes": 37495,
+  "redistribution_basis": "approved legacy manifest; MIT evidence retained at external_quality/pptx/openxml-sdk/LICENSE-openxml-sdk.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/pptx/openxml-sdk/LICENSE-openxml-sdk.txt",
+  "payloads": [
+    {
+      "path": "Algn_tab_TabAlignment.pptx",
+      "payload_sha256": "83f931b14b8e39177ff11fc2395315843529c3b8bbbc453404fbcde4a6ea2060",
+      "payload_bytes": 37495
+    },
+    {
+      "path": "Presentation.pptx",
+      "payload_sha256": "799966923bf7bee0c98308ed94238d12e326e1fe624eaed76bc418748cef0b07",
+      "payload_bytes": 1025720
+    },
+    {
+      "path": "animation.pptx",
+      "payload_sha256": "b81bda36d34258d78329187df6beb99d12bba5a3bd25e7a51506ede016a72191",
+      "payload_bytes": 100209
+    },
+    {
+      "path": "mcppt.pptx",
+      "payload_sha256": "a2f6471c8eb640ad15044315aa31f88dc9cffedea7722f3265f586c544f190d6",
+      "payload_bytes": 30807
+    },
+    {
+      "path": "mediareference.pptx",
+      "payload_sha256": "2a97334494e3287d5a1bd06139905f3a15758f81e77db56bbee1dcb047bbc827",
+      "payload_bytes": 52998
+    },
+    {
+      "path": "viewPr-showComments-1.pptx",
+      "payload_sha256": "d2760aa4ff931f64d16f9d957f5b1035676c59f408a7ae7268f671a6e81e0442",
+      "payload_bytes": 79550
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

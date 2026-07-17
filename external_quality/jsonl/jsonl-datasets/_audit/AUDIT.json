@@ -1,0 +1,31 @@
+{
+  "source_id": "jsonl_datasets",
+  "retrieval_url": "https://github.com/tinytoolkit-org/jsonl-datasets/blob/main/tabular/product-events-10.jsonl",
+  "final_url": "https://github.com/tinytoolkit-org/jsonl-datasets/blob/main/tabular/product-events-10.jsonl",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "CC0-1.0",
+  "license_url": "https://github.com/tinytoolkit-org/jsonl-datasets/blob/HEAD/LICENSE",
+  "license_text_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+  "payload_sha256": "8cc5d20b4d9ae79f4357817c4548ffa620d304ed0f81fef5ad479831f5dc970c",
+  "payload_bytes": 1831,
+  "redistribution_basis": "approved legacy manifest; CC0-1.0 evidence retained at external_quality/jsonl/jsonl-datasets/LICENSE-jsonl-datasets.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/jsonl/jsonl-datasets/LICENSE-jsonl-datasets.txt",
+  "payloads": [
+    {
+      "path": "openai-chat-finetune-6.jsonl",
+      "payload_sha256": "8cc5d20b4d9ae79f4357817c4548ffa620d304ed0f81fef5ad479831f5dc970c",
+      "payload_bytes": 1831
+    },
+    {
+      "path": "product-events-10.jsonl",
+      "payload_sha256": "e41d592ca76bc1117ed09eb2072b5ee59b4eadb884367a0cd0deca1afaa9e351",
+      "payload_bytes": 1390
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

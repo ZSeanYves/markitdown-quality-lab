@@ -1,0 +1,121 @@
+{
+  "source_id": "apache_poi_tests",
+  "retrieval_url": "https://github.com/apache/poi",
+  "final_url": "https://github.com/apache/poi",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://raw.githubusercontent.com/apache/poi/trunk/LICENSE",
+  "license_text_sha256": "6e7c918e5a49f677c1b85a9eb2d035cd85c217fc42af6b4a336964a434001a9c",
+  "payload_sha256": "7a5cb4687ad8835a83fee98bf451b400b8ec7c2ae7fa88793930cab648c6e362",
+  "payload_bytes": 9507,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_quality/xlsx/apache-poi/LICENSE-apache-poi.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/xlsx/apache-poi/LICENSE-apache-poi.txt",
+  "payloads": [
+    {
+      "path": "55906-MultiSheetRefs.xlsx",
+      "payload_sha256": "7a5cb4687ad8835a83fee98bf451b400b8ec7c2ae7fa88793930cab648c6e362",
+      "payload_bytes": 9507
+    },
+    {
+      "path": "57893-many-merges.xlsx",
+      "payload_sha256": "f1b0cc07459a2e00f1e930ff54330e45b9d0626f45468b1ffa7eb3dc21d6f46b",
+      "payload_bytes": 848912
+    },
+    {
+      "path": "DateFormatTests.xlsx",
+      "payload_sha256": "16445dc0deba00671ee4315015a970d415ce9886da59c974532d946e99276c66",
+      "payload_bytes": 12394
+    },
+    {
+      "path": "ExcelTables.xlsx",
+      "payload_sha256": "1e43011440eb39000d1751abaf9ded42d37b26f91b4f586a94bf91ce8ecbe9e5",
+      "payload_bytes": 9457
+    },
+    {
+      "path": "FormulaEvalTestData_Copy.xlsx",
+      "payload_sha256": "01b21647d53501e8ec10f4eb522945d41ea3c8d1fdd57f8b0142ec34884c33eb",
+      "payload_bytes": 65011
+    },
+    {
+      "path": "GroupTest.xlsx",
+      "payload_sha256": "a14e6d478004720480cb99844fd6b00260c804bfa02b3da3f496e2c1fb5c8949",
+      "payload_bytes": 8149
+    },
+    {
+      "path": "NumberFormatTests.xlsx",
+      "payload_sha256": "a11d437ee538abe36d630a4795dd30d5823a68dce02a404a45e085dd49c4435d",
+      "payload_bytes": 21470
+    },
+    {
+      "path": "SampleSS.xlsx",
+      "payload_sha256": "44f1b6ef310c370d4902ee3452e6174da25a67bdb09f47850d51b3287cb3db71",
+      "payload_bytes": 9112
+    },
+    {
+      "path": "SimpleMultiCell.xlsx",
+      "payload_sha256": "119b6e70c5bbca6ca3e46f981e0719c154d87203adb4b5b61210d726deab9f7a",
+      "payload_bytes": 8123
+    },
+    {
+      "path": "SimpleNormal.xlsx",
+      "payload_sha256": "6b300c76d7b6ba32e45c40086f5c8cea4b269946f7786a73e0d6f08c3acfe1e4",
+      "payload_bytes": 8871
+    },
+    {
+      "path": "SimpleWithComments.xlsx",
+      "payload_sha256": "d7d337b3436e863487d26439a57ef749950c599862325d7bce7e830acf1df0ba",
+      "payload_bytes": 10060
+    },
+    {
+      "path": "SingleCellTable.xlsx",
+      "payload_sha256": "81703720d256b69aebfeefac6134e81fd1b014104408db752f0ff24d46e4ba61",
+      "payload_bytes": 9486
+    },
+    {
+      "path": "Tables.xlsx",
+      "payload_sha256": "3402bd6406a6ef32c3b88c45decb820f0ca797a8d971007f869b5ad3743bcbc8",
+      "payload_bytes": 54387
+    },
+    {
+      "path": "TwoSheetsOneHidden.xlsx",
+      "payload_sha256": "3e9749837cac5a19a7628d7e60c1a1c6d0ff7657f27fa7904b217b96e0dc534f",
+      "payload_bytes": 7962
+    },
+    {
+      "path": "WithDrawing.xlsx",
+      "payload_sha256": "97b1ab359d6aecbe37864f30c85106e386f0a19bea8f290103927362a2701066",
+      "payload_bytes": 101696
+    },
+    {
+      "path": "commentTest.xlsx",
+      "payload_sha256": "2e359c938c9984ea70afe4a04087ab33333a30e66ff8747b47645eb75aac4bb3",
+      "payload_bytes": 36701
+    },
+    {
+      "path": "comments.xlsx",
+      "payload_sha256": "6c0b2e28e42d80115d88ac70bf5a610a61bc325d5886a6689ddeee34eefe7a2d",
+      "payload_bytes": 10046
+    },
+    {
+      "path": "picture-and-shape-same-size.xlsx",
+      "payload_sha256": "0a5262599a8f5ba12db065ce89bfa3fe16b19ae1a97ece449021c188eda00437",
+      "payload_bytes": 13204
+    },
+    {
+      "path": "picture.xlsx",
+      "payload_sha256": "fea2f13189e87d06297d7b5313abca4d0b6cd8747d5ca450e4db11273b265279",
+      "payload_bytes": 428616
+    },
+    {
+      "path": "sharedhyperlink.xlsx",
+      "payload_sha256": "91329edc5d293926c0294b6443449d90b3ac9d53a174c2f5c4d9e59ecea8fc73",
+      "payload_bytes": 9080
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

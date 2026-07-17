@@ -1,0 +1,31 @@
+{
+  "source_id": "docutils_rst_docs",
+  "retrieval_url": "https://github.com/docutils/docutils/blob/master/docutils/README.rst",
+  "final_url": "https://github.com/docutils/docutils/blob/master/docutils/README.rst",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Public-Domain",
+  "license_url": "https://github.com/docutils/docutils/blob/HEAD/COPYING",
+  "license_text_sha256": "267d41e88b9097f5bc220a124dea4c633c316a67bf82750c57ca5b2fe33a15d7",
+  "payload_sha256": "be7cc292887b10e14aa11b54b969f5647eec9f142dcf84657875e91df4b1d8c6",
+  "payload_bytes": 12142,
+  "redistribution_basis": "approved legacy manifest; Public-Domain evidence retained at external_quality/rst/docutils/COPYING-docutils.rst",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/rst/docutils/COPYING-docutils.rst",
+  "payloads": [
+    {
+      "path": "README.rst",
+      "payload_sha256": "be7cc292887b10e14aa11b54b969f5647eec9f142dcf84657875e91df4b1d8c6",
+      "payload_bytes": 12142
+    },
+    {
+      "path": "quickstart.rst",
+      "payload_sha256": "31c291293ddf15513e9709faa36da0fb42904a4ec513e7e7d4226d027dad07b9",
+      "payload_bytes": 11822
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

@@ -15,13 +15,75 @@
   "reviewer": "local quality review",
   "reviewed_at": "2026-07-16T00:00:00Z",
   "payloads": [
-    {"path": "XPathTest-foreignPrefix.odp", "payload_sha256": "4dc061ee0d08abfb84116cb3ddbe19b48127352818890e311d81de3d22ca354c", "payload_bytes": 12769},
-    {"path": "XPathTest-foreignPrefix2.odp", "payload_sha256": "2bf65785d57dacb5ea7104c23e097ae371aabd318d31868e66e9b0a398c3199c", "payload_bytes": 57109},
-    {"path": "blank.odp", "payload_sha256": "6541a7c3fb37cf96689f5ec56bff3485dce6a03d52af1bc17c8267e631efac97", "payload_bytes": 9292},
-    {"path": "Presentation1_INVALID.odp", "payload_sha256": "d7b150ef74868f93e0061c62cd8c3b61eb3d1f730f408417e055f556dffdb55e", "payload_bytes": 537154},
-    {"path": "Presentation2.odp", "payload_sha256": "b95311fdc6d31aa46772f9688df9613834f9da7585748fee7e1ce878022b7338", "payload_bytes": 489058},
-    {"path": "Presentation4.odp", "payload_sha256": "c563fcc9add41f23f3be1d40c75d878c71058d9c0a7a94dada5b97b647105e59", "payload_bytes": 414851},
-    {"path": "Presentation5.odp", "payload_sha256": "a124141a1310025a0b63f8dc2c4574b8a65236b4cb90ca5ee331d47500974775", "payload_bytes": 67644},
-    {"path": "Presentation7.odp", "payload_sha256": "0e982ea4d27ad1964ded93043448fcd23604961a977953025d13f474210329af", "payload_bytes": 62877}
+    {
+      "path": "Presentation1.odp",
+      "payload_sha256": "9aae24aa8ff6233ecc92b7f47ff13da4cf399998926b120fde7df889d84553b8",
+      "payload_bytes": 715354
+    },
+    {
+      "path": "Presentation1_INVALID.odp",
+      "payload_sha256": "d7b150ef74868f93e0061c62cd8c3b61eb3d1f730f408417e055f556dffdb55e",
+      "payload_bytes": 537154
+    },
+    {
+      "path": "Presentation2.odp",
+      "payload_sha256": "b95311fdc6d31aa46772f9688df9613834f9da7585748fee7e1ce878022b7338",
+      "payload_bytes": 489058
+    },
+    {
+      "path": "Presentation2.odp",
+      "payload_sha256": "417d2eeebb2ad96864c9e28b936d87571a409173019465f0a9cc22742161d6e0",
+      "payload_bytes": 506928
+    },
+    {
+      "path": "Presentation4.odp",
+      "payload_sha256": "c563fcc9add41f23f3be1d40c75d878c71058d9c0a7a94dada5b97b647105e59",
+      "payload_bytes": 414851
+    },
+    {
+      "path": "Presentation5.odp",
+      "payload_sha256": "a124141a1310025a0b63f8dc2c4574b8a65236b4cb90ca5ee331d47500974775",
+      "payload_bytes": 67644
+    },
+    {
+      "path": "Presentation7.odp",
+      "payload_sha256": "0e982ea4d27ad1964ded93043448fcd23604961a977953025d13f474210329af",
+      "payload_bytes": 62877
+    },
+    {
+      "path": "SlideTest1.odp",
+      "payload_sha256": "75c8f889bdb55b1d5b6b3501ccec7d376d5509c033e81285612ec4039afd5d01",
+      "payload_bytes": 31648
+    },
+    {
+      "path": "SlideTest2.odp",
+      "payload_sha256": "42ba3b10a614f97a702c2fee9b39715aee5384f5f729ca7affd7c8c0a7c308ed",
+      "payload_bytes": 20185
+    },
+    {
+      "path": "SlideTest3.odp",
+      "payload_sha256": "bbb3617b6f776d6a285309ff50d73d7d696b8771b08c0aa3aee499d8984056b5",
+      "payload_bytes": 213275
+    },
+    {
+      "path": "XPathTest-foreignPrefix.odp",
+      "payload_sha256": "4dc061ee0d08abfb84116cb3ddbe19b48127352818890e311d81de3d22ca354c",
+      "payload_bytes": 12769
+    },
+    {
+      "path": "XPathTest-foreignPrefix2.odp",
+      "payload_sha256": "2bf65785d57dacb5ea7104c23e097ae371aabd318d31868e66e9b0a398c3199c",
+      "payload_bytes": 57109
+    },
+    {
+      "path": "blank.odp",
+      "payload_sha256": "6541a7c3fb37cf96689f5ec56bff3485dce6a03d52af1bc17c8267e631efac97",
+      "payload_bytes": 9292
+    },
+    {
+      "path": "presentation.odp",
+      "payload_sha256": "515cd9bf159fa3ab0f4323e3140c6765df188f27c2c780b88a9f9f2dc245d43b",
+      "payload_bytes": 144779
+    }
   ]
 }

@@ -1,0 +1,46 @@
+{
+  "source_id": "qpdf_tests",
+  "retrieval_url": "https://github.com/qpdf/qpdf/blob/main/qpdf/qtest/qpdf/link-annots.pdf",
+  "final_url": "https://github.com/qpdf/qpdf/blob/main/qpdf/qtest/qpdf/link-annots.pdf",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/qpdf/qpdf/blob/HEAD/LICENSE",
+  "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "payload_sha256": "df1ae8b9cb2378aaeda6fdc11146dd37328737fd050941390d2c6bd188eea0e4",
+  "payload_bytes": 16902,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_quality/pdf/qpdf/LICENSE-qpdf.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/pdf/qpdf/LICENSE-qpdf.txt",
+  "payloads": [
+    {
+      "path": "hybrid-xref.pdf",
+      "payload_sha256": "df1ae8b9cb2378aaeda6fdc11146dd37328737fd050941390d2c6bd188eea0e4",
+      "payload_bytes": 16902
+    },
+    {
+      "path": "link-annots.pdf",
+      "payload_sha256": "748632d3943742e1a0f585ab4da1e4b0ccc6893c9db396352e0dbce5221a19f4",
+      "payload_bytes": 7237
+    },
+    {
+      "path": "object-stream.pdf",
+      "payload_sha256": "7e895514a76bff9c9bb699a14275735c9f5c61415fda7acc1e3e80d3003bc730",
+      "payload_bytes": 792
+    },
+    {
+      "path": "outlines-with-old-root-dests-dict.pdf",
+      "payload_sha256": "25dd11f10722a5222f99ff795cbd293aa451c66275b239c4fa24b2afaac59322",
+      "payload_bytes": 16175
+    },
+    {
+      "path": "outlines-with-old-root-dests.pdf",
+      "payload_sha256": "8648932e9d1645ce14e58f35c2a6d203020c5e9f89759bad450066caf2ff6dab",
+      "payload_bytes": 16158
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

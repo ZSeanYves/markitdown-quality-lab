@@ -1,0 +1,31 @@
+{
+  "source_id": "jupyter_notebook_examples",
+  "retrieval_url": "https://github.com/jupyter/notebook/blob/main/docs/source/examples/Notebook/Working%20With%20Markdown%20Cells.ipynb",
+  "final_url": "https://github.com/jupyter/notebook/blob/main/docs/source/examples/Notebook/Working%20With%20Markdown%20Cells.ipynb",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "BSD-3-Clause",
+  "license_url": "https://github.com/jupyter/notebook/blob/HEAD/LICENSE",
+  "license_text_sha256": "5ca74e4d2eeb9330b0d129c25f874d3544a13413bc62ae8d367819100d095072",
+  "payload_sha256": "c526a55f84afb96f8d434f8c8ac93c89c20ee6d8637f5baf4617b033c8daf16f",
+  "payload_bytes": 838,
+  "redistribution_basis": "approved legacy manifest; BSD-3-Clause evidence retained at external_quality/ipynb/jupyter-notebook/LICENSE-notebook.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/ipynb/jupyter-notebook/LICENSE-notebook.txt",
+  "payloads": [
+    {
+      "path": "local_links.ipynb",
+      "payload_sha256": "c526a55f84afb96f8d434f8c8ac93c89c20ee6d8637f5baf4617b033c8daf16f",
+      "payload_bytes": 838
+    },
+    {
+      "path": "working_with_markdown_cells.ipynb",
+      "payload_sha256": "21c27aabbd9ce89397929b28dc73b3f42ce47783239aa5f8d1a6853db65ba050",
+      "payload_bytes": 42817
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}

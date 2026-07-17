@@ -1,0 +1,36 @@
+{
+  "source_id": "pdfbox_tests",
+  "retrieval_url": "https://github.com/apache/pdfbox/blob/trunk/pdfbox/src/test/resources/input/simple-openoffice.pdf",
+  "final_url": "https://github.com/apache/pdfbox/blob/trunk/pdfbox/src/test/resources/input/simple-openoffice.pdf",
+  "retrieved_at": "unknown",
+  "source_revision": "legacy-manifest-unpinned",
+  "license_spdx": "Apache-2.0",
+  "license_url": "https://github.com/apache/pdfbox/blob/HEAD/LICENSE",
+  "license_text_sha256": "1301d8415a4868d82aeeec594849cf7679f1ead4636a9603dc46875f5713157e",
+  "payload_sha256": "d40141c738526af78389649a1391b7dc46de4cbe1e9ba571afd063a39fe19a07",
+  "payload_bytes": 17547,
+  "redistribution_basis": "approved legacy manifest; Apache-2.0 evidence retained at external_quality/pdf/pdfbox/LICENSE-apache-pdfbox.txt",
+  "privacy_status": "approved legacy manifest classifications: external_cache",
+  "review_status": "approved",
+  "reviewer": "local legacy evidence migration",
+  "reviewed_at": "2026-07-17T00:00:00Z",
+  "license_evidence_path": "external_quality/pdf/pdfbox/LICENSE-apache-pdfbox.txt",
+  "payloads": [
+    {
+      "path": "AnnotationTypes.pdf",
+      "payload_sha256": "d40141c738526af78389649a1391b7dc46de4cbe1e9ba571afd063a39fe19a07",
+      "payload_bytes": 17547
+    },
+    {
+      "path": "hello3.pdf",
+      "payload_sha256": "2b4aa9b63f3eed9a5e544b10bc677fcf70e1baaa62651e786a9d22d5dec860b2",
+      "payload_bytes": 30269
+    },
+    {
+      "path": "simple-openoffice.pdf",
+      "payload_sha256": "85e84837601e3c21899bd4b89237fb83771179c69be4565f3f0d7248bd76c74b",
+      "payload_bytes": 15023
+    }
+  ],
+  "retrieval_status": "legacy fixture capture predates machine-readable intake audit"
+}
