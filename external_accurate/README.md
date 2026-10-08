@@ -38,7 +38,6 @@ Current enrolled formats:
 - `odt/`
 - `ods/`
 - `odp/`
-- `ocr/`
 - `pdf/`
 
 Current source families:
@@ -47,8 +46,8 @@ Current source families:
   XlsxWriter, python-pptx, and ODF Toolkit
 - repo-owned Office fixtures under `external_accurate/repo_local/` for
   accurate-only coverage that should not remain in `external_quality/`
-- repo-owned PDF OCR fixtures under `external_accurate/repo_local/pdf/ocr/`
-  for accurate-only scanned-PDF layout and provider-truth coverage
+- born-digital PDF fixtures under `external_accurate/pdf/` for accurate text
+  layer and provenance coverage
 
 Current known curated gaps:
 
@@ -56,8 +55,8 @@ Current known curated gaps:
   `ods_hidden_rows`
 - no public-source PPTX sample is enrolled yet that explicitly exercises
   hidden-slide semantics
-- `ocr/self_synthetic/` is retained for the accurate runtime preflight smoke
-  image, but it is not enrolled as a public-source regression row
+- OCR and scanned-page provider rows are retired. Accurate PDF rows must use
+  the shared text-layer route and may assert `page_single_pass` provenance.
 
 These gaps are explicit on purpose. The accurate suite should only enroll
 samples with a complete redistribution and provenance chain.

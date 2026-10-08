@@ -17,10 +17,9 @@ Boundary:
 - this tree is for corpus quality work, not runtime integration
 - promoted formal rows must still be anchored by
   `external_quality/MANIFEST.tsv` and `external_quality/SOURCE_CATALOG.tsv`
-- accurate-only scanned-PDF OCR rows now live under
-  `external_accurate/repo_local/pdf/ocr/`, so this tree stays focused on
-  broader PDF quality and native-reader coverage
-- broader repo-owned PDF expected outputs, OCR fixtures, and RAG payloads live
+- scanned-PDF OCR rows are retired in the 0.8 text-only contract, so this tree
+  stays focused on broader PDF quality and native-reader coverage
+- broader repo-owned PDF expected outputs and RAG payloads live
   under `external_main_process/pdf/`, not in this external-quality subtree
 
 Local audit notes:

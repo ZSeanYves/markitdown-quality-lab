@@ -9,8 +9,8 @@ It is:
 - the checked-out home for curated benchmark payloads and manifests
 - the checked-out home for reviewed, platform-specific internal performance
   baselines
-- the checked-out home for repo-owned main-process regression fixtures that do
-  not belong in the main runtime repository
+- the checked-out home for repo-owned main-process text-regression fixtures
+  that do not belong in the main runtime repository
 
 It is not:
 
@@ -20,6 +20,8 @@ It is not:
 
 The main `markitdown` repository must still build, run, and pass ordinary
 `moon test` without this repository present.
+
+Corpus contract: `0.8-text-only`.
 
 ## Root Layout
 
@@ -66,8 +68,8 @@ markitdown-quality-lab/
 - It feeds `samples/check_balance.sh` in the main repository.
 - Its machine-readable entrypoint is `external_main_process/MANIFEST.tsv`.
 - It is project-controlled fixture material, not a third-party source pool.
-- Format roots typically use lane-shaped inputs and outputs such as:
-  `markdown/`, `rag/`, `ocr/`, and `expected/<lane>/`.
+- Format roots use lane-shaped text inputs and outputs such as `markdown/`,
+  `rag/`, and `expected/<lane>/`.
 - Optional `assets/` directories keep tracked sidecar material for formats
   like `docx`, `epub`, `html`, `ipynb`, `odt`, `odp`, `pptx`, and `zip`.
 
@@ -77,11 +79,9 @@ Typical shape:
 external_main_process/<format>/
   markdown/                 # or another input lane
   rag/                      # optional
-  ocr/                      # optional
   expected/
     markdown/
     rag/
-    ocr/
     assets/                 # optional
   assets/                   # optional
 ```
@@ -119,12 +119,17 @@ It exists for:
 
 - accurate-mode output differences
 - route-upgrade evidence
-- provider-truth checks for OCR and PDF OCR
 - feature-specific diagnostics that belong in `markdown`, `debug`, or
   `provenance` validation views
 
 Current enrolled formats include `docx`, `xlsx`, `pptx`, `odt`, `ods`, `odp`,
-`ocr`, and `pdf`.
+and text-layer `pdf`.
+
+The 0.8 corpus contract is text-only. Direct image OCR, scanned-page OCR,
+audio transcription, and provider/layout route assertions are retired. PDF rows
+must exercise recoverable text layers and the shared `page_single_pass` route;
+image assets and PDF geometry remain valid signals when they come from the
+document's existing content.
 
 ### `external_bench/`
 

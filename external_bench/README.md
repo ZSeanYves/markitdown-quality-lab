@@ -50,5 +50,10 @@ These classifications are version-specific evidence. A MarkItDown dependency
 update must re-run converter selection and semantic-signal checks before an
 existing class is retained.
 
+The 0.8 benchmark contract is text-only. OCR images, audio inputs, and
+transcription/provider routes are not benchmark cases. PDF rows are limited to
+recoverable text-layer documents; image assets may still be measured as part of
+PDF conversion.
+
 This directory describes the formal benchmark consumption surface. It is not a
 complete pool of every raw upstream external source.

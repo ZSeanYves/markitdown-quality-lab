@@ -247,20 +247,6 @@ markdown_rag_markdown_metadata_basic	markdown	rag	markdown/rag/markdown_metadata
 markdown_rag_markdown_metadata_heading_or_multiline	markdown	rag	markdown/rag/markdown_metadata_heading_or_multiline.md	markdown/expected/rag/markdown_metadata_heading_or_multiline.rag.json	
 markdown_rag_markdown_no_trailing_newline	markdown	rag	markdown/rag/markdown_no_trailing_newline.md	markdown/expected/rag/markdown_no_trailing_newline.rag.json	
 ndjson_markdown_ndjson_records_basic	ndjson	markdown	ndjson/markdown/ndjson_records_basic.ndjson	ndjson/expected/markdown/ndjson_records_basic.md	
-ocr_markdown_ocr_tiny_bmp	ocr	markdown	ocr/markdown/ocr_tiny_bmp.bmp	ocr/expected/markdown/ocr_tiny_bmp.md	
-ocr_markdown_ocr_tiny_jpeg	ocr	markdown	ocr/markdown/ocr_tiny_jpeg.jpeg	ocr/expected/markdown/ocr_tiny_jpeg.md	
-ocr_markdown_ocr_tiny_jpg	ocr	markdown	ocr/markdown/ocr_tiny_jpg.jpg	ocr/expected/markdown/ocr_tiny_jpg.md	
-ocr_markdown_ocr_tiny_png	ocr	markdown	ocr/markdown/ocr_tiny_png.png	ocr/expected/markdown/ocr_tiny_png.md	
-ocr_markdown_ocr_tiny_tif	ocr	markdown	ocr/markdown/ocr_tiny_tif.tif	ocr/expected/markdown/ocr_tiny_tif.md	
-ocr_markdown_ocr_tiny_tiff	ocr	markdown	ocr/markdown/ocr_tiny_tiff.tiff	ocr/expected/markdown/ocr_tiny_tiff.md	
-ocr_markdown_ocr_tiny_webp	ocr	markdown	ocr/markdown/ocr_tiny_webp.webp	ocr/expected/markdown/ocr_tiny_webp.md	
-ocr_rag_ocr_tiny_bmp	ocr	rag	ocr/rag/ocr_tiny_bmp.bmp	ocr/expected/rag/ocr_tiny_bmp.rag.json	
-ocr_rag_ocr_tiny_jpeg	ocr	rag	ocr/rag/ocr_tiny_jpeg.jpeg	ocr/expected/rag/ocr_tiny_jpeg.rag.json	
-ocr_rag_ocr_tiny_jpg	ocr	rag	ocr/rag/ocr_tiny_jpg.jpg	ocr/expected/rag/ocr_tiny_jpg.rag.json	
-ocr_rag_ocr_tiny_png	ocr	rag	ocr/rag/ocr_tiny_png.png	ocr/expected/rag/ocr_tiny_png.rag.json	
-ocr_rag_ocr_tiny_tif	ocr	rag	ocr/rag/ocr_tiny_tif.tif	ocr/expected/rag/ocr_tiny_tif.rag.json	
-ocr_rag_ocr_tiny_tiff	ocr	rag	ocr/rag/ocr_tiny_tiff.tiff	ocr/expected/rag/ocr_tiny_tiff.rag.json	
-ocr_rag_ocr_tiny_webp	ocr	rag	ocr/rag/ocr_tiny_webp.webp	ocr/expected/rag/ocr_tiny_webp.rag.json	
 odp_markdown_odp_basic_sample	odp	markdown	odp/markdown/odp_basic_sample.odp	odp/expected/markdown/odp_basic_sample.md	
 odp_rag_odp_basic_sample	odp	rag	odp/rag/odp_basic_sample.odp	odp/expected/rag/odp_basic_sample.rag.json	
 odp_assets_odp_basic_assets	odp	assets	odp/assets/odp_basic_assets.odp	odp/expected/assets/odp_basic_assets	
@@ -528,9 +514,3 @@ zip_rag_zip_metadata_nested_archive_boundary	zip	rag	zip/rag/zip_metadata_nested
 zip_rag_zip_metadata_unsupported_entries	zip	rag	zip/rag/zip_metadata_unsupported_entries.zip	zip/expected/rag/zip_metadata_unsupported_entries.rag.json	
 zip_assets_zip_duplicate_asset_names	zip	assets	zip/assets/zip_duplicate_asset_names.zip	zip/expected/assets/zip_duplicate_asset_names	
 zip_assets_zip_html_local_image	zip	assets	zip/assets/zip_html_local_image.zip	zip/expected/assets/zip_html_local_image	
-wav_markdown_audio_main_repo	wav	markdown	wav/markdown/audio_main_repo.wav	wav/expected/markdown/audio_main_repo.md	repo-owned synthesized speech sample for canonical wav audio markdown coverage
-wav_rag_audio_main_repo	wav	rag	wav/rag/audio_main_repo.wav	wav/expected/rag/audio_main_repo.rag.json	repo-owned synthesized speech sample for canonical wav audio rag coverage
-mp3_markdown_audio_main_repo	mp3	markdown	mp3/markdown/audio_main_repo.mp3	mp3/expected/markdown/audio_main_repo.md	repo-owned synthesized speech sample for compressed mp3 audio markdown coverage
-mp3_rag_audio_main_repo	mp3	rag	mp3/rag/audio_main_repo.mp3	mp3/expected/rag/audio_main_repo.rag.json	repo-owned synthesized speech sample for compressed mp3 audio rag coverage
-m4a_markdown_audio_main_repo	m4a	markdown	m4a/markdown/audio_main_repo.m4a	m4a/expected/markdown/audio_main_repo.md	repo-owned synthesized speech sample for normalized m4a audio markdown coverage
-m4a_rag_audio_main_repo	m4a	rag	m4a/rag/audio_main_repo.m4a	m4a/expected/rag/audio_main_repo.rag.json	repo-owned synthesized speech sample for normalized m4a audio rag coverage

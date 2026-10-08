@@ -4,8 +4,6 @@ Sample group: `external_accurate/repo_local`
 
 Reviewed files:
 - `docx/docx_textbox_basic.docx`
-- `pdf/ocr/pdf_ocr_single_page.pdf`
-- `pdf/ocr/pdf_ocr_two_page.pdf`
 - `xlsx/xlsx_hidden_sheets_policy.xlsx`
 - `pptx/pptx_callout_blocks_basic.pptx`
 - `LICENSE-markitdown-repo-local.txt`
@@ -22,6 +20,6 @@ Review conclusion:
   so textbox anchoring, hidden-sheet materialization, and PPTX reading-order
   recovery are covered without leaving accurate-tagged rows in
   `external_quality/`.
-- Retain the repo-owned scanned-PDF OCR fixtures only in the dedicated
-  accurate tree so single-page and multi-page PDF OCR route coverage no longer
-  lives on the general `external_quality/` surface.
+- Scanned-PDF OCR fixtures were retired with the 0.8 text-only contract. The
+  accurate tree now keeps only Office fixtures and born-digital PDF provenance
+  rows.

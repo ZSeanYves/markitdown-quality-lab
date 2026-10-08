@@ -17,8 +17,8 @@ Summary:
 Why a separate tree exists:
 
 - accurate regression needs mixed evidence surfaces, not just Markdown
-- OCR and PDF rows must prove provider truth and route upgrades, not merely
-  non-empty text
+- Accurate PDF rows must prove text-layer route and provenance behavior, not
+  merely non-empty text. OCR and provider-route rows are retired in 0.8.
 - a dedicated tree prevents those rows from being conflated with the broader
   quality surface
 

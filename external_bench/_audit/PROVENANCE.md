@@ -489,11 +489,9 @@ Residual risk:
     treated as tracked snapshots rather than freshness claims about current
     upstream bytes.
 
-## Project-owned balance audio contracts
+## Retired multimodal contracts
 
-- `audio_contract_wav_v1`, `audio_contract_mp3_v1`, and
-  `audio_contract_m4a_v1` are exact copies of the Apache-2.0 main-repository
-  fixtures under `samples/fixtures/contracts/audio/`.
-- They are retained only for deterministic balance-mode self-baseline runs.
-- SHA-256 values and byte sizes are recorded in `external_bench/MANIFEST.tsv`;
-  accurate mode is intentionally excluded from all benchmark suites.
+The 0.8 benchmark contract is text-only. Project-owned audio contracts and
+OCR image rows were removed from `external_bench/MANIFEST.tsv` together with
+their payloads. PDF benchmark rows remain limited to recoverable text-layer
+documents; embedded document images are still valid PDF asset signals.

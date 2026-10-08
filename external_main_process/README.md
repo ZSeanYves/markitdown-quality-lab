@@ -3,8 +3,9 @@
 `external_main_process/` contains repo-owned main-process regression material
 for `markitdown`.
 
-This tree is the project-controlled fixture surface used for format-by-format
-conversion checks, expected-output comparisons, and repo-owned corpus coverage.
+This tree is the project-controlled text fixture surface used for
+format-by-format conversion checks, expected-output comparisons, and repo-owned
+corpus coverage.
 It is not a third-party source pool.
 
 ## Layout
@@ -32,6 +33,8 @@ Not every format uses every subdirectory, but the intent is consistent:
 
 - This tree is repo-owned and should remain free of third-party material whose
   redistribution status is unclear.
+- The 0.8 contract is text-only: direct image OCR, scanned-PDF OCR, audio
+  transcription, and their expected-output lanes are not enrolled.
 - It is separate from `external_quality/` and `external_bench/`, which are the
   formal external corpus surfaces.
 - A file from this tree only enters the formal external provenance summary when

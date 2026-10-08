@@ -9,10 +9,7 @@
     "metrics": {
       "renderer_name": "RagJsonRenderer",
       "asset_count": "1"
-    },
-    "degraded_features": [
-      "zip_standalone_image_ocr_failed"
-    ]
+    }
   },
   "source_map": "required",
   "chunk_count": {

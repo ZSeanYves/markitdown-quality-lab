@@ -26,9 +26,8 @@ Formal control points:
 - `SOURCE_CATALOG.tsv` is the formal source, license, and provenance index
 - README summaries must stay consistent with those two machine-readable files
 
-Current format roots include:
+Current text-format roots include:
 
-- `audio/`
 - `csv/`
 - `docx/`
 - `epub/`
@@ -38,7 +37,6 @@ Current format roots include:
 - `jsonl/`
 - `markdown/`
 - `ndjson/`
-- `ocr/`
 - `pdf/`
 - `pptx/`
 - `toml/`
@@ -57,10 +55,10 @@ Migration note:
 
 Current expansion snapshot:
 
-- Audio now includes an Apache-2.0 `vosk-api` speech example group under
-  `audio/vosk-api/`, with the official upstream WAV plus locally derived
-  `mp3` and `m4a` transcodes used to cover the current media-pipeline speech
-  routes across uncompressed and compressed input variants.
+- The 0.8 quality contract is text-only. Direct image OCR, scanned-page OCR,
+  audio transcription, and provider-specific media signals are retired from
+  this manifest. EPUB rows that mention audio/video elements continue to test
+  extraction of textual package metadata, not media decoding or transcription.
 - Markdown now includes a broader BSD-3-Clause Python-Markdown fixture subset
   under `markdown/python-markdown/`, covering footnotes, tables,
   admonitions, and markdown-in-HTML boundary behavior alongside fenced

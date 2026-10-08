@@ -29,7 +29,6 @@
 | odt | 1 | 1 | 1 | 1 | 1 | 115822 | copied_from_external_quality=3, copied_from_samples=1, missing_candidate=1 | repo tiny plus curated ODF Toolkit small/medium/large packages | huge; Huge ODT remains missing because this round does not synthesize oversized ODF text packages. |
 | ods | 1 | 1 | 1 | 1 | 1 | 50500 | copied_from_external_quality=3, copied_from_samples=1, missing_candidate=1 | repo tiny plus curated ODF Toolkit small/medium/large spreadsheet packages | huge; Huge ODS remains missing because this round does not synthesize oversized ODF spreadsheet packages. |
 | odp | 1 | 1 | 1 | 1 | 1 | 961851 | copied_from_external_quality=3, copied_from_samples=1, missing_candidate=1 | repo tiny plus curated ODF Toolkit small/medium/large presentation packages | huge; Huge ODP remains missing because this round does not synthesize oversized ODF presentation packages. |
-| ocr | 1 | 1 | 1 | 1 | 1 | 3532989 | copied_from_external_quality=4, copied_from_samples=1 | repo tiny plus curated self-owned and Commons OCR images across layout, degradation, and scene-text cases | none; OCR byte scale stays image-bound, but the larger tiers increase visual density and complexity. |
 
 ## Notes
 - `txt`: tiny/small external+repo anchors; large/huge are generated tracked text loads No missing classes.
@@ -59,4 +58,3 @@
 - `odt`: repo tiny plus curated ODF Toolkit small/medium/large packages Huge ODT remains missing because this round does not synthesize oversized ODF text packages.
 - `ods`: repo tiny plus curated ODF Toolkit small/medium/large spreadsheet packages Huge ODS remains missing because this round does not synthesize oversized ODF spreadsheet packages.
 - `odp`: repo tiny plus curated ODF Toolkit small/medium/large presentation packages Huge ODP remains missing because this round does not synthesize oversized ODF presentation packages.
-- `ocr`: repo tiny plus curated self-owned and Commons OCR images across layout, degradation, and scene-text cases OCR byte scale stays image-bound, but the larger tiers increase visual density and complexity.
